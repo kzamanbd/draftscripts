@@ -15,7 +15,8 @@
         "dev": "next dev --turbo",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "postinstall": "cp -n .env.example .env || true"
     },
     "dependencies": {
         "@emailjs/browser": "^4.3.3",
@@ -39,3 +40,4 @@
         "typescript": "^5"
     }
 }
+
