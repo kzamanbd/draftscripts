@@ -11,24 +11,16 @@ export async function GET(request: Request) {
     const formData = new FormData();
     const storeId = process.env.NEXT_PUBLIC_STORE_ID as string;
     const storePassword = process.env.NEXT_PUBLIC_STORE_PASSWORD as string;
+    const siteUrl = process.env.NEXT_PUBLIC_BASE_URL as string;
 
     formData.append('store_id', storeId);
     formData.append('store_passwd', storePassword);
     formData.append('currency', 'BDT');
     formData.append('tran_id', transactionId.toString());
     formData.append('total_amount', '500');
-    formData.append(
-        'success_url',
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/success?id=${transactionId}`
-    );
-    formData.append(
-        'fail_url',
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/cancel?id=${transactionId}`
-    );
-    formData.append(
-        'cancel_url',
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/cancel?id=${transactionId}`
-    );
+    formData.append('success_url', `${siteUrl}/api/payment/success?id=${transactionId}`);
+    formData.append('fail_url', `${siteUrl}/api/payment/cancel?id=${transactionId}`);
+    formData.append('cancel_url', `${siteUrl}/api/payment/cancel?id=${transactionId}`);
     formData.append('cus_name', 'Test Customer');
     formData.append('cus_email', 'test@gmail.com');
     formData.append('cus_add1', 'Dhaka');
@@ -69,3 +61,4 @@ export async function GET(request: Request) {
         );
     }
 }
+
