@@ -7,6 +7,21 @@
 @tailwind base;
 @tailwind components;
 @layer components {
+    .card {
+        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 print:border-0;
+    }
+    .card-header {
+        @apply border-b border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
+    .card-body {
+        @apply p-5;
+    }
+    .variant--bordered .card {
+        @apply border border-gray-200 dark:border-gray-700;
+    }
+    .card-footer {
+        @apply border-t border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
     .page {
         @apply z-[1] mx-auto w-full bg-white px-8 pb-10 pt-12 h-auto md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
         @apply relative break-before-auto print:mx-0 print:my-0 print:rounded-none print:shadow-none print:h-[297mm] print:w-[210mm];
@@ -148,7 +163,8 @@ body {
     inset: -5px;
     border: 8px solid transparent;
     border-radius: 12px;
-    mask: linear-gradient(#0000, #0000),
+    mask:
+        linear-gradient(#0000, #0000),
         conic-gradient(
             from calc((var(--start) - (var(--spread) * 0.5)) * 1deg),
             #000 0deg,
@@ -171,7 +187,8 @@ body {
     background: #84738c;
     background-attachment: fixed;
     border-radius: 12px;
-    mask: linear-gradient(#0000, #0000),
+    mask:
+        linear-gradient(#0000, #0000),
         conic-gradient(
             from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) * 1deg),
             #ffffff26 0deg,
@@ -205,7 +222,8 @@ body {
     --alpha: 0;
     inset: 0;
     border: 2px solid transparent;
-    mask: linear-gradient(#0000, #0000),
+    mask:
+        linear-gradient(#0000, #0000),
         conic-gradient(
             from calc(((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) * 1deg),
             #0000 0deg,
