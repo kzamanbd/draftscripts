@@ -28,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="description" content={description} />
                 <meta
                     name="keywords"
-                    content="kzamanbd, kzaman, kamruzzaman, software engineer, problem solving, kzamanbn, "
+                    content="kzamanbd, kzaman, kamruzzaman, software engineer, problem solving, draftscripts, draft scripts, scripts"
                 />
                 <meta name="author" content={authorName} />
                 <meta name="theme-color" content="#009EF7" />
@@ -40,7 +40,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="twitter:image" content="/images/icons/android-chrome-192x192.png" />
                 <meta name="twitter:creator" content="@kzaman" />
                 <meta name="title" property="og:title" content={authorName} key="title" />
-                <meta name="description" property="og:description" content={description} key="desc" />
+                <meta
+                    name="description"
+                    property="og:description"
+                    content={description}
+                    key="desc"
+                />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content={authorName} />
                 <meta property="og:url" content="https://kzaman.vercel.app" />
@@ -76,3 +81,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </html>
     );
 }
+
