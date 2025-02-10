@@ -4,7 +4,6 @@ import {
     FiBell,
     FiCircle,
     FiCloud,
-    FiCode,
     FiHexagon,
     FiPieChart,
     FiStar,
@@ -21,10 +20,6 @@ const HeroBackground = () => {
             <FiBell
                 size={30}
                 className="animate-bell  absolute top-28 right-2/3 hidden text-red-500 sm:inline-block"
-            />
-            <FiCode
-                size={30}
-                className="absolute  top-48 right-1/2 hidden animate-bounce text-indigo-500 sm:inline-block"
             />
             <FiPieChart
                 size={30}
