@@ -1,12 +1,12 @@
+import { user } from '@/app/metadata';
 import { NextResponse } from 'next/server';
 
-export async function POST(request: Request) {
-    // get the body of the request
-    const body = await request.json();
-
-    // check if the user exists
-
+export async function GET(request: Request) {
+    // generate random token
+    const token = Math.random().toString(36).substring(7);
     // response json with token
-    return NextResponse.json(body);
+    return NextResponse.json({
+        token: token,
+        user
+    });
 }
-

@@ -83,14 +83,14 @@ import ProjectCard from './ProjectCard';
 
 const Projects = () => {
     return (
-        <div id="projects" className="relative z-50  my-12 lg:my-24">
+        <div id="projects" className="relative z-50 my-12 lg:my-24">
             <div className="sticky top-10">
-                <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-                <div className="flex items-center justify-start relative">
-                    <span className="bg-[#1a1443] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
+                <div className="absolute -top-3 left-0 h-[80px] w-[80px] translate-x-1/2 rounded-full bg-violet-100 opacity-30 blur-3xl filter"></div>
+                <div className="relative flex items-center justify-start">
+                    <span className="absolute left-0 w-fit rounded-md bg-[#1a1443] px-5 py-3 text-xl text-white">
                         PROJECTS
                     </span>
-                    <span className="w-full h-[2px] bg-[#1a1443]"></span>
+                    <span className="h-[2px] w-full bg-[#1a1443]"></span>
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ const Projects = () => {
                         <div
                             id={`sticky-card-${index + 1}`}
                             key={index}
-                            className="sticky-card w-full mx-auto max-w-2xl sticky">
+                            className="sticky-card sticky mx-auto w-full max-w-2xl">
                             <div className="box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]">
                                 <ProjectCard project={project} />
                             </div>

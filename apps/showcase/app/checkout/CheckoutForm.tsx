@@ -35,10 +35,12 @@ export default function CheckoutForm() {
     };
 
     return (
-        <div className="grid sm:px-10 lg:grid-cols-2 lg:px-30 xl:px-40">
+        <div className="lg:px-30 grid sm:px-10 lg:grid-cols-2 xl:px-40">
             <div className="px-4 pt-8">
                 <p className="text-xl font-medium">Order Summary</p>
-                <p className="text-gray-400">Check your items. And select a suitable shipping method.</p>
+                <p className="text-gray-400">
+                    Check your items. And select a suitable shipping method.
+                </p>
                 <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
                     <div className="flex flex-col rounded-lg bg-white sm:flex-row">
                         <Image
@@ -50,7 +52,9 @@ export default function CheckoutForm() {
                             priority={true}
                         />
                         <div className="flex w-full flex-col px-4 py-4">
-                            <span className="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
+                            <span className="font-semibold">
+                                Nike Air Max Pro 8888 - Super Light
+                            </span>
                             <span className="float-right text-gray-400">42EU - 8.5US</span>
                             <p className="text-lg font-bold">$138.99</p>
                         </div>
@@ -65,7 +69,9 @@ export default function CheckoutForm() {
                             priority={true}
                         />
                         <div className="flex w-full flex-col px-4 py-4">
-                            <span className="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
+                            <span className="font-semibold">
+                                Nike Air Max Pro 8888 - Super Light
+                            </span>
                             <span className="float-right text-gray-400">42EU - 8.5US</span>
                             <p className="mt-auto text-lg font-bold">$238.99</p>
                         </div>
@@ -75,10 +81,16 @@ export default function CheckoutForm() {
                 <p className="mt-8 text-lg font-medium">Shipping Methods</p>
                 <div className="mt-5 grid gap-6">
                     <div className="relative">
-                        <input className="peer hidden" id="radio_1" type="radio" name="radio" defaultChecked />
-                        <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                        <input
+                            className="peer hidden"
+                            id="radio_1"
+                            type="radio"
+                            name="radio"
+                            defaultChecked
+                        />
+                        <span className="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-gray-700"></span>
                         <label
-                            className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                            className="flex cursor-pointer select-none rounded-lg border border-gray-300 p-4 peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50"
                             htmlFor="radio_1">
                             <Image
                                 className="w-14 object-contain"
@@ -89,15 +101,23 @@ export default function CheckoutForm() {
                             />
                             <div className="ml-5">
                                 <span className="mt-2 font-semibold">Fedex Delivery</span>
-                                <p className="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
+                                <p className="text-sm leading-6 text-slate-500">
+                                    Delivery: 2-4 Days
+                                </p>
                             </div>
                         </label>
                     </div>
                     <div className="relative">
-                        <input className="peer hidden" id="radio_2" type="radio" name="radio" defaultChecked />
-                        <span className="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                        <input
+                            className="peer hidden"
+                            id="radio_2"
+                            type="radio"
+                            name="radio"
+                            defaultChecked
+                        />
+                        <span className="absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white peer-checked:border-gray-700"></span>
                         <label
-                            className="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                            className="flex cursor-pointer select-none rounded-lg border border-gray-300 p-4 peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50"
                             htmlFor="radio_2">
                             <Image
                                 className="w-14 object-contain"
@@ -108,17 +128,19 @@ export default function CheckoutForm() {
                             />
                             <div className="ml-5">
                                 <span className="mt-2 font-semibold">Fedex Delivery</span>
-                                <p className="text-slate-500 text-sm leading-6">Delivery: 2-4 Days</p>
+                                <p className="text-sm leading-6 text-slate-500">
+                                    Delivery: 2-4 Days
+                                </p>
                             </div>
                         </label>
                     </div>
                 </div>
             </div>
             {loading && (
-                <div className="z-10 duration-300 absolute inset-0 w-full h-screen flex items-center justify-center backdrop-blur-sm bg-white/20">
+                <div className="absolute inset-0 z-10 flex h-screen w-full items-center justify-center bg-white/20 backdrop-blur-sm duration-300">
                     <svg
                         aria-hidden="true"
-                        className="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                        className="inline h-8 w-8 animate-spin fill-blue-600 text-gray-200 dark:text-gray-600"
                         viewBox="0 0 100 101"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg">
@@ -135,10 +157,12 @@ export default function CheckoutForm() {
             )}
             <form onSubmit={handleSubmit} className="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
                 <p className="text-xl font-medium">Payment Details</p>
-                <p className="text-gray-400">Complete your order by providing your payment details.</p>
+                <p className="text-gray-400">
+                    Complete your order by providing your payment details.
+                </p>
 
                 <div>
-                    <label htmlFor="email" className="mt-4 mb-2 block text-sm font-medium">
+                    <label htmlFor="email" className="mb-2 mt-4 block text-sm font-medium">
                         Email
                     </label>
                     <div className="relative">
@@ -165,7 +189,7 @@ export default function CheckoutForm() {
                             </svg>
                         </div>
                     </div>
-                    <label htmlFor="card-holder" className="mt-4 mb-2 block text-sm font-medium">
+                    <label htmlFor="card-holder" className="mb-2 mt-4 block text-sm font-medium">
                         Card Holder
                     </label>
                     <div className="relative">
@@ -192,7 +216,7 @@ export default function CheckoutForm() {
                             </svg>
                         </div>
                     </div>
-                    <label htmlFor="card-no" className="mt-4 mb-2 block text-sm font-medium">
+                    <label htmlFor="card-no" className="mb-2 mt-4 block text-sm font-medium">
                         Card Details
                     </label>
                     <div className="flex">
@@ -230,7 +254,9 @@ export default function CheckoutForm() {
                             placeholder="CVC"
                         />
                     </div>
-                    <label htmlFor="billing-address" className="mt-4 mb-2 block text-sm font-medium">
+                    <label
+                        htmlFor="billing-address"
+                        className="mb-2 mt-4 block text-sm font-medium">
                         Billing Address
                     </label>
                     <div className="flex flex-col sm:flex-row">
@@ -260,13 +286,13 @@ export default function CheckoutForm() {
                         <input
                             type="text"
                             name="billing-zip"
-                            className="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500"
+                            className="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500 sm:w-1/6"
                             placeholder="ZIP"
                         />
                     </div>
 
                     {/* <!-- Total --> */}
-                    <div className="mt-6 border-t border-b py-2">
+                    <div className="mt-6 border-b border-t py-2">
                         <div className="flex items-center justify-between">
                             <p className="text-sm font-medium text-gray-900">Subtotal</p>
                             <p className="font-semibold text-gray-900">$399.00</p>
@@ -284,7 +310,7 @@ export default function CheckoutForm() {
                 <button
                     type="submit"
                     disabled={loading}
-                    className="mt-4 mb-8 w-full px-6 py-3 font-medium text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg text-sm text-center uppercase">
+                    className="mb-8 mt-4 w-full rounded-lg bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 px-6 py-3 text-center text-sm font-medium uppercase text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
                     Place Order
                 </button>
             </form>

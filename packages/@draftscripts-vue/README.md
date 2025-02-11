@@ -47,13 +47,12 @@ import { DialogPlugin } from '@draftscripts/vue';
 const app = createApp(App);
 
 const options = {
-  // Custom options here
+    // Custom options here
 };
 
 app.use(DialogPlugin, options);
 
 app.mount('#app');
-
 ```
 
 ### Options API Example
@@ -62,22 +61,23 @@ To open a dialog using the Options API:
 
 ```js
 export default {
-  methods: {
-    showDialog() {
-      this.$openDialog('Message', { type: 'success' });
-    },
-    showConfirmDialog() {
-      this.$openDialog('Message', { type: 'confirm' }).then((action) => {
-        if (action) {
-          console.log('Confirmed');
+    methods: {
+        showDialog() {
+            this.$openDialog('Message', { type: 'success' });
+        },
+        showConfirmDialog() {
+            this.$openDialog('Message', { type: 'confirm' })
+                .then((action) => {
+                    if (action) {
+                        console.log('Confirmed');
+                    }
+                })
+                .catch(() => {
+                    console.log('Rejected');
+                });
         }
-      }).catch(() => {
-        console.log('Rejected');
-      });
     }
-  }
 };
-
 ```
 
 ### Composition API Example
@@ -88,28 +88,29 @@ To open a dialog using the Composition API:
 import { inject } from 'vue';
 
 export default {
-  setup() {
-    const openDialog = inject('openDialog');
+    setup() {
+        const openDialog = inject('openDialog');
 
-    const showDialog = () => {
-      openDialog('Message', { type: 'success' });
-    };
+        const showDialog = () => {
+            openDialog('Message', { type: 'success' });
+        };
 
-    const showConfirmDialog = () => {
-      openDialog('Message', { type: 'confirm' }).then((action) => {
-        if (action) {
-          console.log('Confirmed');
-        }
-      }).catch(() => {
-        console.log('Rejected');
-      });
-    };
+        const showConfirmDialog = () => {
+            openDialog('Message', { type: 'confirm' })
+                .then((action) => {
+                    if (action) {
+                        console.log('Confirmed');
+                    }
+                })
+                .catch(() => {
+                    console.log('Rejected');
+                });
+        };
 
-    return {
-      showDialog,
-      showConfirmDialog
-    };
-  }
+        return {
+            showDialog,
+            showConfirmDialog
+        };
+    }
 };
-    
 ```

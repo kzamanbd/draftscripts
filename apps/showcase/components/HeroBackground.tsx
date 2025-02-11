@@ -15,35 +15,35 @@ const HeroBackground = () => {
         <>
             <FiBarChart2
                 size={30}
-                className="absolute  top-60 left-10 hidden text-teal-500 sm:inline-block md:left-24"
+                className="absolute left-10 top-60 hidden text-teal-500 sm:inline-block md:left-24"
             />
             <FiBell
                 size={30}
-                className="animate-bell  absolute top-28 right-2/3 hidden text-red-500 sm:inline-block"
+                className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
             />
             <FiPieChart
                 size={30}
-                className="animate-move  absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48"
+                className="animate-move absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48"
             />
             <FiStar
                 size={30}
-                className="absolute  top-36 right-10 hidden text-yellow-500 sm:inline-block md:right-24"
+                className="absolute right-10 top-36 hidden text-yellow-500 sm:inline-block md:right-24"
             />
             <FiTriangle
                 size={30}
-                className="animate-move-rotate  absolute top-1/3 right-1/4 hidden text-green-500 sm:inline-block"
+                className="animate-move-rotate absolute right-1/4 top-1/3 hidden text-green-500 sm:inline-block"
             />
             <FiCloud
                 size={30}
-                className="absolute bottom-48  left-2/3 hidden animate-pulse text-blue-500 sm:inline-block"
+                className="absolute bottom-48 left-2/3 hidden animate-pulse text-blue-500 sm:inline-block"
             />
             <FiCircle
                 size={30}
-                className="absolute bottom-20  left-16 hidden animate-bounce text-amber-500 sm:inline-block md:left-40"
+                className="absolute bottom-20 left-16 hidden animate-bounce text-amber-500 sm:inline-block md:left-40"
             />
             <FiHexagon
                 size={30}
-                className="absolute top-96 left-1/4 hidden animate-spin text-purple-500 sm:inline-block"
+                className="absolute left-1/4 top-96 hidden animate-spin text-purple-500 sm:inline-block"
             />
             <ul className="hero-circles">
                 <li className="bg-primary-300"></li>
@@ -62,4 +62,3 @@ const HeroBackground = () => {
 };
 
 export default HeroBackground;
-

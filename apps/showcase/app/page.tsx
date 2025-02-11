@@ -8,15 +8,15 @@ export const metadata = {
 
 export default function Features() {
     return (
-        <section className="bg-white dark:bg-gray-900 relative z-[1] h-screen">
+        <section className="relative z-[1] h-screen bg-white dark:bg-gray-900">
             <HeroBackground />
-            <div className="py-8 px-4 mx-auto h-full flex items-center max-w-screen-xl sm:py-16 lg:px-6">
-                <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+            <div className="mx-auto flex h-full max-w-screen-xl items-center px-4 py-8 sm:py-16 lg:px-6">
+                <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
                     <Link href="/portfolio" className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -35,10 +35,10 @@ export default function Features() {
                         </p>
                     </Link>
                     <Link href="/resume" className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -54,10 +54,10 @@ export default function Features() {
                         </p>
                     </Link>
                     <div className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -78,10 +78,10 @@ export default function Features() {
                         </p>
                     </div>
                     <Link href="/checkout" className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -100,10 +100,10 @@ export default function Features() {
                         </p>
                     </Link>
                     <div className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -118,10 +118,10 @@ export default function Features() {
                         </p>
                     </div>
                     <div className="card card-body">
-                        <div className="flex gap-4 items-center mb-4">
-                            <div className="flex justify-center items-center w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
+                        <div className="mb-4 flex items-center gap-4">
+                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
                                 <svg
-                                    className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -143,4 +143,3 @@ export default function Features() {
         </section>
     );
 }
-

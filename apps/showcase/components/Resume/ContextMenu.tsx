@@ -34,12 +34,12 @@ function ContextMenu({ children, className }: any) {
             {dropdown && (
                 <div
                     style={{ top: xYPosition.y, left: xYPosition.x }}
-                    className="context-menu fixed z-50 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 print:hidden">
+                    className="context-menu fixed z-50 w-44 divide-y divide-gray-100 rounded-lg bg-white shadow print:hidden">
                     <ul className="py-2 text-sm text-gray-700">
                         <li>
                             <button
                                 onClick={() => window.print()}
-                                className="w-full flex items-center space-x-2 px-4 py-2 hover:bg-gray-100">
+                                className="flex w-full items-center space-x-2 px-4 py-2 hover:bg-gray-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"
@@ -60,7 +60,7 @@ function ContextMenu({ children, className }: any) {
                         <li>
                             <button
                                 onClick={contentEditable}
-                                className="w-full flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 ">
+                                className="flex w-full items-center space-x-2 px-4 py-2 hover:bg-gray-100">
                                 {editable === 'true' ? (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +97,12 @@ function ContextMenu({ children, className }: any) {
                         </li>
                         <li>
                             <button
-                                onClick={() => document.querySelector('.resume-box')?.classList.toggle('with-photo')}
-                                className="w-full flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 ">
+                                onClick={() =>
+                                    document
+                                        .querySelector('.resume-box')
+                                        ?.classList.toggle('with-photo')
+                                }
+                                className="flex w-full items-center space-x-2 px-4 py-2 hover:bg-gray-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     height="18px"
@@ -113,15 +117,19 @@ function ContextMenu({ children, className }: any) {
                         </li>
                         <li>
                             <button
-                                onClick={() => document.querySelector('.cover-letter')?.classList.toggle('hidden')}
-                                className="w-full flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 ">
+                                onClick={() =>
+                                    document
+                                        .querySelector('.cover-letter')
+                                        ?.classList.toggle('hidden')
+                                }
+                                className="flex w-full items-center space-x-2 px-4 py-2 hover:bg-gray-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     strokeWidth="1.5"
                                     stroke="currentColor"
-                                    className="w-4 h-4">
+                                    className="h-4 w-4">
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
@@ -135,7 +143,7 @@ function ContextMenu({ children, className }: any) {
                             <a
                                 href="/kamruzzaman.pdf"
                                 download
-                                className="w-full flex items-center space-x-2 px-4 py-2 hover:bg-gray-100 ">
+                                className="flex w-full items-center space-x-2 px-4 py-2 hover:bg-gray-100">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="16"

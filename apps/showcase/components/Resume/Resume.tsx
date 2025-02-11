@@ -160,23 +160,23 @@ export default function Resume() {
                     <div className="subtitle">
                         <h5 className="subtitle-text">Key Skills</h5>
                     </div>
-                    <section className="grid grid-cols-3 md:grid-cols-2 gap-2 print:grid-cols-2">
-                        <button className="key-button group from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 focus:ring-pink-200">
+                    <section className="grid grid-cols-3 gap-2 md:grid-cols-2 print:grid-cols-2">
+                        <button className="key-button group from-pink-500 to-orange-400 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400">
                             <span className="key-skill bg-pink-50 text-pink-500 hover:text-white">
                                 PHP/Laravel
                             </span>
                         </button>
-                        <button className="key-button group from-yellow-500 to-orange-400 group-hover:from-yellow-500 group-hover:to-orange-400 focus:ring-yellow-200">
+                        <button className="key-button group from-yellow-500 to-orange-400 focus:ring-yellow-200 group-hover:from-yellow-500 group-hover:to-orange-400">
                             <span className="key-skill bg-yellow-50 text-yellow-500 hover:text-white">
                                 JavaScript
                             </span>
                         </button>
-                        <button className="key-button group from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 focus:ring-lime-200">
+                        <button className="key-button group from-teal-300 to-lime-300 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300">
                             <span className="key-skill bg-teal-50 text-teal-500 hover:text-black">
                                 VueJS
                             </span>
                         </button>
-                        <button className="key-button group from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white focus:ring-cyan-200">
+                        <button className="key-button group from-cyan-500 to-blue-500 hover:text-white focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500">
                             <span className="key-skill bg-cyan-50 text-cyan-500 hover:text-white">
                                 React
                             </span>
@@ -217,14 +217,14 @@ export default function Resume() {
                     {/* Experience section */}
                     <h5 className="subtitle mb-5">Professional Experience</h5>
 
-                    <ol className="relative border-l border-primary-500">
+                    <ol className="border-primary-500 relative border-l">
                         <li className="mb-6 ml-6">
                             <TimelineIcon className="-top-1" />
-                            <h3 className="mb-1 md:flex print:flex items-center font-bold text-gray-900">
+                            <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <div className="mr-2">Software Engineer</div>
-                                <div className="text-sm font-medium text-primary-800 flex space-x-1">
+                                <div className="text-primary-800 flex space-x-1 text-sm font-medium">
                                     <span>at</span>
-                                    <div className="md:flex print:flex items-center space-x-1">
+                                    <div className="items-center space-x-1 md:flex print:flex">
                                         <a
                                             href="https://mononsoft.org"
                                             target="_blank"
@@ -240,7 +240,7 @@ export default function Resume() {
                                     </div>
                                 </div>
                             </h3>
-                            <div className="mb-3 space-y-1 md:space-y-0 print:space-y-0 md:flex print:flex items-center justify-between">
+                            <div className="mb-3 items-center justify-between space-y-1 md:flex md:space-y-0 print:flex print:space-y-0">
                                 <time className="block text-sm font-normal leading-none text-gray-700">
                                     Jun 2021 - Present
                                 </time>
@@ -301,16 +301,16 @@ export default function Resume() {
                         </li>
                         <li className="mb-6 ml-6">
                             <TimelineIcon />
-                            <h3 className="mb-1 md:flex print:flex items-center font-bold text-gray-900">
+                            <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <div>Junior Software Engineer</div>
                                 <a
                                     href="https://maxsop.com/"
-                                    className="ml-2 text-sm font-medium text-primary-800"
+                                    className="text-primary-800 ml-2 text-sm font-medium"
                                     target="_blank">
                                     at <span className="underline">MaxSOP</span>
                                 </a>
                             </h3>
-                            <div className="mb-3 space-y-1 md:space-y-0 print:space-y-0 md:flex print:flex items-center justify-between">
+                            <div className="mb-3 items-center justify-between space-y-1 md:flex md:space-y-0 print:flex print:space-y-0">
                                 <time className="block text-sm font-normal leading-none text-gray-700">
                                     May 2020 – Jun 2021
                                 </time>

@@ -27,10 +27,10 @@ export default function DocExport() {
             <div className="dropdown">
                 <button
                     onClick={() => setDropdown(!dropdown)}
-                    className="text-primary-500 bg-primary-100 focus:ring-0 focus:outline-none font-medium rounded-lg text-sm p-2 text-center inline-flex items-center"
+                    className="text-primary-500 bg-primary-100 inline-flex items-center rounded-lg p-2 text-center text-sm font-medium focus:outline-none focus:ring-0"
                     type="button">
                     <svg
-                        className="w-2.5 h-2.5"
+                        className="h-2.5 w-2.5"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -45,7 +45,7 @@ export default function DocExport() {
                     </svg>
                 </button>
                 {dropdown && (
-                    <div className="z-10 absolute right-8 -top-1 bg-white divide-y divide-gray-100 rounded-lg shadow">
+                    <div className="absolute -top-1 right-8 z-10 divide-y divide-gray-100 rounded-lg bg-white shadow">
                         <div className="inline-flex">
                             <button onClick={contentEditable} className="action-btn">
                                 {editable === 'true' ? (
@@ -97,7 +97,11 @@ export default function DocExport() {
                                 </svg>
                             </button>
                             <button
-                                onClick={() => document.querySelector('.cover-letter')?.classList.toggle('hidden')}
+                                onClick={() =>
+                                    document
+                                        .querySelector('.cover-letter')
+                                        ?.classList.toggle('hidden')
+                                }
                                 className="action-btn">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +109,7 @@ export default function DocExport() {
                                     viewBox="0 0 24 24"
                                     strokeWidth="1.5"
                                     stroke="currentColor"
-                                    className="w-4 h-4">
+                                    className="h-4 w-4">
                                     <path
                                         strokeLinecap="round"
                                         strokeLinejoin="round"

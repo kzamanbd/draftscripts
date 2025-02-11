@@ -18,5 +18,5 @@ export const user = {
     profile: profileImage,
     phone: '+8801716724245',
     email: 'kzamanbn@gmail.com',
-    address: 'Dhaka, Bangladesh',
+    address: 'Dhaka, Bangladesh'
 };

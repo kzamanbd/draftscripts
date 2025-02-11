@@ -35,7 +35,9 @@ const GlowCard = ({ children, identifier }: any) => {
                     CARD_BOUNDS.top + CARD_BOUNDS.height * 0.5
                 ];
 
-                let ANGLE = (Math.atan2(event?.y - CARD_CENTER[1], event?.x - CARD_CENTER[0]) * 180) / Math.PI;
+                let ANGLE =
+                    (Math.atan2(event?.y - CARD_CENTER[1], event?.x - CARD_CENTER[0]) * 180) /
+                    Math.PI;
 
                 ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
 
@@ -64,7 +66,7 @@ const GlowCard = ({ children, identifier }: any) => {
     return (
         <div className={`glow-container-${identifier} glow-container`}>
             <article
-                className={`glow-card glow-card-${identifier} h-fit cursor-pointer border border-primary transition-all duration-300 relative bg-white text-gray-200 rounded-xl hover:border-transparent w-full`}>
+                className={`glow-card glow-card-${identifier} border-primary relative h-fit w-full cursor-pointer rounded-xl border bg-white text-gray-200 transition-all duration-300 hover:border-transparent`}>
                 <div className="glows"></div>
                 {children}
             </article>
