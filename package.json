@@ -7,7 +7,7 @@
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
-        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "format": "prettier --write \"**/*.{js,jsx,css,ts,tsx,md}\"",
         "showcase": "turbo dev --filter=showcase",
         "postinstall": "cp -n .env.example .env || true"
     },

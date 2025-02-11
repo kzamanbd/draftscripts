@@ -14,9 +14,9 @@ export default function Features() {
                 <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
                     <Link href="/portfolio" className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
-                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 lg:h-12 lg:w-12 dark:bg-purple-900">
                                 <svg
-                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                                    className="h-5 w-5 text-purple-500 lg:h-6 lg:w-6 dark:text-purple-300"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +55,9 @@ export default function Features() {
                     </Link>
                     <div className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
-                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-100 lg:h-12 lg:w-12 dark:bg-indigo-900">
                                 <svg
-                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                                    className="h-5 w-5 text-indigo-600 lg:h-6 lg:w-6 dark:text-indigo-300"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -79,9 +79,9 @@ export default function Features() {
                     </div>
                     <Link href="/checkout" className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
-                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 lg:h-12 lg:w-12 dark:bg-green-900">
                                 <svg
-                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                                    className="h-5 w-5 text-green-600 lg:h-6 lg:w-6 dark:text-green-300"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -101,9 +101,9 @@ export default function Features() {
                     </Link>
                     <div className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
-                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-100 lg:h-12 lg:w-12 dark:bg-yellow-900">
                                 <svg
-                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                                    className="h-5 w-5 text-yellow-600 lg:h-6 lg:w-6 dark:text-yellow-300"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -119,9 +119,9 @@ export default function Features() {
                     </div>
                     <div className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
-                            <div className="bg-primary-100 dark:bg-primary-900 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-fuchsia-100 lg:h-12 lg:w-12 dark:bg-fuchsia-900">
                                 <svg
-                                    className="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+                                    className="h-5 w-5 text-fuchsia-600 lg:h-6 lg:w-6 dark:text-fuchsia-300"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
                                     xmlns="http://www.w3.org/2000/svg">
