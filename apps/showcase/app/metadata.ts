@@ -2,7 +2,7 @@ export const description = `Over three years of experience building web applicat
 
 export const authorName = 'KAMRUZZAMAN';
 
-export const profileImage = '/kzaman-transparent.png';
+export const profileImage = '/kzaman.png';
 
 export const user = {
     name: authorName,
