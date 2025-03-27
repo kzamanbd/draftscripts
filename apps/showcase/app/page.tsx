@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function Features() {
     return (
-        <section className="relative z-[1] h-screen bg-white dark:bg-gray-900">
+        <section className="relative z-[1] bg-white md:h-screen dark:bg-gray-900">
             <HeroBackground />
-            <div className="mx-auto flex h-full max-w-screen-xl items-center px-4 py-8 sm:py-16 lg:px-6">
-                <div className="space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
+            <div className="mx-auto flex h-full max-w-screen-xl items-center px-4 py-8 md:py-16 lg:px-6">
+                <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
                     <Link href="/portfolio" className="card card-body">
                         <div className="mb-4 flex items-center gap-4">
                             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 lg:h-12 lg:w-12 dark:bg-purple-900">
