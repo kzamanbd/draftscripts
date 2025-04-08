@@ -162,12 +162,10 @@ export default function Resume() {
                     </div>
                     <section className="grid grid-cols-3 gap-2 md:grid-cols-2 print:grid-cols-2">
                         <button className="key-button group from-pink-500 to-orange-400 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400">
-                            <span className="key-skill bg-pink-50 text-pink-500 hover:text-white">
-                                PHP/Laravel
-                            </span>
+                            <span className="key-skill bg-pink-50 text-pink-500">PHP/Laravel</span>
                         </button>
                         <button className="key-button group from-yellow-500 to-orange-400 focus:ring-yellow-200 group-hover:from-yellow-500 group-hover:to-orange-400">
-                            <span className="key-skill bg-yellow-50 text-yellow-500 hover:text-white">
+                            <span className="key-skill bg-yellow-50 text-yellow-500">
                                 JavaScript
                             </span>
                         </button>
@@ -176,10 +174,8 @@ export default function Resume() {
                                 VueJS
                             </span>
                         </button>
-                        <button className="key-button group from-cyan-500 to-blue-500 hover:text-white focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500">
-                            <span className="key-skill bg-cyan-50 text-cyan-500 hover:text-white">
-                                React
-                            </span>
+                        <button className="key-button group from-cyan-500 to-blue-500 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500">
+                            <span className="key-skill bg-cyan-50 text-cyan-500">React</span>
                         </button>
                     </section>
                     {/* Training */}

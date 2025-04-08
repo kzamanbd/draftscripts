@@ -1,11 +1,48 @@
 @import 'react-toastify/dist/ReactToastify.css';
 
-:root {
-    --primary: theme('colors.primary.500');
+@import 'tailwindcss';
+
+@theme {
+    --color-primary: var(--color-sky-500, #6366f1);
+    --color-primary-50: var(--color-sky-50, #eef2ff);
+    --color-primary-100: var(--color-sky-100, #e0e7ff);
+    --color-primary-200: var(--color-sky-200, #c7d2fe);
+    --color-primary-300: var(--color-sky-300, #a5b4fc);
+    --color-primary-400: var(--color-sky-400, #818cf8);
+    --color-primary-500: var(--color-sky-500, #6366f1);
+    --color-primary-600: var(--color-sky-600, #4f46e5);
+    --color-primary-700: var(--color-sky-700, #4338ca);
+    --color-primary-800: var(--color-sky-800, #3730a3);
+    --color-primary-900: var(--color-sky-900, #312e81);
+    --color-primary-950: var(--color-sky-950, #1e1b4b);
+    --color-light-gray: #f5f8fa;
+
+    --text-sm: 12px;
+
+    --font-sans: Inter, Helvetica, 'sans-serif', ui-sans-serif, system-ui, sans-serif;
 }
 
-@tailwind base;
-@tailwind components;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+}
 @layer components {
     .card {
         @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 print:border-0;
@@ -48,7 +85,7 @@
         @apply col-span-full text-justify md:col-span-7 print:col-span-7;
     }
     .subtitle {
-        @apply blue-gradient relative mb-2 font-bold uppercase print:text-gray-700;
+        @apply relative mb-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-bold uppercase text-transparent print:text-gray-700;
     }
     .timeline-icon {
         @apply to-primary-300 absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-emerald-300;
@@ -69,7 +106,7 @@
         @apply relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4;
     }
     .key-skill {
-        @apply relative w-full rounded-full bg-white px-2 py-1.5 transition-all duration-75 ease-in group-hover:bg-opacity-0;
+        @apply relative w-full rounded-full bg-white px-2 py-1.5 transition-all duration-75 ease-in;
     }
     .contact-icon {
         @apply mr-3 h-5 w-5 rounded;
@@ -103,7 +140,6 @@
         @apply relative mx-auto min-h-screen px-6 text-white sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem];
     }
 }
-@tailwind utilities;
 
 :root {
     --foreground-rgb: rgb(211, 216, 232);
