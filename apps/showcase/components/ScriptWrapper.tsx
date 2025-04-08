@@ -3,15 +3,11 @@
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
 import { ToastContainer } from 'react-toastify';
-
-const PrelineScript = dynamic(() => import('./PrelineScript'), {
-    ssr: false
-});
+import PrelineScript from './PrelineScript';
 
 export default function ScriptWrapper() {
     return (
         <>
-            <PrelineScript />
             <ToastContainer />
             <PrelineScript />
             <Script src="https://www.googletagmanager.com/gtag/js?id=G-3HFZXXGGM3" />

@@ -17,6 +17,7 @@
     --color-primary-900: var(--color-sky-900, #312e81);
     --color-primary-950: var(--color-sky-950, #1e1b4b);
     --color-light-gray: #f5f8fa;
+    --foreground-rgb: rgb(211, 216, 232);
 
     --text-sm: 12px;
 
@@ -46,8 +47,30 @@
     [role='button']:not(:disabled) {
         cursor: pointer;
     }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --foreground-rgb: 255, 255, 255;
+        }
+    }
+
+    body:has(.portfolio) {
+        color: rgb(var(--foreground-rgb));
+        background-color: #0d1224;
+    }
+    body {
+        @apply bg-[url('/images/mask.svg')] [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,1))] print:bg-white;
+    }
 }
 @layer components {
+    .btn {
+        @apply flex cursor-pointer items-center justify-center gap-0.5 rounded-md border border-gray-200 px-2.5 py-1.5 transition-colors duration-300 ease-in-out;
+        @apply text-sm font-medium dark:border-gray-700;
+    }
+    .btn-primary {
+        @apply bg-primary shadow-primary-100 hover:bg-primary-700 text-white;
+        @apply from-primary-400 to-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700 bg-gradient-to-br;
+    }
     .card {
         @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 dark:bg-gray-700/50 print:border-0;
     }
@@ -145,26 +168,7 @@
     }
 }
 
-:root {
-    --foreground-rgb: rgb(211, 216, 232);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-    }
-}
-
-body:has(.portfolio) {
-    color: rgb(var(--foreground-rgb));
-    background-color: #0d1224;
-}
-body {
-    @apply bg-[url('/images/mask.svg')] [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,1))] print:bg-white;
-}
-
 /* card style */
-
 .glow-container {
     --spread: 60;
 }

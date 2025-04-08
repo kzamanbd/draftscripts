@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Pricing',
@@ -15,9 +16,9 @@ const Pricing = () => {
                         <nav className="mx-auto w-full max-w-[85rem] px-4 md:px-6 lg:px-8">
                             <div className="relative md:flex md:items-center md:justify-between">
                                 <div className="flex items-center justify-between">
-                                    <a
+                                    <Link
                                         className="focus:outline-hidden flex-none focus:opacity-80"
-                                        href="#">
+                                        href="/">
                                         <svg
                                             className="h-auto w-28"
                                             width="116"
@@ -50,7 +51,7 @@ const Pricing = () => {
                                                 className="fill-violet-600 dark:fill-white"
                                             />
                                         </svg>
-                                    </a>
+                                    </Link>
 
                                     <div className="md:hidden">
                                         <button
@@ -383,11 +384,11 @@ const Pricing = () => {
                                                 </div>
                                             </div>
 
-                                            <a
+                                            <Link
                                                 className="focus:outline-hidden py-3 font-medium text-gray-600 hover:text-gray-500 focus:text-gray-500 md:py-6 dark:text-neutral-400 dark:hover:text-neutral-500 dark:focus:text-neutral-500"
-                                                href="#">
+                                                href="/login">
                                                 Login
-                                            </a>
+                                            </Link>
 
                                             <div className="pt-3 md:pt-0">
                                                 <a
