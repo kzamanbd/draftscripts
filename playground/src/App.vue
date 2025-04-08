@@ -26,7 +26,7 @@
                 Yellow
             </button>
         </div>
-        <TipTapEditor v-model="content" />
+        <TipTapEditor v-model="content" class="w-3xl" />
     </div>
 </template>
 

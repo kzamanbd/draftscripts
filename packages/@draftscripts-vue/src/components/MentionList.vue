@@ -83,7 +83,7 @@
     };
 </script>
 
-<style lang="scss">
+<style>
     /* Dropdown menu */
     .dropdown-menu {
         background: var(--white);
@@ -96,23 +96,23 @@
         overflow: auto;
         padding: 0.4rem;
         position: relative;
+    }
 
-        button {
-            align-items: center;
-            background-color: transparent;
-            display: flex;
-            gap: 0.25rem;
-            text-align: left;
-            width: 100%;
+    .dropdown-menu button {
+        align-items: center;
+        background-color: transparent;
+        display: flex;
+        gap: 0.25rem;
+        text-align: left;
+        width: 100%;
+    }
 
-            &:hover,
-            &:hover.is-selected {
-                background-color: var(--gray-3);
-            }
+    .dropdown-menu button:hover,
+    .dropdown-menu button:hover.is-selected {
+        background-color: var(--gray-3);
+    }
 
-            &.is-selected {
-                background-color: var(--gray-2);
-            }
-        }
+    .dropdown-menu button.is-selected {
+        background-color: var(--gray-2);
     }
 </style>
