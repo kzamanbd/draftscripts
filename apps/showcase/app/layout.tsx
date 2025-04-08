@@ -1,12 +1,9 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
-import { ToastContainer } from 'react-toastify';
 import NextTopLoader from 'nextjs-toploader';
-
 const inter = Inter({ subsets: ['latin'] });
-
 import { authorName, description, profileImage } from '@/app/metadata';
+import ScriptWrapper from '@/components/ScriptWrapper';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -66,17 +63,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                     {children}
                 </div>
-                <ToastContainer />
-                <Script src="https://www.googletagmanager.com/gtag/js?id=G-3HFZXXGGM3" />
-                <Script id="google-analytics">
-                    {`
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                
-                  gtag('config', 'GA_MEASUREMENT_ID');
-                `}
-                </Script>
+                <ScriptWrapper />
             </body>
         </html>
     );

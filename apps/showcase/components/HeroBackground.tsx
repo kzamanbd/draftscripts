@@ -1,7 +1,7 @@
-import React from 'react';
+'use client';
+
 import {
     FiBarChart2,
-    FiBell,
     FiCircle,
     FiCloud,
     FiHexagon,
@@ -9,18 +9,47 @@ import {
     FiStar,
     FiTriangle
 } from 'react-icons/fi';
+import { MdOutlineLightMode } from 'react-icons/md';
+import { CiDark } from 'react-icons/ci';
+import { useEffect, useState } from 'react';
 
 const HeroBackground = () => {
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode((prev) => !prev);
+        localStorage.setItem('darkMode', !isDarkMode ? 'true' : 'false');
+    };
+
+    useEffect(() => {
+        // check local storage for dark mode preference
+        const saved = localStorage.getItem('darkMode');
+        const darkMode = saved || window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setIsDarkMode(darkMode === 'true');
+        // apply dark mode class to document element
+        document.documentElement.classList.toggle('dark');
+    }, [isDarkMode]);
+
     return (
         <>
             <FiBarChart2
                 size={30}
                 className="absolute left-10 top-60 hidden text-teal-500 sm:inline-block md:left-24"
             />
-            <FiBell
-                size={30}
-                className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
-            />
+            {isDarkMode ? (
+                <CiDark
+                    size={30}
+                    onClick={toggleDarkMode}
+                    className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
+                />
+            ) : (
+                <MdOutlineLightMode
+                    size={30}
+                    onClick={toggleDarkMode}
+                    className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
+                />
+            )}
+
             <FiPieChart
                 size={30}
                 className="animate-move absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48"

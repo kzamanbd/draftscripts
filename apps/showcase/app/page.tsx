@@ -2,8 +2,9 @@ import HeroBackground from '@/components/HeroBackground';
 import Link from 'next/link';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
-import { MdOutlineWorkOutline, MdPayments, MdOutlineBusiness } from 'react-icons/md';
+import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
 import { CiSettings } from 'react-icons/ci';
+import { SiAfterpay } from 'react-icons/si';
 
 export const metadata = {
     title: 'DraftScripts - Features',
@@ -33,14 +34,14 @@ const cardData = [
         link: '/resume'
     },
     {
-        title: 'Business Automation',
+        title: 'Pricing',
         description:
-            'Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.',
-        icon: MdOutlineBusiness,
+            'Get a clear view of your business with our pricing plan. We have a plan for every business, no matter how big or small.',
+        icon: SiAfterpay,
         bgColor: 'bg-indigo-100',
         iconColor: 'text-indigo-500',
         darkBgColor: 'dark:bg-indigo-900',
-        link: '#'
+        link: '/pricing'
     },
     {
         title: 'Payment',
@@ -76,7 +77,7 @@ const cardData = [
 
 export default function Features() {
     return (
-        <section className="relative z-[1] bg-white md:min-h-screen dark:bg-gray-900">
+        <section className="relative z-[1] md:min-h-screen dark:bg-gray-900">
             <HeroBackground />
             <div className="mx-auto flex max-w-screen-xl flex-1 items-center px-4 py-8 md:min-h-screen lg:px-6">
                 <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">

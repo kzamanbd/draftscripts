@@ -1,6 +1,7 @@
 @import 'react-toastify/dist/ReactToastify.css';
 
 @import 'tailwindcss';
+@import 'preline/variants.css';
 
 @theme {
     --color-primary: var(--color-sky-500, #6366f1);
@@ -21,6 +22,9 @@
 
     --font-sans: Inter, Helvetica, 'sans-serif', ui-sans-serif, system-ui, sans-serif;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -45,7 +49,7 @@
 }
 @layer components {
     .card {
-        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 print:border-0;
+        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 dark:bg-gray-700/50 print:border-0;
     }
     .card-header {
         @apply border-b border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
