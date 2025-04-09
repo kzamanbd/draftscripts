@@ -1,8 +1,9 @@
+import { getTitle } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Pricing',
+    title: getTitle('Pricing'),
     description: 'Pricing page for our application'
 };
 

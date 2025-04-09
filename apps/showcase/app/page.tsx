@@ -5,9 +5,10 @@ import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
 import { CiSettings } from 'react-icons/ci';
 import { SiAfterpay } from 'react-icons/si';
+import { getTitle } from '@/utils';
 
 export const metadata = {
-    title: 'DraftScripts - Features',
+    title: getTitle('Features'),
     description: 'DraftScripts features for business teams like yours.'
 };
 

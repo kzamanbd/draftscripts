@@ -1,8 +1,9 @@
 import { Metadata } from 'next';
 import CheckoutForm from './CheckoutForm';
+import { getTitle } from '@/utils';
 
 export const metadata: Metadata = {
-    title: 'Checkout'
+    title: getTitle('Checkout')
 };
 
 export default function Checkout() {
