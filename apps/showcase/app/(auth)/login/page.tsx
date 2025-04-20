@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { login } from '../actions';
-import LoginForm from './LoginForm';
-import ApplicationLogo from '@/components/shared/ApplicationLogo';
-import OtherLoginOption from '@/components/shared/OtherLoginOption';
+import LoginForm from './form';
+import ApplicationLogo from '@/components/shared/application-logo';
+import OtherLoginOption from '@/components/shared/other-login-option';
 import { getSession } from '@/services/auth/session';
 import { redirect } from 'next/navigation';
 

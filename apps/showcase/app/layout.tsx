@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 const inter = Inter({ subsets: ['latin'] });
 import { authorName, description, profileImage } from '@/app/metadata';
-import ScriptWrapper from '@/components/ScriptWrapper';
+import ScriptWrapper from '@/components/script-wrapper';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

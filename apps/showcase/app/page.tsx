@@ -1,4 +1,4 @@
-import HeroBackground from '@/components/HeroBackground';
+import HeroBackground from '@/components/hero-background';
 import Link from 'next/link';
 import { FaProjectDiagram } from 'react-icons/fa';
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';

@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 import Script from 'next/script';
 import { ToastContainer } from 'react-toastify';
-import PrelineScript from './PrelineScript';
+import PrelineScript from './preline-script';
 
 export default function ScriptWrapper() {
     return (

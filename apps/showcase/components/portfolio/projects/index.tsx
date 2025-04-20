@@ -79,7 +79,7 @@ const projectsData = [
         role: 'Full Stack Developer'
     }
 ];
-import ProjectCard from './ProjectCard';
+import ProjectCard from './project-card';
 
 const Projects = () => {
     return (

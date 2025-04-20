@@ -1,7 +1,7 @@
-import AboutSection from '@/components/portfolio/AboutSection';
+import AboutSection from '@/components/portfolio/about-section';
 import ContactSection from '@/components/portfolio/contacts';
-import HeroSection from '@/components/portfolio/HeroSection';
-import NavbarSection from '@/components/portfolio/Navbar';
+import HeroSection from '@/components/portfolio/hero-section';
+import NavbarSection from '@/components/portfolio/nav-menu';
 import ProjectsSection from '@/components/portfolio/projects';
 
 export const metadata = {

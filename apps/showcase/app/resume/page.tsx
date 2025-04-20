@@ -1,5 +1,5 @@
-import CoverLetter from '@/components/resume/CoverLetter';
-import Resume from '@/components/resume/Resume';
+import CoverLetter from '@/components/resume/cover-letter';
+import Resume from '@/components/resume/resume';
 
 export const metadata = {
     title: 'Resume | Kamruzzaman',

@@ -4,7 +4,7 @@ import { FaFacebook, FaTwitterSquare } from 'react-icons/fa';
 import { MdDownload } from 'react-icons/md';
 import { RiContactsFill } from 'react-icons/ri';
 import { SiLeetcode } from 'react-icons/si';
-import TypingEffect from '../TypingEffect';
+import TypingEffect from '../typing-effect';
 
 import { user } from '@/app/metadata';
 

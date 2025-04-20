@@ -1,5 +1,5 @@
-import ActionButton from '@/components/resume/ActionButton';
-import TimelineIcon from '@/components/resume/TimelineIcon';
+import ActionButton from '@/components/resume/action-button';
+import TimelineIcon from '@/components/resume/timeline-icon';
 import Image from 'next/image';
 
 export default function Resume() {
