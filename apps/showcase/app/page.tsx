@@ -80,6 +80,11 @@ export default function Features() {
     return (
         <section className="relative z-[1] md:min-h-screen dark:bg-gray-900">
             <HeroBackground />
+            <div className="fixed right-5 top-5 z-10 flex gap-4">
+                <Link href="/login" className="text-red-600">
+                    Login
+                </Link>
+            </div>
             <div className="mx-auto flex max-w-screen-xl flex-1 items-center px-4 py-8 md:min-h-screen lg:px-6">
                 <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
                     {cardData.map((card, index) => (
