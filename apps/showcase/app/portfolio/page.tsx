@@ -1,8 +1,8 @@
-import AboutSection from '@/components/Portfolio/AboutSection';
-import ContactSection from '@/components/Portfolio/Contacts';
-import HeroSection from '@/components/Portfolio/HeroSection';
-import NavbarSection from '@/components/Portfolio/Navbar';
-import ProjectsSection from '@/components/Portfolio/Projects';
+import AboutSection from '@/components/portfolio/AboutSection';
+import ContactSection from '@/components/portfolio/contacts';
+import HeroSection from '@/components/portfolio/HeroSection';
+import NavbarSection from '@/components/portfolio/Navbar';
+import ProjectsSection from '@/components/portfolio/projects';
 
 export const metadata = {
     title: 'Portfolio | Kamruzzaman',
