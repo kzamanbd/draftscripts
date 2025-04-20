@@ -1,4 +1,5 @@
 {
+    "extends": "@repo/typescript-config/nextjs.json",
     "compilerOptions": {
         "target": "es5",
         "lib": ["dom", "dom.iterable", "esnext"],
@@ -22,6 +23,14 @@
             "@/*": ["./*"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "build/types/**/*.ts", "static/**/*.ts"],
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        ".next/types/**/*.ts",
+        "build/types/**/*.ts",
+        "static/**/*.ts"
+    ],
     "exclude": ["node_modules"]
 }
+
