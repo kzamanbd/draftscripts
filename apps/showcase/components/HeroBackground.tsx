@@ -22,16 +22,17 @@ const HeroBackground = () => {
     };
 
     useEffect(() => {
-        // apply dark mode class to document element
-        document.documentElement.classList.toggle('dark');
-    }, [isDarkMode]);
-
-    useEffect(() => {
         // check local storage for dark mode preference
         const saved = localStorage.getItem('darkMode');
         const darkMode = saved || window.matchMedia('(prefers-color-scheme: dark)').matches;
         setIsDarkMode(darkMode === 'true');
-    }, []);
+        // apply dark mode class to document element
+        if (darkMode) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    }, [isDarkMode]);
 
     return (
         <>
