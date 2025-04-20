@@ -210,15 +210,14 @@ export default function Resume() {
                     </div>
                 </div>
                 <div className="right-box">
-                    <h5 className="subtitle">Summary</h5>
+                    <h5 className="subtitle">About Me</h5>
 
                     <p className="mb-5 text-sm">
-                        Over three years of experience building web applications, updating existing
-                        web applications, and fixing bugs. I like to learn and use new technology in
-                        web development. I have worked extensively on various stages of application
-                        development by creating & implementing application architecture, which
-                        includes various stages in development, code signing, and releasing to
-                        Market and collaborative environments for the web platform.
+                        Over 4+ years of experience specializing in PHP, Laravel, Vue.js, React,
+                        AWS, and cloud technologies. Skilled in building, updating, and optimizing
+                        web applications from architecture design to deployment. Passionate about
+                        learning new tools and delivering high-quality, scalable solutions in
+                        collaborative environments.
                     </p>
 
                     {/* Experience section */}
@@ -358,38 +357,31 @@ export default function Resume() {
                     <ul className="bullet-list">
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
-                            <p>A solid foundation on OOP, Algorithm, Data Structure.</p>
+                            <p>A solid foundation on OOP, Algorithm and Data Structure.</p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
-                            <p>Knowledge on Web Services likes REST/JSON/XML APIs.</p>
+                            <p>Solid Knowledge on Web Services likes REST/JSON APIs.</p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>SQL, MySQL, TypeScript, Redux, Tailwind CSS and Bootstrap.</p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>Experience with SDLC and Agile methodologies.</p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                SQL, MySQL, TypeScript, Redux, Tailwind CSS, Bootstrap, Vuetify and
-                                Livewire.
+                                Experience in working with version control systems like Git, GitHub,
+                                and Gitlab.
                             </p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                Experience with Software Development Life Cycle (SDLC) and Agile
-                                methodologies.
-                            </p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>
-                                Experience in working with version control systems like Git,
-                                Bitbucket, GitLab, and GitHub.
-                            </p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>
-                                Basic knowledge of Cloud Platforms like AWS, Microsoft Azure, Google
-                                Cloud Platform.
+                                Basic knowledge of Cloud Platforms like AWS, Google Cloud Platform.
                             </p>
                         </li>
                         <li className="flex items-center">
@@ -399,8 +391,8 @@ export default function Resume() {
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                Familiarity with DevOps processes and tools (Docker), Linux or Other
-                                Unix-based systems.
+                                Familiarity with DevOps processes, operation tools and Linux based
+                                systems.
                             </p>
                         </li>
                         <li className="flex items-center">
