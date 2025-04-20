@@ -255,7 +255,7 @@ export default function Resume() {
                                     <span>50/B New Eskaton Road, Dhaka 1000</span>
                                 </address>
                             </div>
-                            <ul className="bullet-list">
+                            <ul className="bullet-list ml-0">
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
@@ -319,7 +319,7 @@ export default function Resume() {
                                     <span>27/2 Ram Babu Road, Mymensingh-2200.</span>
                                 </address>
                             </div>
-                            <ul className="bullet-list">
+                            <ul className="bullet-list ml-0">
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
@@ -355,83 +355,63 @@ export default function Resume() {
                     {/* Additional Skills */}
                     <h5 className="subtitle">Additional Skills</h5>
 
-                    <ul className="bullet-list ml-4">
+                    <ul className="bullet-list">
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>A solid foundation on OOP, Algorithm, Data Structure.</p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>Knowledge on Web Services likes REST/JSON/XML APIs.</p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 SQL, MySQL, TypeScript, Redux, Tailwind CSS, Bootstrap, Vuetify and
                                 Livewire.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Experience with Software Development Life Cycle (SDLC) and Agile
                                 methodologies.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Experience in working with version control systems like Git,
                                 Bitbucket, GitLab, and GitHub.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Basic knowledge of Cloud Platforms like AWS, Microsoft Azure, Google
                                 Cloud Platform.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>Experience working in a Dockerized environment.</p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Familiarity with DevOps processes and tools (Docker), Linux or Other
                                 Unix-based systems.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Ability to work individually and independently with minimal
                                 supervision.
                             </p>
                         </li>
                         <li className="flex items-center">
-                            <div className="mr-4">
-                                <div className="bullet"></div>
-                            </div>
+                            <div className="bullet-point"></div>
                             <p>
                                 Problem-solving skills, Self-managed, independent, initiative and
                                 proactive.
