@@ -137,15 +137,14 @@ export default function Resume() {
 
                     {/* Education */}
                     <div className="subtitle">
-                        <h5 className="subtitle-text">Education</h5>
+                        <h5 className="subtitle-text">Educations</h5>
                     </div>
                     <div className="border-primary-500 relative mb-3 space-y-2 border-l pl-3 text-sm">
                         <TimelineIcon>
-                            <p>
-                                <span className="font-bold">B.SC. In CSE </span>
-                                <span>(Ongoing)</span>
-                            </p>
-                            <p className="italic">Southeast University.</p>
+                            <p className="font-bold">Bachelor of Science</p>
+                            <p>Computer Science & Engineering</p>
+                            <p className="mb-2">2022 - Present</p>
+                            <p className="font-semibold italic">Southeast University.</p>
                             <div className="flex items-center">
                                 <MdLocationPin size={12} />
                                 <span>251/A Tejgaon I/A, Dhaka</span>
@@ -153,11 +152,12 @@ export default function Resume() {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <p>
-                                <span className="font-bold">Diploma In CSE </span>
-                                <span> - 2019</span>
+                            <p className="font-bold">Diploma in Engineering </p>
+                            <p>Computer Technology</p>
+                            <p className="mb-2">2015 - 2019</p>
+                            <p className="font-semibold italic">
+                                Rumdo Institute of Modern Technology.
                             </p>
-                            <p className="italic">Rumdo Institute of Modern Technology.</p>
                             <div className="flex items-center">
                                 <MdLocationPin size={12} />
                                 <span>Mymensingh Bypass.</span>
@@ -228,7 +228,7 @@ export default function Resume() {
                         <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <span className="leading-0">Software Engineer</span>
-                                <div className="text-primary-800 ml-2 flex gap-1 text-sm font-medium">
+                                <div className="ml-1 flex gap-1 text-sm font-medium">
                                     <span>at</span>
                                     <div className="items-center gap-1 md:flex print:flex">
                                         <a
@@ -297,14 +297,14 @@ export default function Resume() {
                         <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <span className="leading-0">Junior Software Engineer</span>
-                                <div className="text-primary-800 ml-2 flex gap-1 text-sm font-medium">
+                                <div className="ml-1 flex gap-1 text-sm font-medium">
                                     <span>at</span>
                                     <div className="items-center md:flex print:flex">
                                         <a
                                             href="https://maxsop.com/"
-                                            className="text-primary-800 ml-2 text-sm font-medium"
+                                            className="text-sm font-medium"
                                             target="_blank">
-                                            at <span className="underline">MaxSOP</span>
+                                            <span className="underline">MaxSOP</span>
                                         </a>
                                     </div>
                                 </div>

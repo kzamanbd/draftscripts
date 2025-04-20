@@ -141,7 +141,7 @@
         @apply ml-2 mt-2 space-y-1.5 text-xs;
     }
     .bullet-point {
-        @apply bg-primary-500 mr-2 h-1.5 w-1.5 rounded-full;
+        @apply bg-primary-500 mr-2 h-1 w-1 rounded-full;
     }
     .key-button {
         @apply relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4;
