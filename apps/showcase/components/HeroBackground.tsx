@@ -22,58 +22,54 @@ const HeroBackground = () => {
     };
 
     useEffect(() => {
-        // check local storage for dark mode preference
-        const saved = localStorage.getItem('darkMode');
-        const darkMode = saved || window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setIsDarkMode(darkMode === 'true');
         // apply dark mode class to document element
         document.documentElement.classList.toggle('dark');
     }, [isDarkMode]);
 
+    useEffect(() => {
+        // check local storage for dark mode preference
+        const saved = localStorage.getItem('darkMode');
+        const darkMode = saved || window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setIsDarkMode(darkMode === 'true');
+    }, []);
+
     return (
         <>
-            <FiBarChart2
-                size={30}
-                className="absolute left-10 top-60 hidden text-teal-500 sm:inline-block md:left-24"
-            />
-            {isDarkMode ? (
-                <CiDark
-                    size={30}
-                    onClick={toggleDarkMode}
-                    className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
-                />
-            ) : (
-                <MdOutlineLightMode
-                    size={30}
-                    onClick={toggleDarkMode}
-                    className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block"
-                />
-            )}
+            <div className="absolute left-10 top-60 hidden text-teal-500 sm:inline-block md:left-24">
+                <FiBarChart2 size={30} />
+            </div>
 
-            <FiPieChart
-                size={30}
-                className="animate-move absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48"
-            />
-            <FiStar
-                size={30}
-                className="absolute right-10 top-36 hidden text-yellow-500 sm:inline-block md:right-24"
-            />
-            <FiTriangle
-                size={30}
-                className="animate-move-rotate absolute right-1/4 top-1/3 hidden text-green-500 sm:inline-block"
-            />
-            <FiCloud
-                size={30}
-                className="absolute bottom-48 left-2/3 hidden animate-pulse text-blue-500 sm:inline-block"
-            />
-            <FiCircle
-                size={30}
-                className="absolute bottom-20 left-16 hidden animate-bounce text-amber-500 sm:inline-block md:left-40"
-            />
-            <FiHexagon
-                size={30}
-                className="absolute left-1/4 top-96 hidden animate-spin text-purple-500 sm:inline-block"
-            />
+            <button
+                type="button"
+                onClick={toggleDarkMode}
+                className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block">
+                {isDarkMode ? <CiDark size={30} /> : <MdOutlineLightMode size={30} />}
+            </button>
+
+            <div className="animate-move absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48">
+                <FiPieChart size={30} />
+            </div>
+
+            <div className="absolute right-10 top-36 hidden text-yellow-500 sm:inline-block md:right-24">
+                <FiStar size={30} />
+            </div>
+
+            <div className="animate-move-rotate absolute right-1/4 top-1/3 hidden text-green-500 sm:inline-block">
+                <FiTriangle size={30} />
+            </div>
+
+            <div className="absolute bottom-48 left-2/3 hidden animate-pulse text-blue-500 sm:inline-block">
+                <FiCloud size={30} />
+            </div>
+
+            <div className="absolute bottom-20 left-16 hidden animate-bounce text-amber-500 sm:inline-block md:left-40">
+                <FiCircle size={30} />
+            </div>
+
+            <div className="absolute left-1/4 top-96 hidden animate-spin text-purple-500 sm:inline-block">
+                <FiHexagon size={30} />
+            </div>
+
             <ul className="hero-circles">
                 <li className="bg-primary-300"></li>
                 <li className="bg-purple-300"></li>

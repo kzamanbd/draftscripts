@@ -87,7 +87,7 @@ export default function Features() {
                             <div className="mb-4 flex items-center gap-4">
                                 <div
                                     className={`flex h-10 w-10 items-center justify-center rounded-full ${card.iconColor} ${card.bgColor} lg:h-12 lg:w-12 ${card.darkBgColor}`}>
-                                    <card.icon className="h-6 w-6" />
+                                    <card.icon size="24" />
                                 </div>
                                 <h3 className="text-xl font-bold dark:text-white">{card.title}</h3>
                             </div>
