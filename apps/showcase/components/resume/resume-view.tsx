@@ -35,11 +35,11 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/codeforces.png"
-                                    width="0"
-                                    height="0"
+                                    width={16}
+                                    height={16}
                                     alt="codeforces kzamanbd"
                                 />
-                                <span>@kzamanbd</span>
+                                <span>codeforces/kzamanbd</span>
                             </a>
                         </li>
 
@@ -51,11 +51,11 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/leetcode.svg"
-                                    width="0"
-                                    height="0"
+                                    width={16}
+                                    height={16}
                                     alt="leetcode kzamanbd"
                                 />
-                                <span>@kzamanbd</span>
+                                <span>leetcode/kzamanbd</span>
                             </a>
                         </li>
 
@@ -71,7 +71,7 @@ export default function Resume() {
                                     height={16}
                                     alt="github"
                                 />
-                                <span>@kzamanbd</span>
+                                <span>github/kzamanbd</span>
                             </a>
                         </li>
 
@@ -83,11 +83,11 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/linkedin.png"
-                                    width={20}
-                                    height={20}
+                                    width={16}
+                                    height={16}
                                     alt="github"
                                 />
-                                <span>@kzamanbd</span>
+                                <span>linkedin/kzamanbd</span>
                             </a>
                         </li>
 
@@ -96,11 +96,11 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/phone.png"
-                                    width={20}
-                                    height={20}
+                                    width={16}
+                                    height={16}
                                     alt="phone"
                                 />
-                                <span className="text-sm">+880 1716 724 245</span>
+                                <span className="text-sm">+880 1716-724245</span>
                             </a>
                         </li>
 
@@ -112,8 +112,8 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/email.png"
-                                    width={20}
-                                    height={20}
+                                    width={16}
+                                    height={16}
                                     alt="email"
                                 />
                                 <span>kzamanbn@gmail.com</span>

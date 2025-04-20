@@ -121,7 +121,7 @@
         @apply relative w-full rounded-full bg-white px-2 py-1.5 transition-all duration-75 ease-in;
     }
     .contact-icon {
-        @apply mr-3 h-5 w-5 rounded;
+        @apply mr-3 h-4 w-4 rounded;
     }
     .profile-photo {
         @apply to-primary-400 rounded-full bg-gradient-to-r from-emerald-400 object-cover;
