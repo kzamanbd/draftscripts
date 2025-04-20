@@ -5,8 +5,8 @@ import { useState } from 'react';
 
 const LoginForm = ({ login }: any) => {
     const [formData, setFormData] = useState({
-        username: process.env.NODE_ENV === 'development' ? 'kzamanbn@gmail.com' : '',
-        password: process.env.NODE_ENV === 'development' ? 'password' : '',
+        username: 'kzamanbn@gmail.com',
+        password: 'password',
         remember: false
     });
     const [error, setError] = useState('');

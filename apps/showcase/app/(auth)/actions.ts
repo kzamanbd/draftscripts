@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation';
 
 export const login = async (formData: any) => {
     const userData = {
-        id: 1,
+        id: 1000,
         email: formData.username,
         name: 'Kamruzzaman',
         username: formData.username,
@@ -18,7 +18,7 @@ export const login = async (formData: any) => {
     redirect('/dashboard');
 };
 
-export async function signOut() {
+export async function logout() {
     const user = (await getUser()) as any;
     if (!user) {
         return redirect('/login');
@@ -26,3 +26,4 @@ export async function signOut() {
     // Clear the session cookie
     (await cookies()).delete('session');
 }
+

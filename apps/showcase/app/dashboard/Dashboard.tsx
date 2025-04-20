@@ -1,12 +1,12 @@
 'use client';
 
-import { signOut } from '@/app/(auth)/actions';
+import { logout } from '@/app/(auth)/actions';
 import { useRouter } from 'next/navigation';
 
 const DashboardView = () => {
     const router = useRouter();
     async function handleSignOut() {
-        await signOut();
+        await logout();
         router.refresh();
         router.push('/');
     }
