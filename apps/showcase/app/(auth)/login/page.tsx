@@ -3,12 +3,18 @@ import { login } from '../actions';
 import LoginForm from './LoginForm';
 import ApplicationLogo from '@/components/shared/ApplicationLogo';
 import OtherLoginOption from '@/components/shared/OtherLoginOption';
+import { getSession } from '@/services/auth/session';
+import { redirect } from 'next/navigation';
 
 export const metadata = {
     title: 'Login'
 };
 
 const Login = async () => {
+    const session = await getSession();
+    if (session) {
+        redirect('/dashboard');
+    }
     return (
         <div className="flex min-h-screen items-center justify-center p-6">
             <div className="login-card">

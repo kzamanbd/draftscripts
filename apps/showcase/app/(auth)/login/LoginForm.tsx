@@ -1,7 +1,6 @@
 'use client';
 
 import LoadingSpinner from '@/components/shared/LoadingSpinner';
-import { redirect } from 'next/navigation';
 import { useState } from 'react';
 
 const LoginForm = ({ login }: any) => {
@@ -25,12 +24,9 @@ const LoginForm = ({ login }: any) => {
         e.preventDefault();
         try {
             setIsLoading(true);
-            const data = await login(formData);
-            redirect('/dashboard');
-            console.log('Login successful:', data);
+            await login(formData);
         } catch (error: any) {
             setError(error.message);
-            console.error('Login error:', error);
         } finally {
             setIsLoading(false);
         }
