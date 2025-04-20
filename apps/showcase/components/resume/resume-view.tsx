@@ -169,23 +169,22 @@ export default function Resume() {
                         <h5 className="subtitle-text">Key Skills</h5>
                     </div>
 
-                    <section className="grid grid-cols-3 gap-2 md:grid-cols-2 print:grid-cols-2">
-                        <button className="key-button group from-pink-500 to-orange-400 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400">
-                            <span className="key-skill bg-pink-50 text-pink-500">PHP/Laravel</span>
-                        </button>
-                        <button className="key-button group from-yellow-500 to-orange-400 focus:ring-yellow-200 group-hover:from-yellow-500 group-hover:to-orange-400">
-                            <span className="key-skill bg-yellow-50 text-yellow-500">
-                                JavaScript
-                            </span>
-                        </button>
-                        <button className="key-button group from-teal-300 to-lime-300 focus:ring-lime-200 group-hover:from-teal-300 group-hover:to-lime-300">
-                            <span className="key-skill bg-teal-50 text-teal-500 hover:text-black">
-                                VueJS
-                            </span>
-                        </button>
-                        <button className="key-button group from-cyan-500 to-blue-500 focus:ring-cyan-200 group-hover:from-cyan-500 group-hover:to-blue-500">
-                            <span className="key-skill bg-cyan-50 text-cyan-500">React</span>
-                        </button>
+                    <section className="flex flex-wrap gap-2">
+                        <span className="rounded-sm border border-pink-400 bg-pink-100 px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:bg-gray-700 dark:text-pink-400">
+                            PHP/Laravel
+                        </span>
+                        <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-gray-700 dark:text-yellow-300">
+                            JavaScript
+                        </span>
+                        <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-gray-700 dark:text-blue-400">
+                            React
+                        </span>
+                        <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400">
+                            Vue
+                        </span>
+                        <span className="me-2 rounded-sm border border-gray-500 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-400">
+                            AWS
+                        </span>
                     </section>
                     {/* Training */}
                     <div className="subtitle left mt-3">
@@ -224,6 +223,76 @@ export default function Resume() {
                     <h5 className="subtitle">Work Experience</h5>
 
                     <div className="border-primary-500 relative mb-5 space-y-4 border-l pl-4">
+                        <TimelineIcon>
+                            <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
+                                <span className="leading-0">Software Engineer</span>
+                                <div className="ml-1 flex gap-1 text-sm font-medium">
+                                    <span>at</span>
+                                    <div className="items-center gap-1 md:flex print:flex">
+                                        <a
+                                            href="https://wedevs.com"
+                                            target="_blank"
+                                            className="underline">
+                                            weDevs
+                                        </a>
+                                    </div>
+                                </div>
+                            </h3>
+                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
+                                <time className="block text-sm font-normal">
+                                    NOV 2024 - Present
+                                </time>
+                                <address className="flex items-center text-xs">
+                                    <MdLocationPin size={12} />
+                                    <span>House:1005, Avenue:11, Road:09, Mirpur DOHS 1216</span>
+                                </address>
+                            </div>
+                            <ul className="bullet-list ml-0">
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Developed and enhanced Dokan and Dokan Pro multi-vendor
+                                        marketplace plugins for WordPress.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Built advanced features like vendor management,
+                                        subscriptions, and booking integrations in Dokan Pro.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Enhanced wePOS to integrate physical retail systems with
+                                        WooCommerce stores.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Delivered scalable solutions using PHP, JavaScript, and
+                                        React.js.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Designed intuitive interfaces in collaboration with UX/UI
+                                        teams to improve user experience.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Produced developer documentation with technical writers,
+                                        streamlining onboarding and support.
+                                    </p>
+                                </li>
+                            </ul>
+                        </TimelineIcon>
+
                         <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <span className="leading-0">Software Engineer</span>
@@ -287,12 +356,13 @@ export default function Resume() {
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Developing technical handbooks to represent the design and
-                                        code of new applications.
+                                        Produced developer documentation with technical writers,
+                                        streamlining onboarding and support.
                                     </p>
                                 </li>
                             </ul>
                         </TimelineIcon>
+
                         <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
                                 <span className="leading-0">Junior Software Engineer</span>

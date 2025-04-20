@@ -71,35 +71,6 @@
     }
 }
 @layer components {
-    .btn {
-        @apply flex cursor-pointer items-center justify-center gap-0.5 rounded-md border border-gray-200 px-2.5 py-1.5 transition-colors duration-300 ease-in-out;
-        @apply text-sm font-medium dark:border-gray-700;
-    }
-    .btn-primary {
-        @apply bg-primary shadow-primary-100 hover:bg-primary-700 text-white;
-        @apply from-primary-400 to-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700 bg-gradient-to-br;
-    }
-    .card {
-        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 dark:bg-gray-700/50 print:border-0;
-    }
-    .card-header {
-        @apply border-b border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
-    }
-    .card-body {
-        @apply p-5;
-    }
-    .variant--bordered .card {
-        @apply border border-gray-200 dark:border-gray-700;
-    }
-    .card-footer {
-        @apply border-t border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
-    }
-    .login-card {
-        @apply relative z-[1] w-full max-w-md rounded-md before:absolute before:bg-[url('/images/login-left.png')] dark:border dark:border-gray-500;
-        @apply before:left-[-45px] before:top-[-70px] before:z-[-1] before:h-[244px] before:w-[244px];
-        @apply after:absolute after:bg-[url('/images/login-right.png')];
-        @apply after:bottom-[-50px] after:right-[-50px] after:z-[-1] after:h-[244px] after:w-[244px];
-    }
     .page {
         @apply z-[1] mx-auto h-auto w-full bg-white md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
         @apply relative break-before-auto print:mx-0 print:my-0 print:h-[297mm] print:w-[210mm] print:rounded-none print:shadow-none;
@@ -120,10 +91,10 @@
         @apply grid h-full grid-cols-12 gap-4;
     }
     .left-box {
-        @apply col-span-full bg-[#f8fafe] px-6 pb-10 pt-12 md:col-span-4 print:col-span-4;
+        @apply col-span-full bg-[#f8fafe] px-6 py-8 md:col-span-4 print:col-span-4;
     }
     .right-box {
-        @apply col-span-full pb-10 pl-2 pr-6 pt-12 text-justify md:col-span-8 print:col-span-8;
+        @apply col-span-full py-8 pl-2 pr-6 text-justify md:col-span-8 print:col-span-8;
     }
     .subtitle {
         @apply relative mb-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-bold uppercase text-transparent print:text-gray-700;
@@ -138,7 +109,7 @@
         @apply text-primary-500 text-sm underline;
     }
     .bullet-list {
-        @apply ml-2 mt-2 space-y-1.5 text-xs;
+        @apply ml-2 mt-2 space-y-1.5 text-left text-xs;
     }
     .bullet-point {
         @apply bg-primary-500 mr-2 h-1 w-1 rounded-full;
@@ -183,6 +154,35 @@
 }
 
 @layer components {
+    .btn {
+        @apply flex cursor-pointer items-center justify-center gap-0.5 rounded-md border border-gray-200 px-2.5 py-1.5 transition-colors duration-300 ease-in-out;
+        @apply text-sm font-medium dark:border-gray-700;
+    }
+    .btn-primary {
+        @apply bg-primary shadow-primary-100 hover:bg-primary-700 text-white;
+        @apply from-primary-400 to-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700 bg-gradient-to-br;
+    }
+    .card {
+        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 dark:bg-gray-700/50 print:border-0;
+    }
+    .card-header {
+        @apply border-b border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
+    .card-body {
+        @apply p-5;
+    }
+    .variant--bordered .card {
+        @apply border border-gray-200 dark:border-gray-700;
+    }
+    .card-footer {
+        @apply border-t border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
+    .login-card {
+        @apply relative z-[1] w-full max-w-md rounded-md before:absolute before:bg-[url('/images/login-left.png')] dark:border dark:border-gray-500;
+        @apply before:left-[-45px] before:top-[-70px] before:z-[-1] before:h-[244px] before:w-[244px];
+        @apply after:absolute after:bg-[url('/images/login-right.png')];
+        @apply after:bottom-[-50px] after:right-[-50px] after:z-[-1] after:h-[244px] after:w-[244px];
+    }
     /* Alert */
     .alert {
         @apply rounded border px-5 py-3;
