@@ -101,7 +101,7 @@
         @apply after:bottom-[-50px] after:right-[-50px] after:z-[-1] after:h-[244px] after:w-[244px];
     }
     .page {
-        @apply z-[1] mx-auto h-auto w-full bg-white px-8 pb-10 pt-12 md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
+        @apply z-[1] mx-auto h-auto w-full bg-white md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
         @apply relative break-before-auto print:mx-0 print:my-0 print:h-[297mm] print:w-[210mm] print:rounded-none print:shadow-none;
     }
     .background {
@@ -117,19 +117,19 @@
         @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
     }
     .resume-box {
-        @apply grid h-full grid-cols-10 gap-4;
+        @apply grid h-full grid-cols-12 gap-4;
     }
     .left-box {
-        @apply col-span-full md:col-span-3 print:col-span-3;
+        @apply col-span-full bg-[#f8fafe] px-6 pb-10 pt-12 md:col-span-4 print:col-span-4;
     }
     .right-box {
-        @apply col-span-full text-justify md:col-span-7 print:col-span-7;
+        @apply col-span-full pb-10 pl-2 pr-6 pt-12 text-justify md:col-span-8 print:col-span-8;
     }
     .subtitle {
         @apply relative mb-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-bold uppercase text-transparent print:text-gray-700;
     }
     .timeline-icon {
-        @apply to-primary-300 absolute -left-5 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-emerald-300;
+        @apply border-primary-200 absolute -left-[6.5px] flex h-3 w-3 items-center justify-center rounded-full border;
     }
     .section-box {
         @apply bg-primary-100 flex h-10 items-center justify-center rounded-lg;
@@ -140,8 +140,8 @@
     .bullet-list {
         @apply ml-2 mt-2 space-y-1.5 text-xs;
     }
-    .bullet {
-        @apply bg-primary-500 h-1.5 w-1.5 rounded-full;
+    .bullet-point {
+        @apply bg-primary-500 mr-2 h-1.5 w-1.5 rounded-full;
     }
     .key-button {
         @apply relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4;
@@ -153,13 +153,13 @@
         @apply mr-3 h-5 w-5 rounded;
     }
     .profile-photo {
-        @apply to-primary-400 mx-auto rounded-full bg-gradient-to-r from-emerald-400 object-cover;
+        @apply to-primary-400 rounded-full bg-gradient-to-r from-emerald-400 object-cover;
     }
     .name--title {
         @apply mb-10;
     }
     .resume-box.with-photo .name--title {
-        @apply mb-6 mt-4 text-center;
+        @apply mb-6 mt-4;
     }
     .resume-box:not(.with-photo) .profile-photo {
         @apply hidden;

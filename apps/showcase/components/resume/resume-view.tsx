@@ -1,6 +1,7 @@
 import ActionButton from '@/components/resume/action-button';
 import TimelineIcon from '@/components/resume/timeline-icon';
 import Image from 'next/image';
+import { MdLocationPin } from 'react-icons/md';
 
 export default function Resume() {
     return (
@@ -24,6 +25,7 @@ export default function Resume() {
                     <div className="subtitle">
                         <h5 className="subtitle-text">Personal Details</h5>
                     </div>
+
                     <ul className="mb-3 space-y-2">
                         <li className="flex items-center">
                             <a
@@ -65,8 +67,8 @@ export default function Resume() {
                                 <Image
                                     className="contact-icon"
                                     src="/images/github.png"
-                                    width={20}
-                                    height={20}
+                                    width={16}
+                                    height={16}
                                     alt="github"
                                 />
                                 <span>@kzamanbd</span>
@@ -137,29 +139,36 @@ export default function Resume() {
                     <div className="subtitle">
                         <h5 className="subtitle-text">Education</h5>
                     </div>
-                    <section className="mb-3 text-sm">
-                        <div className="mb-2">
+                    <div className="border-primary-500 relative mb-3 space-y-2 border-l pl-3 text-sm">
+                        <TimelineIcon>
                             <p>
                                 <span className="font-bold">B.SC. In CSE </span>
                                 <span>(Ongoing)</span>
                             </p>
                             <p className="italic">Southeast University.</p>
-                            <p> – 251/A Tejgaon I/A, Dhaka</p>
-                        </div>
+                            <div className="flex items-center">
+                                <MdLocationPin size={12} />
+                                <span>251/A Tejgaon I/A, Dhaka</span>
+                            </div>
+                        </TimelineIcon>
 
-                        <div>
+                        <TimelineIcon>
                             <p>
                                 <span className="font-bold">Diploma In CSE </span>
-                                <span>(3.31) - 2019</span>
+                                <span> - 2019</span>
                             </p>
                             <p className="italic">Rumdo Institute of Modern Technology.</p>
-                            <p> – Mymensingh City.</p>
-                        </div>
-                    </section>
+                            <div className="flex items-center">
+                                <MdLocationPin size={12} />
+                                <span>Mymensingh Bypass.</span>
+                            </div>
+                        </TimelineIcon>
+                    </div>
                     {/* Key Skills */}
                     <div className="subtitle">
                         <h5 className="subtitle-text">Key Skills</h5>
                     </div>
+
                     <section className="grid grid-cols-3 gap-2 md:grid-cols-2 print:grid-cols-2">
                         <button className="key-button group from-pink-500 to-orange-400 focus:ring-pink-200 group-hover:from-pink-500 group-hover:to-orange-400">
                             <span className="key-skill bg-pink-50 text-pink-500">PHP/Laravel</span>
@@ -182,9 +191,11 @@ export default function Resume() {
                     <div className="subtitle left mt-3">
                         <h5 className="subtitle-text">Training</h5>
                     </div>
-                    <section className="space-y-2 text-sm">
-                        <div>
-                            <p className="resume-link font-bold">PHP/Laravel (2019)</p>
+                    <div className="text-sm">
+                        <div className="mb-2">
+                            <a href="#" target="_blank" className="resume-link font-bold">
+                                PHP/Laravel (2019)
+                            </a>
                             <p className="italic">Creative It Institute, Dhaka.</p>
                         </div>
                         <div>
@@ -196,7 +207,7 @@ export default function Resume() {
                             </a>
                             <p className="italic">Learn with Sumit.</p>
                         </div>
-                    </section>
+                    </div>
                 </div>
                 <div className="right-box">
                     <h5 className="subtitle">Summary</h5>
@@ -211,16 +222,15 @@ export default function Resume() {
                     </p>
 
                     {/* Experience section */}
-                    <h5 className="subtitle mb-5">Professional Experience</h5>
+                    <h5 className="subtitle">Work Experience</h5>
 
-                    <ol className="border-primary-500 relative border-l">
-                        <li className="mb-6 ml-6">
-                            <TimelineIcon className="-top-1" />
+                    <div className="border-primary-500 relative mb-5 space-y-4 border-l pl-4">
+                        <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
-                                <div className="mr-2">Software Engineer</div>
-                                <div className="text-primary-800 flex space-x-1 text-sm font-medium">
+                                <span className="leading-0">Software Engineer</span>
+                                <div className="text-primary-800 ml-2 flex gap-1 text-sm font-medium">
                                     <span>at</span>
-                                    <div className="items-center space-x-1 md:flex print:flex">
+                                    <div className="items-center gap-1 md:flex print:flex">
                                         <a
                                             href="https://mononsoft.org"
                                             target="_blank"
@@ -236,124 +246,111 @@ export default function Resume() {
                                     </div>
                                 </div>
                             </h3>
-                            <div className="mb-3 items-center justify-between space-y-1 md:flex md:space-y-0 print:flex print:space-y-0">
-                                <time className="block text-sm font-normal leading-none text-gray-700">
-                                    Jun 2021 - Present
+                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
+                                <time className="block text-sm font-normal">
+                                    JUL 2021 - OCT-2024
                                 </time>
-                                <address className="text-xs">
-                                    52 New Eskaton Road, Dhaka-1000.
+                                <address className="flex items-center text-xs">
+                                    <MdLocationPin size={12} />
+                                    <span>50/B New Eskaton Road, Dhaka 1000</span>
                                 </address>
                             </div>
                             <ul className="bullet-list">
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Developing an ERP system based on Laravel, Vue.js and
                                         React.js.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>Developing software solutions to meet customer needs.</p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Creating and implementing the source code of new
                                         applications.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>Testing source code and debugging code.</p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Evaluating existing applications and performing updates and
                                         modifications.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Developing technical handbooks to represent the design and
                                         code of new applications.
                                     </p>
                                 </li>
                             </ul>
-                        </li>
-                        <li className="mb-6 ml-6">
-                            <TimelineIcon />
+                        </TimelineIcon>
+                        <TimelineIcon>
                             <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
-                                <div>Junior Software Engineer</div>
-                                <a
-                                    href="https://maxsop.com/"
-                                    className="text-primary-800 ml-2 text-sm font-medium"
-                                    target="_blank">
-                                    at <span className="underline">MaxSOP</span>
-                                </a>
+                                <span className="leading-0">Junior Software Engineer</span>
+                                <div className="text-primary-800 ml-2 flex gap-1 text-sm font-medium">
+                                    <span>at</span>
+                                    <div className="items-center md:flex print:flex">
+                                        <a
+                                            href="https://maxsop.com/"
+                                            className="text-primary-800 ml-2 text-sm font-medium"
+                                            target="_blank">
+                                            at <span className="underline">MaxSOP</span>
+                                        </a>
+                                    </div>
+                                </div>
                             </h3>
-                            <div className="mb-3 items-center justify-between space-y-1 md:flex md:space-y-0 print:flex print:space-y-0">
-                                <time className="block text-sm font-normal leading-none text-gray-700">
-                                    May 2020 – Jun 2021
+
+                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
+                                <time className="block text-sm font-normal">
+                                    MAY 2020 – JUN 2021
                                 </time>
-                                <address className="text-xs">
-                                    27/2 Ram Babu Road, Mymensingh-2200
+                                <address className="flex items-center text-xs">
+                                    <MdLocationPin size={12} />
+                                    <span>27/2 Ram Babu Road, Mymensingh-2200.</span>
                                 </address>
                             </div>
                             <ul className="bullet-list">
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Developing web applications based on PHP frameworks -
                                         Laravel, Vue JS.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Build efficient, testable & reusable codes. Modify existing
                                         code as needed.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Executed and monitored standards for user interfaces page
                                         design and development.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
-                                    <div className="mr-4">
-                                        <div className="bullet"></div>
-                                    </div>
+                                    <div className="bullet-point"></div>
                                     <p>
                                         Perform other operational tasks based on{' '}
                                         {`"as and when required"`}.
                                     </p>
                                 </li>
                             </ul>
-                        </li>
-                    </ol>
+                        </TimelineIcon>
+                    </div>
 
                     {/* Additional Skills */}
                     <h5 className="subtitle">Additional Skills</h5>
