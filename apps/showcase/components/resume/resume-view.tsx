@@ -170,19 +170,19 @@ export default function Resume() {
                     </div>
 
                     <section className="flex flex-wrap gap-2">
-                        <span className="rounded-sm border border-pink-400 bg-pink-100 px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:bg-gray-700 dark:text-pink-400">
+                        <span className="rounded-sm border border-pink-400 bg-pink-100 px-2.5 py-0.5 text-xs font-medium text-pink-800">
                             PHP/Laravel
                         </span>
-                        <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-gray-700 dark:text-yellow-300">
+                        <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
                             JavaScript
                         </span>
-                        <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-gray-700 dark:text-blue-400">
+                        <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
                             React
                         </span>
-                        <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-gray-700 dark:text-green-400">
+                        <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
                             Vue
                         </span>
-                        <span className="me-2 rounded-sm border border-gray-500 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800 dark:bg-gray-700 dark:text-gray-400">
+                        <span className="me-2 rounded-sm border border-gray-500 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
                             AWS
                         </span>
                     </section>
