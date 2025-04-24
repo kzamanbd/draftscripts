@@ -196,7 +196,7 @@ export default function Home() {
                     </div>
                     <div className="right-box">
                         {/* Social */}
-                        <div className="mb-4 flex justify-end gap-4">
+                        <div className="mb-4 flex flex-wrap gap-4 md:justify-end">
                             {Object.entries(social).map(([key, value]) => (
                                 <a
                                     key={key}

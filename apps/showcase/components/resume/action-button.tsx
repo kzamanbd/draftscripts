@@ -23,7 +23,7 @@ export default function DocExport() {
     };
 
     return (
-        <div className="action-button">
+        <div className="absolute bottom-3 left-1/2 cursor-pointer text-sm print:hidden">
             <div className="dropdown">
                 <button
                     onClick={() => setDropdown(!dropdown)}

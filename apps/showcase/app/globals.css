@@ -139,9 +139,6 @@
         @apply hidden;
     }
     /* extra buttons */
-    .action-button {
-        @apply absolute left-1/2 top-3 cursor-pointer text-sm print:hidden;
-    }
     .action-btn {
         @apply flex h-8 w-8 items-center justify-center border border-r-0;
     }
