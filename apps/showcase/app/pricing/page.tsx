@@ -366,7 +366,7 @@ const Pricing = () => {
 
                                             <div className="pt-3 md:pt-0">
                                                 <a
-                                                    className="focus:outline-hidden bg-primary-900 hover:bg-primary-700 focus:bg-primary-700 inline-flex items-center gap-x-2 rounded-lg border border-transparent px-3 py-2.5 text-sm font-medium text-white disabled:pointer-events-none disabled:opacity-50"
+                                                    className="focus:outline-hidden inline-flex items-center gap-x-2 rounded-lg border border-transparent bg-violet-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-violet-700 focus:bg-violet-700 disabled:pointer-events-none disabled:opacity-50"
                                                     href="#">
                                                     Request demo
                                                 </a>
@@ -391,7 +391,7 @@ const Pricing = () => {
                         <div className="mx-auto max-w-[85rem] px-4 pt-10 sm:px-6 lg:px-8 lg:pt-14">
                             {/* <!-- Title --> */}
                             <div className="mx-auto mb-10 max-w-2xl text-center">
-                                <h2 className="bg-linear-to-r from-primary-600 to-fuchsia-700 bg-clip-text text-3xl font-bold leading-tight text-transparent md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
+                                <h2 className="bg-linear-to-r from-violet-600 to-fuchsia-700 bg-clip-text text-3xl font-bold leading-tight text-transparent md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight">
                                     Simple, transparent pricing
                                 </h2>
                                 <p className="mt-2 text-gray-800 lg:text-lg dark:text-neutral-200">
@@ -443,7 +443,7 @@ const Pricing = () => {
                                     <ul className="mt-7 space-y-2.5 text-sm">
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -462,7 +462,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -481,7 +481,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -500,16 +500,16 @@ const Pricing = () => {
                                     </ul>
 
                                     <a
-                                        className="focus:outline-hidden border-primary-600 text-primary-600 hover:border-primary-500 hover:text-primary-500 focus:border-primary-500 focus:text-primary-500 dark:border-primary-500 dark:text-primary-500 dark:hover:border-primary-400 dark:hover:text-primary-400 dark:focus:border-primary-400 dark:focus:text-primary-400 mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border px-4 py-3 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+                                        className="focus:outline-hidden mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-violet-600 px-4 py-3 text-sm font-medium text-violet-600 hover:border-violet-500 hover:text-violet-500 focus:border-violet-500 focus:text-violet-500 disabled:pointer-events-none disabled:opacity-50 dark:border-violet-500 dark:text-violet-500 dark:hover:border-violet-400 dark:hover:text-violet-400 dark:focus:border-violet-400 dark:focus:text-violet-400"
                                         href="#">
                                         Get started
                                     </a>
                                 </div>
 
                                 {/* <!-- Card --> */}
-                                <div className="border-primary-900 dark:border-primary-700 flex flex-col rounded-2xl border-2 bg-white p-4 text-center shadow-xl md:p-8 dark:bg-neutral-900">
+                                <div className="flex flex-col rounded-2xl border-2 border-violet-900 bg-white p-4 text-center shadow-xl md:p-8 dark:border-violet-700 dark:bg-neutral-900">
                                     <p className="mb-3">
-                                        <span className="bg-primary-100 text-primary-800 dark:bg-primary-900 inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold uppercase dark:text-white">
+                                        <span className="inline-flex items-center gap-1.5 rounded-lg bg-violet-100 px-3 py-1.5 text-xs font-semibold uppercase text-violet-800 dark:bg-violet-900 dark:text-white">
                                             Most popular
                                         </span>
                                     </p>
@@ -526,7 +526,7 @@ const Pricing = () => {
                                     <ul className="mt-7 space-y-2.5 text-sm">
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -545,7 +545,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -564,7 +564,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -583,7 +583,7 @@ const Pricing = () => {
                                     </ul>
 
                                     <a
-                                        className="focus:outline-hidden bg-primary-600 hover:bg-primary-700 focus:bg-primary-700 mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent px-4 py-3 text-sm font-medium text-white disabled:pointer-events-none disabled:opacity-50"
+                                        className="focus:outline-hidden mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-violet-600 px-4 py-3 text-sm font-medium text-white hover:bg-violet-700 focus:bg-violet-700 disabled:pointer-events-none disabled:opacity-50"
                                         href="https://github.com/htmlstreamofficial/preline/tree/main/examples/html">
                                         Get started
                                     </a>
@@ -605,7 +605,7 @@ const Pricing = () => {
                                     <ul className="mt-7 space-y-2.5 text-sm">
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -624,7 +624,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -643,7 +643,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -662,7 +662,7 @@ const Pricing = () => {
                                     </ul>
 
                                     <a
-                                        className="focus:outline-hidden border-primary-600 text-primary-600 hover:border-primary-500 hover:text-primary-500 focus:border-primary-500 focus:text-primary-500 dark:border-primary-500 dark:text-primary-500 dark:hover:border-primary-400 dark:hover:text-primary-400 dark:focus:border-primary-400 dark:focus:text-primary-400 mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border px-4 py-3 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+                                        className="focus:outline-hidden mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-violet-600 px-4 py-3 text-sm font-medium text-violet-600 hover:border-violet-500 hover:text-violet-500 focus:border-violet-500 focus:text-violet-500 disabled:pointer-events-none disabled:opacity-50 dark:border-violet-500 dark:text-violet-500 dark:hover:border-violet-400 dark:hover:text-violet-400 dark:focus:border-violet-400 dark:focus:text-violet-400"
                                         href="#">
                                         Get started
                                     </a>
@@ -684,7 +684,7 @@ const Pricing = () => {
                                     <ul className="mt-7 space-y-2.5 text-sm">
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -703,7 +703,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -722,7 +722,7 @@ const Pricing = () => {
 
                                         <li className="flex gap-x-2">
                                             <svg
-                                                className="text-primary-900 mt-0.5 size-4 shrink-0"
+                                                className="mt-0.5 size-4 shrink-0 text-violet-900"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 width="24"
                                                 height="24"
@@ -741,7 +741,7 @@ const Pricing = () => {
                                     </ul>
 
                                     <a
-                                        className="focus:outline-hidden border-primary-600 text-primary-600 hover:border-primary-500 hover:text-primary-500 focus:border-primary-500 focus:text-primary-500 dark:border-primary-500 dark:text-primary-500 dark:hover:border-primary-400 dark:hover:text-primary-400 dark:focus:border-primary-400 dark:focus:text-primary-400 mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border px-4 py-3 text-sm font-medium disabled:pointer-events-none disabled:opacity-50"
+                                        className="focus:outline-hidden mt-5 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-violet-600 px-4 py-3 text-sm font-medium text-violet-600 hover:border-violet-500 hover:text-violet-500 focus:border-violet-500 focus:text-violet-500 disabled:pointer-events-none disabled:opacity-50 dark:border-violet-500 dark:text-violet-500 dark:hover:border-violet-400 dark:hover:text-violet-400 dark:focus:border-violet-400 dark:focus:text-violet-400"
                                         href="#">
                                         Get started
                                     </a>
@@ -830,10 +830,10 @@ const Pricing = () => {
                             {/* <!-- End Clients --> */}
                         </div>
 
-                        <div className="-z-1 w-85 h-85 border-primary-200 dark:border-primary-900/60 absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed"></div>
-                        <div className="-z-1 border-primary-200 dark:border-primary-900/60 absolute start-1/2 top-1/2 h-[575px] w-[575px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed opacity-80"></div>
-                        <div className="-z-1 border-primary-200 dark:border-primary-900/60 absolute start-1/2 top-1/2 h-[840px] w-[840px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed opacity-60"></div>
-                        <div className="-z-1 border-primary-200 dark:border-primary-900/60 absolute start-1/2 top-1/2 h-[1080px] w-[1080px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed opacity-40"></div>
+                        <div className="-z-1 w-85 h-85 absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed border-violet-200 dark:border-violet-900/60"></div>
+                        <div className="-z-1 absolute start-1/2 top-1/2 h-[575px] w-[575px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed border-violet-200 opacity-80 dark:border-violet-900/60"></div>
+                        <div className="-z-1 absolute start-1/2 top-1/2 h-[840px] w-[840px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed border-violet-200 opacity-60 dark:border-violet-900/60"></div>
+                        <div className="-z-1 absolute start-1/2 top-1/2 h-[1080px] w-[1080px] -translate-x-1/2 -translate-y-1/2 transform rounded-full border border-dashed border-violet-200 opacity-40 dark:border-violet-900/60"></div>
                     </div>
                     {/* <!-- End Hero --> */}
                 </div>
@@ -1032,7 +1032,7 @@ const Pricing = () => {
                                             Free
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1053,7 +1053,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1074,7 +1074,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1095,7 +1095,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1145,7 +1145,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1166,7 +1166,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1187,7 +1187,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1276,7 +1276,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1297,7 +1297,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1347,7 +1347,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1368,7 +1368,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1389,7 +1389,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1478,7 +1478,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1499,7 +1499,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1549,7 +1549,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1570,7 +1570,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1591,7 +1591,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1683,7 +1683,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1733,7 +1733,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1754,7 +1754,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1775,7 +1775,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1846,7 +1846,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1867,7 +1867,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1917,7 +1917,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -1959,7 +1959,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2051,7 +2051,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2101,7 +2101,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2122,7 +2122,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2143,7 +2143,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2232,7 +2232,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2253,7 +2253,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2303,7 +2303,7 @@ const Pricing = () => {
                                             Startup
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2324,7 +2324,7 @@ const Pricing = () => {
                                             Team
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2345,7 +2345,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2437,7 +2437,7 @@ const Pricing = () => {
                                             Enterprise
                                         </span>
                                         <svg
-                                            className="text-primary-600 dark:text-primary-500 size-5 shrink-0"
+                                            className="size-5 shrink-0 text-violet-600 dark:text-violet-500"
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
@@ -2470,7 +2470,7 @@ const Pricing = () => {
 
                                 <div className="col-span-1">
                                     <a
-                                        className="focus:outline-hidden bg-primary-600 hover:bg-primary-700 focus:bg-primary-700 inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent px-4 py-3 text-sm font-medium text-white disabled:pointer-events-none disabled:opacity-50"
+                                        className="focus:outline-hidden inline-flex w-full items-center justify-center gap-x-2 rounded-lg border border-transparent bg-violet-600 px-4 py-3 text-sm font-medium text-white hover:bg-violet-700 focus:bg-violet-700 disabled:pointer-events-none disabled:opacity-50"
                                         href="#">
                                         Get started
                                     </a>
@@ -2966,7 +2966,7 @@ const Pricing = () => {
                                     href="#">
                                     Careers
                                 </a>{' '}
-                                <span className="text-primary-600 dark:text-primary-500 inline">
+                                <span className="inline text-violet-600 dark:text-violet-500">
                                     — We{"'"}re hiring
                                 </span>
                             </p>
@@ -3064,7 +3064,7 @@ const Pricing = () => {
                                     href="#">
                                     GitHub
                                 </a>{' '}
-                                <span className="text-primary-600 dark:text-primary-500 inline">
+                                <span className="inline text-violet-600 dark:text-violet-500">
                                     — New
                                 </span>
                             </p>
