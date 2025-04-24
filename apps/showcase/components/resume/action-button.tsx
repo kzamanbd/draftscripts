@@ -30,7 +30,7 @@ export default function DocExport() {
                     className="text-primary-500 bg-primary-100 inline-flex items-center rounded-lg p-2 text-center text-sm font-medium focus:outline-none focus:ring-0"
                     type="button">
                     <svg
-                        className="h-2.5 w-2.5"
+                        className={`h-2.5 w-2.5 transition-all duration-300 ${dropdown ? 'rotate-180' : ''}`}
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

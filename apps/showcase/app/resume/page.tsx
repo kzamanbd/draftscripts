@@ -4,9 +4,16 @@ import TimelineIcon from '@/components/resume/timeline-icon';
 import Image from 'next/image';
 import { MdLocationPin } from 'react-icons/md';
 
+import { profileImage, user } from '@/app/metadata';
+const social = {
+    GitHub: user.github,
+    Linkedin: user.linkedin,
+    Codeforces: user.codeforces,
+    LeetCode: user.leetcode
+};
+
 export const metadata = {
-    title: 'Resume | Kamruzzaman',
-    description: 'DraftScripts features for business teams like yours.'
+    title: 'Resume | Kamruzzaman'
 };
 
 const YearsOfExperience = ({
@@ -65,127 +72,49 @@ export default function Home() {
                 <div className="resume-box with-photo">
                     <div className="left-box">
                         <Image
-                            src="/images/profile.png"
+                            src={profileImage}
                             className="profile-photo"
                             width={150}
                             height={150}
-                            alt="profile"
+                            alt="kamruzzaman, kamruzzaman profile image"
                         />
                         <div className="name--title">
                             <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
                             <h5 className="subtitle capitalize">Software Engineer</h5>
                         </div>
                         {/* contact info */}
-                        <div className="subtitle">
-                            <h5 className="subtitle-text">Personal Details</h5>
+                        <div className="about-me">
+                            <h5 className="subtitle">About Me</h5>
+                            <p className="mb-4 text-justify text-sm">
+                                {getTotalYearsOfExperience()} of hands-on experience in PHP,
+                                Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and
+                                optimizing web apps from architecture to deployment. Passionate
+                                about learning new tools and delivering scalable, high-quality
+                                solutions in team environments.
+                            </p>
                         </div>
 
-                        <ul className="mb-3 space-y-2">
-                            <li className="flex items-center">
-                                <a
-                                    href="https://codeforces.com/profile/kzamanbd"
-                                    target="_blank"
-                                    className="resume-link flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/codeforces.png"
-                                        width={16}
-                                        height={16}
-                                        alt="codeforces kzamanbd"
-                                    />
-                                    <span>codeforces/kzamanbd</span>
-                                </a>
-                            </li>
-
-                            <li className="flex items-center">
-                                <a
-                                    href="https://leetcode.com/kzamanbd"
-                                    target="_blank"
-                                    className="resume-link flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/leetcode.svg"
-                                        width={16}
-                                        height={16}
-                                        alt="leetcode kzamanbd"
-                                    />
-                                    <span>leetcode/kzamanbd</span>
+                        <ul className="mb-3 space-y-1 text-sm">
+                            <li>
+                                <a href="tel:8801716724245" className="flex items-center gap-1">
+                                    <span className="font-semibold">Phone:</span>
+                                    <span className="underline">+880 1716-724245</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a
-                                    href="https://github.com/kzamanbd"
+                                    href={`mailto:${user.email}`}
                                     target="_blank"
-                                    className="resume-link flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/github.png"
-                                        width={16}
-                                        height={16}
-                                        alt="github"
-                                    />
-                                    <span>github/kzamanbd</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="https://linkedin.com/in/kzamanbd"
-                                    target="_blank"
-                                    className="resume-link flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/linkedin.png"
-                                        width={16}
-                                        height={16}
-                                        alt="github"
-                                    />
-                                    <span>linkedin/kzamanbd</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="tel:8801716724245" className="flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/phone.png"
-                                        width={16}
-                                        height={16}
-                                        alt="phone"
-                                    />
-                                    <span className="text-sm">+880 1716-724245</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="mailto:kzamanbn@gmail.com"
-                                    target="_blank"
-                                    className="resume-link flex items-center">
-                                    <Image
-                                        className="contact-icon"
-                                        src="/images/email.png"
-                                        width={16}
-                                        height={16}
-                                        alt="email"
-                                    />
-                                    <span>kzamanbn@gmail.com</span>
+                                    className="flex items-center gap-1">
+                                    <span className="font-semibold">Email:</span>
+                                    <span className="underline"> {user.email}</span>
                                 </a>
                             </li>
 
                             <li className="flex items-center">
-                                <Image
-                                    className="contact-icon"
-                                    src="/images/location.png"
-                                    width={20}
-                                    height={20}
-                                    alt="location"
-                                />
-                                <p className="text-sm">
-                                    Tejgaon Industrial Area,
-                                    <br /> 29/C & 29/D, Dhaka
-                                </p>
+                                <MdLocationPin size={12} />
+                                <p>Mirpur 12, Dhaka, Bangladesh</p>
                             </li>
                         </ul>
 
@@ -266,16 +195,19 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="right-box">
-                        <h5 className="subtitle">About Me</h5>
-
-                        <p className="mb-4 text-sm">
-                            Over {getTotalYearsOfExperience()} of hands-on experience specializing
-                            in PHP, Laravel, WordPress, Vue, React and cloud(AWS) technologies.
-                            Skilled in building, updating, and optimizing web applications from
-                            architecture design to deployment. Passionate about learning new tools
-                            and delivering high-quality, scalable solutions in collaborative
-                            environments.
-                        </p>
+                        {/* Social */}
+                        <div className="mb-4 flex justify-end gap-4">
+                            {Object.entries(social).map(([key, value]) => (
+                                <a
+                                    key={key}
+                                    href={value}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
+                                    <span>{key}</span>
+                                </a>
+                            ))}
+                        </div>
 
                         {/* Experience section */}
                         <h5 className="subtitle">Work Experience</h5>
