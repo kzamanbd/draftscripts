@@ -9,6 +9,37 @@ export const metadata = {
     description: 'DraftScripts features for business teams like yours.'
 };
 
+const YearsOfExperience = ({
+    startDate,
+    endDate
+}: {
+    startDate: string;
+    endDate?: string | null;
+}) => {
+    // get years of experience
+    const getYearsOfExperience = () => {
+        const date = new Date(startDate);
+        const currentDate = new Date(endDate || Date.now());
+        const diffInMs = currentDate.getTime() - date.getTime();
+
+        // Calculate total months
+        const totalMonths = Math.floor(diffInMs / (1000 * 60 * 60 * 24 * 30));
+
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
+        const yearPart = years > 0 ? `${years} yr${years > 1 ? 's' : ''}` : '';
+        const monthPart = months > 0 ? `${months} mo${months > 1 ? 's' : ''}` : '';
+
+        if (yearPart && monthPart) return `${yearPart} ${monthPart}`;
+        if (yearPart) return yearPart;
+        if (monthPart) return monthPart;
+        return null;
+    };
+
+    return <span className="text-primary-500 text-sm font-medium">({getYearsOfExperience()})</span>;
+};
+
 export default function Home() {
     return (
         <>
@@ -233,17 +264,18 @@ export default function Home() {
 
                         <div className="border-primary-500 relative mb-5 space-y-4 border-l pl-4">
                             <TimelineIcon>
-                                <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
+                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
                                     <span className="leading-0">Software Engineer</span>
                                     <div className="ml-1 flex gap-1 text-sm font-medium">
                                         <span>at</span>
-                                        <div className="items-center gap-1 md:flex print:flex">
+                                        <div className="flex items-center gap-1">
                                             <a
                                                 href="https://wedevs.com"
-                                                target="_blank"
-                                                className="underline">
+                                                className="underline"
+                                                target="_blank">
                                                 weDevs
                                             </a>
+                                            <YearsOfExperience startDate="2024-11-01" />
                                         </div>
                                     </div>
                                 </h3>
@@ -305,23 +337,27 @@ export default function Home() {
                             </TimelineIcon>
 
                             <TimelineIcon>
-                                <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
+                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
                                     <span className="leading-0">Software Engineer</span>
                                     <div className="ml-1 flex gap-1 text-sm font-medium">
                                         <span>at</span>
-                                        <div className="items-center gap-1 md:flex print:flex">
+                                        <div className="flex items-center gap-1">
                                             <a
                                                 href="https://mononsoft.org"
-                                                target="_blank"
-                                                className="underline">
+                                                className="underline"
+                                                target="_blank">
                                                 MononSoft Ltd.
                                             </a>
                                             <a
                                                 href="https://jmigroup-bd.com"
-                                                target="_blank"
-                                                className="underline">
-                                                (A Sister Concern of JMI Group)
+                                                className="underline"
+                                                target="_blank">
+                                                (JMI Group)
                                             </a>
+                                            <YearsOfExperience
+                                                startDate="2021-07-01"
+                                                endDate="2024-10-31"
+                                            />
                                         </div>
                                     </div>
                                 </h3>
@@ -375,17 +411,21 @@ export default function Home() {
                             </TimelineIcon>
 
                             <TimelineIcon>
-                                <h3 className="mb-1 items-center font-bold text-gray-900 md:flex print:flex">
-                                    <span className="leading-0">Junior Software Engineer</span>
+                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
+                                    <span className="leading-0">Jr. Software Engineer</span>
                                     <div className="ml-1 flex gap-1 text-sm font-medium">
                                         <span>at</span>
-                                        <div className="items-center md:flex print:flex">
+                                        <div className="flex items-center gap-1">
                                             <a
                                                 href="https://maxsop.com/"
-                                                className="text-sm font-medium"
+                                                className="underline"
                                                 target="_blank">
-                                                <span className="underline">MaxSOP</span>
+                                                MaxSOP
                                             </a>
+                                            <YearsOfExperience
+                                                startDate="2020-05-01"
+                                                endDate="2021-06-30"
+                                            />
                                         </div>
                                     </div>
                                 </h3>
