@@ -41,6 +41,23 @@ const YearsOfExperience = ({
 };
 
 export default function Home() {
+    // get the total years of experience
+    const getTotalYearsOfExperience = () => {
+        const startDate = new Date('2020-05-01');
+        const currentDate = new Date();
+
+        let years = currentDate.getFullYear() - startDate.getFullYear();
+        let months = currentDate.getMonth() - startDate.getMonth();
+        const days = currentDate.getDate() - startDate.getDate();
+
+        if (months < 0 || (months === 0 && days < 0)) {
+            years--; // subtract a year if current month/day is before start month/day
+            months += 12;
+        }
+
+        const plusSign = months > 0 || days > 0 ? '+' : '';
+        return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
+    };
     return (
         <>
             <div className="page-container">
@@ -251,18 +268,19 @@ export default function Home() {
                     <div className="right-box">
                         <h5 className="subtitle">About Me</h5>
 
-                        <p className="mb-5 text-sm">
-                            Over 4+ years of experience specializing in PHP, Laravel, Vue.js, React,
-                            AWS, and cloud technologies. Skilled in building, updating, and
-                            optimizing web applications from architecture design to deployment.
-                            Passionate about learning new tools and delivering high-quality,
-                            scalable solutions in collaborative environments.
+                        <p className="mb-4 text-sm">
+                            Over {getTotalYearsOfExperience()} of hands-on experience specializing
+                            in PHP, Laravel, WordPress, Vue, React and cloud(AWS) technologies.
+                            Skilled in building, updating, and optimizing web applications from
+                            architecture design to deployment. Passionate about learning new tools
+                            and delivering high-quality, scalable solutions in collaborative
+                            environments.
                         </p>
 
                         {/* Experience section */}
                         <h5 className="subtitle">Work Experience</h5>
 
-                        <div className="border-primary-500 relative mb-5 space-y-4 border-l pl-4">
+                        <div className="border-primary-500 relative mb-4 space-y-3 border-l pl-4">
                             <TimelineIcon>
                                 <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
                                     <span className="leading-0">Software Engineer</span>

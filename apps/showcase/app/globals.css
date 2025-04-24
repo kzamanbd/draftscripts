@@ -91,13 +91,13 @@
         @apply grid h-full grid-cols-12 gap-4;
     }
     .left-box {
-        @apply col-span-full bg-[#f8fafe] px-6 py-8 md:col-span-4 print:col-span-4;
+        @apply col-span-full bg-[#f8fafe] py-8 pl-8 pr-6 md:col-span-4 print:col-span-4;
     }
     .right-box {
-        @apply col-span-full py-8 pl-6 pr-6 text-justify md:col-span-8 md:pl-2 print:col-span-8;
+        @apply col-span-full py-8 pl-6 pr-8 text-justify md:col-span-8 md:pl-2 print:col-span-8;
     }
     .subtitle {
-        @apply relative mb-2 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-bold uppercase text-transparent print:text-gray-700;
+        @apply relative mb-1.5 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text font-bold uppercase text-transparent print:text-gray-700;
     }
     .timeline-icon {
         @apply border-primary-200 absolute -left-[6.5px] flex h-3 w-3 items-center justify-center rounded-full border;
