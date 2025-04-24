@@ -28,7 +28,7 @@ export default function HeroSection() {
                             <BsGithub size={30} />
                         </Link>
                         <Link
-                            href={user.linkedIn}
+                            href={user.linkedin}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
                             <BsLinkedin size={30} />

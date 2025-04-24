@@ -5,8 +5,7 @@ import NavbarSection from '@/components/portfolio/nav-menu';
 import ProjectsSection from '@/components/portfolio/projects';
 
 export const metadata = {
-    title: 'Portfolio | Kamruzzaman',
-    description: 'DraftScripts features for business teams like yours.'
+    title: 'Portfolio | Kamruzzaman'
 };
 
 export default function Portfolio() {

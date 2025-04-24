@@ -1,10 +1,7 @@
 import Link from 'next/link';
-import React from 'react';
 
 export const metadata = {
-    name: 'PaymentSuccess',
-    title: 'Payment Success',
-    description: 'Payment success page for Showcase'
+    title: 'Payment Success'
 };
 
 function PaymentSuccess() {

@@ -8,7 +8,7 @@ export const user = {
     name: authorName,
     designation: 'Software Engineer',
     github: 'https://github.com/kzamanbd',
-    linkedIn: 'https://www.linkedin.com/in/kzamanbd/',
+    linkedin: 'https://www.linkedin.com/in/kzamanbd/',
     codeforces: 'https://codeforces.com/profile/kzamanbd',
     facebook: 'https://www.facebook.com/kzaman.me',
     leetcode: 'https://leetcode.com/u/kzamanbd',

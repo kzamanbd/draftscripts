@@ -8,8 +8,7 @@ import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
 import { SiAfterpay } from 'react-icons/si';
 
 export const metadata = {
-    title: getTitle('Features'),
-    description: 'DraftScripts features for business teams like yours.'
+    title: getTitle('Features')
 };
 
 // Card data structure

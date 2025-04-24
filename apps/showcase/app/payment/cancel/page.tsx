@@ -1,9 +1,5 @@
-import React from 'react';
-
 export const metadata = {
-    name: 'PaymentCancel',
-    title: 'Payment Cancel',
-    description: 'Payment cancel page for Showcase'
+    title: 'Payment Cancel'
 };
 
 function PaymentCancel() {
