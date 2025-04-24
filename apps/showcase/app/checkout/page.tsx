@@ -1,6 +1,6 @@
-import { Metadata } from 'next';
-import CheckoutForm from './CheckoutForm';
 import { getTitle } from '@/utils';
+import { Metadata } from 'next';
+import CheckoutForm from './checkout-form';
 
 export const metadata: Metadata = {
     title: getTitle('Checkout')
