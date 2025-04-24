@@ -20,3 +20,12 @@ export const user = {
     email: 'kzamanbn@gmail.com',
     address: 'Dhaka, Bangladesh'
 };
+
+const metadata = {
+    authorName,
+    description,
+    profileImage,
+    user
+};
+
+export default metadata;
