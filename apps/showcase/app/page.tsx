@@ -1,11 +1,11 @@
 import HeroBackground from '@/components/hero-background';
-import Link from 'next/link';
-import { FaProjectDiagram } from 'react-icons/fa';
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
-import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
-import { CiSettings } from 'react-icons/ci';
-import { SiAfterpay } from 'react-icons/si';
 import { getTitle } from '@/utils';
+import Link from 'next/link';
+import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import { CiSettings } from 'react-icons/ci';
+import { FaBloggerB } from 'react-icons/fa';
+import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
+import { SiAfterpay } from 'react-icons/si';
 
 export const metadata = {
     title: getTitle('Features'),
@@ -55,14 +55,14 @@ const cardData = [
         link: '/checkout'
     },
     {
-        title: 'Enterprise Design',
+        title: 'Blog',
         description:
-            'Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.',
-        icon: FaProjectDiagram,
+            'Get the most out of your business with our blog. We have a blog for every business, no matter how big or small.',
+        icon: FaBloggerB,
         bgColor: 'bg-yellow-100',
         iconColor: 'text-yellow-500',
         darkBgColor: 'dark:bg-yellow-900',
-        link: '#'
+        link: '/blog'
     },
     {
         title: 'Operations',

@@ -1,8 +1,8 @@
 import { description } from '@/app/metadata';
+import NewsletterForm from '@/components/blog/news-letter-form';
+import Tag from '@/components/blog/tag-view';
 import { formatDate } from '@/utils';
 import Link from 'next/link';
-import NewsletterForm from './news-letter-form';
-import Tag from './tag-view';
 
 const MAX_DISPLAY = 5;
 

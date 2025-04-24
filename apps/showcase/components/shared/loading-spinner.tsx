@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SpinnerProps {
     isLoading: boolean;
@@ -10,7 +10,7 @@ const LoadingSpinner: React.FC<SpinnerProps> = ({ isLoading }) => {
             <div role="status">
                 <svg
                     aria-hidden="true"
-                    className="inline w-4 h-4 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-white"
+                    className="mr-2 inline h-4 w-4 animate-spin fill-white text-gray-200 dark:text-gray-600"
                     viewBox="0 0 100 101"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@ const LoadingSpinner: React.FC<SpinnerProps> = ({ isLoading }) => {
                         fill="currentFill"
                     />
                 </svg>
-                <span className="sr-only justify-end hidden">Loading...</span>
+                <span className="sr-only hidden justify-end">Loading...</span>
             </div>
         )
     );

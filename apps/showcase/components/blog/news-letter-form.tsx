@@ -22,26 +22,26 @@ const NewsletterForm = ({
             return;
         }
 
-        const res = await fetch(apiUrl, {
-            body: JSON.stringify({
-                email: inputEl.current.value
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method: 'POST'
-        });
+        try {
+            const res = await fetch(apiUrl, {
+                body: JSON.stringify({
+                    email: inputEl.current.value
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST'
+            });
 
-        const { error } = await res.json();
-        if (error) {
+            await res.json();
+            inputEl.current.value = '';
+            setError(false);
+            setSubscribed(true);
+        } catch (err) {
             setError(true);
             setMessage('Your e-mail address is invalid or you are already subscribed!');
-            return;
+            setSubscribed(false);
         }
-
-        inputEl.current.value = '';
-        setError(false);
-        setSubscribed(true);
     };
 
     return (
@@ -50,27 +50,23 @@ const NewsletterForm = ({
                 {title}
             </div>
             <form className="flex flex-col sm:flex-row" onSubmit={subscribe}>
-                <div>
-                    <label htmlFor="email-input">
-                        <span className="sr-only">Email address</span>
-                        <input
-                            autoComplete="email"
-                            className="focus:ring-primary-600 w-72 rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 dark:bg-black"
-                            id="email-input"
-                            name="email"
-                            placeholder={
-                                subscribed ? "You're subscribed !  🎉" : 'Enter your email'
-                            }
-                            ref={inputEl}
-                            required
-                            type="email"
-                            disabled={subscribed}
-                        />
-                    </label>
-                </div>
+                <label htmlFor="email-input" className="mb-0">
+                    <span className="sr-only">Email address</span>
+                    <input
+                        autoComplete="email"
+                        className="form-control w-72"
+                        id="email-input"
+                        name="email"
+                        placeholder={subscribed ? "You're subscribed !  🎉" : 'Enter your email'}
+                        ref={inputEl}
+                        required
+                        type="email"
+                        disabled={subscribed}
+                    />
+                </label>
                 <div className="mt-2 flex w-full rounded-md shadow-sm sm:ml-3 sm:mt-0">
                     <button
-                        className={`bg-primary-500 w-full rounded-md px-4 py-2 font-medium text-white sm:py-0 ${
+                        className={`btn btn-primary w-full ${
                             subscribed
                                 ? 'cursor-default'
                                 : 'hover:bg-primary-700 dark:hover:bg-primary-400'

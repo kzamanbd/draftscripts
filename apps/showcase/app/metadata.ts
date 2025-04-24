@@ -12,6 +12,8 @@ export const user = {
     codeforces: 'https://codeforces.com/profile/kzamanbd',
     facebook: 'https://www.facebook.com/kzaman.me',
     leetcode: 'https://leetcode.com/u/kzamanbd',
+    medium: 'https://medium.com/@kzamanbd',
+    youtube: 'https://www.youtube.com/@draftscripts',
     twitter: '',
     resume: '/resume',
     description: description,
@@ -21,11 +23,24 @@ export const user = {
     address: 'Dhaka, Bangladesh'
 };
 
+export const headerNavLinks = [
+    { href: '/', title: 'Home' },
+    { href: '/blog', title: 'Blog' },
+    { href: '/tags', title: 'Tags' },
+    { href: '/projects', title: 'Projects' },
+    { href: '/about', title: 'About' }
+];
+
 const metadata = {
-    authorName,
+    user,
+    author: authorName,
     description,
-    profileImage,
-    user
+    profile: profileImage,
+    title: 'DraftScripts - Features',
+    headerTitle: 'DraftScripts',
+    headerTitleShort: 'DraftScripts',
+    stickyNav: true,
+    theme: 'system'
 };
 
 export default metadata;

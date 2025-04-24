@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const TYPING_SPEED = 100;
 const DELETING_SPEED = 30;

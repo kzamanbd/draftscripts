@@ -1,5 +1,7 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import { CiDark } from 'react-icons/ci';
 import {
     FiBarChart2,
     FiCircle,
@@ -10,8 +12,6 @@ import {
     FiTriangle
 } from 'react-icons/fi';
 import { MdOutlineLightMode } from 'react-icons/md';
-import { CiDark } from 'react-icons/ci';
-import { useEffect, useState } from 'react';
 
 const HeroBackground = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
