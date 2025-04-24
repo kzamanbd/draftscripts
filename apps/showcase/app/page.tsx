@@ -77,29 +77,35 @@ const cardData = [
 
 export default function Features() {
     return (
-        <section className="relative z-[1] md:min-h-screen dark:bg-gray-900">
+        <>
             <HeroBackground />
-            <div className="fixed right-5 top-5 z-10 flex gap-4">
-                <Link href="/login" className="text-red-600">
-                    Login
-                </Link>
-            </div>
-            <div className="mx-auto flex max-w-screen-xl flex-1 items-center px-4 py-8 md:min-h-screen lg:px-6">
-                <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-                    {cardData.map((card, index) => (
-                        <Link key={index} href={card.link} className="card card-body">
-                            <div className="mb-4 flex items-center gap-4">
-                                <div
-                                    className={`flex h-10 w-10 items-center justify-center rounded-full ${card.iconColor} ${card.bgColor} lg:h-12 lg:w-12 ${card.darkBgColor}`}>
-                                    <card.icon size="24" />
-                                </div>
-                                <h3 className="text-xl font-bold dark:text-white">{card.title}</h3>
-                            </div>
-                            <p className="text-gray-500 dark:text-gray-400">{card.description}</p>
-                        </Link>
-                    ))}
+            <section className="feature-page relative z-[1] mx-auto flex max-w-7xl flex-col gap-4 p-6 md:min-h-screen lg:p-8 dark:bg-gray-900">
+                <div className="flex justify-end gap-4">
+                    <Link href="/login" className="btn hover:bg-gray-100 dark:hover:bg-gray-800">
+                        Login
+                    </Link>
                 </div>
-            </div>
-        </section>
+                <div className="flex flex-1 items-center">
+                    <div className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
+                        {cardData.map((card, index) => (
+                            <Link key={index} href={card.link} className="card card-body">
+                                <div className="mb-4 flex items-center gap-4">
+                                    <div
+                                        className={`flex h-10 w-10 items-center justify-center rounded-full ${card.iconColor} ${card.bgColor} lg:h-12 lg:w-12 ${card.darkBgColor}`}>
+                                        <card.icon size="24" />
+                                    </div>
+                                    <h3 className="text-xl font-bold dark:text-white">
+                                        {card.title}
+                                    </h3>
+                                </div>
+                                <p className="text-gray-500 dark:text-gray-400">
+                                    {card.description}
+                                </p>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
     );
 }

@@ -54,7 +54,7 @@ export default function Footer() {
                     <SocialIcon kind="github" href={user.github} />
                     <SocialIcon kind="facebook" href={user.facebook} />
                     <SocialIcon kind="youtube" href={user.youtube} />
-                    <SocialIcon kind="linkedin" href={user.linkedIn} />
+                    <SocialIcon kind="linkedin" href={user.linkedin} />
                     <SocialIcon kind="twitter" href={user.twitter} />
                     <SocialIcon kind="x" href={user.twitter} />
                     <SocialIcon kind="medium" href={user.medium} />

@@ -66,7 +66,7 @@ export default function Home() {
         return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
     };
     return (
-        <>
+        <div className="resume">
             <div className="page-container">
                 <ActionButton />
                 <div className="resume-box with-photo">
@@ -486,6 +486,6 @@ export default function Home() {
                 </div>
             </div>
             <CoverLetter />
-        </>
+        </div>
     );
 }
