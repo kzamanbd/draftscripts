@@ -71,7 +71,7 @@
     }
 }
 @layer components {
-    .page {
+    .page-container {
         @apply z-[1] mx-auto h-auto w-full bg-white md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
         @apply relative break-before-auto print:mx-0 print:my-0 print:h-[297mm] print:w-[210mm] print:rounded-none print:shadow-none;
     }
