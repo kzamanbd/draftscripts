@@ -20,5 +20,5 @@ const posts = [
 ];
 
 export default function Blog() {
-    return <Posts posts={[]} />;
+    return <Posts posts={posts} />;
 }
