@@ -212,7 +212,7 @@ export default function Home() {
                         {/* Experience section */}
                         <h5 className="subtitle">Work Experience</h5>
 
-                        <div className="border-primary-500 relative mb-4 space-y-3 border-l pl-4">
+                        <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
                             <TimelineIcon>
                                 <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
                                     <span className="leading-0">Software Engineer</span>

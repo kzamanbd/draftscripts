@@ -79,7 +79,7 @@ export default function Features() {
     return (
         <>
             <HeroBackground />
-            <section className="feature-page relative z-[1] mx-auto flex max-w-7xl flex-col gap-4 p-6 md:min-h-screen lg:p-8 dark:bg-gray-900">
+            <section className="feature-page relative z-[1] mx-auto flex max-w-7xl flex-col gap-4 p-6 md:min-h-screen lg:p-8">
                 <div className="flex justify-end gap-4">
                     <Link href="/login" className="btn hover:bg-gray-100 dark:hover:bg-gray-800">
                         Login

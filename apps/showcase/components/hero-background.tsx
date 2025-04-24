@@ -43,7 +43,7 @@ const HeroBackground = () => {
             <button
                 type="button"
                 onClick={toggleDarkMode}
-                className="animate-bell absolute right-2/3 top-28 hidden text-red-500 sm:inline-block">
+                className="animate-bell absolute right-2/3 top-28 z-50 hidden text-red-500 sm:inline-block">
                 {isDarkMode ? <CiDark size={30} /> : <MdOutlineLightMode size={30} />}
             </button>
 
