@@ -2,7 +2,7 @@ import { compare, hash } from 'bcryptjs';
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-const key = new TextEncoder().encode(process.env.AUTH_SECRET);
+const key = new TextEncoder().encode(process.env.AUTH_SECRET || 'N6MJt9J6ZjKGzkHFR');
 const SALT_ROUNDS = 10;
 
 export async function hashPassword(password: string) {
