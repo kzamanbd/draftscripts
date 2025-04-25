@@ -1,9 +1,10 @@
-import './globals.css';
+import { authorName, description } from '@/app/metadata';
+import ScriptWrapper from '@/components/script-wrapper';
+import { ThemeProviders } from '@/components/theme-providers';
 import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
-import { authorName, description, profileImage } from '@/app/metadata';
-import ScriptWrapper from '@/components/script-wrapper';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -61,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         speed={200}
                         shadow="0 0 10px #2299DD,0 0 5px #2299DD"
                     />
-                    {children}
+                    <ThemeProviders>{children}</ThemeProviders>
                 </div>
                 <ScriptWrapper />
             </body>

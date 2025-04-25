@@ -1,9 +1,9 @@
 import siteMetadata, { headerNavLinks } from '@/app/metadata';
 import Link from 'next/link';
 import ApplicationLogo from '../shared/application-logo';
+import ThemeSwitch from '../theme-switch';
 import MobileNav from './mobile-nav';
 import SearchButton from './search-button';
-import ThemeSwitch from './theme-switch';
 
 const Header = () => {
     let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10';

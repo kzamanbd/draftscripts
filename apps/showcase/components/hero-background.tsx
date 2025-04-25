@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { CiDark } from 'react-icons/ci';
 import {
     FiBarChart2,
     FiCircle,
@@ -11,41 +9,18 @@ import {
     FiStar,
     FiTriangle
 } from 'react-icons/fi';
-import { MdOutlineLightMode } from 'react-icons/md';
+import ThemeSwitch from './theme-switch';
 
 const HeroBackground = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const toggleDarkMode = () => {
-        setIsDarkMode((prev) => !prev);
-        localStorage.setItem('darkMode', !isDarkMode ? 'true' : 'false');
-    };
-
-    useEffect(() => {
-        // check local storage for dark mode preference
-        const saved = localStorage.getItem('darkMode');
-        const darkMode = saved || window.matchMedia('(prefers-color-scheme: dark)').matches;
-        setIsDarkMode(darkMode === 'true');
-        // apply dark mode class to document element
-        if (darkMode) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [isDarkMode]);
-
     return (
         <>
             <div className="absolute left-10 top-60 hidden text-teal-500 sm:inline-block md:left-24">
                 <FiBarChart2 size={30} />
             </div>
 
-            <button
-                type="button"
-                onClick={toggleDarkMode}
-                className="animate-bell absolute right-2/3 top-28 z-50 hidden text-red-500 sm:inline-block">
-                {isDarkMode ? <CiDark size={30} /> : <MdOutlineLightMode size={30} />}
-            </button>
+            <div className="animate-bell absolute right-2/3 top-28 z-50 hidden text-red-500 sm:inline-block">
+                <ThemeSwitch />
+            </div>
 
             <div className="animate-move absolute bottom-10 right-20 hidden text-fuchsia-500 sm:inline-block md:right-48">
                 <FiPieChart size={30} />

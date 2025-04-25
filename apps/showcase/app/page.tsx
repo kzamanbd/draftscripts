@@ -4,8 +4,9 @@ import Link from 'next/link';
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import { CiSettings } from 'react-icons/ci';
 import { FaBloggerB } from 'react-icons/fa';
-import { MdOutlineWorkOutline, MdPayments } from 'react-icons/md';
+import { MdPayments } from 'react-icons/md';
 import { SiAfterpay } from 'react-icons/si';
+import { TbFileCv } from 'react-icons/tb';
 
 export const metadata = {
     title: getTitle('Features')
@@ -13,6 +14,16 @@ export const metadata = {
 
 // Card data structure
 const cardData = [
+    {
+        title: 'Resume',
+        description:
+            'Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.',
+        icon: TbFileCv,
+        iconColor: 'text-primary-500',
+        bgColor: 'bg-primary-100',
+        darkBgColor: 'dark:bg-primary-900',
+        link: '/resume'
+    },
     {
         title: 'Portfolio',
         description:
@@ -22,16 +33,6 @@ const cardData = [
         bgColor: 'bg-purple-100',
         darkBgColor: 'dark:bg-purple-900',
         link: '/portfolio'
-    },
-    {
-        title: 'Resume',
-        description:
-            'Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.',
-        icon: MdOutlineWorkOutline,
-        iconColor: 'text-primary-500',
-        bgColor: 'bg-primary-100',
-        darkBgColor: 'dark:bg-primary-900',
-        link: '/resume'
     },
     {
         title: 'Pricing',
