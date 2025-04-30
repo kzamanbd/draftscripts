@@ -3,7 +3,6 @@ import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
 import Image from 'next/image';
 import { MdLocationPin } from 'react-icons/md';
-import YearsOfExperience, { getTotalYearsOfExperience } from './experience';
 
 import { profileImage, user } from '@/app/metadata';
 const social = {
@@ -15,6 +14,24 @@ const social = {
 
 export const metadata = {
     title: 'Resume | Kamruzzaman'
+};
+
+// get the total years of experience
+export const getTotalYearsOfExperience = () => {
+    const startDate = new Date('2020-05-01');
+    const currentDate = new Date();
+
+    let years = currentDate.getFullYear() - startDate.getFullYear();
+    let months = currentDate.getMonth() - startDate.getMonth();
+    const days = currentDate.getDate() - startDate.getDate();
+
+    if (months < 0 || (months === 0 && days < 0)) {
+        years--; // subtract a year if current month/day is before start month/day
+        months += 12;
+    }
+
+    const plusSign = months > 0 || days > 0 ? '+' : '';
+    return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
 };
 
 export default function Home() {
@@ -178,7 +195,6 @@ export default function Home() {
                                                 target="_blank">
                                                 weDevs
                                             </a>
-                                            <YearsOfExperience startDate="2024-11-01" />
                                         </div>
                                     </div>
                                 </h3>
@@ -257,10 +273,9 @@ export default function Home() {
                                                 target="_blank">
                                                 (JMI Group)
                                             </a>
-                                            <YearsOfExperience
-                                                startDate="2021-07-01"
-                                                endDate="2024-10-31"
-                                            />
+                                            <span className="text-primary-500 text-sm font-medium">
+                                                (3 yrs 4 mos)
+                                            </span>
                                         </div>
                                     </div>
                                 </h3>
@@ -325,10 +340,9 @@ export default function Home() {
                                                 target="_blank">
                                                 MaxSOP
                                             </a>
-                                            <YearsOfExperience
-                                                startDate="2020-05-01"
-                                                endDate="2021-06-30"
-                                            />
+                                            <span className="text-primary-500 text-sm font-medium">
+                                                (1 yr 2 mos)
+                                            </span>
                                         </div>
                                     </div>
                                 </h3>
