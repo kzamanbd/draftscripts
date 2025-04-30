@@ -17,7 +17,7 @@ export const metadata = {
 };
 
 // get the total years of experience
-export const getTotalYearsOfExperience = () => {
+const getTotalYearsOfExperience = () => {
     const startDate = new Date('2020-05-01');
     const currentDate = new Date();
 
