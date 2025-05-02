@@ -76,6 +76,7 @@ export default function Home() {
                                 <a
                                     href={`mailto:${user.email}`}
                                     target="_blank"
+                                    rel="noreferrer"
                                     className="flex items-center gap-1">
                                     <span className="font-semibold">Email:</span>
                                     <span className="underline"> {user.email}</span>
@@ -148,7 +149,11 @@ export default function Home() {
                         </div>
                         <div className="text-sm">
                             <div className="mb-2">
-                                <a href="#" target="_blank" className="resume-link font-bold">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="resume-link font-bold">
                                     PHP/Laravel (2019)
                                 </a>
                                 <p className="italic">Creative It Institute, Dhaka.</p>
@@ -157,6 +162,7 @@ export default function Home() {
                                 <a
                                     href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
                                     target="_blank"
+                                    rel="noreferrer"
                                     className="resume-link font-bold">
                                     Redux (2023)
                                 </a>
@@ -172,7 +178,7 @@ export default function Home() {
                                     key={key}
                                     href={value}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="noreferrer"
                                     className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
                                     <span>{key}</span>
                                 </a>
@@ -192,7 +198,8 @@ export default function Home() {
                                             <a
                                                 href="https://wedevs.com"
                                                 className="underline"
-                                                target="_blank">
+                                                target="_blank"
+                                                rel="noreferrer">
                                                 weDevs
                                             </a>
                                         </div>
@@ -264,13 +271,15 @@ export default function Home() {
                                             <a
                                                 href="https://mononsoft.org"
                                                 className="underline"
-                                                target="_blank">
+                                                target="_blank"
+                                                rel="noreferrer">
                                                 MononSoft Ltd.
                                             </a>
                                             <a
                                                 href="https://jmigroup-bd.com"
                                                 className="underline"
-                                                target="_blank">
+                                                target="_blank"
+                                                rel="noreferrer">
                                                 (JMI Group)
                                             </a>
                                             <span className="text-primary-500 text-sm font-medium">
@@ -337,7 +346,8 @@ export default function Home() {
                                             <a
                                                 href="https://maxsop.com/"
                                                 className="underline"
-                                                target="_blank">
+                                                target="_blank"
+                                                rel="noreferrer">
                                                 MaxSOP
                                             </a>
                                             <span className="text-primary-500 text-sm font-medium">

@@ -41,6 +41,7 @@ const NewsletterForm = ({
             setError(true);
             setMessage('Your e-mail address is invalid or you are already subscribed!');
             setSubscribed(false);
+            throw err;
         }
     };
 

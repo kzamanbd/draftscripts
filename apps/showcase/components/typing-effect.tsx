@@ -19,11 +19,10 @@ const TypingEffect = ({ dataText }: TypingEffectProps) => {
         const handleType = () => {
             const i = loopNum % dataText.length;
             const fullText = dataText[i];
-            // @ts-ignore
-            setText((prevText) => {
+            setText((prevText: string) => {
                 return isDeleting
-                    ? fullText?.substring(0, prevText.length - 1)
-                    : fullText?.substring(0, prevText.length + 1);
+                    ? fullText?.substring(0, prevText.length - 1) || ''
+                    : fullText?.substring(0, prevText.length + 1) || '';
             });
 
             setTypingSpeed(isDeleting ? DELETING_SPEED : TYPING_SPEED);

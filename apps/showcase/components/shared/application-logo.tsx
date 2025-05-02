@@ -3,6 +3,7 @@ import { SVGAttributes } from 'react';
 export default function ApplicationLogo(props: SVGAttributes<SVGElement>) {
     return (
         <svg
+            {...props}
             className="tw-logo"
             width="50"
             height="39"

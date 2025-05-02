@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export async function GET(request: Request) {
+export async function GET() {
     try {
         const res = await fetch('https://jsonplaceholder.typicode.com/photos', {
             method: 'GET'
@@ -23,8 +23,9 @@ export async function GET(request: Request) {
     } catch (error) {
         return NextResponse.json(
             {
-                error: 'Failed to fetch photos!',
-                success: false
+                message: 'Failed to fetch photos!',
+                success: false,
+                error: error
             },
             { status: 500 }
         );

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NotFound() {
     return (
         <div className="mx-auto flex size-full h-screen max-w-[50rem] flex-col items-center justify-center overflow-hidden">
@@ -12,7 +14,7 @@ export default function NotFound() {
                     Sorry about that! Please visit our home page to get where you need to go.
                 </p>
                 <div className="mt-5 flex flex-col items-center justify-center gap-2 sm:flex-row sm:gap-3">
-                    <a className="btn btn-primary" href="/">
+                    <Link className="btn btn-primary" href="/">
                         <svg
                             className="size-4 shrink-0"
                             xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +29,7 @@ export default function NotFound() {
                             <path d="m15 18-6-6 6-6"></path>
                         </svg>{' '}
                         Back to Home
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

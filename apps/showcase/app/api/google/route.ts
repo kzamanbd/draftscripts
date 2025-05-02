@@ -19,7 +19,7 @@ export async function POST(request: Request) {
                 { status: 500 }
             );
         }
-        const data = await res.json();
+        await res.json();
 
         return NextResponse.json({
             message: 'Captcha verification success!!',
@@ -28,8 +28,9 @@ export async function POST(request: Request) {
     } catch (error) {
         return NextResponse.json(
             {
-                error: 'Captcha verification failed!',
-                success: false
+                message: 'Captcha verification failed!',
+                success: false,
+                error: error
             },
             { status: 500 }
         );

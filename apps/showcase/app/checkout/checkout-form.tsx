@@ -29,11 +29,6 @@ export default function CheckoutForm() {
         }
     };
 
-    const payNow = (option: any) => {
-        console.log('Pay now', option);
-        window.open(option.redirectGatewayURL);
-    };
-
     return (
         <div className="lg:px-30 grid sm:px-10 lg:grid-cols-2 xl:px-40">
             <div className="px-4 pt-8">
