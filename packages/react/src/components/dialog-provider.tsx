@@ -55,13 +55,14 @@ const DialogProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =
     }, []);
 
     const handleClose = (confirmed: boolean) => {
-        state.open = false;
-        if (confirmed) {
-            state.resolve?.(true);
-        } else {
-            state.reject?.();
-        }
-        setState((prev) => ({ ...prev, open: false }));
+        setState((prev) => {
+            if (confirmed) {
+                prev.resolve?.(true);
+            } else {
+                prev.reject?.();
+            }
+            return { ...prev, open: false };
+        });
     };
 
     return (
