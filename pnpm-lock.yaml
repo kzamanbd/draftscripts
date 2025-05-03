@@ -286,6 +286,9 @@ importers:
       '@tiptap/vue-3':
         specifier: ^2.4.0
         version: 2.11.7(@tiptap/core@2.11.7(@tiptap/pm@2.11.7))(@tiptap/pm@2.11.7)(vue@3.5.13(typescript@5.8.2))
+      bootstrap:
+        specifier: ^5.3.5
+        version: 5.3.5(@popperjs/core@2.11.8)
       lottie-web:
         specifier: ^5.12.2
         version: 5.12.2
@@ -314,6 +317,9 @@ importers:
       '@tsconfig/node22':
         specifier: ^22.0.1
         version: 22.0.1
+      '@types/bootstrap':
+        specifier: ^5.2.10
+        version: 5.2.10
       '@types/jsdom':
         specifier: ^21.1.7
         version: 21.1.7
@@ -1938,6 +1944,9 @@ packages:
   '@types/body-scroll-lock@3.1.2':
     resolution: {integrity: sha512-ELhtuphE/YbhEcpBf/rIV9Tl3/O0A0gpCVD+oYFSS8bWstHFJUgA4nNw1ZakVlRC38XaQEIsBogUZKWIPBvpfQ==}
 
+  '@types/bootstrap@5.2.10':
+    resolution: {integrity: sha512-F2X+cd6551tep0MvVZ6nM8v7XgGN/twpdNDjqS1TUM7YFNEtQYWk+dKAnH+T1gr6QgCoGMPl487xw/9hXooa2g==}
+
   '@types/estree@1.0.7':
     resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
 
@@ -2366,6 +2375,11 @@ packages:
 
   boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}
+
+  bootstrap@5.3.5:
+    resolution: {integrity: sha512-ct1CHKtiobRimyGzmsSldEtM03E8fcEX4Tb3dGXz1V8faRwM50+vfHwTzOxB3IlKO7m+9vTH3s/3C6T2EAPeTA==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.8
 
   bottleneck@2.19.5:
     resolution: {integrity: sha512-VHiNCbI1lKdl44tGrhNfU3lup0Tj/ZBMJB5/2ZbNXRCPuRCO7ed2mgcK4r17y+KB2EfuYuRaVlwNbAeaWGSpbw==}
@@ -6906,6 +6920,10 @@ snapshots:
 
   '@types/body-scroll-lock@3.1.2': {}
 
+  '@types/bootstrap@5.2.10':
+    dependencies:
+      '@popperjs/core': 2.11.8
+
   '@types/estree@1.0.7': {}
 
   '@types/glob@7.2.0':
@@ -7516,6 +7534,10 @@ snapshots:
   body-scroll-lock@4.0.0-beta.0: {}
 
   boolbase@1.0.0: {}
+
+  bootstrap@5.3.5(@popperjs/core@2.11.8):
+    dependencies:
+      '@popperjs/core': 2.11.8
 
   bottleneck@2.19.5: {}
 
