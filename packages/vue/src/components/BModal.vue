@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { Modal } from 'bootstrap';
     import { defineComponent } from 'vue';
 
@@ -90,13 +90,13 @@
             }
         },
         mounted() {
-            const modalElement = this.$refs.modalRef;
+            const modalElement = this.$refs.modalRef as HTMLElement;
             Modal.getOrCreateInstance(modalElement).hide();
             modalElement.addEventListener('shown.bs.modal', this.show);
             modalElement.addEventListener('hidden.bs.modal', this.hide);
         },
         beforeUnmount() {
-            const modalElement = this.$refs.modalRef;
+            const modalElement = this.$refs.modalRef as HTMLElement;
             modalElement.removeEventListener('shown.bs.modal', this.show);
             modalElement.removeEventListener('hidden.bs.modal', this.hide);
             if (this.modalInstance) {
