@@ -196,6 +196,9 @@ importers:
       vite:
         specifier: ^6.3.1
         version: 6.3.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.3)
+      vite-plugin-css-injected-by-js:
+        specifier: ^3.5.1
+        version: 3.5.2(vite@6.3.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.3))
 
   packages/typescript-config: {}
 
@@ -395,12 +398,21 @@ importers:
 
   playgrounds/react:
     dependencies:
+      '@draftscripts/react':
+        specifier: workspace:*
+        version: link:../../packages/react
+      '@tailwindcss/vite':
+        specifier: ^4.1.5
+        version: 4.1.5(vite@6.3.4(@types/node@22.14.1)(jiti@2.4.2)(lightningcss@1.29.2)(sass@1.86.3))
       react:
         specifier: ^19.0.0
         version: 19.1.0
       react-dom:
         specifier: ^19.0.0
         version: 19.1.0(react@19.1.0)
+      tailwindcss:
+        specifier: ^4.1.3
+        version: 4.1.5
     devDependencies:
       '@eslint/js':
         specifier: ^9.22.0

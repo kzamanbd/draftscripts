@@ -1,23 +1,8 @@
 'use client';
 
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
-import { ReactNode, useEffect, useRef, useState } from 'react';
-import { DialogOptions, DialogType } from './dialog-provider';
-
-type ModalProps = {
-    open: boolean;
-    title?: string;
-    message?: string;
-    options: DialogOptions;
-    onClose: (confirmed: boolean) => void;
-};
-
-type TypeProps = {
-    icon: ReactNode;
-    defaultTitle: string;
-    iconClass?: string;
-    buttonClass?: string;
-};
+import { useEffect, useRef, useState } from 'react';
+import { DialogType, ModalProps, TypeProps } from '../types';
 
 const typeMap: Record<DialogType, TypeProps> = {
     success: {
