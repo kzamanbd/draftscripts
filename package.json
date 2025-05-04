@@ -1,13 +1,13 @@
 {
     "name": "draftscripts",
     "version": "1.0.0",
-    "description": "This is a full stack application with react and node",
+    "description": "This is a full stack application with react, vue and node",
     "packageManager": "pnpm@9.15.4",
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
-        "format": "prettier --write \"**/*.{js,jsx,css,ts,tsx,md}\"",
+        "format": "prettier --write \"**/*.{js,jsx,css,ts,tsx}\"",
         "showcase": "turbo dev --filter=showcase",
         "postinstall": "cp -n .env.example .env || true"
     },
@@ -26,3 +26,4 @@
         "typescript": "^5.5.4"
     }
 }
+
