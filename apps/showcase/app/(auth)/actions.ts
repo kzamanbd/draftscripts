@@ -26,4 +26,3 @@ export async function logout() {
     // Clear the session cookie
     (await cookies()).delete('session');
 }
-

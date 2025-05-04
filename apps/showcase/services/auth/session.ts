@@ -55,4 +55,3 @@ export async function setSession(user: any) {
         sameSite: 'lax'
     });
 }
-

@@ -15,4 +15,3 @@ const Tag = ({ text }: Props) => {
 };
 
 export default Tag;
-

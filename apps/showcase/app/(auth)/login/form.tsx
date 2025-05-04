@@ -132,4 +132,3 @@ const LoginForm = ({ login }: any) => {
 };
 
 export default LoginForm;
-
