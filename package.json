@@ -2,7 +2,7 @@
     "name": "draftscripts",
     "version": "1.0.0",
     "description": "This is a full stack application with react and node",
-    "packageManager": "pnpm@8.15.6",
+    "packageManager": "pnpm@9.15.4",
     "scripts": {
         "build": "turbo build",
         "dev": "turbo dev",
@@ -26,3 +26,4 @@
         "typescript": "^5.5.4"
     }
 }
+
