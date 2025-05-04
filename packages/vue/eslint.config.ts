@@ -24,5 +24,10 @@ export default defineConfigWithVueTs(
         ...pluginVitest.configs.recommended,
         files: ['src/**/__tests__/*']
     },
-    skipFormatting
+    skipFormatting,
+    {
+        rules: {
+            '@typescript-eslint/ban-ts-comment': 'off'
+        }
+    }
 );
