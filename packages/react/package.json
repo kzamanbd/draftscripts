@@ -1,11 +1,14 @@
 {
     "name": "@draftscripts/react",
-    "private": true,
     "version": "1.0.0",
     "type": "module",
     "main": "dist/draftscripts.umd.js",
     "module": "dist/draftscripts.es.js",
-    "types": "dist/types/index.d.ts",
+    "typings": "src/types/index.d.ts",
+    "files": [
+        "dist",
+        "src/types"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
