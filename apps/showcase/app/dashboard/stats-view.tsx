@@ -329,7 +329,7 @@ export default function SassDashboard() {
                     </div>
                 </div>
 
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto text-sm">
                     <table className="min-w-full divide-y divide-gray-200">
                         <tbody className="divide-y divide-gray-200 bg-white">
                             {users.map((user, index) => (
