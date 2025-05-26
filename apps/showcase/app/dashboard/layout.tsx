@@ -80,7 +80,7 @@ export default function DashboardRootLayout({ children }: DashboardRootLayoutPro
                                         <span className="text-sm font-bold text-white">P</span>
                                     </div>
                                     <span className="text-xl font-semibold text-gray-900">
-                                        Preline
+                                        DraftScripts
                                     </span>
                                 </Link>
 
