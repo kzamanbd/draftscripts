@@ -100,6 +100,10 @@ export default function SassDashboard() {
 
     return (
         <>
+            {/* Page Title */}
+            <div className="mb-4">
+                <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+            </div>
             {/* Stats Grid */}
             <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
                 {/* Users Card */}

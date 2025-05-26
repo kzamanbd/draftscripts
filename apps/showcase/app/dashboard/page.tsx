@@ -1,4 +1,4 @@
-import SassDashboard from './sass-dashboard';
+import SassDashboard from './stats-view';
 
 export const metadata = {
     title: 'Sass Dashboard'
