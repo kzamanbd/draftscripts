@@ -1,17 +1,11 @@
-import DashboardView from './dashboard-view';
+import SassDashboard from './sass-dashboard';
 
 export const metadata = {
-    title: 'Dashboard'
+    title: 'Sass Dashboard'
 };
 
 const Dashboard = () => {
-    return (
-        <div className="flex h-screen flex-col items-center justify-center">
-            <h1 className="text-4xl font-bold">Dashboard</h1>
-            <p className="mt-4 text-lg">Welcome to your dashboard!</p>
-            <DashboardView />
-        </div>
-    );
+    return <SassDashboard />;
 };
 
 export default Dashboard;
