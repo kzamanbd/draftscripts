@@ -18,7 +18,7 @@ const HeroBackground = () => {
                 <FiBarChart2 size={30} />
             </div>
 
-            <div className="animate-bell absolute right-2/3 top-28 z-50 hidden text-red-500 sm:inline-block">
+            <div className="animate-bell absolute right-2/3 top-28 z-50 hidden sm:inline-block">
                 <ThemeSwitch />
             </div>
 
