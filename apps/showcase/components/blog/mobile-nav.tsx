@@ -1,10 +1,10 @@
 'use client';
 
-import { headerNavLinks } from '@/app/metadata';
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react';
 import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import Link from 'next/link';
 import { Fragment, useEffect, useRef, useState } from 'react';
+import { headerNavLinks } from './header';
 
 const MobileNav = () => {
     const [navShow, setNavShow] = useState(false);

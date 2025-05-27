@@ -1,6 +1,7 @@
 'use client';
 
 const BillingView = () => {
+    // eslint-disable-next-line
     const plans = [
         {
             name: 'Starter',

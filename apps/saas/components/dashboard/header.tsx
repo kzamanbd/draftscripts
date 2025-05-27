@@ -1,6 +1,6 @@
 'use client';
 
-import ThemeSwitch from '@/components/theme-switch';
+import { ThemeSwitch } from '@repo/shared';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import LogoutButton from './logout';

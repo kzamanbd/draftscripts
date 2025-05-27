@@ -1,10 +1,10 @@
-export const description = `5+ yrs of hands-on experience in PHP, Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and optimizing web apps from architecture to deployment. Passionate about learning new tools and delivering scalable, high-quality solutions in team environments`;
+const description = `5+ yrs of hands-on experience in PHP, Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and optimizing web apps from architecture to deployment. Passionate about learning new tools and delivering scalable, high-quality solutions in team environments`;
 
-export const authorName = 'KAMRUZZAMAN';
+const authorName = 'KAMRUZZAMAN';
 
-export const profileImage = '/kzaman.png';
+const profileImage = '/kzaman.png';
 
-export const user = {
+const user = {
     name: authorName,
     designation: 'Software Engineer',
     github: 'https://github.com/kzamanbd',
@@ -23,19 +23,11 @@ export const user = {
     address: 'Dhaka, Bangladesh'
 };
 
-export const headerNavLinks = [
-    { href: '/', title: 'Home' },
-    { href: '/blog', title: 'Blog' },
-    { href: '/tags', title: 'Tags' },
-    { href: '/projects', title: 'Projects' },
-    { href: '/about', title: 'About' }
-];
-
-const metadata = {
+const userMeta = {
     user,
-    author: authorName,
+    authorName,
     description,
-    profile: profileImage,
+    profileImage,
     title: 'DraftScripts - Features',
     headerTitle: 'DraftScripts',
     headerTitleShort: 'DraftScripts',
@@ -43,4 +35,4 @@ const metadata = {
     theme: 'system'
 };
 
-export default metadata;
+export default userMeta;

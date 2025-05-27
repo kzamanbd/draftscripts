@@ -1,5 +1,5 @@
 // @flow strict
-import { user } from '@/app/metadata';
+import { userMeta } from '@repo/shared';
 import Link from 'next/link';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { CiLocationOn } from 'react-icons/ci';
@@ -8,6 +8,8 @@ import { FaXTwitter } from 'react-icons/fa6';
 import { IoLogoGithub, IoMdCall } from 'react-icons/io';
 import { MdAlternateEmail } from 'react-icons/md';
 import FormWithCaptcha from './form-with-captcha';
+
+const { user } = userMeta;
 
 export default function ContactSection() {
     return (

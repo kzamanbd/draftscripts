@@ -1,7 +1,8 @@
 // @flow strict
 import Link from 'next/link';
 
-import { user } from '@/app/metadata';
+import { userMeta } from '@repo/shared';
+const { user } = userMeta;
 
 function Navbar() {
     return (

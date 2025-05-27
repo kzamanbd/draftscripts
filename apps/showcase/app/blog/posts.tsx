@@ -1,7 +1,7 @@
-import { description } from '@/app/metadata';
 import NewsletterForm from '@/components/blog/news-letter-form';
 import Tag from '@/components/blog/tag-view';
 import { formatDate } from '@/utils';
+import { userMeta } from '@repo/shared';
 import Link from 'next/link';
 
 const MAX_DISPLAY = 5;
@@ -15,7 +15,7 @@ export default function Posts({ posts }: any) {
                         Latest
                     </h1>
                     <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-                        {description}
+                        {userMeta.description}
                     </p>
                 </div>
                 <ul className="divide-y divide-gray-200 dark:divide-gray-700">

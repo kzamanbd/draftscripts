@@ -1,10 +1,9 @@
+import { getSession } from '@/services/auth/session';
+import { ApplicationLogo, OtherLoginOption } from '@repo/shared';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { login } from '../actions';
 import LoginForm from './form';
-import ApplicationLogo from '@/components/shared/application-logo';
-import OtherLoginOption from '@/components/shared/other-login-option';
-import { getSession } from '@/services/auth/session';
-import { redirect } from 'next/navigation';
 
 export const metadata = {
     title: 'Login'

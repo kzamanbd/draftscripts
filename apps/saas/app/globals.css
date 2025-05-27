@@ -1,27 +1,69 @@
 @import 'tailwindcss';
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@import 'preline/variants.css';
+
+@theme {
+    --color-primary: var(--color-purple-500, #6366f1);
+    --color-primary-50: var(--color-purple-50, #eef2ff);
+    --color-primary-100: var(--color-purple-100, #e0e7ff);
+    --color-primary-200: var(--color-purple-200, #c7d2fe);
+    --color-primary-300: var(--color-purple-300, #a5b4fc);
+    --color-primary-400: var(--color-purple-400, #818cf8);
+    --color-primary-500: var(--color-purple-500, #6366f1);
+    --color-primary-600: var(--color-purple-600, #4f46e5);
+    --color-primary-700: var(--color-purple-700, #4338ca);
+    --color-primary-800: var(--color-purple-800, #3730a3);
+    --color-primary-900: var(--color-purple-900, #312e81);
+    --color-primary-950: var(--color-purple-950, #1e1b4b);
+    --color-light-gray: #f5f8fa;
+    --foreground-rgb: rgb(211, 216, 232);
+    --color-dark: #1f2937;
+    --color-white: #ffffff;
+    --color-light: #f5f8fa;
+
+    --text-sm: 12px;
+
+    --font-sans: Inter, Helvetica, 'sans-serif', ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
-}
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
+    }
+    input:disabled,
+    button:disabled,
+    [role='button']:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --foreground-rgb: 255, 255, 255;
+        }
+    }
+    body {
+        @apply bg-light dark:bg-gray-800;
     }
 }
-
-body {
-    background: var(--background);
-    color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
-}
-
