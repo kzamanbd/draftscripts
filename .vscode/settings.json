@@ -9,6 +9,7 @@
         "source.fixAll": "always",
         "source.fixAll.eslint": "always",
         "source.organizeImports": "always"
-    }
+    },
+    "cSpell.words": ["turbopack"]
 }
 
