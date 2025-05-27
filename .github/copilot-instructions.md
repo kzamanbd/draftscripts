@@ -66,7 +66,7 @@ A clean Next.js 15 SaaS application template featuring:
 
 - Modern Next.js app router structure
 - TailwindCSS 4 integration
-- Shared UI components from `@repo/ui`
+- Shared UI components from `@repo/shared`
 - TypeScript strict mode
 - ESLint with flat config
 
@@ -136,8 +136,8 @@ Shared React component library with:
 **Usage:**
 
 ```typescript
-import { ComponentName } from '@repo/ui';
-import { AnotherComponent } from '@repo/ui/another-component';
+import { ComponentName } from '@repo/shared';
+import { AnotherComponent } from '@repo/shared/another-component';
 ```
 
 **Generate New Component:**
@@ -500,3 +500,4 @@ pnpm list --recursive
 - [EmailJS](https://www.emailjs.com)
 
 This monorepo demonstrates modern full-stack development patterns with a focus on developer experience, type safety, and performance optimization.
+

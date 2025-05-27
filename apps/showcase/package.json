@@ -36,7 +36,7 @@
         "react-toastify": "^10.0.5"
     },
     "devDependencies": {
-        "@repo/ui": "workspace:*",
+        "@repo/shared": "workspace:*",
         "@repo/eslint-config": "workspace:*",
         "@repo/typescript-config": "workspace:*",
         "@tailwindcss/postcss": "^4.1.3",

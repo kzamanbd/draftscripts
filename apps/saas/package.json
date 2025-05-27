@@ -15,7 +15,7 @@
         "next": "15.3.2"
     },
     "devDependencies": {
-        "@repo/ui": "workspace:*",
+        "@repo/shared": "workspace:*",
         "@repo/eslint-config": "workspace:*",
         "@repo/typescript-config": "workspace:*",
         "@types/node": "^20",
