@@ -1,4 +1,5 @@
 {
+    "editor.formatOnSave": true,
     "eslint.workingDirectories": [
         {
             "mode": "auto"
@@ -8,6 +9,7 @@
         "source.fixAll": "always",
         "source.fixAll.eslint": "always",
         "source.organizeImports": "always"
-    }
+    },
+    "cSpell.words": ["turbopack"]
 }
 

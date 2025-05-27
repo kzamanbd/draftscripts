@@ -6,8 +6,8 @@ A customizable Vue.js dialog component library with support for success, error, 
 
 [![NPM Version](https://img.shields.io/npm/v/@draftscripts/vue)](https://www.npmjs.com/package/@draftscripts/vue)
 [![Download](https://img.shields.io/npm/dm/@draftscripts/vue)](https://www.npmjs.com/package/@draftscripts/vue)
-[![Stars](https://img.shields.io/github/stars/kzamanbd/node-draftscripts.svg?style=flat-square)](https://github.com/kzamanbd/node-draftscripts/stargazers)
-[![LICENSE](https://img.shields.io/npm/l/@draftscripts/vue)](https://github.com/kzamanbd/node-draftscripts/blob/master/LICENSE)
+[![Stars](https://img.shields.io/github/stars/kzamanbd/node-draftscripts.svg?style=flat-square)](https://github.com/kzamanbd/draftscripts/stargazers)
+[![LICENSE](https://img.shields.io/npm/l/@draftscripts/vue)](https://github.com/kzamanbd/draftscripts/blob/master/packages/vue/LICENSE)
 
 ## Explore the documentation
 

@@ -16,4 +16,3 @@ const BlogLayout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default BlogLayout;
-

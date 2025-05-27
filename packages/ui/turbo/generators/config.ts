@@ -28,4 +28,3 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         ]
     });
 }
-

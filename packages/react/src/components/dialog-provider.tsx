@@ -1,29 +1,6 @@
 import React, { createContext, useCallback, useState } from 'react';
+import { DialogOptions, DialogState } from '../types';
 import Modal from './modal';
-
-type DialogType = 'success' | 'error' | 'warning' | 'confirm';
-
-type DialogOptions = {
-    type?: DialogType;
-    title?: string;
-    okText?: string;
-    autoHideDelay?: number;
-    showCancel?: boolean;
-    showOk?: boolean;
-    cancelText?: string;
-    allowOutsideClick?: boolean;
-};
-
-type DialogState = {
-    open: boolean;
-    title?: string;
-    message: string;
-    confirmText?: string;
-    cancelText?: string;
-    options: DialogOptions;
-    resolve?: (value: boolean) => void;
-    reject?: () => void;
-};
 
 const DialogContext = createContext<(message: string, options?: DialogOptions) => Promise<boolean>>(
     () => {
@@ -80,5 +57,4 @@ const DialogProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =
 };
 
 export { DialogContext, DialogProvider };
-export type { DialogOptions, DialogType };
 

@@ -12,7 +12,6 @@
         showOkBtn?: boolean;
         showCancelBtn?: boolean;
         allowOutsideClick?: boolean;
-        animationData?: any;
         resolve: (value: boolean) => void;
         reject: (value: boolean) => void;
     }
@@ -39,7 +38,7 @@
     });
     const visible = ref(false);
     const isHovered = ref(false);
-    let autoHideTimeout: any = null;
+    let autoHideTimeout: ReturnType<typeof setTimeout>;
 
     const cancelHandler = () => {
         visible.value = false;
@@ -51,6 +50,7 @@
         }
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const outsideClickHandler = (event: any) => {
         if (dialog.value.allowOutsideClick && !event.target.closest('.dialog__container')) {
             cancelHandler();
@@ -109,7 +109,7 @@
         };
     };
 
-    const resetAutoHideTimeout = (autoHideDelay: any) => {
+    const resetAutoHideTimeout = (autoHideDelay: number) => {
         if (autoHideTimeout) clearTimeout(autoHideTimeout);
         if (dialog.value.type !== 'confirm') {
             autoHideTimeout = setTimeout(() => {
@@ -129,7 +129,7 @@
 
     const mouseLeave = () => {
         isHovered.value = false;
-        resetAutoHideTimeout(dialog.value.autoHideDelay);
+        resetAutoHideTimeout(dialog.value.autoHideDelay || 2000);
     };
 
     const openDialog = (
@@ -146,23 +146,20 @@
             return new Promise((resolve) => {
                 dialog.value = {
                     message,
-                    // @ts-ignore
-                    resolve,
                     autoHideDelay,
-                    ...modifiedOptions(options)
+                    ...modifiedOptions(options),
+                    resolve
                 };
                 resolve(cancelHandler);
             });
         }
         return new Promise((resolve, reject) => {
             dialog.value = {
-                // @ts-ignore
-                reject,
-                // @ts-ignore
-                resolve,
                 message,
                 autoHideDelay,
-                ...modifiedOptions(options)
+                ...modifiedOptions(options),
+                resolve,
+                reject
             };
             resetAutoHideTimeout(autoHideDelay);
         });
@@ -176,44 +173,46 @@
 </script>
 
 <template>
-    <div v-if="visible" class="dialog__overlay"></div>
-    <Transition name="scale">
-        <div v-if="visible" class="dialog__box" @click="outsideClickHandler">
-            <div :class="dialogType" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
-                <!-- <div class="loading__bar"></div> -->
-                <div class="dialog__content">
-                    <div class="dialog__icon">
-                        <div v-if="dialog.loading" class="progress__icon">
-                            <span class="dialog__loader"></span>
+    <div>
+        <div v-if="visible" class="dialog__overlay"></div>
+        <Transition name="scale">
+            <div v-if="visible" class="dialog__box" @click="outsideClickHandler">
+                <div :class="dialogType" @mouseenter="mouseEnter" @mouseleave="mouseLeave">
+                    <!-- <div class="loading__bar"></div> -->
+                    <div class="dialog__content">
+                        <div class="dialog__icon">
+                            <div v-if="dialog.loading" class="progress__icon">
+                                <span class="dialog__loader"></span>
+                            </div>
+                            <span v-else class="material-icons">
+                                {{ dialog.iconClass }}
+                            </span>
                         </div>
-                        <span v-else class="material-icons">
-                            {{ dialog.iconClass }}
-                        </span>
+
+                        <div class="dialog__title">{{ dialog.title }}</div>
+                        <div class="dialog__message">{{ dialog.message }}</div>
                     </div>
 
-                    <div class="dialog__title">{{ dialog.title }}</div>
-                    <div class="dialog__message">{{ dialog.message }}</div>
-                </div>
+                    <div class="dialog__btn-group">
+                        <button
+                            v-if="dialog.showCancelBtn"
+                            class="dialog__btn error"
+                            @click="cancelHandler">
+                            CANCEL
+                        </button>
 
-                <div class="dialog__btn-group">
-                    <button
-                        v-if="dialog.showCancelBtn"
-                        class="dialog__btn error"
-                        @click="cancelHandler">
-                        CANCEL
-                    </button>
-
-                    <button
-                        v-if="dialog.showOkBtn"
-                        :class="dialog.type"
-                        class="dialog__btn"
-                        @click="okHandler">
-                        {{ dialog.okText }}
-                    </button>
+                        <button
+                            v-if="dialog.showOkBtn"
+                            :class="dialog.type"
+                            class="dialog__btn"
+                            @click="okHandler">
+                            {{ dialog.okText }}
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </Transition>
+        </Transition>
+    </div>
 </template>
 
 <style>

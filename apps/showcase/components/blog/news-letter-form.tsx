@@ -88,4 +88,3 @@ const NewsletterForm = ({
 };
 
 export default NewsletterForm;
-

@@ -1,8 +1,14 @@
 {
     "name": "@draftscripts/react",
-    "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
+    "main": "dist/draftscripts.umd.js",
+    "module": "dist/draftscripts.es.js",
+    "typings": "src/types/index.d.ts",
+    "files": [
+        "dist",
+        "src/types"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "tsc -b && vite build",
@@ -27,6 +33,12 @@
         "globals": "^16.0.0",
         "typescript": "~5.7.2",
         "typescript-eslint": "^8.26.1",
+        "vite-plugin-css-injected-by-js": "^3.5.1",
         "vite": "^6.3.1"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0"
     }
 }
+

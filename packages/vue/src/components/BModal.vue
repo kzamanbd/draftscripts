@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { Modal } from 'bootstrap';
     import { defineComponent } from 'vue';
 
@@ -90,13 +90,13 @@
             }
         },
         mounted() {
-            const modalElement = this.$refs.modalRef;
+            const modalElement = this.$refs.modalRef as HTMLElement;
             Modal.getOrCreateInstance(modalElement).hide();
             modalElement.addEventListener('shown.bs.modal', this.show);
             modalElement.addEventListener('hidden.bs.modal', this.hide);
         },
         beforeUnmount() {
-            const modalElement = this.$refs.modalRef;
+            const modalElement = this.$refs.modalRef as HTMLElement;
             modalElement.removeEventListener('shown.bs.modal', this.show);
             modalElement.removeEventListener('hidden.bs.modal', this.hide);
             if (this.modalInstance) {
@@ -111,8 +111,9 @@
                 if (this.modalInstance) {
                     return;
                 }
-                const modalElement = this.$refs.modalRef;
+                const modalElement = this.$refs.modalRef as HTMLElement;
                 Modal.getOrCreateInstance(modalElement).show();
+                // @ts-ignore
                 this.modalInstance = Modal.getInstance(modalElement);
                 this.$emit('show');
                 this.$emit('update:modelValue', true);
@@ -123,15 +124,17 @@
              */
             hide() {
                 const modalElement = this.$refs.modalRef;
+                // @ts-ignore
                 Modal.getOrCreateInstance(modalElement).hide();
                 this.modalInstance = null;
                 this.$emit('hidden');
                 this.$emit('update:modelValue', false);
             },
             toggle() {
-                const modalElement = this.$refs.modalRef;
+                const modalElement = this.$refs.modalRef as HTMLElement;
 
                 Modal.getOrCreateInstance(modalElement).toggle();
+                // @ts-ignore
                 this.modalInstance = Modal.getInstance(modalElement);
                 this.$emit('update:modelValue', !this.modelValue);
             },
