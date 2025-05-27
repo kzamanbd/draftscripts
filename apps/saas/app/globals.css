@@ -67,3 +67,211 @@
         @apply bg-light dark:bg-gray-800;
     }
 }
+@layer components {
+    .btn {
+        @apply flex cursor-pointer items-center justify-center gap-0.5 rounded-md border border-gray-200 px-2.5 py-1.5 transition-colors duration-300 ease-in-out;
+        @apply text-sm font-medium dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-600;
+    }
+    .btn-primary {
+        @apply bg-primary shadow-primary-100 hover:bg-primary-700 text-white;
+        @apply from-primary-400 to-primary-500 dark:bg-primary-600 dark:hover:bg-primary-700 bg-gradient-to-br;
+    }
+    .card {
+        @apply rounded-md border border-gray-200 bg-white/50 shadow-sm dark:border-gray-700 dark:bg-gray-700/50 print:border-0;
+    }
+    .card-header {
+        @apply border-b border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
+    .card-body {
+        @apply p-5;
+    }
+    .variant--bordered .card {
+        @apply border border-gray-200 dark:border-gray-700;
+    }
+    .card-footer {
+        @apply border-t border-dashed border-gray-200 px-5 py-3 dark:border-gray-700 print:border-0;
+    }
+    .login-card {
+        @apply relative z-[1] w-full max-w-md rounded-md before:absolute before:bg-[url('/images/login-left.png')] dark:border dark:border-gray-500;
+        @apply before:left-[-45px] before:top-[-70px] before:z-[-1] before:h-[244px] before:w-[244px];
+        @apply after:absolute after:bg-[url('/images/login-right.png')];
+        @apply after:bottom-[-50px] after:right-[-50px] after:z-[-1] after:h-[244px] after:w-[244px];
+    }
+    /* Alert */
+    .alert {
+        @apply rounded border px-5 py-3;
+    }
+    .alert-icon {
+        @apply flex items-center space-x-3;
+    }
+    .alert-dismiss {
+        @apply flex items-center justify-between space-x-3;
+    }
+    .form-group {
+        @apply mb-2;
+    }
+    label,
+    .form-label {
+        @apply relative mb-1.5 block text-sm font-semibold;
+    }
+    .label-required {
+        @apply after:ml-[0.125rem] after:text-red-500 after:content-['*'];
+    }
+    .form-control {
+        @apply focus:border-primary-300 focus:ring-primary-200 block w-full rounded-md border-gray-200 bg-white text-sm focus:ring dark:border-gray-600 dark:bg-gray-700;
+    }
+    .form-select-sm {
+        @apply py-1.5 text-xs;
+    }
+    .form-check-input {
+        @apply text-primary-600 focus:border-primary-300 focus:ring-primary-200 border-gray-300 shadow-sm focus:ring focus:ring-offset-0;
+    }
+    .form-check-input[type='checkbox'] {
+        @apply rounded-sm;
+    }
+    .form-check-input[type='radio'] {
+        @apply rounded-full;
+    }
+    .form-control.is-invalid {
+        @apply border-red-500 focus:border-red-300 focus:ring focus:ring-red-200;
+    }
+    .form-control.is-valid {
+        @apply border-green-500 focus:border-green-300 focus:ring focus:ring-green-200;
+    }
+
+    .input-group {
+        @apply relative flex w-full items-stretch;
+    }
+    /* form control sm */
+    .form-control-sm {
+        @apply h-8 px-2 text-sm;
+    }
+    /* form control large */
+    .form-control-lg {
+        @apply px-2 text-2xl;
+    }
+    .has-success .form-control {
+        @apply border-green-500 bg-green-100 focus:border-green-300 focus:ring focus:ring-green-200;
+    }
+    .has-error .form-control {
+        @apply border-red-500 bg-red-100 focus:border-red-300 focus:ring focus:ring-red-200;
+    }
+    /* layout */
+    .dropdown,
+    .hs-dropdown {
+        @apply relative;
+    }
+    .dropdown-toggle {
+        @apply flex cursor-pointer items-center;
+    }
+    .dropdown-menu {
+        @apply hs-dropdown-open:opacity-100 z-20 hidden rounded-md border border-gray-200 bg-white p-2 opacity-0 shadow-lg outline-none transition-[opacity,margin] duration-300 dark:border-gray-700 dark:bg-gray-800;
+    }
+    .dropdown-menu.user-profile-dropdown {
+        @apply w-64 px-0;
+    }
+    .user-avatar {
+        @apply h-8 w-8 rounded-md bg-gray-200 object-cover;
+    }
+    .user-menu-item {
+        @apply px-1.5;
+    }
+    .user-group-divider {
+        @apply mx-2 my-1.5 border-b dark:border-gray-700;
+    }
+    .user-menu-link {
+        @apply hover:bg-light flex w-full cursor-pointer items-center gap-2 rounded-md p-2 text-sm dark:text-gray-300 hover:dark:bg-slate-700 dark:hover:text-gray-100;
+    }
+    .tw-bell-icon {
+        @apply absolute -right-1 -top-1 flex h-2 w-2;
+    }
+    .tw-bell-icon.count {
+        @apply size-4;
+    }
+    .tw-icon-badge {
+        @apply bg-primary-400 absolute inline-flex h-full w-full animate-ping rounded-full opacity-75;
+    }
+    .tw-badge-dot {
+        @apply bg-primary-500 relative flex items-center justify-center rounded-full text-xs;
+    }
+    .tw-bell-icon:not(.count) .tw-badge-dot {
+        @apply h-2 w-2;
+    }
+    .tw-bell-icon.count .tw-badge-dot {
+        @apply aspect-square p-1 text-white;
+    }
+    .search-box-input {
+        @apply flex w-full items-center rounded-md border-0 bg-transparent py-1.5 pl-2 pr-3 text-sm leading-6 outline-0 focus-within:outline-0 focus:border-0 focus:outline-none focus:ring-0;
+    }
+    .quick-search-box {
+        @apply relative ml-auto cursor-pointer transition lg:mx-4;
+    }
+    .global-search-container {
+        @apply max-h-[500px] min-h-44 space-y-4 divide-y px-1 dark:divide-gray-700;
+    }
+    .quick-search-input {
+        @apply focus:border-primary-500 focus:ring-primary-500 dark:bg-dark hidden w-full rounded-full border-gray-200 bg-white py-2 pe-16 ps-10 text-sm shadow-sm placeholder:text-gray-400 group-hover:border-gray-300 lg:block lg:min-w-[25rem] dark:border-gray-700 dark:text-neutral-400 dark:placeholder:text-neutral-500 dark:hover:border-gray-600 dark:group-hover:border-gray-600;
+    }
+    .quick-search-command {
+        @apply absolute inset-y-0 end-0 hidden items-center p-2 lg:flex;
+    }
+    .quick-search-btn {
+        @apply hover:border-primary-100 hover:bg-primary-100 hover:text-primary flex size-8 items-center justify-center rounded-lg lg:pointer-events-none lg:absolute lg:inset-y-0 lg:start-0 lg:flex lg:size-auto lg:items-center lg:p-[.6875rem] lg:ps-3;
+    }
+    .quick-search-svg {
+        @apply hover:text-primary group-hover:text-primary-600 text-gray-600 lg:text-gray-400 dark:text-neutral-400 lg:dark:text-neutral-500 lg:dark:group-hover:text-gray-500;
+    }
+    /* Modal */
+    .tw-modal {
+        @apply pointer-events-none fixed start-0 top-0 z-[80] size-full overflow-y-auto overflow-x-hidden;
+    }
+    .tw-modal-full {
+        @apply p-0;
+    }
+    .tw-modal-dialog {
+        @apply hs-overlay-open:scale-100 hs-overlay-open:opacity-100 m-3 flex scale-95 items-center opacity-0 transition-all duration-200 ease-in-out sm:mx-auto sm:w-full sm:max-w-xl;
+    }
+    .tw-modal-scale {
+        @apply hs-overlay-open:scale-100 hs-overlay-open:opacity-100 scale-95;
+    }
+    .tw-modal-sm {
+        @apply mx-auto max-w-md;
+    }
+    .tw-modal-lg {
+        @apply max-w-3xl;
+    }
+    .tw-modal-full {
+        @apply m-0 h-screen max-w-full;
+    }
+    .tw-modal-full .tw-modal-content {
+        @apply rounded-none;
+    }
+    .tw-modal-centered {
+        @apply flex min-h-[calc(100%-3.5rem)] items-center justify-center;
+    }
+    .tw-modal-content {
+        @apply pointer-events-auto relative flex h-full w-full flex-col overflow-hidden rounded-md bg-white shadow-xl dark:bg-slate-900;
+    }
+    .tw-modal-header,
+    .tw-modal-body,
+    .tw-modal-footer {
+        @apply px-4 py-3;
+    }
+    .tw-modal-header {
+        @apply flex items-center justify-between border-b dark:border-gray-600;
+    }
+    .tw-modal-close {
+        @apply flex cursor-pointer items-center justify-center gap-0.5 rounded-md border border-gray-200 px-2.5 py-1.5 transition-colors duration-300 ease-in-out;
+        @apply text-sm font-medium dark:border-gray-700;
+        @apply border-transparent p-1 hover:bg-gray-100 dark:hover:bg-gray-700;
+    }
+    .tw-modal-body {
+        @apply flex-grow overflow-auto;
+    }
+    .tw-modal-footer {
+        @apply flex items-center justify-end gap-x-2 border-t bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-slate-700;
+    }
+    .hs-overlay-backdrop {
+        @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/50 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur-sm hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
+    }
+}

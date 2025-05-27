@@ -17,7 +17,7 @@ const Login = async () => {
     return (
         <div className="flex min-h-screen items-center justify-center overflow-hidden p-6">
             <div className="login-card">
-                <div className="rounded-md bg-white px-8 py-6 shadow-md">
+                <div className="rounded-md bg-white px-8 py-6 text-gray-600 shadow-md dark:bg-gray-700 dark:text-gray-200">
                     <Link href="/" className="my-4 flex items-center justify-center space-x-2">
                         <ApplicationLogo />
                         <p className="text-3xl font-semibold">
