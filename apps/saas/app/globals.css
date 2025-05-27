@@ -1,6 +1,4 @@
 @import 'tailwindcss';
-
-@import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @import 'preline/variants.css';
 
@@ -275,3 +273,4 @@
         @apply hs-overlay-backdrop-open:supports-[backdrop-filter]:bg-light/50 hs-overlay-backdrop-open:supports-[backdrop-filter]:backdrop-blur-sm hs-overlay-backdrop-open:dark:supports-[backdrop-filter]:bg-gray-700/60;
     }
 }
+
