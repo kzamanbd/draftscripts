@@ -111,8 +111,9 @@
                 if (this.modalInstance) {
                     return;
                 }
-                const modalElement = this.$refs.modalRef;
+                const modalElement = this.$refs.modalRef as HTMLElement;
                 Modal.getOrCreateInstance(modalElement).show();
+                // @ts-ignore
                 this.modalInstance = Modal.getInstance(modalElement);
                 this.$emit('show');
                 this.$emit('update:modelValue', true);
@@ -123,15 +124,17 @@
              */
             hide() {
                 const modalElement = this.$refs.modalRef;
+                // @ts-ignore
                 Modal.getOrCreateInstance(modalElement).hide();
                 this.modalInstance = null;
                 this.$emit('hidden');
                 this.$emit('update:modelValue', false);
             },
             toggle() {
-                const modalElement = this.$refs.modalRef;
+                const modalElement = this.$refs.modalRef as HTMLElement;
 
                 Modal.getOrCreateInstance(modalElement).toggle();
+                // @ts-ignore
                 this.modalInstance = Modal.getInstance(modalElement);
                 this.$emit('update:modelValue', !this.modelValue);
             },

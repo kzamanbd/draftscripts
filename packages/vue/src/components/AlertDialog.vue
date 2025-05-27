@@ -38,7 +38,7 @@
     });
     const visible = ref(false);
     const isHovered = ref(false);
-    let autoHideTimeout: number = 0;
+    let autoHideTimeout: ReturnType<typeof setTimeout>;
 
     const cancelHandler = () => {
         visible.value = false;

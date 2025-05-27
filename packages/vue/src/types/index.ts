@@ -1,11 +1,12 @@
 export type { AnimationDirection, AnimationItem, AnimationSegment } from 'lottie-web';
 
 export interface LottieProps {
-    animationData: any;
+    animationData: string | object;
     animationLink: string;
     loop: boolean | number;
     autoPlay: boolean;
     renderer: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     rendererSettings: any;
     width: number | string;
     height: number | string;
@@ -37,7 +38,7 @@ export interface DialogTypes {
     showOkBtn?: boolean;
     showCancelBtn?: boolean;
     allowOutsideClick?: boolean;
-    animationData?: any;
+    animationData?: string | object;
     resolve: (value: boolean) => void;
     reject: (value: boolean) => void;
 }

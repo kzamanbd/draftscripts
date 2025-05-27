@@ -13,7 +13,7 @@ export async function middleware(request: NextRequest) {
         return NextResponse.redirect(new URL('/login', request.url));
     }
 
-    let res = NextResponse.next();
+    const res = NextResponse.next();
 
     if (sessionCookie && request.method === 'GET') {
         try {
@@ -46,4 +46,3 @@ export async function middleware(request: NextRequest) {
 export const config = {
     matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
 };
-

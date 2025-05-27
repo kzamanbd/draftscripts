@@ -22,4 +22,3 @@ export const slug = (text: string) => {
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
 };
-

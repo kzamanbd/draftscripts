@@ -1,6 +1,6 @@
 {
     "name": "@draftscripts/vue",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "dist/draftscripts.umd.js",
     "module": "dist/draftscripts.es.js",
     "types": "dist/types/index.d.ts",

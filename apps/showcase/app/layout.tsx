@@ -3,7 +3,7 @@ import ScriptWrapper from '@/components/script-wrapper';
 import { ThemeProviders } from '@/components/theme-providers';
 import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
-import './globals.css';
+import '../styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="icon" href="/favicon.png" />
-                <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+                <link rel="apple-touch-icon" href="/icons/base-icon.png" />
                 <meta name="theme-color" content="#009EF7" />
                 <meta name="apple-mobile-web-app-status-bar" content="#009EF7" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,10 +32,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="theme-color" content="#009EF7" />
 
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:url" content="https://kzaman.vercel.app" />
+                <meta name="twitter:url" content="https://kzaman.me" />
                 <meta name="twitter:title" content={authorName} />
                 <meta name="twitter:description" content={description} />
-                <meta name="twitter:image" content="/images/icons/android-chrome-192x192.png" />
+                <meta name="twitter:image" content="/images/banner-image.png" />
                 <meta name="twitter:creator" content="@kzaman" />
                 <meta name="title" property="og:title" content={authorName} key="title" />
                 <meta
@@ -46,18 +46,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content={authorName} />
-                <meta property="og:url" content="https://kzaman.vercel.app" />
-                <meta property="og:image" content="/images/icons/android-chrome-192x192.png" />
+                <meta property="og:url" content="https://kzaman.me" />
+                <meta property="og:image" content="/images/banner-image.png" />
             </head>
             <body suppressHydrationWarning={true}>
                 <div className={inter.className}>
                     <NextTopLoader
-                        color="#2299DD"
                         initialPosition={0.08}
-                        crawlSpeed={200}
                         height={3}
-                        crawl={true}
-                        showSpinner={true}
+                        showSpinner={false}
                         easing="ease"
                         speed={200}
                         shadow="0 0 10px #2299DD,0 0 5px #2299DD"
