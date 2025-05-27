@@ -181,3 +181,4 @@ const Modal: React.FC<ModalProps> = ({ title, message, open, options, onClose })
 };
 
 export default Modal;
+
