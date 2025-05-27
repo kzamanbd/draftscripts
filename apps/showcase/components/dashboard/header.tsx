@@ -1,63 +1,69 @@
+'use client';
+
 import ThemeSwitch from '@/components/theme-switch';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import LogoutButton from './logout';
 
-const DashboardHeader = () => {
-    const navigationItems = [
-        {
-            name: 'Dashboard',
-            href: '/dashboard',
-            key: 'dashboard',
-            icon: (
-                <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"
-                    />
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 5a2 2 0 012-2h4a2 2 0 012 2v10a2 2 0 01-2 2H10a2 2 0 01-2-2V5z"
-                    />
-                </svg>
-            )
-        },
-        {
-            name: 'Integrations',
-            href: '#',
-            key: 'integrations',
-            icon: (
-                <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                    />
-                </svg>
-            )
-        },
-        {
-            name: 'Billing',
-            href: '/dashboard/billing',
-            key: 'billing',
-            icon: (
-                <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
-                    />
-                </svg>
-            )
-        }
-    ];
+const navigationItems = [
+    {
+        name: 'Dashboard',
+        href: '/dashboard',
+        key: 'dashboard',
+        icon: (
+            <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"
+                />
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 5a2 2 0 012-2h4a2 2 0 012 2v10a2 2 0 01-2 2H10a2 2 0 01-2-2V5z"
+                />
+            </svg>
+        )
+    },
+    {
+        name: 'Integrations',
+        href: '#',
+        key: 'integrations',
+        icon: (
+            <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+            </svg>
+        )
+    },
+    {
+        name: 'Billing',
+        href: '/dashboard/billing',
+        key: 'billing',
+        icon: (
+            <svg className="mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                />
+            </svg>
+        )
+    }
+];
 
-    const activeTab = 'dashboard'; // This can be dynamically set based on the current route or state
+const DashboardHeader = () => {
+    // This can be dynamically set based on the current route or state
+    const path = usePathname();
+    const activeTab = path.split('/').pop() || 'dashboard';
+
     return (
         <header className="shadow-xs border-b border-gray-200 bg-white">
             <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 sm:py-4">
