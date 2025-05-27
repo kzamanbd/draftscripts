@@ -15,15 +15,13 @@
         "next": "15.3.2"
     },
     "devDependencies": {
-        "@repo/ui": "workspace:*",
+        "@repo/shared": "workspace:*",
         "@repo/eslint-config": "workspace:*",
         "@repo/typescript-config": "workspace:*",
         "@types/node": "^20",
         "@types/react": "^19",
         "@types/react-dom": "^19",
         "@tailwindcss/postcss": "^4",
-        "prettier": "^3.5",
-        "prettier-plugin-tailwindcss": "^0.6.11",
         "tailwindcss": "^4",
         "eslint": "^9",
         "typescript": "^5"

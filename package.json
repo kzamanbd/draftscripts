@@ -8,6 +8,7 @@
         "dev": "turbo dev",
         "lint": "turbo lint",
         "format": "prettier --write \"**/*.{js,jsx,css,ts,tsx}\"",
+        "saas": "turbo dev --filter=saas",
         "showcase": "turbo dev --filter=showcase",
         "postinstall": "cp -n .env.example .env || true"
     },
@@ -20,9 +21,10 @@
     "devDependencies": {
         "@repo/eslint-config": "workspace:*",
         "@repo/typescript-config": "workspace:*",
-        "prettier": "^3.3.3",
+        "prettier": "^3.5.3",
         "prettier-plugin-tailwindcss": "^0.6.11",
         "turbo": "^2.5.3",
         "typescript": "^5.5.4"
     }
 }
+
