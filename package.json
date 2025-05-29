@@ -2,19 +2,27 @@
     "name": "draftscripts",
     "version": "1.0.0",
     "description": "This is a full stack application with react, vue and node",
-    "packageManager": "pnpm@9.15.4",
+    "packageManager": "pnpm@10.2.0",
     "scripts": {
-        "build": "turbo build",
         "dev": "turbo dev",
         "lint": "turbo lint",
+        "build": "turbo build",
         "format": "prettier --write \"**/*.{js,jsx,css,ts,tsx}\"",
         "saas": "turbo dev --filter=saas",
         "showcase": "turbo dev --filter=showcase",
-        "postinstall": "cp -n .env.example .env || true"
+        "portfolio": "turbo dev --filter=portfolio"
     },
     "keywords": [
         "react",
-        "node"
+        "vue",
+        "fullstack",
+        "typescript",
+        "javascript",
+        "nextjs",
+        "tailwindcss",
+        "express",
+        "mongodb",
+        "postgresql"
     ],
     "author": "Kamruzzaman",
     "license": "MIT",

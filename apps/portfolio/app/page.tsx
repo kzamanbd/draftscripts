@@ -1,33 +1,169 @@
 import { ApplicationLogo } from '@repo/shared';
-import Image from 'next/image';
 import Link from 'next/link';
+import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiDownload } from 'react-icons/hi';
 
-export const metadata = {
-    title: 'Home',
-    description: 'Pricing page for our application'
-};
+// Software engineer skill sets
+const skills = [
+    'PHP',
+    'Laravel',
+    'WordPress',
+    'React',
+    'Vue.js',
+    'TypeScript',
+    'Express.js',
+    'AWS'
+];
 
 const Home = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold underline">Welcome to the Portfolio App</h1>
-            <p className="mt-4">This is the home page of the portfolio application.</p>
-            <div className="mt-6">
-                <Link href="/about" className="text-blue-500 hover:underline">
-                    Go to About Page
-                </Link>
-            </div>
-            <div className="mt-6">
-                <ApplicationLogo />
-            </div>
-            <div className="mt-6">
-                <Image
-                    src="/images/portfolio-image.jpg"
-                    alt="Portfolio Image"
-                    width={500}
-                    height={300}
-                />
-            </div>
+        <div className="min-h-screen">
+            {/* Hero Section */}
+            <section className="relative overflow-hidden pb-16 pt-20 md:pt-32">
+                {/* Background gradient effects */}
+                <div className="pointer-events-none absolute inset-0">
+                    <div className="animate-pulse-slow absolute -right-20 -top-40 h-96 w-96 rounded-full bg-purple-200/40 blur-3xl" />
+                    <div className="animate-pulse-slow animation-delay-2000 absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-blue-100/30 blur-3xl" />
+                    <div className="animate-pulse-slow animation-delay-1000 absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-pink-100/30 blur-3xl" />
+                    <div className="animate-pulse-slow animation-delay-3000 absolute left-1/3 top-20 h-72 w-72 rounded-full bg-indigo-100/30 blur-3xl" />
+                </div>
+
+                <div className="container mx-auto px-4">
+                    <div className="flex flex-col items-center gap-12 lg:flex-row lg:gap-24">
+                        {/* Text Content */}
+                        <div className="z-10 w-full lg:w-2/3">
+                            <div className="mb-6 inline-flex items-center rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-indigo-50 px-4 py-2 text-sm font-medium shadow-sm transition-all hover:shadow-md dark:border-blue-800/30 dark:bg-gray-800 dark:from-blue-900/20 dark:to-indigo-900/20">
+                                <span className="mr-2 flex h-3 w-3 items-center justify-center">
+                                    <span className="absolute h-3 w-3 animate-ping rounded-full bg-green-400 opacity-75"></span>
+                                    <span className="relative h-2 w-2 rounded-full bg-green-500"></span>
+                                </span>
+                                <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-indigo-400">
+                                    Available for work
+                                </span>
+                            </div>
+
+                            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                                <span className="block">Hi, I&apos;m</span>
+                                <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                                    Kamruzzaman
+                                </span>
+                            </h1>
+
+                            <p className="mb-8 max-w-2xl text-lg text-gray-600 dark:text-gray-300">
+                                I build accessible, responsive, and performant web applications with
+                                modern technologies. Focused on creating exceptional user
+                                experiences through clean code.
+                            </p>
+
+                            {/* Skills Pills */}
+                            <div className="mb-10 flex flex-wrap gap-2">
+                                {skills.map((skill) => (
+                                    <span
+                                        key={skill}
+                                        className="rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                                        {skill}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-wrap gap-4">
+                                <Link
+                                    href="/projects"
+                                    className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700">
+                                    View Projects <FaArrowRight />
+                                </Link>
+
+                                <Link
+                                    href="/resume"
+                                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    Resume <HiDownload />
+                                </Link>
+                            </div>
+
+                            {/* Social Links */}
+                            <div className="mt-8 flex gap-4">
+                                <a
+                                    href="https://github.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+                                    <FaGithub size={24} />
+                                </a>
+                                <a
+                                    href="https://linkedin.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+                                    <FaLinkedin size={24} />
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Visual Element - Code Block Display */}
+                        <div className="relative z-10 w-full max-w-md lg:w-1/3">
+                            <div className="animate-pulse-slow absolute inset-0 rounded-lg bg-gradient-to-br from-blue-200 to-purple-200 opacity-20 blur-xl"></div>
+                            <div className="animate-pulse-slow animation-delay-1000 absolute inset-0 rounded-lg bg-gradient-to-tr from-pink-100 to-indigo-200 opacity-10 blur-xl"></div>
+
+                            {/* Code Block Card */}
+                            <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-xl dark:border-gray-700 dark:bg-gray-800">
+                                {/* Fake Code Editor UI */}
+                                <div className="mb-3 flex items-center gap-1.5">
+                                    <span className="h-3 w-3 rounded-full bg-red-400"></span>
+                                    <span className="h-3 w-3 rounded-full bg-yellow-400"></span>
+                                    <span className="h-3 w-3 rounded-full bg-green-400"></span>
+                                    <span className="ml-auto flex h-5 items-center rounded bg-gray-100 px-2 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+                                        index.tsx
+                                    </span>
+                                </div>
+
+                                {/* Syntax-highlighted Code */}
+                                <div className="font-mono text-sm">
+                                    <div className="text-gray-500">
+                                        <span className="text-purple-600">const</span>{' '}
+                                        <span className="text-blue-600">developer</span> = () =&gt;{' '}
+                                        {'{'}
+                                    </div>
+                                    <div className="pl-4 text-gray-500">
+                                        <span className="text-purple-600">const</span>{' '}
+                                        <span className="text-blue-600">skills</span> = [
+                                    </div>
+                                    <div className="pl-8 text-gray-500">
+                                        <span className="text-green-600">&apos;PHP&apos;</span>,
+                                        <span className="text-green-600"> &apos;Laravel&apos;</span>
+                                        ,
+                                    </div>
+                                    <div className="pl-8 text-gray-500">
+                                        <span className="text-green-600">&apos;React&apos;</span>,
+                                        <span className="text-green-600">
+                                            {' '}
+                                            &apos;TypeScript&apos;
+                                        </span>
+                                        ,
+                                    </div>
+                                    <div className="pl-8 text-gray-500">
+                                        <span className="text-green-600">
+                                            &apos;Express.js&apos;
+                                        </span>
+                                        ,<span className="text-green-600"> &apos;AWS&apos;</span>,
+                                    </div>
+                                    <div className="pl-4 text-gray-500">];</div>
+                                    <div className="text-gray-500">
+                                        <span className="text-purple-600"> return</span>{' '}
+                                        <span className="text-blue-600">createImpact</span>(skills);
+                                    </div>
+                                    <div className="text-gray-500">{'}'}</div>
+                                </div>
+                            </div>
+
+                            {/* Floating Logo */}
+                            <div className="absolute -bottom-6 -right-6 rounded-full bg-white p-3 shadow-lg dark:bg-gray-800">
+                                <ApplicationLogo className="h-12 w-12" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     );
 };
