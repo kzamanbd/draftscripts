@@ -6,7 +6,8 @@ import { RiContactsFill } from 'react-icons/ri';
 import { SiLeetcode } from 'react-icons/si';
 import TypingEffect from '../typing-effect';
 
-import { user } from '@/app/metadata';
+import { userMeta } from '@repo/shared';
+const { user } = userMeta;
 
 export default function HeroSection() {
     return (

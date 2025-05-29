@@ -1,10 +1,17 @@
 'use client';
 import { useEffect } from 'react';
 
-const GlowCard = ({ children, identifier }: any) => {
+type GlowCardProps = {
+    children: React.ReactNode;
+    identifier: string;
+};
+
+const GlowCard = ({ children, identifier }: GlowCardProps) => {
     useEffect(() => {
         const CONTAINER = document.querySelector(`.glow-container-${identifier}`) as HTMLElement;
-        const CARDS = document.querySelectorAll(`.glow-card-${identifier}`);
+        const CARDS = document.querySelectorAll(
+            `.glow-card-${identifier}`
+        ) as NodeListOf<HTMLElement>;
 
         const CONFIG = {
             proximity: 40,
@@ -12,11 +19,11 @@ const GlowCard = ({ children, identifier }: any) => {
             blur: 12,
             gap: 32,
             vertical: false,
-            opacity: 0
+            opacity: '0'
         };
 
-        const UPDATE = (event: any) => {
-            for (const CARD of CARDS as any) {
+        const UPDATE = (event: MouseEvent) => {
+            for (const CARD of CARDS) {
                 const CARD_BOUNDS = CARD.getBoundingClientRect();
 
                 if (
@@ -25,7 +32,7 @@ const GlowCard = ({ children, identifier }: any) => {
                     event?.y > CARD_BOUNDS.top - CONFIG.proximity &&
                     event?.y < CARD_BOUNDS.top + CARD_BOUNDS.height + CONFIG.proximity
                 ) {
-                    CARD.style.setProperty('--active', 1);
+                    CARD.style.setProperty('--active', '1');
                 } else {
                     CARD.style.setProperty('--active', CONFIG.opacity);
                 }
@@ -36,12 +43,12 @@ const GlowCard = ({ children, identifier }: any) => {
                 ];
 
                 let ANGLE =
-                    (Math.atan2(event?.y - CARD_CENTER[1], event?.x - CARD_CENTER[0]) * 180) /
+                    (Math.atan2(event?.y - CARD_CENTER[1]!, event?.x - CARD_CENTER[0]!) * 180) /
                     Math.PI;
 
                 ANGLE = ANGLE < 0 ? ANGLE + 360 : ANGLE;
 
-                CARD.style.setProperty('--start', ANGLE + 90);
+                CARD.style.setProperty('--start', String(ANGLE + 90));
             }
         };
 
@@ -55,7 +62,6 @@ const GlowCard = ({ children, identifier }: any) => {
         };
 
         RESTYLE();
-        UPDATE(null);
 
         // Cleanup event listener
         return () => {

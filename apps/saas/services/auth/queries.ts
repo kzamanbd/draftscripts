@@ -1,6 +1,6 @@
+import { userMeta } from '@repo/shared';
 import { cookies } from 'next/headers';
 import { verifyToken } from './session';
-import { user } from '@/app/metadata';
 
 export async function getUser() {
     const sessionCookie = (await cookies()).get('session');
@@ -21,7 +21,7 @@ export async function getUser() {
 
     const userData = [
         {
-            ...user,
+            ...userMeta.user,
             id: sessionData.user.id
         }
     ];
