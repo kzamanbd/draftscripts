@@ -1,7 +1,7 @@
 import Footer from '@/components/blog/footer';
 import Header from '@/components/blog/header';
 import SectionContainer from '@/components/section-container';
-import { ThemeProviders } from '@/components/theme-providers';
+import { ThemeProviders } from '@repo/shared';
 
 const BlogLayout = ({ children }: { children: React.ReactNode }) => {
     return (

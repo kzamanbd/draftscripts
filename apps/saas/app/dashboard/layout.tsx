@@ -1,5 +1,5 @@
 import DashboardHeader from '@/components/dashboard/header';
-import { ThemeProviders } from '@/components/theme-providers';
+import { ThemeProviders } from '@repo/shared';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 

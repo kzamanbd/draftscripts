@@ -4,7 +4,7 @@ import { cookies } from 'next/headers';
 
 export const runtime = 'nodejs'; // fixes the warning
 
-const key = new TextEncoder().encode(process.env.AUTH_SECRET || 'N6MJt9J6ZjKGzkHFR');
+const key = new TextEncoder().encode('N6MJt9J6ZjKGzkHFR');
 const SALT_ROUNDS = 10;
 
 export async function hashPassword(password: string) {

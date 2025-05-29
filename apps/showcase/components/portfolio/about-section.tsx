@@ -1,6 +1,7 @@
+import { userMeta } from '@repo/shared';
 import Image from 'next/image';
 
-import { user } from '@/app/metadata';
+const { user } = userMeta;
 
 function AboutSection() {
     return (

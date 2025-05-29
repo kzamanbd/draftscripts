@@ -1,4 +1,4 @@
-import siteMeta, { authorName, user } from '@/app/metadata';
+import { userMeta } from '@repo/shared';
 import Link from 'next/link';
 import {
     FaFacebook,
@@ -9,6 +9,8 @@ import {
     FaTwitter,
     FaYoutube
 } from 'react-icons/fa';
+
+const { user, authorName } = userMeta;
 
 const SocialIcon = ({ kind, href, size = 24 }: { kind: string; href: string; size?: number }) => {
     const icons = {
@@ -64,7 +66,7 @@ export default function Footer() {
                     <div>{` • `}</div>
                     <div>{`© ${new Date().getFullYear()}`}</div>
                     <div>{` • `}</div>
-                    <Link href="/">{siteMeta.title}</Link>
+                    <Link href="/">{userMeta.title}</Link>
                 </div>
                 <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
                     <Link href="https://github.com/timlrx/tailwind-nextjs-starter-blog">

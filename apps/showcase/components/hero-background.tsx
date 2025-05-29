@@ -1,5 +1,6 @@
 'use client';
 
+import { ThemeSwitch } from '@repo/shared';
 import {
     FiBarChart2,
     FiCircle,
@@ -9,7 +10,6 @@ import {
     FiStar,
     FiTriangle
 } from 'react-icons/fi';
-import ThemeSwitch from './theme-switch';
 
 const HeroBackground = () => {
     return (

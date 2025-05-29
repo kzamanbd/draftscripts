@@ -1,6 +1,6 @@
 'use client';
 
-import LoadingSpinner from '@/components/shared/loading-spinner';
+import { LoadingSpinner } from '@repo/shared';
 import { useState } from 'react';
 
 const LoginForm = ({ login }: any) => {
