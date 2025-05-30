@@ -2,7 +2,7 @@
     "name": "draftscripts",
     "version": "1.0.0",
     "description": "This is a full stack application with react, vue and node",
-    "packageManager": "pnpm@10.2.0",
+    "packageManager": "pnpm@10.11.0",
     "scripts": {
         "dev": "turbo dev",
         "lint": "turbo lint",
