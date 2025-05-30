@@ -18,14 +18,14 @@ const skills = [
 
 const Home = () => {
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-white dark:bg-gray-900">
             {/* Hero Section */}
             <section className="relative overflow-hidden pb-16 pt-20 md:pt-32">
                 <div className="pointer-events-none absolute inset-0">
-                    <div className="animate-pulse-slow absolute -right-20 -top-40 h-96 w-96 rounded-full bg-purple-200/40 blur-3xl" />
-                    <div className="animate-pulse-slow animation-delay-2000 absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-blue-100/30 blur-3xl" />
-                    <div className="animate-pulse-slow animation-delay-1000 absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-pink-100/30 blur-3xl" />
-                    <div className="animate-pulse-slow animation-delay-3000 absolute left-1/3 top-20 h-72 w-72 rounded-full bg-indigo-100/30 blur-3xl" />
+                    <div className="animate-pulse-slow absolute -right-20 -top-40 h-96 w-96 rounded-full bg-purple-200/40 blur-3xl dark:bg-purple-800/20" />
+                    <div className="animate-pulse-slow animation-delay-2000 absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-blue-100/30 blur-3xl dark:bg-blue-800/20" />
+                    <div className="animate-pulse-slow animation-delay-1000 absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-pink-100/30 blur-3xl dark:bg-pink-800/20" />
+                    <div className="animate-pulse-slow animation-delay-3000 absolute left-1/3 top-20 h-72 w-72 rounded-full bg-indigo-100/30 blur-3xl dark:bg-indigo-800/20" />
                 </div>
 
                 <div className="container mx-auto px-4">
@@ -42,9 +42,9 @@ const Home = () => {
                                 </span>
                             </div>
 
-                            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+                            <h1 className="mb-6 text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                                 <span className="block">Hi, I&apos;m</span>
-                                <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
+                                <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-400">
                                     Kamruzzaman
                                 </span>
                             </h1>
@@ -60,7 +60,7 @@ const Home = () => {
                                 {skills.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="rounded-full bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                                        className="rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
                                         {skill}
                                     </span>
                                 ))}
@@ -76,7 +76,7 @@ const Home = () => {
 
                                 <Link
                                     href="/resume"
-                                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
                                     Resume <HiDownload />
                                 </Link>
                             </div>
@@ -123,8 +123,8 @@ const Home = () => {
 
                         {/* Visual Element - Code Block Display */}
                         <div className="relative z-10 w-full max-w-md lg:w-1/3">
-                            <div className="animate-pulse-slow absolute inset-0 rounded-lg bg-gradient-to-br from-blue-200 to-purple-200 opacity-20 blur-xl"></div>
-                            <div className="animate-pulse-slow animation-delay-1000 absolute inset-0 rounded-lg bg-gradient-to-tr from-pink-100 to-indigo-200 opacity-10 blur-xl"></div>
+                            <div className="animate-pulse-slow absolute inset-0 rounded-lg bg-gradient-to-br from-blue-200 to-purple-200 opacity-20 blur-xl dark:from-blue-800 dark:to-purple-800 dark:opacity-30"></div>
+                            <div className="animate-pulse-slow animation-delay-1000 absolute inset-0 rounded-lg bg-gradient-to-tr from-pink-100 to-indigo-200 opacity-10 blur-xl dark:from-pink-800 dark:to-indigo-800 dark:opacity-20"></div>
 
                             {/* Code Block Card */}
                             <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-xl dark:border-gray-700 dark:bg-gray-800">
@@ -140,40 +140,69 @@ const Home = () => {
 
                                 {/* Syntax-highlighted Code */}
                                 <div className="font-mono text-sm">
-                                    <div className="text-gray-500">
-                                        <span className="text-purple-600">const</span>{' '}
-                                        <span className="text-blue-600">developer</span> = () =&gt;{' '}
-                                        {'{'}
+                                    <div className="text-gray-500 dark:text-gray-400">
+                                        <span className="text-purple-600 dark:text-purple-400">
+                                            const
+                                        </span>{' '}
+                                        <span className="text-blue-600 dark:text-blue-400">
+                                            developer
+                                        </span>{' '}
+                                        = () =&gt; {'{'}
                                     </div>
-                                    <div className="pl-4 text-gray-500">
-                                        <span className="text-purple-600">const</span>{' '}
-                                        <span className="text-blue-600">skills</span> = [
+                                    <div className="pl-4 text-gray-500 dark:text-gray-400">
+                                        <span className="text-purple-600 dark:text-purple-400">
+                                            const
+                                        </span>{' '}
+                                        <span className="text-blue-600 dark:text-blue-400">
+                                            skills
+                                        </span>{' '}
+                                        = [
                                     </div>
-                                    <div className="pl-8 text-gray-500">
-                                        <span className="text-green-600">&apos;PHP&apos;</span>,
-                                        <span className="text-green-600"> &apos;Laravel&apos;</span>
+                                    <div className="pl-8 text-gray-500 dark:text-gray-400">
+                                        <span className="text-green-600 dark:text-green-400">
+                                            &apos;PHP&apos;
+                                        </span>
+                                        ,
+                                        <span className="text-green-600 dark:text-green-400">
+                                            {' '}
+                                            &apos;Laravel&apos;
+                                        </span>
                                         ,
                                     </div>
-                                    <div className="pl-8 text-gray-500">
-                                        <span className="text-green-600">&apos;React&apos;</span>,
-                                        <span className="text-green-600">
+                                    <div className="pl-8 text-gray-500 dark:text-gray-400">
+                                        <span className="text-green-600 dark:text-green-400">
+                                            &apos;React&apos;
+                                        </span>
+                                        ,
+                                        <span className="text-green-600 dark:text-green-400">
                                             {' '}
                                             &apos;TypeScript&apos;
                                         </span>
                                         ,
                                     </div>
-                                    <div className="pl-8 text-gray-500">
-                                        <span className="text-green-600">
+                                    <div className="pl-8 text-gray-500 dark:text-gray-400">
+                                        <span className="text-green-600 dark:text-green-400">
                                             &apos;Express.js&apos;
                                         </span>
-                                        ,<span className="text-green-600"> &apos;AWS&apos;</span>,
+                                        ,
+                                        <span className="text-green-600 dark:text-green-400">
+                                            {' '}
+                                            &apos;AWS&apos;
+                                        </span>
+                                        ,
                                     </div>
-                                    <div className="pl-4 text-gray-500">];</div>
-                                    <div className="pl-4 text-gray-500">
-                                        <span className="text-purple-600"> return</span>{' '}
-                                        <span className="text-blue-600">createImpact</span>(skills);
+                                    <div className="pl-4 text-gray-500 dark:text-gray-400">];</div>
+                                    <div className="pl-4 text-gray-500 dark:text-gray-400">
+                                        <span className="text-purple-600 dark:text-purple-400">
+                                            {' '}
+                                            return
+                                        </span>{' '}
+                                        <span className="text-blue-600 dark:text-blue-400">
+                                            createImpact
+                                        </span>
+                                        (skills);
                                     </div>
-                                    <div className="text-gray-500">{'}'}</div>
+                                    <div className="text-gray-500 dark:text-gray-400">{'}'}</div>
                                 </div>
                             </div>
                         </div>
