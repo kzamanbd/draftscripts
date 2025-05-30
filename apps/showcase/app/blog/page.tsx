@@ -1,4 +1,4 @@
-import { getTitle } from '@/utils';
+import { getTitle } from '@repo/shared/utils';
 import Posts from './posts';
 
 const posts = [

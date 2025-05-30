@@ -1,4 +1,4 @@
-import { slug } from '@/utils';
+import { slug } from '@repo/shared/utils';
 import Link from 'next/link';
 interface Props {
     text: string;

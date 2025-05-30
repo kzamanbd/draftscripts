@@ -1,4 +1,4 @@
-import { getTitle } from '@/utils';
+import { getTitle } from '@repo/shared/utils';
 import { Metadata } from 'next';
 import CheckoutForm from './checkout-form';
 

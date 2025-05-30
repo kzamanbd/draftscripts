@@ -1,7 +1,7 @@
 import NewsletterForm from '@/components/blog/news-letter-form';
 import Tag from '@/components/blog/tag-view';
-import { formatDate } from '@/utils';
 import { userMeta } from '@repo/shared';
+import { formatDate } from '@repo/shared/utils';
 import Link from 'next/link';
 
 const MAX_DISPLAY = 5;

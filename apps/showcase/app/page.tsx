@@ -1,5 +1,5 @@
 import HeroBackground from '@/components/hero-background';
-import { getTitle } from '@/utils';
+import { getTitle } from '@repo/shared/utils';
 import Link from 'next/link';
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import { CiSettings } from 'react-icons/ci';
