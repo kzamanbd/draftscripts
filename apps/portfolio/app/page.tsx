@@ -1,4 +1,3 @@
-import { ApplicationLogo } from '@repo/shared';
 import Link from 'next/link';
 import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
@@ -148,17 +147,12 @@ const Home = () => {
                                         ,<span className="text-green-600"> &apos;AWS&apos;</span>,
                                     </div>
                                     <div className="pl-4 text-gray-500">];</div>
-                                    <div className="text-gray-500">
+                                    <div className="pl-4 text-gray-500">
                                         <span className="text-purple-600"> return</span>{' '}
                                         <span className="text-blue-600">createImpact</span>(skills);
                                     </div>
                                     <div className="text-gray-500">{'}'}</div>
                                 </div>
-                            </div>
-
-                            {/* Floating Logo */}
-                            <div className="absolute -bottom-6 -right-6 rounded-full bg-white p-3 shadow-lg dark:bg-gray-800">
-                                <ApplicationLogo className="h-12 w-12" />
                             </div>
                         </div>
                     </div>

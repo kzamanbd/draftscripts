@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     return {
         name: 'Kamruzzaman',
         short_name: 'Zaman',
-        description: "Kamruzzaman's Portfolio",
+        description: "Kamruzzaman's Portfolio - Web Developer, Designer, and Content Creator",
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
@@ -36,14 +36,14 @@ export default function manifest(): MetadataRoute.Manifest {
                 sizes: '640x320',
                 type: 'image/png',
                 form_factor: 'wide',
-                label: 'Kamruzzaman Portfolio - Wide Screenshot'
+                label: 'Kamruzzaman - Wide Screenshot'
             },
             {
                 src: '/screenshot-637x911.png',
                 sizes: '637x911',
                 type: 'image/png',
                 form_factor: 'narrow',
-                label: 'Kamruzzaman Portfolio - Narrow Screenshot'
+                label: 'Kamruzzaman - Narrow Screenshot'
             }
         ]
     };
