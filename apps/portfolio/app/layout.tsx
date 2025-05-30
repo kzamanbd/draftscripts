@@ -20,9 +20,7 @@ export default function RootLayout({
             <head>
                 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
             </head>
-            <body
-                className={`${inter.className} bg-white antialiased transition-colors duration-300 dark:bg-gray-900`}
-                suppressHydrationWarning={true}>
+            <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
                 <ThemeProviders>{children}</ThemeProviders>
             </body>
         </html>
