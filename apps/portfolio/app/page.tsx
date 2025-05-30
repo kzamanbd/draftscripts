@@ -1,7 +1,8 @@
-import { ApplicationLogo } from '@repo/shared';
+import { userMeta } from '@repo/shared';
 import Link from 'next/link';
-import { FaArrowRight, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaArrowRight, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
+import { SiCodeforces, SiLeetcode } from 'react-icons/si';
 
 // Software engineer skill sets
 const skills = [
@@ -20,7 +21,6 @@ const Home = () => {
         <div className="min-h-screen">
             {/* Hero Section */}
             <section className="relative overflow-hidden pb-16 pt-20 md:pt-32">
-                {/* Background gradient effects */}
                 <div className="pointer-events-none absolute inset-0">
                     <div className="animate-pulse-slow absolute -right-20 -top-40 h-96 w-96 rounded-full bg-purple-200/40 blur-3xl" />
                     <div className="animate-pulse-slow animation-delay-2000 absolute -left-20 top-1/3 h-96 w-96 rounded-full bg-blue-100/30 blur-3xl" />
@@ -69,7 +69,7 @@ const Home = () => {
                             {/* CTA Buttons */}
                             <div className="flex flex-wrap gap-4">
                                 <Link
-                                    href="/projects"
+                                    href="#projects"
                                     className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700">
                                     View Projects <FaArrowRight />
                                 </Link>
@@ -84,18 +84,39 @@ const Home = () => {
                             {/* Social Links */}
                             <div className="mt-8 flex gap-4">
                                 <a
-                                    href="https://github.com"
+                                    href={userMeta.user.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <FaGithub size={24} />
                                 </a>
                                 <a
-                                    href="https://linkedin.com"
+                                    href={userMeta.user.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <FaLinkedin size={24} />
+                                </a>
+                                <a
+                                    href={userMeta.user.leetcode}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+                                    <SiLeetcode size={24} />
+                                </a>
+                                <a
+                                    href={userMeta.user.codeforces}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+                                    <SiCodeforces size={24} />
+                                </a>
+                                <a
+                                    href={userMeta.user.facebook}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
+                                    <FaFacebook size={24} />
                                 </a>
                             </div>
                         </div>
@@ -148,17 +169,12 @@ const Home = () => {
                                         ,<span className="text-green-600"> &apos;AWS&apos;</span>,
                                     </div>
                                     <div className="pl-4 text-gray-500">];</div>
-                                    <div className="text-gray-500">
+                                    <div className="pl-4 text-gray-500">
                                         <span className="text-purple-600"> return</span>{' '}
                                         <span className="text-blue-600">createImpact</span>(skills);
                                     </div>
                                     <div className="text-gray-500">{'}'}</div>
                                 </div>
-                            </div>
-
-                            {/* Floating Logo */}
-                            <div className="absolute -bottom-6 -right-6 rounded-full bg-white p-3 shadow-lg dark:bg-gray-800">
-                                <ApplicationLogo className="h-12 w-12" />
                             </div>
                         </div>
                     </div>

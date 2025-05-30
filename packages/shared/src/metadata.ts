@@ -14,7 +14,7 @@ const user = {
     leetcode: 'https://leetcode.com/u/kzamanbd',
     medium: 'https://medium.com/@kzamanbd',
     youtube: 'https://www.youtube.com/@draftscripts',
-    twitter: '',
+    twitter: 'https://x.com/_kzamanbd',
     resume: '/resume',
     description: description,
     profile: profileImage,
