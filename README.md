@@ -3,20 +3,20 @@
 A full-stack monorepo showcasing modern web development patterns with React, Vue, and Node.js. This repository demonstrates component libraries, applications, and shared utilities built with cutting-edge technologies.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![pnpm](https://img.shields.io/badge/pnpm-10.2.0+-4EC7C7.svg)](https://pnpm.io/)
+[![pnpm](https://img.shields.io/badge/pnpm-9.15.4+-4EC7C7.svg)](https://pnpm.io/)
 [![React](https://img.shields.io/badge/React-19.1.0-61DAFB.svg)](https://react.dev)
-[![Vue](https://img.shields.io/badge/Vue-3.4.21-42b883.svg)](https://vuejs.org)
+[![Vue](https://img.shields.io/badge/Vue-3.5.13-42b883.svg)](https://vuejs.org)
 [![Next.js](https://img.shields.io/badge/Next.js-15.3.2-000000.svg)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6.svg)](https://www.typescriptlang.org/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.7-38B2AC.svg)](https://tailwindcss.com)
-[![Vite](https://img.shields.io/badge/Vite-6.3.1-646CFF.svg)](https://vitejs.dev)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.3-38B2AC.svg)](https://tailwindcss.com)
+[![Vite](https://img.shields.io/badge/Vite-6.3.4-646CFF.svg)](https://vitejs.dev)
 [![Turborepo](https://img.shields.io/badge/Turborepo-2.5.3-EF4444.svg)](https://turbo.build)
 
 ## Overview
 
 DraftScripts is a comprehensive monorepo that includes:
 
-- **Modern Portfolio, SaaS & Showcase Applications** built with Next.js 15
+- **Modern SaaS & Showcase Applications** built with Next.js 15
 - **Reusable Component Libraries** for React and Vue
 - **Shared Configuration Packages** for ESLint and TypeScript
 - **Development Playgrounds** for quick prototyping
@@ -27,11 +27,10 @@ DraftScripts is a comprehensive monorepo that includes:
 ```bash
 draftscripts/
 ├── apps/
-│   ├── portfolio/     # Personal portfolio app (Next.js 15, React 19)
 │   ├── saas/          # Next.js 15 SaaS application (React 19, TailwindCSS 4)
-│   └── showcase/      # Comprehensive showcase app (Next.js 15, advanced features)
+│   └── showcase/      # Portfolio/showcase app (Next.js 15, comprehensive features)
 ├── packages/
-│   ├── shared/        # Shared React component library (@repo/shared)
+│   ├── ui/            # Shared React component library
 │   ├── react/         # React component package (@draftscripts/react)
 │   ├── vue/           # Vue component package (@draftscripts/vue)
 │   ├── eslint-config/ # Shared ESLint configurations
@@ -48,38 +47,20 @@ draftscripts/
 ### Core Technologies
 
 - **React**: 19.1.0 (latest stable)
-- **Vue**: 3.4.21 (latest stable)
+- **Vue**: 3.5.13 (latest stable)
 - **Next.js**: 15.3.2 (app router, turbo/turbopack)
 - **TypeScript**: 5.8.2+ (strict configuration)
-- **TailwindCSS**: 4.1.7+ (latest with PostCSS 4)
+- **TailwindCSS**: 4.1.3+ (latest with PostCSS 4)
 
 ### Build & Development Tools
 
 - **Turborepo**: 2.5.3+ (monorepo build system)
-- **pnpm**: 10.2.0 (package manager)
-- **Vite**: 6.3.1+ (build tool for React/Vue packages)
+- **pnpm**: 9.15.4 (package manager)
+- **Vite**: 6.3.4+ (build tool for React/Vue packages)
 - **ESLint**: 9.25.0+ (linting with flat config)
 - **Prettier**: 3.5.3 (code formatting)
 
 ## Application Details
-
-### Apps/Portfolio (`apps/portfolio/`)
-
-A clean personal portfolio application featuring:
-
-- **Framework**: Next.js 15 with app router
-- **Styling**: TailwindCSS 4 with PostCSS
-- **Runtime**: React 19 with turbopack
-- **Icons**: React Icons library
-- **Features**: Resume display, HTTPS development support, PWA manifest
-
-**Development Commands:**
-
-```bash
-pnpm portfolio       # Start portfolio app only
-pnpm portfolio:https # Start with HTTPS for local development
-cd apps/portfolio && pnpm dev  # Alternative approach
-```
 
 ### Apps/SaaS (`apps/saas/`)
 
@@ -88,7 +69,7 @@ A clean Next.js 15 SaaS application template featuring:
 - **Framework**: Next.js 15 with app router
 - **Styling**: TailwindCSS 4 with PostCSS
 - **Runtime**: React 19 with turbopack
-- **UI Components**: Preline UI integration
+- **Typography**: Geist font family
 - **Development**: Hot reload with `--turbopack` flag
 
 **Development Commands:**
@@ -145,22 +126,14 @@ cd apps/showcase && pnpm dev  # Alternative approach
 
 ## Shared Packages
 
-### Shared Package (`packages/shared/`)
+### UI Package (`packages/ui/`)
 
 Shared React component library with:
 
-- **Package**: `@repo/shared` (workspace-internal)
 - **Export Strategy**: Direct file exports (`./*` pattern)
-- **Components**: Reusable React components (Button, Card, Code, etc.)
+- **Components**: Reusable React components
 - **Generator**: Turbo generator for new components
 - **TypeScript**: Strict type checking
-
-**Key Components:**
-
-- ApplicationLogo, GlowCard, LoadingSpinner
-- ThemeProviders and ThemeSwitch
-- OtherLoginOption for authentication
-- Tailwind CSS integration
 
 **Usage:**
 
@@ -172,7 +145,7 @@ import { AnotherComponent } from '@repo/shared/another-component';
 **Generate New Component:**
 
 ```bash
-cd packages/shared
+cd packages/ui
 pnpm generate:component
 ```
 
@@ -181,17 +154,9 @@ pnpm generate:component
 Standalone React component library:
 
 - **Package**: `@draftscripts/react`
-- **Version**: 1.0.0
 - **Build**: Vite with UMD/ES modules
 - **Dependencies**: Headless UI, TailwindCSS 4
 - **Styling**: TailwindCSS with Vite plugin
-
-**Key Features:**
-
-- Dialog system with useConfirm hook
-- Success, error, warning, and confirmation dialogs
-- Headless UI integration
-- TypeScript support with strict types
 
 ### Vue Package (`packages/vue/`)
 
@@ -241,10 +206,9 @@ pnpm install
 # Start all apps in development
 pnpm dev
 
-# Start specific apps
-pnpm portfolio      # Personal portfolio app
-pnpm saas          # SaaS application
-pnpm showcase      # Comprehensive showcase app
+# Start specific app
+pnpm saas
+pnpm showcase
 
 # Build all packages
 pnpm build
@@ -270,8 +234,7 @@ turbo build
 # Lint (parallel execution)
 turbo lint
 
-# Filter specific apps
-turbo dev --filter=portfolio
+# Filter specific app
 turbo dev --filter=saas
 turbo build --filter=showcase
 ```
@@ -288,13 +251,13 @@ turbo build --filter=showcase
 
 When creating new components:
 
-1. **For Shared Package**: Use the generator
+1. **For UI Package**: Use the generator
 
     ```bash
-    cd packages/shared && pnpm generate:component
+    cd packages/ui && pnpm generate:component
     ```
 
-2. **For Apps**: Follow Next.js 15+ app router conventions
+2. **For Apps**: Follow Next.js 13+ app router conventions
 
     ```typescript
     // Use proper TypeScript interfaces
@@ -324,7 +287,7 @@ When creating new components:
 
 ### Monorepo Organization
 
-- **Apps**: Complete applications (portfolio, saas, showcase)
+- **Apps**: Complete applications (saas, showcase)
 - **Packages**: Shared libraries and configurations
 - **Playgrounds**: Development environments
 - **Workspaces**: pnpm workspace with Turborepo
@@ -334,7 +297,7 @@ When creating new components:
 - **Atomic Design**: Components organized by complexity
 - **Prop Interfaces**: TypeScript interfaces for all props
 - **Composition**: Prefer composition over inheritance
-- **Reusability**: Shared components in packages/shared
+- **Reusability**: Shared components in packages/ui
 
 ### State Management
 
