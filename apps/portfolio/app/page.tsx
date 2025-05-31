@@ -60,29 +60,14 @@ const Home = () => {
                                 {skills.map((skill) => (
                                     <span
                                         key={skill}
-                                        className="rounded-full border border-gray-200 bg-gray-100 px-3 py-1 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
+                                        className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300">
                                         {skill}
                                     </span>
                                 ))}
                             </div>
 
-                            {/* CTA Buttons */}
-                            <div className="flex flex-wrap gap-4">
-                                <Link
-                                    href="#projects"
-                                    className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700">
-                                    View Projects <FaArrowRight />
-                                </Link>
-
-                                <Link
-                                    href="/resume"
-                                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
-                                    Resume <HiDownload />
-                                </Link>
-                            </div>
-
                             {/* Social Links */}
-                            <div className="mt-8 flex gap-4">
+                            <div className="mb-8 flex gap-4">
                                 <a
                                     href={userMeta.user.github}
                                     target="_blank"
@@ -118,6 +103,21 @@ const Home = () => {
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <FaFacebook size={24} />
                                 </a>
+                            </div>
+
+                            {/* CTA Buttons */}
+                            <div className="flex flex-wrap gap-4">
+                                <Link
+                                    href="#projects"
+                                    className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700">
+                                    View Projects <FaArrowRight />
+                                </Link>
+
+                                <Link
+                                    href="/resume"
+                                    className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+                                    Resume <HiDownload />
+                                </Link>
                             </div>
                         </div>
 
