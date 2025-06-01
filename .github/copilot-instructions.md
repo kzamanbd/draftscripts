@@ -9,10 +9,11 @@ DraftScripts is a full-stack monorepo showcasing modern web development patterns
 ```
 draftscripts/
 ├── apps/
-│   ├── saas/          # Next.js 15 SaaS application (React 19, TailwindCSS 4)
-│   └── showcase/      # Portfolio/showcase app (Next.js 15, comprehensive features)
+│   ├── portfolio/     # Personal portfolio app (Next.js 15, React 19, TailwindCSS 4)
+│   ├── saas/          # Next.js 15 SaaS application (React 19, TailwindCSS 4, JWT auth)
+│   └── showcase/      # Feature showcase app (Next.js 15, comprehensive features)
 ├── packages/
-│   ├── ui/            # Shared React component library
+│   ├── shared/        # Shared React component library (@repo/shared)
 │   ├── react/         # React component package (@draftscripts/react)
 │   ├── vue/           # Vue component package (@draftscripts/vue)
 │   ├── eslint-config/ # Shared ESLint configurations
@@ -28,16 +29,16 @@ draftscripts/
 
 ### Core Technologies
 
-- **React**: 19.1.0 (latest stable)
+- **React**: 19.0.0 (latest stable)
 - **Vue**: 3.5.13 (latest stable)
 - **Next.js**: 15.3.2 (app router, turbo/turbopack)
-- **TypeScript**: 5.8.2+ (strict configuration)
+- **TypeScript**: 5.5.4+ (strict configuration)
 - **TailwindCSS**: 4.1.3+ (latest with PostCSS 4)
 
 ### Build & Development Tools
 
 - **Turborepo**: 2.5.3+ (monorepo build system)
-- **pnpm**: 9.15.4 (package manager)
+- **pnpm**: 10.11.0 (package manager)
 - **Vite**: 6.3.4+ (build tool for React/Vue packages)
 - **ESLint**: 9.25.0+ (linting with flat config)
 - **Prettier**: 3.5.3 (code formatting)
@@ -49,18 +50,21 @@ draftscripts/
 - **react-icons**: 5.2.1+ (icon library)
 - **next-themes**: 0.4.6+ (theme switching)
 - **@emailjs/browser**: 4.4.1+ (email integration)
+- **react-toastify**: 10.0.5+ (toast notifications)
+- **body-scroll-lock**: 4.0.0-beta.0 (scroll management)
 
 ## Application Details
 
-### Apps/SaaS (`apps/saas/`)
+### Apps/Portfolio (`apps/portfolio/`)
 
-A clean Next.js 15 SaaS application template featuring:
+A clean personal portfolio application featuring:
 
 - **Framework**: Next.js 15 with app router
 - **Styling**: TailwindCSS 4 with PostCSS
 - **Runtime**: React 19 with turbopack
-- **Typography**: Geist font family
-- **Development**: Hot reload with `--turbopack` flag
+- **Email**: EmailJS integration for contact forms
+- **Icons**: React Icons library
+- **Development**: Hot reload with `--turbopack` and HTTPS support
 
 **Key Features:**
 
@@ -69,6 +73,41 @@ A clean Next.js 15 SaaS application template featuring:
 - Shared UI components from `@repo/shared`
 - TypeScript strict mode
 - ESLint with flat config
+- Contact form with EmailJS
+- Resume/CV display functionality
+- PWA manifest support
+- Project showcase with reusable ProjectCard components
+- HTTPS development support with certificates
+
+**Development Commands:**
+
+```bash
+pnpm portfolio        # Start portfolio app only
+cd apps/portfolio && pnpm dev  # Alternative approach
+cd apps/portfolio && pnpm dev:https  # HTTPS development
+```
+
+### Apps/SaaS (`apps/saas/`)
+
+A comprehensive SaaS application featuring:
+
+- **Framework**: Next.js 15 with app router
+- **Styling**: TailwindCSS 4 with PostCSS and @tailwindcss/forms
+- **Runtime**: React 19 with turbopack
+- **Authentication**: JWT with bcryptjs and jose
+- **UI Components**: Preline UI integration
+- **Development**: Hot reload with `--turbopack` flag
+
+**Key Features:**
+
+- Modern Next.js app router structure
+- JWT-based authentication system
+- TailwindCSS 4 integration with forms plugin
+- Preline UI component library
+- Shared UI components from `@repo/shared`
+- TypeScript strict mode
+- ESLint with flat config
+- Middleware for route protection
 
 **Development Commands:**
 
@@ -87,32 +126,29 @@ A comprehensive portfolio and showcase application featuring:
 - **Email**: EmailJS integration with reCAPTCHA
 - **Themes**: Dark/light mode with next-themes
 - **Loading**: NextJS TopLoader for navigation
+- **UI Components**: @headlessui/react for accessibility
 
 **Key Features:**
 
 - Portfolio sections (projects, resume, contacts)
-- Authentication system (`(auth)` route group)
 - API routes (`/api/google` for reCAPTCHA)
-- Dashboard functionality
 - Blog system
 - E-commerce features (checkout, payment, pricing)
 - Contact forms with validation
 - Theme switching capabilities
 - PWA manifest support
+- Body scroll lock functionality
 
 **Route Structure:**
 
 ```
 app/
-├── (auth)/          # Authentication routes
 ├── api/             # API endpoints
 ├── blog/            # Blog functionality
 ├── checkout/        # E-commerce checkout
-├── dashboard/       # User dashboard
 ├── payment/         # Payment processing
 ├── portfolio/       # Portfolio sections
-├── pricing/         # Pricing pages
-└── resume/          # Resume/CV display
+└── page.tsx         # Main landing page
 ```
 
 **Development Commands:**
@@ -124,7 +160,7 @@ cd apps/showcase && pnpm dev  # Alternative approach
 
 ## Shared Packages
 
-### UI Package (`packages/ui/`)
+### Shared Package (`packages/shared/`)
 
 Shared React component library with:
 
@@ -137,13 +173,13 @@ Shared React component library with:
 
 ```typescript
 import { ComponentName } from '@repo/shared';
-import { AnotherComponent } from '@repo/shared/another-component';
+import { AnotherComponent } from '@repo/shared/utils';
 ```
 
 **Generate New Component:**
 
 ```bash
-cd packages/ui
+cd packages/shared
 pnpm generate:component
 ```
 
@@ -176,6 +212,28 @@ Comprehensive Vue 3 component library:
 - Mention system
 - Character counting
 
+## Playgrounds
+
+### React Playground (`playgrounds/react/`)
+
+Development environment for React components:
+
+- **Package**: Local react playground
+- **Framework**: Vite with React 19
+- **Styling**: TailwindCSS 4 with Vite plugin
+- **Dependencies**: Uses `@draftscripts/react` workspace package
+- **TypeScript**: Full TypeScript support
+
+### Vue Playground (`playgrounds/vue/`)
+
+Development environment for Vue components:
+
+- **Package**: vue-playground
+- **Framework**: Vite with Vue 3.4+
+- **Styling**: TailwindCSS 4 with PostCSS
+- **Dependencies**: Uses `@draftscripts/vue` workspace package
+- **Linting**: ESLint with Vue plugin
+
 ### ESLint Config (`packages/eslint-config/`)
 
 Shared ESLint configurations:
@@ -205,6 +263,7 @@ pnpm install
 pnpm dev
 
 # Start specific app
+pnpm portfolio
 pnpm saas
 pnpm showcase
 
@@ -249,10 +308,10 @@ turbo build --filter=showcase
 
 When creating new components:
 
-1. **For UI Package**: Use the generator
+1. **For Shared Package**: Use the generator
 
     ```bash
-    cd packages/ui && pnpm generate:component
+    cd packages/shared && pnpm generate:component
     ```
 
 2. **For Apps**: Follow Next.js 13+ app router conventions
@@ -319,7 +378,7 @@ export async function POST(request: Request) {
 
 ### Monorepo Organization
 
-- **Apps**: Complete applications (saas, showcase)
+- **Apps**: Complete applications (portfolio, saas, showcase)
 - **Packages**: Shared libraries and configurations
 - **Playgrounds**: Development environments
 - **Workspaces**: pnpm workspace with Turborepo
@@ -329,7 +388,7 @@ export async function POST(request: Request) {
 - **Atomic Design**: Components organized by complexity
 - **Prop Interfaces**: TypeScript interfaces for all props
 - **Composition**: Prefer composition over inheritance
-- **Reusability**: Shared components in packages/ui
+- **Reusability**: Shared components in packages/shared
 
 ### State Management
 
@@ -397,14 +456,15 @@ pnpm lint
 ### Environment Setup
 
 - **Node.js**: Version 18+ recommended
-- **pnpm**: 9.15.4+ required
+- **pnpm**: 10.11.0+ required
 - **Environment Variables**: Configure for each environment
 
 ### Vercel Deployment (Recommended)
 
-Both apps are optimized for Vercel deployment:
+All three apps are optimized for Vercel deployment:
 
-- **saas**: Standard Next.js deployment
+- **portfolio**: Standard Next.js deployment with EmailJS
+- **saas**: Next.js with JWT authentication
 - **showcase**: Next.js with API routes and env vars
 
 ## Contributing Guidelines
@@ -457,7 +517,7 @@ Recommended extensions:
 
 ### Common Issues
 
-1. **pnpm Installation**: Use pnpm 9.15.4+ for workspace support
+1. **pnpm Installation**: Use pnpm 10.11.0+ for workspace support
 2. **TypeScript Errors**: Check tsconfig inheritance
 3. **Build Failures**: Clear Turbo cache with `turbo prune`
 4. **Styling Issues**: Verify TailwindCSS 4 configuration
