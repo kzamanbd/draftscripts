@@ -22,7 +22,7 @@ const cardData = [
         iconColor: 'text-primary-500',
         bgColor: 'bg-primary-100',
         darkBgColor: 'dark:bg-primary-900',
-        link: '/resume'
+        link: '#'
     },
     {
         title: 'Portfolio',
@@ -32,7 +32,7 @@ const cardData = [
         iconColor: 'text-purple-500',
         bgColor: 'bg-purple-100',
         darkBgColor: 'dark:bg-purple-900',
-        link: '/portfolio'
+        link: '#'
     },
     {
         title: 'Pricing',
