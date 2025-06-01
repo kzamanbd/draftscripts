@@ -10,4 +10,5 @@ export { default as OtherLoginOption } from './components/other-login-option';
 export { ThemeProviders } from './components/theme-providers';
 export { default as ThemeSwitch } from './components/theme-switch';
 export { default as userMeta } from './metadata';
+export type { User, UserMeta } from './types';
 

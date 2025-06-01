@@ -1,10 +1,12 @@
+import type { User, UserMeta } from './types';
+
 const description = `5+ yrs of hands-on experience in PHP, Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and optimizing web apps from architecture to deployment. Passionate about learning new tools and delivering scalable, high-quality solutions in team environments`;
 
 const authorName = 'KAMRUZZAMAN';
 
 const profileImage = '/kzaman.png';
 
-const user = {
+const user: User = {
     name: authorName,
     designation: 'Software Engineer',
     github: 'https://github.com/kzamanbd',
@@ -23,7 +25,7 @@ const user = {
     address: 'Dhaka, Bangladesh'
 };
 
-const userMeta = {
+const userMeta: UserMeta = {
     user,
     authorName,
     description,
