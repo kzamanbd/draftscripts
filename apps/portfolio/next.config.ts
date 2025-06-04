@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
                 pathname: '/**'
             }
         ]
+    },
+    publicRuntimeConfig: {
+        siteURL: 'https://kzaman.me',
+        sitemapURL: `https://kzaman.me/sitemap.xml`
     }
 };
 
