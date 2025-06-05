@@ -19,6 +19,7 @@ export interface User {
 
 export interface UserMeta {
     user: User;
+    siteName: string;
     authorName: string;
     description: string;
     profileImage: string;
@@ -27,5 +28,8 @@ export interface UserMeta {
     headerTitleShort: string;
     stickyNav: boolean;
     theme: string;
+    siteURL: string;
+    sitemapURL?: string;
+    siteKeywords: string[];
 }
 

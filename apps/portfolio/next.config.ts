@@ -1,3 +1,4 @@
+import { userMeta } from '@repo/shared';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
@@ -14,8 +15,8 @@ const nextConfig: NextConfig = {
         ]
     },
     publicRuntimeConfig: {
-        siteURL: 'https://kzaman.me',
-        sitemapURL: `https://kzaman.me/sitemap.xml`
+        siteURL: userMeta.siteURL,
+        sitemapURL: `${userMeta.siteURL}/sitemap.xml`
     }
 };
 
