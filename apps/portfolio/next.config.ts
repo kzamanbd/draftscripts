@@ -1,4 +1,3 @@
-import { userMeta } from '@repo/shared';
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
@@ -9,14 +8,13 @@ const nextConfig: NextConfig = {
             {
                 protocol: 'https',
                 hostname: 'images.unsplash.com',
-                port: '',
                 pathname: '/**'
             }
         ]
     },
     publicRuntimeConfig: {
-        siteURL: userMeta.siteURL,
-        sitemapURL: `${userMeta.siteURL}/sitemap.xml`
+        siteURL: 'https://kzaman.me',
+        sitemapURL: `https://kzaman.me/sitemap.xml`
     }
 };
 
