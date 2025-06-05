@@ -18,7 +18,7 @@ const skills = [
 
 const Home = () => {
     return (
-        <div className="min-h-screen bg-white dark:bg-gray-900">
+        <div className="flex min-h-[100svh] flex-col bg-white dark:bg-gray-900">
             {/* Hero Section */}
             <section className="relative overflow-hidden pb-16 pt-20 md:pt-32">
                 <div className="pointer-events-none absolute inset-0">

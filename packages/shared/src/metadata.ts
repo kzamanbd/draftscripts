@@ -6,6 +6,29 @@ const authorName = 'KAMRUZZAMAN';
 
 const profileImage = '/kzaman.png';
 
+export const siteKeywords: UserMeta['siteKeywords'] = [
+    'Kamruzzaman',
+    'kzaman',
+    'kzamanbd',
+    'Full Stack Developer',
+    'Web Developer',
+    'Software Engineer',
+    'Portfolio',
+    'PHP',
+    'Laravel',
+    'Vue.js',
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node.js',
+    'Express.js',
+    'MySQL',
+    'Next.js',
+    'Nuxt.js',
+    'Tailwind CSS'
+];
+
 const user: User = {
     name: authorName,
     designation: 'Software Engineer',
@@ -28,13 +51,16 @@ const user: User = {
 const userMeta: UserMeta = {
     user,
     authorName,
+    siteName: authorName,
     description,
     profileImage,
     title: 'DraftScripts - Features',
     headerTitle: 'DraftScripts',
     headerTitleShort: 'DraftScripts',
     stickyNav: true,
-    theme: 'system'
+    theme: 'system',
+    siteURL: 'https://kzaman.me',
+    siteKeywords
 };
 
 export default userMeta;
