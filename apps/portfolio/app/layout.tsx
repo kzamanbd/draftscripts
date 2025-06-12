@@ -1,3 +1,4 @@
+import { JsonLdScript } from '@/components/json-ld-script';
 import { GoogleTagManager } from '@next/third-parties/google';
 import { ThemeProviders, userMeta } from '@repo/shared';
 import type { Metadata, Viewport } from 'next';
@@ -70,6 +71,7 @@ export default function RootLayout({
             <head>
                 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
                 <meta name="apple-mobile-web-app-title" content="Kamruzzaman " />
+                <JsonLdScript />
             </head>
             <GoogleTagManager gtmId={googleTagManagerId} />
             <body className={`${inter.className} antialiased`} suppressHydrationWarning={true}>
