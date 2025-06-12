@@ -31,5 +31,16 @@ export interface UserMeta {
     siteURL: string;
     sitemapURL?: string;
     siteKeywords: string[];
+    currentJobTitle: string;
+    currentWorkplace: string;
+    currentWorkplaceURL: string;
+    careerExperience: number;
+    education: string;
+    educationURL: string;
+    jsonLdDescription: string;
+    jsonLdAlternateName: string;
+    jsonLdKnowsAbout: string[];
+    siteAuthorEmail: string;
+    siteThumbnail: string;
 }
 
