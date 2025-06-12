@@ -1,6 +1,6 @@
 import { JsonLdScript } from '@/components/json-ld-script';
 import { GoogleTagManager } from '@next/third-parties/google';
-import { ThemeProviders, userMeta } from '@repo/shared';
+import { ThemeProviders } from '@repo/shared';
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 const googleTagManagerId = 'G-NB5NCE8041';
 
-const { siteURL, description, siteKeywords, authorName, siteName } = userMeta;
+import { authorName, description, siteKeywords, siteName, siteURL } from '@repo/shared/metadata';
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteURL),

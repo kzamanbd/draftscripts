@@ -1,4 +1,4 @@
-import { userMeta } from '@repo/shared';
+import { user } from '@repo/shared/metadata';
 import { NextResponse } from 'next/server';
 
 export async function GET() {
@@ -7,7 +7,7 @@ export async function GET() {
     // response json with token
     return NextResponse.json({
         token: token,
-        user: userMeta.user,
+        user: user,
         message: 'Login successful'
     });
 }

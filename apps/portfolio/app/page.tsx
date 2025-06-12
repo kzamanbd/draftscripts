@@ -1,4 +1,4 @@
-import { userMeta } from '@repo/shared';
+import { user } from '@repo/shared/metadata';
 import Link from 'next/link';
 import { FaArrowRight, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
@@ -69,35 +69,35 @@ const Home = () => {
                             {/* Social Links */}
                             <div className="mb-8 flex gap-4">
                                 <a
-                                    href={userMeta.user.github}
+                                    href={user.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <FaGithub size={24} />
                                 </a>
                                 <a
-                                    href={userMeta.user.linkedin}
+                                    href={user.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <FaLinkedin size={24} />
                                 </a>
                                 <a
-                                    href={userMeta.user.leetcode}
+                                    href={user.leetcode}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <SiLeetcode size={24} />
                                 </a>
                                 <a
-                                    href={userMeta.user.codeforces}
+                                    href={user.codeforces}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
                                     <SiCodeforces size={24} />
                                 </a>
                                 <a
-                                    href={userMeta.user.facebook}
+                                    href={user.facebook}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">

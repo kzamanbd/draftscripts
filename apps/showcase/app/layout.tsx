@@ -1,11 +1,10 @@
 import ScriptWrapper from '@/components/script-wrapper';
-import { ThemeProviders, userMeta } from '@repo/shared';
+import { ThemeProviders } from '@repo/shared';
+import { authorName, description } from '@repo/shared/metadata';
 import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import '../styles/globals.css';
 const inter = Inter({ subsets: ['latin'] });
-
-const { authorName, description } = userMeta;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (

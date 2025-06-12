@@ -1,4 +1,4 @@
-import { ApplicationLogo, userMeta as siteMetadata, ThemeSwitch } from '@repo/shared';
+import { ApplicationLogo, ThemeSwitch } from '@repo/shared';
 import Link from 'next/link';
 import MobileNav from './mobile-nav';
 import SearchButton from './search-button';
@@ -11,12 +11,14 @@ export const headerNavLinks = [
     { href: '/about', title: 'About' }
 ];
 
-const Header = () => {
-    let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10';
-    if (siteMetadata.stickyNav) {
-        headerClass += ' sticky top-0 z-50';
-    }
+const headerClass =
+    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10 sticky top-0 z-50';
 
+const siteMetadata = {
+    headerTitle: 'DraftScripts'
+};
+
+const Header = () => {
     return (
         <header className={headerClass}>
             <Link href="/" aria-label={siteMetadata.headerTitle}>

@@ -1,11 +1,9 @@
 import ActionButton from '@/components/resume/action-button';
 import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
-import { userMeta } from '@repo/shared';
+import { profileImage, user } from '@repo/shared/metadata';
 import Image from 'next/image';
 import { MdLocationPin } from 'react-icons/md';
-
-const { user, profileImage } = userMeta;
 
 const social = {
     GitHub: user.github,

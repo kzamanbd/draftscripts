@@ -1,6 +1,6 @@
 import NewsletterForm from '@/components/blog/news-letter-form';
 import Tag from '@/components/blog/tag-view';
-import { userMeta } from '@repo/shared';
+import { description } from '@repo/shared/metadata';
 import { formatDate } from '@repo/shared/utils';
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ export default function Posts({ posts }: any) {
                         Latest
                     </h1>
                     <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-                        {userMeta.description}
+                        {description}
                     </p>
                 </div>
                 <ul className="divide-y divide-gray-200 dark:divide-gray-700">
