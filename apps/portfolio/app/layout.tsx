@@ -8,8 +8,16 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 const googleTagManagerId = 'G-NB5NCE8041';
+const facebookPageId = '';
 
-import { authorName, description, siteKeywords, siteName, siteURL } from '@repo/shared/metadata';
+import {
+    authorName,
+    description,
+    siteKeywords,
+    siteName,
+    siteThumbnail,
+    siteURL
+} from '@repo/shared/metadata';
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteURL),
@@ -38,6 +46,11 @@ export const metadata: Metadata = {
     publisher: authorName,
     keywords: siteKeywords,
     category: 'portfolio',
+    icons: {
+        icon: '/kzaman-icon-192x192.png',
+        apple: '/kzaman-icon-192x192.png',
+        shortcut: '/kzaman-icon-192x192.png'
+    },
     robots: {
         index: true,
         follow: true,
@@ -50,10 +63,11 @@ export const metadata: Metadata = {
             'max-snippet': -1
         }
     },
-    icons: {
-        icon: '/kzaman-icon-192x192.png',
-        apple: '/kzaman-icon-192x192.png',
-        shortcut: '/kzaman-icon-192x192.png'
+    facebook: {
+        admins: [facebookPageId]
+    },
+    other: {
+        thumbnail: siteThumbnail
     }
 };
 
@@ -70,7 +84,8 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning={true}>
             <head>
                 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
-                <meta name="apple-mobile-web-app-title" content="Kamruzzaman " />
+                <meta name="apple-mobile-web-app-title" content="Kamruzzaman" />
+                <meta property="fb:pages" content={facebookPageId}></meta>
                 <JsonLdScript />
             </head>
             <GoogleTagManager gtmId={googleTagManagerId} />
