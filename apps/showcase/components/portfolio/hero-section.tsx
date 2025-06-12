@@ -6,8 +6,7 @@ import { RiContactsFill } from 'react-icons/ri';
 import { SiLeetcode } from 'react-icons/si';
 import TypingEffect from '../typing-effect';
 
-import { userMeta } from '@repo/shared';
-const { user } = userMeta;
+import { user } from '@repo/shared/metadata';
 
 export default function HeroSection() {
     return (
@@ -67,7 +66,7 @@ export default function HeroSection() {
                         <Link
                             className="flex items-center gap-1 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-3 py-3 text-center text-xs font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:gap-3 hover:text-white hover:no-underline md:px-8 md:py-4 md:text-sm md:font-semibold"
                             role="button"
-                            href={user.resume}>
+                            href="/resume">
                             <span>Get Resume</span>
                             <MdDownload size={16} />
                         </Link>

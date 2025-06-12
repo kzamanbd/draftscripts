@@ -1,12 +1,20 @@
-import type { User, UserMeta } from './types';
+import type { User } from './types';
 
-const description = `5+ yrs of hands-on experience in PHP, Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and optimizing web apps from architecture to deployment. Passionate about learning new tools and delivering scalable, high-quality solutions in team environments`;
+export const description = `5+ yrs of hands-on experience in PHP, Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and optimizing web apps from architecture to deployment. Passionate about learning new tools and delivering scalable, high-quality solutions in team environments`;
 
-const authorName = 'KAMRUZZAMAN';
+export const authorName = 'KAMRUZZAMAN';
 
-const profileImage = '/kzaman.png';
+export const siteName = authorName;
 
-export const siteKeywords: UserMeta['siteKeywords'] = [
+export const siteURL = 'https://kzaman.me';
+
+export const siteThumbnail = '/thumbnail.png';
+
+export const siteAuthorEmail = 'kzamanbn@gmail.com';
+
+export const profileImage = '/kzaman.png';
+
+export const siteKeywords: string[] = [
     'Kamruzzaman',
     'kzaman',
     'kzamanbd',
@@ -30,18 +38,18 @@ export const siteKeywords: UserMeta['siteKeywords'] = [
 ];
 
 // workspace
-const currentJobTitle: string = 'Software Engineer (Full Stack)';
-const currentWorkplace: string = 'weDevs';
-const currentWorkplaceURL: string = 'https://wedevs.com';
-const careerExperience: number = new Date().getFullYear() - 2021;
+export const currentJobTitle: string = 'Software Engineer (Full Stack)';
+export const currentWorkplace: string = 'weDevs';
+export const currentWorkplaceURL: string = 'https://wedevs.com';
+export const careerExperience: number = new Date().getFullYear() - 2021;
 
 // education
-const education: string = 'Bachelor of Science in Computer Science and Engineering';
-const educationURL: string = 'https://www.seu.edu.bd/';
+export const education: string = 'Bachelor of Science in Computer Science and Engineering';
+export const educationURL: string = 'https://www.seu.edu.bd/';
 
 // json-ld
-const jsonLdAlternateName: string = 'shibbirweb';
-const jsonLdKnowsAbout: string[] = [
+export const jsonLdAlternateName: string = 'kzamanbd';
+export const jsonLdKnowsAbout: string[] = [
     'Web Development',
     'PHP',
     'Laravel',
@@ -57,11 +65,11 @@ const jsonLdKnowsAbout: string[] = [
     'CSS',
     'Tailwind CSS'
 ];
-const jsonLdDescription: string = `${authorName} is a passionate and experienced Full-Stack Software Engineer with over ${careerExperience} years of expertise in building scalable, high-performance web applications. He specializes in modern JavaScript frameworks, Laravel, RESTful APIs, and DevOps tools like Docker. Currently working at ${currentWorkplace}, he is committed to delivering clean, maintainable code and crafting seamless user experiences across platforms.`;
+export const jsonLdDescription: string = `${authorName} is a passionate and experienced Full-Stack Software Engineer with over ${careerExperience} years of expertise in building scalable, high-performance web applications. He specializes in modern JavaScript frameworks, Laravel, RESTful APIs, and DevOps tools like Docker. Currently working at ${currentWorkplace}, he is committed to delivering clean, maintainable code and crafting seamless user experiences across platforms.`;
 
-const user: User = {
+export const user: User = {
     name: authorName,
-    designation: 'Software Engineer',
+    designation: currentJobTitle,
     github: 'https://github.com/kzamanbd',
     linkedin: 'https://www.linkedin.com/in/kzamanbd/',
     codeforces: 'https://codeforces.com/profile/kzamanbd',
@@ -70,38 +78,8 @@ const user: User = {
     medium: 'https://medium.com/@kzamanbd',
     youtube: 'https://www.youtube.com/@draftscripts',
     twitter: 'https://x.com/_kzamanbd',
-    resume: '/resume',
     description: description,
-    profile: profileImage,
     phone: '+8801716724245',
     email: 'kzamanbn@gmail.com',
     address: 'Dhaka, Bangladesh'
 };
-
-const userMeta: UserMeta = {
-    user,
-    authorName,
-    siteName: authorName,
-    description,
-    profileImage,
-    title: 'DraftScripts - Features',
-    headerTitle: 'DraftScripts',
-    headerTitleShort: 'DraftScripts',
-    stickyNav: true,
-    theme: 'system',
-    siteURL: 'https://kzaman.me',
-    siteKeywords,
-    currentJobTitle,
-    currentWorkplace,
-    currentWorkplaceURL,
-    careerExperience,
-    education,
-    educationURL,
-    jsonLdDescription,
-    jsonLdAlternateName,
-    jsonLdKnowsAbout,
-    siteAuthorEmail: user.email,
-    siteThumbnail: '/thumbnail.png'
-};
-
-export default userMeta;

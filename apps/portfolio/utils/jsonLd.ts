@@ -1,21 +1,20 @@
 import { ProfilePage, WithContext } from 'schema-dts';
 
-import { userMeta } from '@repo/shared';
-const {
-    user,
+import {
     currentJobTitle,
     currentWorkplace,
     currentWorkplaceURL,
     education,
     educationURL,
+    jsonLdAlternateName,
     jsonLdDescription,
+    jsonLdKnowsAbout,
     siteAuthorEmail,
     siteName,
     siteThumbnail,
     siteURL,
-    jsonLdAlternateName,
-    jsonLdKnowsAbout
-} = userMeta;
+    user
+} from '@repo/shared/metadata';
 
 export const jsonLd: WithContext<ProfilePage> = {
     '@context': 'https://schema.org',

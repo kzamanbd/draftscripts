@@ -2,7 +2,7 @@ import { compare, hash } from 'bcryptjs';
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 
-export const runtime = 'nodejs'; // fixes the warning
+// export const runtime = 'nodejs'; // fixes the warning
 
 const key = new TextEncoder().encode('N6MJt9J6ZjKGzkHFR');
 const SALT_ROUNDS = 10;

@@ -9,38 +9,9 @@ export interface User {
     medium: string;
     youtube: string;
     twitter: string;
-    resume: string;
     description: string;
-    profile: string;
     phone: string;
     email: string;
     address: string;
-}
-
-export interface UserMeta {
-    user: User;
-    siteName: string;
-    authorName: string;
-    description: string;
-    profileImage: string;
-    title: string;
-    headerTitle: string;
-    headerTitleShort: string;
-    stickyNav: boolean;
-    theme: string;
-    siteURL: string;
-    sitemapURL?: string;
-    siteKeywords: string[];
-    currentJobTitle: string;
-    currentWorkplace: string;
-    currentWorkplaceURL: string;
-    careerExperience: number;
-    education: string;
-    educationURL: string;
-    jsonLdDescription: string;
-    jsonLdAlternateName: string;
-    jsonLdKnowsAbout: string[];
-    siteAuthorEmail: string;
-    siteThumbnail: string;
 }
 

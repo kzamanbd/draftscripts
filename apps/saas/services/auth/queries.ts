@@ -1,4 +1,4 @@
-import { userMeta } from '@repo/shared';
+import { user } from '@repo/shared/metadata';
 import { cookies } from 'next/headers';
 import { verifyToken } from './session';
 
@@ -21,7 +21,7 @@ export async function getUser() {
 
     const userData = [
         {
-            ...userMeta.user,
+            ...user,
             id: sessionData.user.id
         }
     ];

@@ -11,6 +11,10 @@
             "types": "./src/utils/index.ts",
             "default": "./src/utils/index.ts"
         },
+        "./metadata": {
+            "types": "./src/metadata.ts",
+            "default": "./src/metadata.ts"
+        },
         "./*": {
             "types": "./src/*.tsx",
             "default": "./src/*.tsx"

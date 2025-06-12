@@ -1,7 +1,5 @@
-import { userMeta } from '@repo/shared';
+import { authorName, description, profileImage } from '@repo/shared/metadata';
 import Image from 'next/image';
-
-const { user } = userMeta;
 
 function AboutSection() {
     return (
@@ -15,14 +13,14 @@ function AboutSection() {
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
                 <div className="order-2 lg:order-1">
                     <p className="mb-5 text-xl font-medium uppercase text-[#16f2b3]">Who I am?</p>
-                    <p className="text-sm text-gray-200 lg:text-lg">{user.description}</p>
+                    <p className="text-sm text-gray-200 lg:text-lg">{description}</p>
                 </div>
                 <div className="order-1 flex justify-center lg:order-2">
                     <Image
-                        src={user.profile}
+                        src={profileImage}
                         width={280}
                         height={280}
-                        alt={user.name}
+                        alt={authorName}
                         className="cursor-pointer rounded-lg grayscale transition-all duration-1000 hover:scale-110 hover:grayscale-0"
                     />
                 </div>
