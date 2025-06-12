@@ -8,7 +8,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 const googleTagManagerId = 'G-NB5NCE8041';
-const facebookPageId = '';
+const facebookPageId = '561025357095593';
 
 import {
     authorName,
