@@ -40,7 +40,7 @@ const education: string = 'Bachelor of Science in Computer Science and Engineeri
 const educationURL: string = 'https://www.seu.edu.bd/';
 
 // json-ld
-const jsonLdAlternateName: string = 'shibbirweb';
+const jsonLdAlternateName: string = 'kzamanbd';
 const jsonLdKnowsAbout: string[] = [
     'Web Development',
     'PHP',
