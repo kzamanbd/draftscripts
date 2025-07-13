@@ -34,7 +34,7 @@ const getTotalYearsOfExperience = () => {
     return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
 };
 
-export default function Home() {
+const Resume = () => {
     return (
         <div className="resume">
             <div className="page-container">
@@ -465,4 +465,6 @@ export default function Home() {
             <CoverLetter />
         </div>
     );
-}
+};
+
+export default Resume;
