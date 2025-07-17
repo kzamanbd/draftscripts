@@ -71,7 +71,7 @@ export const user: User = {
     name: authorName,
     designation: currentJobTitle,
     github: 'https://github.com/kzamanbd',
-    linkedin: 'https://www.linkedin.com/in/kzamanbd/',
+    linkedin: 'https://www.linkedin.com/in/kzamanbd',
     codeforces: 'https://codeforces.com/profile/kzamanbd',
     facebook: 'https://www.facebook.com/kzaman.me',
     leetcode: 'https://leetcode.com/u/kzamanbd',
