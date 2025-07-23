@@ -27,7 +27,7 @@ const Resume = () => {
                             </p>
                             <ul className="flex gap-2 text-sm">
                                 <li>
-                                    <a href="tel:8801716724245" className="flex items-center gap-1">
+                                    <a href="tel:8801716724245" className="contact-link">
                                         <span className="font-semibold">Phone:</span>
                                         <span className="underline">+880 1716-724245</span>
                                     </a>
@@ -38,13 +38,13 @@ const Resume = () => {
                                         href={`mailto:${user.email}`}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex items-center gap-1">
+                                        className="contact-link">
                                         <span className="font-semibold">Email:</span>
                                         <span className="underline"> {user.email}</span>
                                     </a>
                                 </li>
 
-                                <li className="flex items-center gap-1">
+                                <li className="contact-link">
                                     <span className="font-semibold">Address:</span>
                                     <p>Mirpur 12, Dhaka, Bangladesh</p>
                                 </li>
@@ -52,12 +52,12 @@ const Resume = () => {
                             {/* Social */}
                             <div className="mb-4 flex flex-wrap gap-2 text-sm">
                                 {social.map(([key, value], index) => (
-                                    <div key={key} className="flex items-center gap-1">
+                                    <div key={key} className="contact-link">
                                         <a
                                             href={value}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
+                                            className="social-link">
                                             <span>
                                                 {value.replace('https://', '').replace('www.', '')}
                                             </span>
@@ -72,12 +72,12 @@ const Resume = () => {
                             className="size-25 rounded-xl object-cover"
                             width={100}
                             height={100}
-                            alt="kamruzzaman, kamruzzaman profile image"
+                            alt="kamruzzaman"
                         />
                     </div>
                     {/* contact info */}
                     <div className="about-me">
-                        <h5 className="mb-1.5 font-bold uppercase">PROFESSIONAL SUMMARY</h5>
+                        <h5 className="section-heading">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
                             Full-Stack Software Engineer with 5+ Years of professional experience
                             developing scalable web applications using PHP, Laravel, WordPress,
@@ -91,14 +91,14 @@ const Resume = () => {
                     </div>
 
                     {/* Experience section */}
-                    <h5 className="mb-1.5 font-bold uppercase">PROFESSIONAL EXPERIENCE</h5>
+                    <h5 className="section-heading">PROFESSIONAL EXPERIENCE</h5>
 
-                    <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
+                    <div className="timeline-container">
                         <TimelineIcon>
-                            <div className="flex justify-between">
+                            <div className="job-header">
                                 <div className="font-bold text-gray-900">
                                     <h3>Software Engineer</h3>
-                                    <div className="flex gap-1 text-sm font-medium">
+                                    <div className="company-info">
                                         <div className="size-4">
                                             <Image
                                                 src="/images/wedevs-logo.svg"
@@ -107,7 +107,7 @@ const Resume = () => {
                                                 height={32}
                                             />
                                         </div>
-                                        <div className="flex items-center gap-1">
+                                        <div className="contact-link">
                                             <a
                                                 href="https://wedevs.com"
                                                 className="underline"
@@ -118,41 +118,41 @@ const Resume = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-right text-sm">
+                                <div className="job-meta">
                                     <time>November 2024 - Present</time>
                                     <address>Mirpur DOHS 1216, Dhaka, Bangladesh</address>
                                 </div>
                             </div>
                             <ul className="bullet-list ml-0">
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Developed and enhanced Dokan and Dokan Pro multi-vendor
                                         marketplace plugins for WordPress, serving 150,000+ active
                                         installations.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Built advanced features including vendor management systems,
                                         subscription models, booking integrations, and payment
                                         gateways for Dokan Pro platform.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Enhanced wePOS (Point of Sale) system to integrate physical
                                         retail operations with WooCommerce stores, improving
                                         inventory management and sales tracking.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Implemented scalable solutions using PHP, JavaScript,
                                         React.js, WordPress APIs, and MySQL database optimization
                                         techniques.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Collaborated with UX/UI design teams to create intuitive
                                         user interfaces, resulting in improved user experience and
@@ -163,10 +163,10 @@ const Resume = () => {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <div className="flex justify-between">
+                            <div className="job-header">
                                 <div className="font-bold text-gray-900">
                                     <h3>Software Engineer</h3>
-                                    <div className="flex gap-1 text-sm font-medium">
+                                    <div className="company-info">
                                         <div className="size-4">
                                             <Image
                                                 src="/images/mononsoft-logo.svg"
@@ -175,7 +175,7 @@ const Resume = () => {
                                                 height={32}
                                             />
                                         </div>
-                                        <div className="flex items-center gap-1">
+                                        <div className="contact-link">
                                             <a
                                                 href="https://mononsoft.org"
                                                 className="underline"
@@ -193,13 +193,13 @@ const Resume = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-right text-sm">
+                                <div className="job-meta">
                                     <time>July 2021 - October 2024</time>
                                     <address>50/B New Eskaton Road, Dhaka 1000</address>
                                 </div>
                             </div>
                             <ul className="bullet-list ml-0">
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Architected and developed comprehensive ERP system using
                                         Laravel 8/9/10, Vue.js 3, React.js 18, and MySQL, serving
@@ -207,35 +207,35 @@ const Resume = () => {
                                         and HR management.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Delivered custom software solutions for client requirements,
                                         reducing manual processes by 60% and improving operational
                                         efficiency across departments.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Designed and implemented RESTful APIs and microservices
                                         architecture, ensuring seamless integration between frontend
                                         and backend systems.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Performed comprehensive testing, debugging, and code
                                         reviews, maintaining 95% code coverage and reducing
                                         production bugs by 40%.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Led application modernization initiatives, migrating legacy
                                         systems to modern frameworks and implementing performance
                                         optimizations that improved page load times by 50%.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Mentored junior developers and conducted technical training
                                         sessions, contributing to team skill development and
@@ -246,10 +246,10 @@ const Resume = () => {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <div className="flex justify-between">
+                            <div className="job-header">
                                 <div className="font-bold text-gray-900">
                                     <h3>Jr. Software Engineer</h3>
-                                    <div className="flex gap-1 text-sm font-medium">
+                                    <div className="company-info">
                                         <div className="size-4">
                                             <Image
                                                 src="/images/maxsop-logo.svg"
@@ -258,7 +258,7 @@ const Resume = () => {
                                                 height={32}
                                             />
                                         </div>
-                                        <div className="flex items-center gap-1">
+                                        <div className="contact-link">
                                             <a
                                                 href="https://maxsop.com/"
                                                 className="underline"
@@ -269,34 +269,34 @@ const Resume = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="text-right text-sm">
+                                <div className="job-meta">
                                     <time>May 2020 – June 2021</time>
                                     <address>27/2 Ram Babu Road, Mymensingh-2200</address>
                                 </div>
                             </div>
                             <ul className="bullet-list ml-0">
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Developed responsive web applications using PHP Laravel
                                         framework, Vue.js, MySQL, and Bootstrap, implementing MVC
                                         architecture and following coding best practices.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Built efficient, testable, and reusable code components,
                                         reducing development time by 35% and improving application
                                         maintainability.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Implemented responsive user interface designs and
                                         established coding standards for consistent development
                                         practices across the team.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
+                                <li>
                                     <p>
                                         Contributed to full software development lifecycle including
                                         requirements analysis, system design, implementation,
@@ -308,18 +308,18 @@ const Resume = () => {
                     </div>
 
                     {/* Education */}
-                    <h5 className="mb-1.5 font-bold uppercase">EDUCATION</h5>
+                    <h5 className="section-heading">EDUCATION</h5>
 
-                    <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
+                    <div className="timeline-container">
                         <TimelineIcon>
-                            <div className="flex justify-between">
+                            <div className="job-header">
                                 <div className="font-bold text-gray-900">
                                     <h3>Bachelor of Science</h3>
                                     <div className="text-sm font-medium">
                                         Computer Science & Engineering
                                     </div>
                                 </div>
-                                <div className="text-right text-sm">
+                                <div className="job-meta">
                                     <time>2022 - Present</time>
                                     <address>Dhaka, Bangladesh</address>
                                 </div>
@@ -328,12 +328,12 @@ const Resume = () => {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <div className="flex justify-between">
+                            <div className="job-header">
                                 <div className="font-bold text-gray-900">
                                     <h3>Diploma in Engineering</h3>
                                     <div className="text-sm font-medium">Computer Technology</div>
                                 </div>
-                                <div className="text-right text-sm">
+                                <div className="job-meta">
                                     <time>2015 - 2019</time>
                                     <address>Mymensingh, Bangladesh</address>
                                 </div>
@@ -345,7 +345,7 @@ const Resume = () => {
                     </div>
 
                     {/* Core Technical Skills */}
-                    <h5 className="mb-1.5 font-bold uppercase">CORE TECHNICAL SKILLS</h5>
+                    <h5 className="section-heading">CORE TECHNICAL SKILLS</h5>
 
                     <div className="mb-4 grid grid-cols-2 gap-4 text-sm">
                         <div>
@@ -390,10 +390,10 @@ const Resume = () => {
                         </div>
                     </div>
                     {/* Training */}
-                    <h5 className="mb-1.5 font-bold uppercase">CERTIFICATIONS & TRAINING</h5>
+                    <h5 className="section-heading">CERTIFICATIONS & TRAINING</h5>
 
                     <div className="relative mb-4">
-                        <div className="flex justify-between">
+                        <div className="job-header">
                             <div className="font-bold text-gray-900">
                                 <h3>
                                     <a
@@ -410,7 +410,7 @@ const Resume = () => {
                             </div>
                         </div>
 
-                        <div className="flex justify-between">
+                        <div className="job-header">
                             <div className="font-bold text-gray-900">
                                 <h3>
                                     <a
@@ -429,69 +429,69 @@ const Resume = () => {
                     </div>
 
                     {/* Additional Skills */}
-                    <h5 className="mb-1.5 font-bold uppercase">ADDITIONAL COMPETENCIES</h5>
+                    <h5 className="section-heading">ADDITIONAL COMPETENCIES</h5>
 
                     <ul className="bullet-list">
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Strong foundation in Object-Oriented Programming (OOP), Data
                                 Structures, and Algorithms
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Extensive experience with RESTful APIs, GraphQL, and microservices
                                 architecture
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Database design and optimization: MySQL, PostgreSQL, MongoDB, Redis
                                 caching
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Frontend technologies: TypeScript, Redux, Tailwind CSS, Bootstrap,
                                 SCSS
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Software Development Life Cycle (SDLC) and Agile/Scrum methodologies
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Version control systems: Git, GitHub, GitLab with CI/CD pipeline
                                 implementation
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Cloud platforms: AWS (EC2, S3, RDS, Lambda), Google Cloud Platform
                                 basics
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 DevOps tools: Docker containerization, Jenkins, Nginx, Apache server
                                 configuration
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>Linux/Unix systems administration and command-line proficiency</p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>Testing frameworks: PHPUnit, Jest, Cypress for automated testing</p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Self-motivated team player with strong analytical and
                                 problem-solving abilities
                             </p>
                         </li>
-                        <li className="flex items-center">
+                        <li>
                             <p>
                                 Excellent communication skills for cross-functional collaboration
                                 and client interaction

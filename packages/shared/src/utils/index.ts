@@ -1,3 +1,7 @@
+import type { ClassValue } from 'clsx';
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
 export const getTitle = (title: string) => {
     return `${title} - DraftScripts Showcase`;
 };
@@ -21,4 +25,8 @@ export const slug = (text: string) => {
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '');
+};
+
+export const classNames = (...inputs: ClassValue[]) => {
+    return twMerge(clsx(inputs));
 };

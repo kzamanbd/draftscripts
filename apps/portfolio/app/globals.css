@@ -135,6 +135,32 @@
     .action-btn:last-child {
         @apply rounded-r border-r;
     }
+
+    /* Common ATS Resume Classes */
+    .contact-link {
+        @apply flex items-center gap-1;
+    }
+    .section-heading {
+        @apply mb-1.5 font-bold uppercase;
+    }
+    .timeline-container {
+        @apply border-primary-500 relative mb-4 space-y-3 border-l pl-4;
+    }
+    .job-header {
+        @apply flex justify-between;
+    }
+    .company-info {
+        @apply flex gap-1 text-sm font-medium;
+    }
+    .job-meta {
+        @apply text-right text-sm;
+    }
+    .resume-list-item {
+        @apply flex items-center;
+    }
+    .social-link {
+        @apply hover:text-primary-500 text-sm font-semibold text-gray-800 underline;
+    }
 }
 
 /* Custom animations for gradient effects */

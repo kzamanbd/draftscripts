@@ -93,7 +93,7 @@ const Resume = () => {
                         <div className="subtitle">
                             <h5 className="subtitle-text">Educations</h5>
                         </div>
-                        <div className="border-primary-500 relative mb-3 space-y-2 border-l pl-3 text-sm">
+                        <div className="timeline-container text-sm">
                             <TimelineIcon>
                                 <p className="font-bold">Bachelor of Science</p>
                                 <p>Computer Science & Engineering</p>
@@ -188,7 +188,7 @@ const Resume = () => {
                         {/* Experience section */}
                         <h5 className="subtitle">Work Experience</h5>
 
-                        <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
+                        <div className="timeline-container">
                             <TimelineIcon>
                                 <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
                                     <span className="leading-0">Software Engineer</span>
