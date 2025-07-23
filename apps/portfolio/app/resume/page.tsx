@@ -218,42 +218,36 @@ const Resume = () => {
                                 </div>
                                 <ul className="bullet-list ml-0">
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Developed and enhanced Dokan and Dokan Pro multi-vendor
                                             marketplace plugins for WordPress.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Built advanced features like vendor management,
                                             subscriptions, and booking integrations in Dokan Pro.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Enhanced wePOS to integrate physical retail systems with
                                             WooCommerce stores.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Delivered scalable solutions using PHP, JavaScript, and
                                             React.js.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Designed intuitive interfaces in collaboration with
                                             UX/UI teams to improve user experience.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Produced developer documentation with technical writers,
                                             streamlining onboarding and support.
@@ -299,36 +293,30 @@ const Resume = () => {
                                 </div>
                                 <ul className="bullet-list ml-0">
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Developing an ERP system based on Laravel, Vue.js and
                                             React.js.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>Developing software solutions to meet customer needs.</p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Creating and implementing the source code of new
                                             applications.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>Testing source code and debugging code.</p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Evaluating existing applications and performing updates
                                             and modifications.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Produced developer documentation with technical writers,
                                             streamlining onboarding and support.
@@ -368,28 +356,24 @@ const Resume = () => {
                                 </div>
                                 <ul className="bullet-list ml-0">
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Developing web applications based on PHP frameworks -
                                             Laravel, Vue JS.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Build efficient, testable & reusable codes. Modify
                                             existing code as needed.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Executed and monitored standards for user interfaces
                                             page design and development.
                                         </p>
                                     </li>
                                     <li className="flex items-center">
-                                        <div className="bullet-point"></div>
                                         <p>
                                             Perform other operational tasks based on{' '}
                                             {`"as and when required"`}.
@@ -404,55 +388,45 @@ const Resume = () => {
 
                         <ul className="bullet-list">
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>A solid foundation on OOP, Algorithm and Data Structure.</p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>Solid Knowledge on Web Services likes REST/JSON APIs.</p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>SQL, MySQL, TypeScript, Redux, Tailwind CSS and Bootstrap.</p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>Experience with SDLC and Agile methodologies.</p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>
                                     Experience in working with version control systems like Git,
                                     GitHub, and Gitlab.
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>
                                     Basic knowledge of Cloud Platforms like AWS, Google Cloud
                                     Platform.
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>Experience working in a Dockerized environment.</p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>
                                     Familiarity with DevOps processes, operation tools and Linux
                                     based systems.
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>
                                     Ability to work individually and independently with minimal
                                     supervision.
                                 </p>
                             </li>
                             <li className="flex items-center">
-                                <div className="bullet-point"></div>
                                 <p>
                                     Problem-solving skills, Self-managed, independent, initiative
                                     and proactive.
