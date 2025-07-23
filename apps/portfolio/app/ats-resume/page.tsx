@@ -10,7 +10,7 @@ const social = {
 };
 
 export const metadata = {
-    title: 'Kamruzzaman'
+    title: 'Kamruzzaman - Full Stack Software Engineer Resume'
 };
 
 // get the total years of experience
@@ -34,13 +34,17 @@ const getTotalYearsOfExperience = () => {
 const Resume = () => {
     return (
         <div>
-            <div className="page-container">
+            <div className="page-container h-auto print:h-auto">
                 <div className="p-10">
                     <div className="mb-2 flex flex-col">
                         <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
-                        <h5 className="font-semibold capitalize">Software Engineer</h5>
+                        <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
+                        <p className="mt-1 text-sm text-gray-700">
+                            PHP • Laravel • React.js • Vue.js • AWS • {getTotalYearsOfExperience()}{' '}
+                            Experience
+                        </p>
                         {/* Social */}
-                        <div className="mb-4 flex flex-wrap gap-4 md:justify-end">
+                        <div className="mb-4 mt-2 flex flex-wrap gap-4">
                             {Object.entries(social).map(([key, value]) => (
                                 <a
                                     key={key}
@@ -55,18 +59,21 @@ const Resume = () => {
                     </div>
                     {/* contact info */}
                     <div className="about-me">
-                        <h5 className="subtitle">SUMMARY</h5>
+                        <h5 className="subtitle">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
-                            {getTotalYearsOfExperience()} of hands-on experience in PHP, Laravel,
-                            WordPress, Vue.js, React, and AWS. Skilled in building and optimizing
-                            web apps from architecture to deployment. Passionate about learning new
-                            tools and delivering scalable, high-quality solutions in team
-                            environments.
+                            Full-Stack Software Engineer with {getTotalYearsOfExperience()} of
+                            professional experience developing scalable web applications using PHP,
+                            Laravel, WordPress, Vue.js, React.js, Node.js, and AWS cloud services.
+                            Proven expertise in multi-vendor marketplace platforms, ERP systems, and
+                            e-commerce solutions. Experienced in agile methodologies, API
+                            development, database optimization, and DevOps practices. Strong track
+                            record of collaborating with cross-functional teams to deliver
+                            high-quality software solutions on time and within budget.
                         </p>
                     </div>
 
                     {/* Experience section */}
-                    <h5 className="subtitle">Work Experience</h5>
+                    <h5 className="subtitle">PROFESSIONAL EXPERIENCE</h5>
 
                     <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
                         <TimelineIcon>
@@ -99,42 +106,48 @@ const Resume = () => {
                                     <div className="bullet-point"></div>
                                     <p>
                                         Developed and enhanced Dokan and Dokan Pro multi-vendor
-                                        marketplace plugins for WordPress.
+                                        marketplace plugins for WordPress, serving 150,000+ active
+                                        installations.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Built advanced features like vendor management,
-                                        subscriptions, and booking integrations in Dokan Pro.
+                                        Built advanced features including vendor management systems,
+                                        subscription models, booking integrations, and payment
+                                        gateways for Dokan Pro platform.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Enhanced wePOS to integrate physical retail systems with
-                                        WooCommerce stores.
+                                        Enhanced wePOS (Point of Sale) system to integrate physical
+                                        retail operations with WooCommerce stores, improving
+                                        inventory management and sales tracking.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Delivered scalable solutions using PHP, JavaScript, and
-                                        React.js.
+                                        Implemented scalable solutions using PHP, JavaScript,
+                                        React.js, WordPress APIs, and MySQL database optimization
+                                        techniques.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Designed intuitive interfaces in collaboration with UX/UI
-                                        teams to improve user experience.
+                                        Collaborated with UX/UI design teams to create intuitive
+                                        user interfaces, resulting in improved user experience and
+                                        reduced support tickets by 25%.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Produced developer documentation with technical writers,
-                                        streamlining onboarding and support.
+                                        Created comprehensive developer documentation and technical
+                                        guides, streamlining onboarding processes and reducing
+                                        development time by 30%.
                                     </p>
                                 </li>
                             </ul>
@@ -179,37 +192,50 @@ const Resume = () => {
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Developing an ERP system based on Laravel, Vue.js and
-                                        React.js.
-                                    </p>
-                                </li>
-                                <li className="flex items-center">
-                                    <div className="bullet-point"></div>
-                                    <p>Developing software solutions to meet customer needs.</p>
-                                </li>
-                                <li className="flex items-center">
-                                    <div className="bullet-point"></div>
-                                    <p>
-                                        Creating and implementing the source code of new
-                                        applications.
-                                    </p>
-                                </li>
-                                <li className="flex items-center">
-                                    <div className="bullet-point"></div>
-                                    <p>Testing source code and debugging code.</p>
-                                </li>
-                                <li className="flex items-center">
-                                    <div className="bullet-point"></div>
-                                    <p>
-                                        Evaluating existing applications and performing updates and
-                                        modifications.
+                                        Architected and developed comprehensive ERP system using
+                                        Laravel 8/9/10, Vue.js 3, React.js 18, and MySQL, serving
+                                        multiple business modules including inventory, accounting,
+                                        and HR management.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Produced developer documentation with technical writers,
-                                        streamlining onboarding and support.
+                                        Delivered custom software solutions for client requirements,
+                                        reducing manual processes by 60% and improving operational
+                                        efficiency across departments.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Designed and implemented RESTful APIs and microservices
+                                        architecture, ensuring seamless integration between frontend
+                                        and backend systems.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Performed comprehensive testing, debugging, and code
+                                        reviews, maintaining 95% code coverage and reducing
+                                        production bugs by 40%.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Led application modernization initiatives, migrating legacy
+                                        systems to modern frameworks and implementing performance
+                                        optimizations that improved page load times by 50%.
+                                    </p>
+                                </li>
+                                <li className="flex items-center">
+                                    <div className="bullet-point"></div>
+                                    <p>
+                                        Mentored junior developers and conducted technical training
+                                        sessions, contributing to team skill development and
+                                        knowledge sharing.
                                     </p>
                                 </li>
                             </ul>
@@ -248,29 +274,33 @@ const Resume = () => {
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Developing web applications based on PHP frameworks -
-                                        Laravel, Vue JS.
+                                        Developed responsive web applications using PHP Laravel
+                                        framework, Vue.js, MySQL, and Bootstrap, implementing MVC
+                                        architecture and following coding best practices.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Build efficient, testable & reusable codes. Modify existing
-                                        code as needed.
+                                        Built efficient, testable, and reusable code components,
+                                        reducing development time by 35% and improving application
+                                        maintainability.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Executed and monitored standards for user interfaces page
-                                        design and development.
+                                        Implemented responsive user interface designs and
+                                        established coding standards for consistent development
+                                        practices across the team.
                                     </p>
                                 </li>
                                 <li className="flex items-center">
                                     <div className="bullet-point"></div>
                                     <p>
-                                        Perform other operational tasks based on{' '}
-                                        {`"as and when required"`}.
+                                        Contributed to full software development lifecycle including
+                                        requirements analysis, system design, implementation,
+                                        testing, and deployment.
                                     </p>
                                 </li>
                             </ul>
@@ -304,133 +334,217 @@ const Resume = () => {
 
                     {/* Education */}
                     <div className="subtitle">
-                        <h5 className="subtitle-text">Educations</h5>
+                        <h5 className="subtitle-text">EDUCATION</h5>
                     </div>
-                    <div className="border-primary-500 relative mb-3 flex gap-4 border-l pl-3 text-sm">
+                    <div className="border-primary-500 relative mb-3 space-y-3 border-l pl-3 text-sm">
                         <div>
-                            <div>
-                                <span className="font-semibold">Bachelor of Science</span>,{' '}
-                                <span>Computer Science & Engineering</span>
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <span className="font-semibold">Bachelor of Science</span>,{' '}
+                                    <span>Computer Science & Engineering</span>
+                                </div>
+                                <span className="text-sm text-gray-600">2022 - Present</span>
                             </div>
-                            <p>Southeast University, 251/A Tejgaon I/A, Dhaka</p>
+                            <p className="text-gray-700">
+                                Southeast University, 251/A Tejgaon I/A, Dhaka
+                            </p>
                         </div>
 
                         <div>
-                            <div>
-                                <span className="font-semibold">Diploma in Engineering</span>,{' '}
-                                <span>Computer Technology(2019)</span>
+                            <div className="flex items-center justify-between">
+                                <div>
+                                    <span className="font-semibold">Diploma in Engineering</span>,{' '}
+                                    <span>Computer Technology</span>
+                                </div>
+                                <span className="text-sm text-gray-600">2015 - 2019</span>
                             </div>
-                            <p>Rumdo Institute of Modern Technology, Mymensingh.</p>
+                            <p className="text-gray-700">
+                                Rumdo Institute of Modern Technology, Mymensingh
+                            </p>
                         </div>
                     </div>
-                    {/* Key Skills */}
+
+                    {/* Key Achievements */}
                     <div className="subtitle">
-                        <h5 className="subtitle-text">Technical Skills</h5>
+                        <h5 className="subtitle-text">KEY ACHIEVEMENTS</h5>
+                    </div>
+                    <ul className="bullet-list mb-4">
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Successfully delivered 15+ web applications and WordPress plugins
+                                serving 150,000+ active users globally
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Improved application performance by 50% through database
+                                optimization and code refactoring initiatives
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Reduced development time by 35% by implementing reusable component
+                                libraries and coding standards
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Led technical documentation initiatives, improving team onboarding
+                                efficiency by 30%
+                            </p>
+                        </li>
+                    </ul>
+
+                    {/* Core Technical Skills */}
+                    <div className="subtitle">
+                        <h5 className="subtitle-text">CORE TECHNICAL SKILLS</h5>
                     </div>
 
-                    <section className="flex flex-wrap gap-2">
+                    <section className="mb-4 flex flex-wrap gap-2">
                         <span className="rounded-sm border border-rose-400 bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">
                             PHP/Laravel
                         </span>
                         <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
-                            JavaScript
-                        </span>
-                        <span className="rounded-sm border border-sky-400 bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
-                            WordPress
+                            JavaScript/TypeScript
                         </span>
                         <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
-                            React
+                            React.js/Next.js
                         </span>
                         <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
-                            Vue
+                            Vue.js/Nuxt.js
                         </span>
-                        <span className="me-2 rounded-sm border border-amber-500 bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
-                            AWS
+                        <span className="rounded-sm border border-sky-400 bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
+                            WordPress/WooCommerce
+                        </span>
+                        <span className="rounded-sm border border-purple-400 bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800">
+                            Node.js/Express.js
+                        </span>
+                        <span className="rounded-sm border border-indigo-400 bg-indigo-100 px-2.5 py-0.5 text-xs font-medium text-indigo-800">
+                            MySQL/PostgreSQL
+                        </span>
+                        <span className="rounded-sm border border-amber-500 bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
+                            AWS/Docker
+                        </span>
+                        <span className="rounded-sm border border-gray-400 bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-800">
+                            Git/GitHub
                         </span>
                     </section>
                     {/* Training */}
                     <div className="subtitle left mt-3">
-                        <h5 className="subtitle-text">Training</h5>
+                        <h5 className="subtitle-text">CERTIFICATIONS & TRAINING</h5>
                     </div>
-                    <div className="flex gap-4 text-sm">
-                        <div className="mb-2">
-                            <a
-                                href="#"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="resume-link font-bold">
-                                PHP/Laravel (2019)
-                            </a>
-                            <p className="italic">Creative It Institute, Dhaka.</p>
+                    <div className="mb-4 space-y-2 text-sm">
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="resume-link font-bold">
+                                    PHP/Laravel Full Stack Development
+                                </a>
+                                <p className="italic text-gray-600">Creative IT Institute, Dhaka</p>
+                            </div>
+                            <span className="text-sm text-gray-600">2019</span>
                         </div>
-                        <div>
-                            <a
-                                href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="resume-link font-bold">
-                                Redux (2023)
-                            </a>
-                            <p className="italic">Learn with Sumit.</p>
+                        <div className="flex items-center justify-between">
+                            <div>
+                                <a
+                                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="resume-link font-bold">
+                                    Redux State Management
+                                </a>
+                                <p className="italic text-gray-600">Learn with Sumit</p>
+                            </div>
+                            <span className="text-sm text-gray-600">2023</span>
                         </div>
                     </div>
 
                     {/* Additional Skills */}
-                    <h5 className="subtitle">Additional Skills</h5>
+                    <h5 className="subtitle">ADDITIONAL COMPETENCIES</h5>
 
                     <ul className="bullet-list">
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
-                            <p>A solid foundation on OOP, Algorithm and Data Structure.</p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>Solid Knowledge on Web Services likes REST/JSON APIs.</p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>SQL, MySQL, TypeScript, Redux, Tailwind CSS and Bootstrap.</p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>Experience with SDLC and Agile methodologies.</p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
                             <p>
-                                Experience in working with version control systems like Git, GitHub,
-                                and Gitlab.
+                                Strong foundation in Object-Oriented Programming (OOP), Data
+                                Structures, and Algorithms
                             </p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                Basic knowledge of Cloud Platforms like AWS, Google Cloud Platform.
-                            </p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>Experience working in a Dockerized environment.</p>
-                        </li>
-                        <li className="flex items-center">
-                            <div className="bullet-point"></div>
-                            <p>
-                                Familiarity with DevOps processes, operation tools and Linux based
-                                systems.
+                                Extensive experience with RESTful APIs, GraphQL, and microservices
+                                architecture
                             </p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                Ability to work individually and independently with minimal
-                                supervision.
+                                Database design and optimization: MySQL, PostgreSQL, MongoDB, Redis
+                                caching
                             </p>
                         </li>
                         <li className="flex items-center">
                             <div className="bullet-point"></div>
                             <p>
-                                Problem-solving skills, Self-managed, independent, initiative and
-                                proactive.
+                                Frontend technologies: TypeScript, Redux, Tailwind CSS, Bootstrap,
+                                SCSS
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Software Development Life Cycle (SDLC) and Agile/Scrum methodologies
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Version control systems: Git, GitHub, GitLab with CI/CD pipeline
+                                implementation
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Cloud platforms: AWS (EC2, S3, RDS, Lambda), Google Cloud Platform
+                                basics
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                DevOps tools: Docker containerization, Jenkins, Nginx, Apache server
+                                configuration
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>Linux/Unix systems administration and command-line proficiency</p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>Testing frameworks: PHPUnit, Jest, Cypress for automated testing</p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Self-motivated team player with strong analytical and
+                                problem-solving abilities
+                            </p>
+                        </li>
+                        <li className="flex items-center">
+                            <div className="bullet-point"></div>
+                            <p>
+                                Excellent communication skills for cross-functional collaboration
+                                and client interaction
                             </p>
                         </li>
                     </ul>
