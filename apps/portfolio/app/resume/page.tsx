@@ -1,14 +1,11 @@
-import ActionButton from '@/components/resume/action-button';
 import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
-import { profileImage, user } from '@repo/shared/metadata';
-import Image from 'next/image';
+import { user } from '@repo/shared/metadata';
 import { MdLocationPin } from 'react-icons/md';
 
 const social = {
     GitHub: user.github,
     Linkedin: user.linkedin,
-    Codeforces: user.codeforces,
     LeetCode: user.leetcode
 };
 
@@ -38,23 +35,32 @@ const Resume = () => {
     return (
         <div className="resume">
             <div className="page-container">
-                <ActionButton />
-                <div className="resume-box with-photo">
+                <div className="resume-box">
                     <div className="left-box">
-                        <Image
-                            src={profileImage}
-                            className="profile-photo"
-                            width={150}
-                            height={150}
-                            alt="kamruzzaman, kamruzzaman profile image"
-                        />
-                        <div className="name--title">
+                        <div className="mb-2 flex flex-col items-center justify-center gap-2">
                             <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
-                            <h5 className="subtitle capitalize">Software Engineer</h5>
+                            <h5 className="font-semibold capitalize">
+                                Software Engineer | Southeast University
+                            </h5>
+                            {/* Social */}
+                            <div className="mb-4 flex flex-wrap gap-4 md:justify-end">
+                                {Object.entries(social).map(([key, value]) => (
+                                    <a
+                                        key={key}
+                                        href={value}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
+                                        <span>
+                                            {value.replace('https://', '').replace('www.', '')}
+                                        </span>
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                         {/* contact info */}
                         <div className="about-me">
-                            <h5 className="subtitle">About Me</h5>
+                            <h5 className="subtitle">SUMMARY</h5>
                             <p className="mb-4 text-justify text-sm">
                                 {getTotalYearsOfExperience()} of hands-on experience in PHP,
                                 Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and
@@ -62,127 +68,6 @@ const Resume = () => {
                                 about learning new tools and delivering scalable, high-quality
                                 solutions in team environments.
                             </p>
-                        </div>
-
-                        <ul className="mb-3 space-y-1 text-sm">
-                            <li>
-                                <a href="tel:8801716724245" className="flex items-center gap-1">
-                                    <span className="font-semibold">Phone:</span>
-                                    <span className="underline">+880 1716-724245</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a
-                                    href={`mailto:${user.email}`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-1">
-                                    <span className="font-semibold">Email:</span>
-                                    <span className="underline"> {user.email}</span>
-                                </a>
-                            </li>
-
-                            <li className="flex items-center">
-                                <MdLocationPin size={12} />
-                                <p>Mirpur 12, Dhaka, Bangladesh</p>
-                            </li>
-                        </ul>
-
-                        {/* Education */}
-                        <div className="subtitle">
-                            <h5 className="subtitle-text">Educations</h5>
-                        </div>
-                        <div className="border-primary-500 relative mb-3 space-y-2 border-l pl-3 text-sm">
-                            <TimelineIcon>
-                                <p className="font-bold">Bachelor of Science</p>
-                                <p>Computer Science & Engineering</p>
-                                <p className="mb-2">2022 - Present</p>
-                                <p className="font-semibold italic">Southeast University.</p>
-                                <div className="flex items-center">
-                                    <MdLocationPin size={12} />
-                                    <span>251/A Tejgaon I/A, Dhaka</span>
-                                </div>
-                            </TimelineIcon>
-
-                            <TimelineIcon>
-                                <p className="font-bold">Diploma in Engineering </p>
-                                <p>Computer Technology</p>
-                                <p className="mb-2">2015 - 2019</p>
-                                <p className="font-semibold italic">
-                                    Rumdo Institute of Modern Technology.
-                                </p>
-                                <div className="flex items-center">
-                                    <MdLocationPin size={12} />
-                                    <span>Mymensingh Bypass.</span>
-                                </div>
-                            </TimelineIcon>
-                        </div>
-                        {/* Key Skills */}
-                        <div className="subtitle">
-                            <h5 className="subtitle-text">Key Skills</h5>
-                        </div>
-
-                        <section className="flex flex-wrap gap-2">
-                            <span className="rounded-sm border border-rose-400 bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">
-                                PHP/Laravel
-                            </span>
-                            <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
-                                JavaScript
-                            </span>
-                            <span className="rounded-sm border border-sky-400 bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
-                                WordPress
-                            </span>
-                            <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
-                                React
-                            </span>
-                            <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
-                                Vue
-                            </span>
-                            <span className="me-2 rounded-sm border border-amber-500 bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
-                                AWS
-                            </span>
-                        </section>
-                        {/* Training */}
-                        <div className="subtitle left mt-3">
-                            <h5 className="subtitle-text">Training</h5>
-                        </div>
-                        <div className="text-sm">
-                            <div className="mb-2">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="resume-link font-bold">
-                                    PHP/Laravel (2019)
-                                </a>
-                                <p className="italic">Creative It Institute, Dhaka.</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="resume-link font-bold">
-                                    Redux (2023)
-                                </a>
-                                <p className="italic">Learn with Sumit.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="right-box">
-                        {/* Social */}
-                        <div className="mb-4 flex flex-wrap gap-4 md:justify-end">
-                            {Object.entries(social).map(([key, value]) => (
-                                <a
-                                    key={key}
-                                    href={value}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
-                                    <span>{key}</span>
-                                </a>
-                            ))}
                         </div>
 
                         {/* Experience section */}
@@ -207,7 +92,7 @@ const Resume = () => {
                                 </h3>
                                 <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
                                     <time className="block text-sm font-normal">
-                                        NOV 2024 - Present
+                                        November 2024 - Present
                                     </time>
                                     <address className="flex items-center text-xs">
                                         <MdLocationPin size={12} />
@@ -290,7 +175,7 @@ const Resume = () => {
                                 </h3>
                                 <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
                                     <time className="block text-sm font-normal">
-                                        JUL 2021 - OCT-2024
+                                        July 2021 - October 2024
                                     </time>
                                     <address className="flex items-center text-xs">
                                         <MdLocationPin size={12} />
@@ -359,7 +244,7 @@ const Resume = () => {
 
                                 <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
                                     <time className="block text-sm font-normal">
-                                        MAY 2020 – JUN 2021
+                                        May 2020 – June 2021
                                     </time>
                                     <address className="flex items-center text-xs">
                                         <MdLocationPin size={12} />
@@ -399,6 +284,105 @@ const Resume = () => {
                             </TimelineIcon>
                         </div>
 
+                        <ul className="mb-3 space-y-1 text-sm">
+                            <li>
+                                <a href="tel:8801716724245" className="flex items-center gap-1">
+                                    <span className="font-semibold">Phone:</span>
+                                    <span className="underline">+880 1716-724245</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href={`mailto:${user.email}`}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-1">
+                                    <span className="font-semibold">Email:</span>
+                                    <span className="underline"> {user.email}</span>
+                                </a>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <span className="font-semibold">Address:</span>
+                                <p>Mirpur 12, Dhaka, Bangladesh</p>
+                            </li>
+                        </ul>
+
+                        {/* Education */}
+                        <div className="subtitle">
+                            <h5 className="subtitle-text">Educations</h5>
+                        </div>
+                        <div className="border-primary-500 relative mb-3 flex gap-4 border-l pl-3 text-sm">
+                            <div>
+                                <div>
+                                    <span className="font-semibold">Bachelor of Science</span>,{' '}
+                                    <span>Computer Science & Engineering</span>
+                                </div>
+                                <p>Southeast University, 251/A Tejgaon I/A, Dhaka</p>
+                            </div>
+
+                            <div>
+                                <div>
+                                    <span className="font-semibold">Diploma in Engineering</span>,{' '}
+                                    <span>Computer Technology(2019)</span>
+                                </div>
+                                <p>Rumdo Institute of Modern Technology, Mymensingh.</p>
+                            </div>
+                        </div>
+                        {/* Key Skills */}
+                        <div className="subtitle">
+                            <h5 className="subtitle-text">Technical Skills</h5>
+                        </div>
+
+                        <section className="flex flex-wrap gap-2">
+                            <span className="rounded-sm border border-rose-400 bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">
+                                PHP/Laravel
+                            </span>
+                            <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
+                                JavaScript
+                            </span>
+                            <span className="rounded-sm border border-sky-400 bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
+                                WordPress
+                            </span>
+                            <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
+                                React
+                            </span>
+                            <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
+                                Vue
+                            </span>
+                            <span className="me-2 rounded-sm border border-amber-500 bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
+                                AWS
+                            </span>
+                        </section>
+                        {/* Training */}
+                        <div className="subtitle left mt-3">
+                            <h5 className="subtitle-text">Training</h5>
+                        </div>
+                        <div className="flex gap-4 text-sm">
+                            <div className="mb-2">
+                                <a
+                                    href="#"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="resume-link font-bold">
+                                    PHP/Laravel (2019)
+                                </a>
+                                <p className="italic">Creative It Institute, Dhaka.</p>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="resume-link font-bold">
+                                    Redux (2023)
+                                </a>
+                                <p className="italic">Learn with Sumit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="right-box">
                         {/* Additional Skills */}
                         <h5 className="subtitle">Additional Skills</h5>
 
