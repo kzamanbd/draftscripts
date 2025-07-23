@@ -1,34 +1,16 @@
 import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
 import { user } from '@repo/shared/metadata';
-import { MdLocationPin } from 'react-icons/md';
+import Image from 'next/image';
 
-const social = {
+const social = Object.entries({
     GitHub: user.github,
     Linkedin: user.linkedin,
     LeetCode: user.leetcode
-};
+});
 
 export const metadata = {
-    title: 'Kamruzzaman - Full Stack Software Engineer Resume'
-};
-
-// get the total years of experience
-const getTotalYearsOfExperience = () => {
-    const startDate = new Date('2020-05-01');
-    const currentDate = new Date();
-
-    let years = currentDate.getFullYear() - startDate.getFullYear();
-    let months = currentDate.getMonth() - startDate.getMonth();
-    const days = currentDate.getDate() - startDate.getDate();
-
-    if (months < 0 || (months === 0 && days < 0)) {
-        years--; // subtract a year if current month/day is before start month/day
-        months += 12;
-    }
-
-    const plusSign = months > 0 || days > 0 ? '+' : '';
-    return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
+    title: 'Kamruzzaman - Software Engineer'
 };
 
 const Resume = () => {
@@ -40,20 +22,47 @@ const Resume = () => {
                         <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
                         <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
                         <p className="mt-1 text-sm text-gray-700">
-                            PHP • Laravel • React.js • Vue.js • AWS • {getTotalYearsOfExperience()}{' '}
-                            Experience
+                            PHP • Laravel • React.js • Vue.js • AWS • 5+ Years of Experience
                         </p>
-                        {/* Social */}
-                        <div className="mb-4 mt-2 flex flex-wrap gap-4">
-                            {Object.entries(social).map(([key, value]) => (
+                        <ul className="flex gap-2 text-sm">
+                            <li>
+                                <a href="tel:8801716724245" className="flex items-center gap-1">
+                                    <span className="font-semibold">Phone:</span>
+                                    <span className="underline">+880 1716-724245</span>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a
-                                    key={key}
-                                    href={value}
+                                    href={`mailto:${user.email}`}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
-                                    <span>{value.replace('https://', '').replace('www.', '')}</span>
+                                    className="flex items-center gap-1">
+                                    <span className="font-semibold">Email:</span>
+                                    <span className="underline"> {user.email}</span>
                                 </a>
+                            </li>
+
+                            <li className="flex items-center gap-1">
+                                <span className="font-semibold">Address:</span>
+                                <p>Mirpur 12, Dhaka, Bangladesh</p>
+                            </li>
+                        </ul>
+                        {/* Social */}
+                        <div className="mb-4 flex flex-wrap gap-2 text-sm">
+                            {social.map(([key, value], index) => (
+                                <div key={key} className="flex items-center gap-1">
+                                    <a
+                                        href={value}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
+                                        <span>
+                                            {value.replace('https://', '').replace('www.', '')}
+                                        </span>
+                                    </a>
+                                    <span>{index < social.length - 1 ? '•' : ''}</span>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -61,14 +70,14 @@ const Resume = () => {
                     <div className="about-me">
                         <h5 className="subtitle">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
-                            Full-Stack Software Engineer with {getTotalYearsOfExperience()} of
-                            professional experience developing scalable web applications using PHP,
-                            Laravel, WordPress, Vue.js, React.js, Node.js, and AWS cloud services.
-                            Proven expertise in multi-vendor marketplace platforms, ERP systems, and
-                            e-commerce solutions. Experienced in agile methodologies, API
-                            development, database optimization, and DevOps practices. Strong track
-                            record of collaborating with cross-functional teams to deliver
-                            high-quality software solutions on time and within budget.
+                            Full-Stack Software Engineer with 5+ Years of professional experience
+                            developing scalable web applications using PHP, Laravel, WordPress,
+                            Vue.js, React.js, Node.js, and AWS cloud services. Proven expertise in
+                            multi-vendor marketplace platforms, ERP systems, and e-commerce
+                            solutions. Experienced in agile methodologies, API development, database
+                            optimization, and DevOps practices. Strong track record of collaborating
+                            with cross-functional teams to deliver high-quality software solutions
+                            on time and within budget.
                         </p>
                     </div>
 
@@ -77,29 +86,33 @@ const Resume = () => {
 
                     <div className="border-primary-500 relative mb-4 space-y-4 border-l pl-4">
                         <TimelineIcon>
-                            <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                <span className="leading-0">Software Engineer</span>
-                                <div className="ml-1 flex gap-1 text-sm font-medium">
-                                    <span>at</span>
-                                    <div className="flex items-center gap-1">
-                                        <a
-                                            href="https://wedevs.com"
-                                            className="underline"
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            weDevs
-                                        </a>
+                            <div className="flex justify-between">
+                                <div className="font-bold text-gray-900">
+                                    <h3>Software Engineer</h3>
+                                    <div className="flex gap-1 text-sm font-medium">
+                                        <div className="size-4">
+                                            <Image
+                                                src="/images/wedevs-logo.svg"
+                                                alt="weDevs Logo"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <a
+                                                href="https://wedevs.com"
+                                                className="underline"
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                weDevs
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </h3>
-                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                <time className="block text-sm font-normal">
-                                    November 2024 - Present
-                                </time>
-                                <address className="flex items-center text-xs">
-                                    <MdLocationPin size={12} />
-                                    <span>House:1005, Avenue:11, Road:09, Mirpur DOHS 1216</span>
-                                </address>
+                                <div className="text-right text-sm">
+                                    <time>November 2024 - Present</time>
+                                    <address>Mirpur DOHS 1216, Dhaka, Bangladesh</address>
+                                </div>
                             </div>
                             <ul className="bullet-list ml-0">
                                 <li className="flex items-center">
@@ -142,51 +155,44 @@ const Resume = () => {
                                         reduced support tickets by 25%.
                                     </p>
                                 </li>
-                                <li className="flex items-center">
-                                    <div className="bullet-point"></div>
-                                    <p>
-                                        Created comprehensive developer documentation and technical
-                                        guides, streamlining onboarding processes and reducing
-                                        development time by 30%.
-                                    </p>
-                                </li>
                             </ul>
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                <span className="leading-0">Software Engineer</span>
-                                <div className="ml-1 flex gap-1 text-sm font-medium">
-                                    <span>at</span>
-                                    <div className="flex items-center gap-1">
-                                        <a
-                                            href="https://mononsoft.org"
-                                            className="underline"
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            MononSoft Ltd.
-                                        </a>
-                                        <a
-                                            href="https://jmigroup-bd.com"
-                                            className="underline"
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            (JMI Group)
-                                        </a>
-                                        <span className="text-primary-500 text-sm font-medium">
-                                            (3 yrs 4 mos)
-                                        </span>
+                            <div className="flex justify-between">
+                                <div className="font-bold text-gray-900">
+                                    <h3>Software Engineer</h3>
+                                    <div className="flex gap-1 text-sm font-medium">
+                                        <div className="size-4">
+                                            <Image
+                                                src="/images/mononsoft-logo.svg"
+                                                alt="MononSoft Logo"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <a
+                                                href="https://mononsoft.org"
+                                                className="underline"
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                MononSoft Ltd.
+                                            </a>
+                                            <a
+                                                href="https://jmigroup-bd.com"
+                                                className="underline"
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                (JMI Group)
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </h3>
-                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                <time className="block text-sm font-normal">
-                                    July 2021 - October 2024
-                                </time>
-                                <address className="flex items-center text-xs">
-                                    <MdLocationPin size={12} />
-                                    <span>50/B New Eskaton Road, Dhaka 1000</span>
-                                </address>
+                                <div className="text-right text-sm">
+                                    <time>July 2021 - October 2024</time>
+                                    <address>50/B New Eskaton Road, Dhaka 1000</address>
+                                </div>
                             </div>
                             <ul className="bullet-list ml-0">
                                 <li className="flex items-center">
@@ -242,33 +248,33 @@ const Resume = () => {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                <span className="leading-0">Jr. Software Engineer</span>
-                                <div className="ml-1 flex gap-1 text-sm font-medium">
-                                    <span>at</span>
-                                    <div className="flex items-center gap-1">
-                                        <a
-                                            href="https://maxsop.com/"
-                                            className="underline"
-                                            target="_blank"
-                                            rel="noreferrer">
-                                            MaxSOP
-                                        </a>
-                                        <span className="text-primary-500 text-sm font-medium">
-                                            (1 yr 2 mos)
-                                        </span>
+                            <div className="flex justify-between">
+                                <div className="font-bold text-gray-900">
+                                    <h3>Jr. Software Engineer</h3>
+                                    <div className="flex gap-1 text-sm font-medium">
+                                        <div className="size-4">
+                                            <Image
+                                                src="/images/maxsop-logo.svg"
+                                                alt="MaxSOP Logo"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="flex items-center gap-1">
+                                            <a
+                                                href="https://maxsop.com/"
+                                                className="underline"
+                                                target="_blank"
+                                                rel="noreferrer">
+                                                MaxSOP
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </h3>
-
-                            <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                <time className="block text-sm font-normal">
-                                    May 2020 – June 2021
-                                </time>
-                                <address className="flex items-center text-xs">
-                                    <MdLocationPin size={12} />
-                                    <span>27/2 Ram Babu Road, Mymensingh-2200.</span>
-                                </address>
+                                <div className="text-right text-sm">
+                                    <time>May 2020 – June 2021</time>
+                                    <address>27/2 Ram Babu Road, Mymensingh-2200</address>
+                                </div>
                             </div>
                             <ul className="bullet-list ml-0">
                                 <li className="flex items-center">
@@ -307,36 +313,11 @@ const Resume = () => {
                         </TimelineIcon>
                     </div>
 
-                    <ul className="mb-3 space-y-1 text-sm">
-                        <li>
-                            <a href="tel:8801716724245" className="flex items-center gap-1">
-                                <span className="font-semibold">Phone:</span>
-                                <span className="underline">+880 1716-724245</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a
-                                href={`mailto:${user.email}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="flex items-center gap-1">
-                                <span className="font-semibold">Email:</span>
-                                <span className="underline"> {user.email}</span>
-                            </a>
-                        </li>
-
-                        <li className="flex items-center gap-1">
-                            <span className="font-semibold">Address:</span>
-                            <p>Mirpur 12, Dhaka, Bangladesh</p>
-                        </li>
-                    </ul>
-
                     {/* Education */}
                     <div className="subtitle">
                         <h5 className="subtitle-text">EDUCATION</h5>
                     </div>
-                    <div className="border-primary-500 relative mb-3 space-y-3 border-l pl-3 text-sm">
+                    <div className="relative mb-3 space-y-3 text-sm">
                         <div>
                             <div className="flex items-center justify-between">
                                 <div>
