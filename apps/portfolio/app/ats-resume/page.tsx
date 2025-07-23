@@ -99,10 +99,11 @@ const Resume = () => {
                                 <div className="font-bold text-gray-900">
                                     <h3>Software Engineer</h3>
                                     <div className="company-info">
-                                        <div className="size-4">
+                                        <div className="flex items-center rounded border p-0.5">
                                             <Image
                                                 src="/images/wedevs-logo.svg"
-                                                alt="weDevs Logo"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
                                                 width={32}
                                                 height={32}
                                             />
@@ -167,10 +168,11 @@ const Resume = () => {
                                 <div className="font-bold text-gray-900">
                                     <h3>Software Engineer</h3>
                                     <div className="company-info">
-                                        <div className="size-4">
+                                        <div className="flex items-center rounded border p-0.5">
                                             <Image
                                                 src="/images/mononsoft-logo.svg"
-                                                alt="MononSoft Logo"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
                                                 width={32}
                                                 height={32}
                                             />
@@ -250,10 +252,11 @@ const Resume = () => {
                                 <div className="font-bold text-gray-900">
                                     <h3>Jr. Software Engineer</h3>
                                     <div className="company-info">
-                                        <div className="size-4">
+                                        <div className="flex items-center rounded border p-0.5">
                                             <Image
                                                 src="/images/maxsop-logo.svg"
-                                                alt="MaxSOP Logo"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
                                                 width={32}
                                                 height={32}
                                             />
