@@ -1,21 +1,22 @@
-type TimelineIconProps = {
-    as?: React.ElementType;
+import { classNames } from '@repo/shared/utils';
+
+type TimelineProps = {
     className?: string;
     children?: React.ReactNode;
     [key: string]: any;
 };
 
-const TimelineIcon = (props: TimelineIconProps) => {
-    const { as: Component = 'div', className = '', children, ...rest } = props;
+const Timeline = (props: TimelineProps) => {
+    const { className = '', children, ...rest } = props;
 
     return (
-        <Component className={className} {...rest}>
+        <div className={classNames(className)} {...rest}>
             <div className="timeline-icon bg-white">
                 <div className="bg-primary flex h-1.5 w-1.5 rounded-full"></div>
             </div>
             {children}
-        </Component>
+        </div>
     );
 };
 
-export default TimelineIcon;
+export default Timeline;

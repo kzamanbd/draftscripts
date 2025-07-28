@@ -60,14 +60,13 @@
         }
     }
     body {
-        @apply bg-light dark:bg-gray-800;
+        @apply bg-light dark:bg-gray-800 print:bg-transparent;
     }
 }
 
 @layer components {
     .page-container {
-        @apply z-[1] mx-auto h-auto w-full bg-white md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border;
-        @apply relative break-before-auto print:mx-0 print:my-0 print:h-[297mm] print:w-[210mm] print:rounded-none print:shadow-none;
+        @apply relative z-[1] mx-auto h-auto w-full break-before-auto bg-white md:my-6 md:h-[297mm] md:w-[210mm] md:rounded md:border print:mx-0 print:my-0 print:h-[297mm] print:w-[210mm] print:rounded-none print:border-0 print:shadow-none;
     }
     .orange-gradient {
         @apply bg-gradient-to-r from-amber-500 via-orange-600 to-yellow-500 bg-clip-text text-transparent;
@@ -100,10 +99,10 @@
         @apply text-primary-500 text-sm underline;
     }
     .bullet-list {
-        @apply ml-2 mt-2 space-y-1.5 text-left text-xs;
+        @apply relative ml-2 mt-2 space-y-1.5 text-left text-xs;
     }
-    .bullet-point {
-        @apply bg-primary-500 mr-2 h-1 w-1 rounded-full;
+    .bullet-list li {
+        @apply before:bg-primary-500 flex items-center before:mr-2 before:h-1 before:w-1 before:rounded-full;
     }
     .key-button {
         @apply relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-br p-0.5 text-sm font-medium text-gray-900 focus:outline-none focus:ring-4;
@@ -115,7 +114,7 @@
         @apply mr-3 h-4 w-4 rounded;
     }
     .profile-photo {
-        @apply to-primary-500 size-40 rounded-xl bg-gradient-to-r from-indigo-300 object-cover;
+        @apply size-40 rounded-xl object-cover;
     }
     .name--title {
         @apply mb-10;
@@ -135,6 +134,32 @@
     }
     .action-btn:last-child {
         @apply rounded-r border-r;
+    }
+
+    /* Common ATS Resume Classes */
+    .contact-link {
+        @apply flex items-center gap-1;
+    }
+    .section-heading {
+        @apply mb-1.5 font-bold uppercase;
+    }
+    .timeline-container {
+        @apply border-primary-500 relative mb-4 space-y-3 border-l pl-4;
+    }
+    .job-header {
+        @apply flex justify-between;
+    }
+    .company-info {
+        @apply flex gap-1 text-sm font-medium;
+    }
+    .job-meta {
+        @apply text-right text-sm;
+    }
+    .resume-list-item {
+        @apply flex items-center;
+    }
+    .social-link {
+        @apply hover:text-primary-500 text-sm font-semibold text-gray-800 underline;
     }
 }
 
@@ -165,5 +190,14 @@
 
 .animation-delay-3000 {
     animation-delay: 3s;
+}
+
+@page {
+    size: A4;
+    margin: 2.5rem;
+    @bottom-right {
+        content: 'Page ' counter(page) ' of ' counter(pages);
+        font-size: 12px;
+    }
 }
 
