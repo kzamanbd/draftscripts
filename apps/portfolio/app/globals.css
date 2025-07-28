@@ -114,7 +114,7 @@
         @apply mr-3 h-4 w-4 rounded;
     }
     .profile-photo {
-        @apply to-primary-500 size-40 rounded-xl bg-gradient-to-r from-indigo-300 object-cover;
+        @apply size-40 rounded-xl object-cover;
     }
     .name--title {
         @apply mb-10;
