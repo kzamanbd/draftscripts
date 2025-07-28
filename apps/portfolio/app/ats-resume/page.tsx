@@ -10,20 +10,22 @@ const social = Object.entries({
 });
 
 export const metadata = {
-    title: 'Kamruzzaman - Software Engineer'
+    title: 'Software Engineer'
 };
 
 const Resume = () => {
     return (
         <div>
             <div className="page-container h-auto print:h-auto">
-                <div className="p-10 print:p-0">
+                <div className="p-10 print:p-0 print:pl-1.5">
                     <div className="mb-2 flex justify-between">
                         <div className="flex flex-col">
                             <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
-                            <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
+                            <h2 className="text-lg font-semibold">
+                                Full Stack Software Engineer (Laravel Specialist)
+                            </h2>
                             <p className="mt-1 text-sm text-gray-700">
-                                PHP • Laravel • React.js • Vue.js • AWS • 5+ Years of Experience
+                                PHP • Laravel • React.js • Vue.js • AWS • 4+ Years of Experience
                             </p>
                             <ul className="flex gap-2 text-sm">
                                 <li>
@@ -79,14 +81,17 @@ const Resume = () => {
                     <div className="about-me">
                         <h5 className="section-heading">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
-                            Full-Stack Software Engineer with 5+ Years of professional experience
-                            developing scalable web applications using PHP, Laravel, WordPress,
-                            Vue.js, React.js, Node.js, and AWS cloud services. Proven expertise in
-                            multi-vendor marketplace platforms, ERP systems, and e-commerce
-                            solutions. Experienced in agile methodologies, API development, database
-                            optimization, and DevOps practices. Strong track record of collaborating
-                            with cross-functional teams to deliver high-quality software solutions
-                            on time and within budget.
+                            Full Stack Software Engineer with 4+ years of hands-on experience
+                            specializing in Laravel, PHP, and modern JavaScript frameworks like
+                            Vue.js and React. Proven track record of designing and developing
+                            scalable, secure web applications and RESTful APIs using clean, testable
+                            code. Experienced in collaborating with cross-functional teams,
+                            participating in Agile/Scrum workflows, and communicating complex
+                            technical concepts to both technical and non-technical stakeholders.
+                            Adept at optimizing application performance, integrating third-party
+                            services, and mentoring junior developers. Passionate about continuous
+                            learning, user-focused design, and driving impact within high-performing
+                            engineering teams.
                         </p>
                     </div>
 
@@ -128,7 +133,7 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Developed and enhanced Dokan and Dokan Pro multi-vendor
-                                        marketplace plugins for WordPress, serving 150,000+ active
+                                        marketplace plugins for WordPress, serving 50,000+ active
                                         installations.
                                     </p>
                                 </li>
@@ -155,9 +160,15 @@ const Resume = () => {
                                 </li>
                                 <li>
                                     <p>
-                                        Collaborated with UX/UI design teams to create intuitive
-                                        user interfaces, resulting in improved user experience and
-                                        reduced support tickets by 25%.
+                                        Collaborated closely with frontend developers, designers,
+                                        and QA to ensure smooth feature rollouts across multi-vendor
+                                        platforms.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Participated in daily stand-ups and sprint planning sessions
+                                        following Agile/Scrum methodology.
                                     </p>
                                 </li>
                             </ul>
@@ -204,7 +215,7 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Architected and developed comprehensive ERP system using
-                                        Laravel 8/9/10, Vue.js 3, React.js 18, and MySQL, serving
+                                        Laravel 10, Vue.js 3, React.js 18, and MySQL, serving
                                         multiple business modules including inventory, accounting,
                                         and HR management.
                                     </p>
@@ -225,16 +236,14 @@ const Resume = () => {
                                 </li>
                                 <li>
                                     <p>
-                                        Performed comprehensive testing, debugging, and code
-                                        reviews, maintaining 95% code coverage and reducing
-                                        production bugs by 40%.
+                                        Coordinated with cross-functional stakeholders to gather
+                                        requirements and deliver business-critical ERP modules.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Led application modernization initiatives, migrating legacy
-                                        systems to modern frameworks and implementing performance
-                                        optimizations that improved page load times by 50%.
+                                        Documented system architecture and conducted walkthroughs
+                                        for new team members
                                     </p>
                                 </li>
                                 <li>
@@ -287,16 +296,14 @@ const Resume = () => {
                                 </li>
                                 <li>
                                     <p>
-                                        Built efficient, testable, and reusable code components,
-                                        reducing development time by 35% and improving application
-                                        maintainability.
+                                        Worked in a small agile team, improving team velocity by
+                                        sharing knowledge and reviewing peers’ code.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Implemented responsive user interface designs and
-                                        established coding standards for consistent development
-                                        practices across the team.
+                                        Actively communicated with clients to understand project
+                                        requirements and propose technical solutions.
                                     </p>
                                 </li>
                                 <li>
@@ -319,7 +326,7 @@ const Resume = () => {
                                 <div className="font-bold text-gray-900">
                                     <h3>Bachelor of Science</h3>
                                     <div className="text-sm font-medium">
-                                        Computer Science & Engineering
+                                        Computer Science & Engineering(In Progress)
                                     </div>
                                 </div>
                                 <div className="job-meta">
@@ -348,49 +355,43 @@ const Resume = () => {
                     </div>
 
                     {/* Core Technical Skills */}
-                    <h5 className="section-heading">CORE TECHNICAL SKILLS</h5>
-
+                    <h5 className="section-heading break-before-page">CORE TECHNICAL SKILLS</h5>
+                    <h6 className="mb-2 font-semibold text-gray-900">
+                        Programming Languages & Frameworks
+                    </h6>
                     <div className="mb-4 grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                            <h6 className="mb-2 font-semibold text-gray-900">
-                                Programming Languages & Frameworks
-                            </h6>
-                            <ul className="bullet-list m-0 space-y-1 text-gray-700">
-                                <li>
-                                    <p>PHP/Laravel</p>
-                                </li>
-                                <li>
-                                    <p>JavaScript/TypeScript</p>
-                                </li>
-                                <li>
-                                    <p>React.js/Next.js</p>
-                                </li>
-                                <li>
-                                    <p>Vue.js/Nuxt.js</p>
-                                </li>
-                                <li>
-                                    <p>Node.js/Express.js</p>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul className="bullet-list m-0 space-y-1 text-gray-700">
+                            <li>
+                                <p>PHP/Laravel</p>
+                            </li>
+                            <li>
+                                <p>JavaScript/TypeScript</p>
+                            </li>
+                            <li>
+                                <p>React.js/Next.js</p>
+                            </li>
+                            <li>
+                                <p>Vue.js/Nuxt.js</p>
+                            </li>
+                            <li>
+                                <p>Node.js/Express.js</p>
+                            </li>
+                        </ul>
 
-                        <div>
-                            <h6 className="mb-2 font-semibold text-gray-900">Database & DevOps</h6>
-                            <ul className="bullet-list m-0 space-y-1 text-gray-700">
-                                <li>
-                                    <p>MySQL/PostgreSQL</p>
-                                </li>
-                                <li>
-                                    <p>AWS/Docker</p>
-                                </li>
-                                <li>
-                                    <p>Git/GitHub</p>
-                                </li>
-                                <li>
-                                    <p>WordPress/WooCommerce</p>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul className="bullet-list m-0 space-y-1 text-gray-700">
+                            <li>
+                                <p>MySQL/PostgreSQL</p>
+                            </li>
+                            <li>
+                                <p>AWS/Docker</p>
+                            </li>
+                            <li>
+                                <p>Git/GitHub</p>
+                            </li>
+                            <li>
+                                <p>WordPress/WooCommerce</p>
+                            </li>
+                        </ul>
                     </div>
                     {/* Training */}
                     <h5 className="section-heading">CERTIFICATIONS & TRAINING</h5>
@@ -443,14 +444,13 @@ const Resume = () => {
                         </li>
                         <li>
                             <p>
-                                Extensive experience with RESTful APIs, GraphQL, and microservices
+                                Extensive experience with RESTful APIs, and microservices
                                 architecture
                             </p>
                         </li>
                         <li>
                             <p>
-                                Database design and optimization: MySQL, PostgreSQL, MongoDB, Redis
-                                caching
+                                Database design and optimization: MySQL, PostgreSQL, Redis caching
                             </p>
                         </li>
                         <li>
@@ -471,22 +471,16 @@ const Resume = () => {
                             </p>
                         </li>
                         <li>
-                            <p>
-                                Cloud platforms: AWS (EC2, S3, RDS, Lambda), Google Cloud Platform
-                                basics
-                            </p>
+                            <p>Cloud platforms: AWS (EC2, S3), Google Cloud Platform basics</p>
                         </li>
                         <li>
                             <p>
-                                DevOps tools: Docker containerization, Jenkins, Nginx, Apache server
+                                DevOps tools: Docker containerization, Nginx, Apache server
                                 configuration
                             </p>
                         </li>
                         <li>
-                            <p>Linux/Unix systems administration and command-line proficiency</p>
-                        </li>
-                        <li>
-                            <p>Testing frameworks: PHPUnit, Jest, Cypress for automated testing</p>
+                            <p>Testing frameworks: PHPUnit, Playwright for automated testing</p>
                         </li>
                         <li>
                             <p>
@@ -496,8 +490,8 @@ const Resume = () => {
                         </li>
                         <li>
                             <p>
-                                Excellent communication skills for cross-functional collaboration
-                                and client interaction
+                                Strong verbal and written communication skills for team and client
+                                interaction
                             </p>
                         </li>
                     </ul>

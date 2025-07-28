@@ -387,46 +387,46 @@ const Resume = () => {
                         <h5 className="subtitle">Additional Skills</h5>
 
                         <ul className="bullet-list">
-                            <li className="flex items-center">
+                            <li>
                                 <p>A solid foundation on OOP, Algorithm and Data Structure.</p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>Solid Knowledge on Web Services likes REST/JSON APIs.</p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>SQL, MySQL, TypeScript, Redux, Tailwind CSS and Bootstrap.</p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>Experience with SDLC and Agile methodologies.</p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>
                                     Experience in working with version control systems like Git,
                                     GitHub, and Gitlab.
                                 </p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>
                                     Basic knowledge of Cloud Platforms like AWS, Google Cloud
                                     Platform.
                                 </p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>Experience working in a Dockerized environment.</p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>
                                     Familiarity with DevOps processes, operation tools and Linux
                                     based systems.
                                 </p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>
                                     Ability to work individually and independently with minimal
                                     supervision.
                                 </p>
                             </li>
-                            <li className="flex items-center">
+                            <li>
                                 <p>
                                     Problem-solving skills, Self-managed, independent, initiative
                                     and proactive.
