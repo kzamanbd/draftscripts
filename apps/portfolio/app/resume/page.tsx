@@ -49,7 +49,7 @@ const Resume = () => {
                             alt="kamruzzaman, kamruzzaman profile image"
                         />
                         <div className="name--title">
-                            <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
+                            <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
                             <h5 className="subtitle capitalize">Software Engineer</h5>
                         </div>
                         {/* contact info */}

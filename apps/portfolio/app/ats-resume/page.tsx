@@ -20,7 +20,7 @@ const Resume = () => {
                 <div className="p-10 print:p-0 print:pl-1.5">
                     <div className="mb-2 flex justify-between">
                         <div className="flex flex-col">
-                            <h1 className="text-xl font-bold">KAMRUZZAMAN</h1>
+                            <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
                             <h2 className="text-lg font-semibold">
                                 Full Stack Software Engineer (Laravel Specialist)
                             </h2>
