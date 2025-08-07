@@ -9,10 +9,6 @@ const social = Object.entries({
     LeetCode: user.leetcode
 });
 
-export const metadata = {
-    title: 'Software Engineer'
-};
-
 const Resume = () => {
     return (
         <div>
@@ -59,7 +55,7 @@ const Resume = () => {
                                             href={value}
                                             target="_blank"
                                             rel="noreferrer"
-                                            className="social-link">
+                                            className="resume-link">
                                             <span>
                                                 {value.replace('https://', '').replace('www.', '')}
                                             </span>
@@ -396,7 +392,7 @@ const Resume = () => {
                     {/* Training */}
                     <h5 className="section-heading">CERTIFICATIONS & TRAINING</h5>
 
-                    <div className="relative mb-4">
+                    <div className="relative mb-4 grid grid-cols-3">
                         <div className="job-header">
                             <div className="font-bold text-gray-900">
                                 <h3>
@@ -456,7 +452,7 @@ const Resume = () => {
                         <li>
                             <p>
                                 Frontend technologies: TypeScript, Redux, Tailwind CSS, Bootstrap,
-                                SCSS
+                                SCSS, and jQuery
                             </p>
                         </li>
                         <li>
