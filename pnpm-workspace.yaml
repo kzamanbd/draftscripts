@@ -1,4 +1,8 @@
 packages:
-  - "apps/*"
-  - "packages/*"
-  - "playgrounds/*"
+  - apps/*
+  - packages/*
+  - playgrounds/*
+ignoredBuiltDependencies:
+  - protobufjs
+onlyBuiltDependencies:
+  - '@firebase/util'
