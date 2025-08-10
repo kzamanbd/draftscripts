@@ -11,6 +11,7 @@ import {
     serverTimestamp,
     updateDoc
 } from 'firebase/firestore';
+import { headers } from 'next/headers';
 
 export interface Link {
     id: string;
@@ -58,12 +59,17 @@ export const createLink = async (longUrl: string): Promise<Link> => {
         createdAt: serverTimestamp()
     };
 
+    const h = await headers();
+    const host = h.get('host');
+    const protocol = h.get('x-forwarded-proto') || 'http';
+    const baseUrl = `${protocol}://${host}`;
+
     const linksCollection = collection(firestore, 'links');
     const docRef = await addDoc(linksCollection, linkData);
 
     return {
         id: docRef.id,
-        shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/go/${slug}`,
+        shortUrl: `${baseUrl}/go/${slug}`,
         ...linkData,
         createdAt: new Date() // Replace serverTimestamp with a Date object
     } as Link;
