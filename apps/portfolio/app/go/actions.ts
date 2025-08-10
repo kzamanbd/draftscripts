@@ -74,4 +74,3 @@ export const getLinkBySlug = async (slug: string): Promise<Link | null> => {
     const link = snapshot.docs.find((doc) => doc.data().slug === slug);
     return link ? ({ id: link.id, ...link.data() } as Link) : null;
 };
-

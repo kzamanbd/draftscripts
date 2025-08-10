@@ -10,4 +10,3 @@ export { default as OtherLoginOption } from './components/other-login-option';
 export { ThemeProviders } from './components/theme-providers';
 export { default as ThemeSwitch } from './components/theme-switch';
 export type { User } from './types';
-

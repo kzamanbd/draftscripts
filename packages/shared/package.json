@@ -15,6 +15,10 @@
             "types": "./src/metadata.ts",
             "default": "./src/metadata.ts"
         },
+        "./icons": {
+            "types": "./src/components/icons/index.ts",
+            "default": "./src/components/icons/index.ts"
+        },
         "./*": {
             "types": "./src/*.tsx",
             "default": "./src/*.tsx"
@@ -48,3 +52,4 @@
         "tailwindcss": "^4.1.7"
     }
 }
+

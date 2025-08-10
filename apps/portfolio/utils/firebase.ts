@@ -19,4 +19,3 @@ const firestore = getFirestore(app);
 console.log(firestore);
 
 export { app, firestore };
-

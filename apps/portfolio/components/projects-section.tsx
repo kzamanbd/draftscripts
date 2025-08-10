@@ -1,4 +1,4 @@
-import { HiOutlineCode, HiOutlineSparkles } from 'react-icons/hi';
+import { Code, Sparkles } from 'lucide-react';
 import ProjectCard from './project-card';
 
 export interface Project {
@@ -111,7 +111,7 @@ const ProjectsSection = () => {
                 <div className="mb-16 text-center">
                     {/* Badge */}
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-gradient-to-r from-purple-50 to-blue-50 px-4 py-2 text-sm font-medium shadow-sm dark:border-purple-800/30 dark:from-purple-900/20 dark:to-blue-900/20">
-                        <HiOutlineSparkles className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                        <Sparkles className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                         <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-400">
                             Featured Work
                         </span>
@@ -142,7 +142,7 @@ const ProjectsSection = () => {
                 <div className="mt-16 text-center">
                     <div className="rounded-2xl border border-gray-200 bg-white/50 p-8 backdrop-blur-sm dark:border-gray-700 dark:bg-gray-800/50">
                         <div className="mb-4 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-purple-100 to-blue-100 p-3 dark:from-purple-900/30 dark:to-blue-900/30">
-                            <HiOutlineCode className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                            <Code className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                         </div>
 
                         <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white">
@@ -159,7 +159,7 @@ const ProjectsSection = () => {
                                 href="mailto:kzamanbn@gmail.com"
                                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-6 py-3 font-medium text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:from-purple-500 dark:to-blue-500">
                                 Get in Touch
-                                <HiOutlineSparkles className="h-4 w-4" />
+                                <Sparkles className="h-4 w-4" />
                             </a>
 
                             <a
@@ -176,4 +176,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-

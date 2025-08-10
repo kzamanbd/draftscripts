@@ -1,7 +1,6 @@
+import { Code, Eye, Github, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaCode, FaEye, FaGithub } from 'react-icons/fa';
-import { HiOutlineSparkles } from 'react-icons/hi';
 import type { Project } from './projects-section';
 
 interface ProjectCardProps {
@@ -34,7 +33,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     {/* Role Badge - Floating */}
                     <div className="absolute left-4 top-4">
                         <div className="flex items-center gap-1 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-gray-800 backdrop-blur-sm transition-all duration-300 group-hover:bg-white/95">
-                            <HiOutlineSparkles className="h-3 w-3 text-purple-600" />
+                            <Sparkles className="h-3 w-3 text-purple-600" />
                             {project.role}
                         </div>
                     </div>
@@ -48,7 +47,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 rel="noopener noreferrer"
                                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-200 hover:scale-110 hover:bg-blue-500 hover:text-white"
                                 title="View Demo">
-                                <FaEye size={16} />
+                                <Eye size={16} />
                             </Link>
                         )}
                         {project.code && (
@@ -58,7 +57,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                                 rel="noopener noreferrer"
                                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-gray-800 shadow-lg backdrop-blur-sm transition-all duration-200 hover:scale-110 hover:bg-gray-900 hover:text-white"
                                 title="View Code">
-                                <FaGithub size={16} />
+                                <Github size={16} />
                             </Link>
                         )}
                     </div>
@@ -79,7 +78,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                     {/* Tech Stack */}
                     <div className="space-y-3">
                         <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-800 dark:text-gray-200">
-                            <FaCode className="h-3 w-3 text-purple-600" />
+                            <Code className="h-3 w-3 text-purple-600" />
                             Tech Stack
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -107,4 +106,3 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 };
 
 export default ProjectCard;
-

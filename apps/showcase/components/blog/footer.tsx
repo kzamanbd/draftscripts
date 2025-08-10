@@ -1,25 +1,19 @@
-import { authorName, user } from '@repo/shared/metadata';
-import Link from 'next/link';
 import {
-    FaFacebook,
-    FaGithub,
-    FaLinkedin,
-    FaMailBulk,
-    FaMedium,
-    FaTwitter,
-    FaYoutube
-} from 'react-icons/fa';
+    Facebook as FaFacebook,
+    Github as FaGithub,
+    Linkedin as FaLinkedin
+} from '@repo/shared/icons';
+import { authorName, user } from '@repo/shared/metadata';
+import { X } from 'lucide-react';
+import Link from 'next/link';
 
-const SocialIcon = ({ kind, href, size = 24 }: { kind: string; href: string; size?: number }) => {
+const SocialIcon = ({ kind, href }: { kind: string; href: string }) => {
     const icons = {
-        mail: <FaMailBulk size={size} />,
-        github: <FaGithub size={size} />,
-        facebook: <FaFacebook size={size} />,
-        youtube: <FaYoutube size={size} />,
-        linkedin: <FaLinkedin size={size} />,
-        twitter: <FaTwitter size={size} />,
-        x: <FaTwitter size={size} />,
-        medium: <FaMedium size={size} />
+        github: <FaGithub />,
+        facebook: <FaFacebook />,
+        linkedin: <FaLinkedin />,
+        twitter: <X />,
+        x: <X />
     };
     const icon = icons[kind as keyof typeof icons];
     if (!icon) {

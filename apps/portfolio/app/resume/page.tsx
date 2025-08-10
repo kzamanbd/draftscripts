@@ -2,8 +2,8 @@ import ActionButton from '@/components/resume/action-button';
 import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
 import { profileImage, user } from '@repo/shared/metadata';
+import { MapPin } from 'lucide-react';
 import Image from 'next/image';
-import { MdLocationPin } from 'react-icons/md';
 
 const social = {
     GitHub: user.github,
@@ -84,7 +84,7 @@ const Resume = () => {
                             </li>
 
                             <li className="flex items-center">
-                                <MdLocationPin size={12} />
+                                <MapPin size={12} />
                                 <p>Mirpur 12, Dhaka, Bangladesh</p>
                             </li>
                         </ul>
@@ -100,7 +100,7 @@ const Resume = () => {
                                 <p className="mb-2">2022 - Present</p>
                                 <p className="font-semibold italic">Southeast University.</p>
                                 <div className="flex items-center">
-                                    <MdLocationPin size={12} />
+                                    <MapPin size={12} />
                                     <span>251/A Tejgaon I/A, Dhaka</span>
                                 </div>
                             </TimelineIcon>
@@ -113,7 +113,7 @@ const Resume = () => {
                                     Rumdo Institute of Modern Technology.
                                 </p>
                                 <div className="flex items-center">
-                                    <MdLocationPin size={12} />
+                                    <MapPin size={12} />
                                     <span>Mymensingh Bypass.</span>
                                 </div>
                             </TimelineIcon>
@@ -210,7 +210,7 @@ const Resume = () => {
                                         NOV 2024 - Present
                                     </time>
                                     <address className="flex items-center text-xs">
-                                        <MdLocationPin size={12} />
+                                        <MapPin size={12} />
                                         <span>
                                             House:1005, Avenue:11, Road:09, Mirpur DOHS 1216
                                         </span>
@@ -287,7 +287,7 @@ const Resume = () => {
                                         JUL 2021 - OCT-2024
                                     </time>
                                     <address className="flex items-center text-xs">
-                                        <MdLocationPin size={12} />
+                                        <MapPin size={12} />
                                         <span>50/B New Eskaton Road, Dhaka 1000</span>
                                     </address>
                                 </div>
@@ -350,7 +350,7 @@ const Resume = () => {
                                         MAY 2020 – JUN 2021
                                     </time>
                                     <address className="flex items-center text-xs">
-                                        <MdLocationPin size={12} />
+                                        <MapPin size={12} />
                                         <span>27/2 Ram Babu Road, Mymensingh-2200.</span>
                                     </address>
                                 </div>

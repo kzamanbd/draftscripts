@@ -47,7 +47,7 @@ draftscripts/
 
 - **@headlessui/react**: 2.2.2+ (unstyled UI components)
 - **@tiptap/**: Rich text editor components (Vue package)
-- **react-icons**: 5.2.1+ (icon library)
+- **lucide-react**: 5.2.1+ (icon library)
 - **next-themes**: 0.4.6+ (theme switching)
 - **@emailjs/browser**: 4.4.1+ (email integration)
 - **react-toastify**: 10.0.5+ (toast notifications)
@@ -556,7 +556,6 @@ pnpm list --recursive
 
 - [Headless UI](https://headlessui.com)
 - [TipTap Editor](https://tiptap.dev)
-- [React Icons](https://react-icons.github.io/react-icons)
 - [EmailJS](https://www.emailjs.com)
 
 This monorepo demonstrates modern full-stack development patterns with a focus on developer experience, type safety, and performance optimization.

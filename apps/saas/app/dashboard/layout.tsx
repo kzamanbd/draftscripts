@@ -549,4 +549,3 @@ export default function DashboardRootLayout({ children }: DashboardRootLayoutPro
         </ThemeProviders>
     );
 }
-

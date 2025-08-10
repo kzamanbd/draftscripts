@@ -15,4 +15,3 @@ const Page = async ({ params }: { params: Promise<{ code: string }> }) => {
 };
 
 export default Page;
-

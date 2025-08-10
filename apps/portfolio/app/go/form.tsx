@@ -1,6 +1,6 @@
 'use client';
 
-import { FiCheck, FiCopy, FiEye, FiLink, FiLoader } from 'react-icons/fi';
+import { Check, Copy, Eye, Link as LinkIcon, Loader } from 'lucide-react';
 import { useUrlShortener } from './use-shortener';
 
 const URLShortenerForm = () => {
@@ -21,7 +21,7 @@ const URLShortenerForm = () => {
         <div className="mx-auto w-full max-w-2xl p-4 md:p-8">
             <div className="mb-8 text-center">
                 <div className="mb-4 inline-block rounded-full bg-indigo-100 p-4">
-                    <FiLink className="h-12 w-12 text-indigo-500" />
+                    <LinkIcon className="h-12 w-12 text-indigo-500" />
                 </div>
                 <h1 className="mb-2 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
                     URL Shortener
@@ -34,7 +34,7 @@ const URLShortenerForm = () => {
             <form onSubmit={handleShortenUrl} className="mb-8">
                 <div className="focus-within:ring-primary-500 flex rounded-md ring-1 ring-gray-200 focus-within:ring-2 dark:ring-gray-600">
                     <span className="flex items-center justify-center rounded-bl-md rounded-tl-md bg-gray-200 px-4 font-semibold dark:bg-gray-800">
-                        <FiLink className="h-5 w-5" />
+                        <LinkIcon className="h-5 w-5" />
                     </span>
                     <input
                         type="url"
@@ -48,7 +48,7 @@ const URLShortenerForm = () => {
                         type="submit"
                         disabled={isLoading || !longUrl}
                         className="flex items-center justify-center rounded-br-md rounded-tr-md bg-gray-200 bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-4 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-purple-700 hover:to-indigo-700 disabled:scale-100 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-gray-800">
-                        {isLoading ? <FiLoader className="h-6 w-6 animate-spin" /> : 'Shorten'}
+                        {isLoading ? <Loader className="h-6 w-6 animate-spin" /> : 'Shorten'}
                     </button>
                 </div>
             </form>
@@ -76,9 +76,9 @@ const URLShortenerForm = () => {
                                 className="flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-white shadow-md transition-colors hover:bg-indigo-700"
                                 title="Copy to Clipboard">
                                 {isCopied ? (
-                                    <FiCheck className="h-5 w-5" />
+                                    <Check className="h-5 w-5" />
                                 ) : (
-                                    <FiCopy className="h-5 w-5" />
+                                    <Copy className="h-5 w-5" />
                                 )}
                                 <span>{isCopied ? 'Copied!' : 'Copy'}</span>
                             </button>
@@ -86,7 +86,7 @@ const URLShortenerForm = () => {
                                 onClick={handleVisitUrl}
                                 className="rounded-lg bg-gray-200 p-3 text-gray-700 shadow-md transition-colors hover:bg-gray-300"
                                 title="Test Short URL">
-                                <FiEye className="h-5 w-5" />
+                                <Eye className="h-5 w-5" />
                             </button>
                         </div>
                     </div>
@@ -97,4 +97,3 @@ const URLShortenerForm = () => {
 };
 
 export default URLShortenerForm;
-

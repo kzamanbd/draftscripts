@@ -1,10 +1,8 @@
+import { Contact, Download, X as Twitter } from 'lucide-react';
 import Link from 'next/link';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
-import { FaFacebook, FaTwitterSquare } from 'react-icons/fa';
-import { MdDownload } from 'react-icons/md';
-import { RiContactsFill } from 'react-icons/ri';
-import { SiLeetcode } from 'react-icons/si';
 import TypingEffect from '../typing-effect';
+
+import { Facebook, Github, LeetCode, Linkedin } from '@repo/shared/icons';
 
 import { user } from '@repo/shared/metadata';
 
@@ -25,31 +23,31 @@ export default function HeroSection() {
                             href={user.github}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
-                            <BsGithub size={30} />
+                            <Github />
                         </Link>
                         <Link
                             href={user.linkedin}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
-                            <BsLinkedin size={30} />
+                            <Linkedin />
                         </Link>
                         <Link
                             href={user.facebook}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
-                            <FaFacebook size={30} />
+                            <Facebook />
                         </Link>
                         <Link
                             href={user.leetcode}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
-                            <SiLeetcode size={30} />
+                            <LeetCode className="h-8 w-8" />
                         </Link>
                         <Link
                             href={user.twitter}
                             target="_blank"
                             className="text-pink-500 transition-all duration-300 hover:scale-125">
-                            <FaTwitterSquare size={30} />
+                            <Twitter />
                         </Link>
                     </div>
 
@@ -59,7 +57,7 @@ export default function HeroSection() {
                             className="rounded-full bg-gradient-to-r from-violet-600 to-pink-500 p-[1px] transition-all duration-300 hover:from-pink-500 hover:to-violet-600">
                             <button className="flex items-center gap-1 rounded-full border-none bg-[#0d1224] px-3 py-3 text-center text-xs font-medium uppercase tracking-wider text-[#ffff] no-underline transition-all duration-200 ease-out hover:gap-3 md:px-8 md:py-4 md:text-sm md:font-semibold">
                                 <span>Contact me</span>
-                                <RiContactsFill size={16} />
+                                <Contact size={16} />
                             </button>
                         </Link>
 
@@ -68,7 +66,7 @@ export default function HeroSection() {
                             role="button"
                             href="/resume">
                             <span>Get Resume</span>
-                            <MdDownload size={16} />
+                            <Download size={16} />
                         </Link>
                     </div>
                 </div>
