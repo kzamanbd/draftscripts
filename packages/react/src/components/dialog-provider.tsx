@@ -57,4 +57,3 @@ const DialogProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =
 };
 
 export { DialogContext, DialogProvider };
-

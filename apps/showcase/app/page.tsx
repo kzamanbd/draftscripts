@@ -1,12 +1,7 @@
 import HeroBackground from '@/components/hero-background';
 import { getTitle } from '@repo/shared/utils';
+import { CreditCard, File, Landmark, Projector, Rss, Settings } from 'lucide-react';
 import Link from 'next/link';
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
-import { CiSettings } from 'react-icons/ci';
-import { FaBloggerB } from 'react-icons/fa';
-import { MdPayments } from 'react-icons/md';
-import { SiAfterpay } from 'react-icons/si';
-import { TbFileCv } from 'react-icons/tb';
 
 export const metadata = {
     title: getTitle('Features')
@@ -18,7 +13,7 @@ const cardData = [
         title: 'Resume',
         description:
             'Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.',
-        icon: TbFileCv,
+        icon: File,
         iconColor: 'text-primary-500',
         bgColor: 'bg-primary-100',
         darkBgColor: 'dark:bg-primary-900',
@@ -28,7 +23,7 @@ const cardData = [
         title: 'Portfolio',
         description:
             'Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.',
-        icon: AiOutlineFundProjectionScreen,
+        icon: Projector,
         iconColor: 'text-purple-500',
         bgColor: 'bg-purple-100',
         darkBgColor: 'dark:bg-purple-900',
@@ -38,7 +33,7 @@ const cardData = [
         title: 'Pricing',
         description:
             'Get a clear view of your business with our pricing plan. We have a plan for every business, no matter how big or small.',
-        icon: SiAfterpay,
+        icon: Landmark,
         bgColor: 'bg-indigo-100',
         iconColor: 'text-indigo-500',
         darkBgColor: 'dark:bg-indigo-900',
@@ -48,7 +43,7 @@ const cardData = [
         title: 'Payment',
         description:
             'Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.',
-        icon: MdPayments,
+        icon: CreditCard,
         bgColor: 'bg-green-100',
         iconColor: 'text-green-500',
         darkBgColor: 'dark:bg-green-900',
@@ -58,7 +53,7 @@ const cardData = [
         title: 'Blog',
         description:
             'Get the most out of your business with our blog. We have a blog for every business, no matter how big or small.',
-        icon: FaBloggerB,
+        icon: Rss,
         bgColor: 'bg-yellow-100',
         iconColor: 'text-yellow-500',
         darkBgColor: 'dark:bg-yellow-900',
@@ -68,7 +63,7 @@ const cardData = [
         title: 'Operations',
         description:
             "Keep your company's lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.",
-        icon: CiSettings,
+        icon: Settings,
         bgColor: 'bg-fuchsia-100',
         iconColor: 'text-fuchsia-500',
         darkBgColor: 'dark:bg-fuchsia-900',

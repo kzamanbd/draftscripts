@@ -1,13 +1,20 @@
 import { getTitle } from '@repo/shared/utils';
-import Link from 'next/link';
-import { FaBug, FaDownload, FaGithub, FaPlay, FaRocket, FaStar, FaWordpress } from 'react-icons/fa';
 import {
-    HiOutlineChartBar,
-    HiOutlineCog,
-    HiOutlineDesktopComputer,
-    HiOutlineSparkles
-} from 'react-icons/hi';
-import { MdSecurity, MdSpeed } from 'react-icons/md';
+    BarChart,
+    Bug,
+    Cog,
+    Download,
+    Gauge,
+    Github,
+    Monitor,
+    Play,
+    Rocket,
+    ShieldCheck,
+    Sparkles,
+    Star,
+    Wrench
+} from 'lucide-react';
+import Link from 'next/link';
 
 export const metadata = {
     title: getTitle('Debug Suite - WordPress Plugin')
@@ -23,7 +30,7 @@ const pluginData = {
     compatibility: ['WordPress 6.0+', 'PHP 8.1+', 'Multisite Compatible'],
     features: [
         {
-            icon: FaBug,
+            icon: Bug,
             title: 'WordPress Debug Management',
             description:
                 'Easily manage WordPress debug constants (WP_DEBUG, WP_DEBUG_LOG, WP_DEBUG_DISPLAY) through an intuitive dashboard interface.',
@@ -31,7 +38,7 @@ const pluginData = {
             bgColor: 'bg-red-100 dark:bg-red-900/30'
         },
         {
-            icon: HiOutlineChartBar,
+            icon: BarChart,
             title: 'Debug Log Parsing',
             description:
                 'Parse and display WordPress debug logs with syntax highlighting, filtering by severity, and comprehensive search functionality.',
@@ -39,7 +46,7 @@ const pluginData = {
             bgColor: 'bg-blue-100 dark:bg-blue-900/30'
         },
         {
-            icon: MdSecurity,
+            icon: ShieldCheck,
             title: 'Safe File Operations',
             description:
                 'Secure file operations with proper path validation, permission checks, and automatic backup creation before modifications.',
@@ -47,7 +54,7 @@ const pluginData = {
             bgColor: 'bg-green-100 dark:bg-green-900/30'
         },
         {
-            icon: MdSpeed,
+            icon: Gauge,
             title: 'Performance Monitoring',
             description:
                 'Monitor WordPress performance with log statistics, file size tracking, and system health indicators.',
@@ -55,7 +62,7 @@ const pluginData = {
             bgColor: 'bg-purple-100 dark:bg-purple-900/30'
         },
         {
-            icon: HiOutlineCog,
+            icon: Cog,
             title: 'REST API Integration',
             description:
                 'Modern REST API architecture with comprehensive endpoints for all debugging operations and secure authentication.',
@@ -63,7 +70,7 @@ const pluginData = {
             bgColor: 'bg-orange-100 dark:bg-orange-900/30'
         },
         {
-            icon: HiOutlineDesktopComputer,
+            icon: Monitor,
             title: 'Modern Interface',
             description:
                 'Clean React-based dashboard with responsive design, dark mode support, and intuitive user experience.',
@@ -94,7 +101,7 @@ const PluginDebugSuite = () => {
                 <div className="mb-16 text-center">
                     {/* Plugin Category Badge */}
                     <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-gradient-to-r from-purple-50 to-blue-50 px-4 py-2 text-sm font-medium shadow-sm dark:border-purple-800/30 dark:from-purple-900/20 dark:to-blue-900/20">
-                        <HiOutlineSparkles className="h-4 w-4 text-purple-600 dark:text-purple-400" />
+                        <Sparkles className="h-4 w-4 text-purple-600 dark:text-purple-400" />
                         <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent dark:from-purple-400 dark:to-blue-400">
                             {pluginData.category}
                         </span>
@@ -116,7 +123,7 @@ const PluginDebugSuite = () => {
                     {/* Stats Row */}
                     <div className="mb-8 flex flex-wrap justify-center gap-6">
                         <div className="flex items-center gap-2 rounded-lg bg-white/70 px-4 py-2 shadow-sm backdrop-blur-sm dark:bg-gray-800/70">
-                            <FaDownload className="h-4 w-4 text-blue-600" />
+                            <Download className="h-4 w-4 text-blue-600" />
                             <span className="font-semibold text-gray-800 dark:text-gray-200">
                                 {pluginData.stats.downloads}
                             </span>
@@ -125,7 +132,7 @@ const PluginDebugSuite = () => {
                             </span>
                         </div>
                         <div className="flex items-center gap-2 rounded-lg bg-white/70 px-4 py-2 shadow-sm backdrop-blur-sm dark:bg-gray-800/70">
-                            <FaStar className="h-4 w-4 text-yellow-500" />
+                            <Star className="h-4 w-4 text-yellow-500" />
                             <span className="font-semibold text-gray-800 dark:text-gray-200">
                                 {pluginData.stats.rating}
                             </span>
@@ -134,7 +141,7 @@ const PluginDebugSuite = () => {
                             </span>
                         </div>
                         <div className="flex items-center gap-2 rounded-lg bg-white/70 px-4 py-2 shadow-sm backdrop-blur-sm dark:bg-gray-800/70">
-                            <HiOutlineDesktopComputer className="h-4 w-4 text-green-600" />
+                            <Monitor className="h-4 w-4 text-green-600" />
                             <span className="font-semibold text-gray-800 dark:text-gray-200">
                                 {pluginData.stats.activeInstalls}
                             </span>
@@ -147,18 +154,18 @@ const PluginDebugSuite = () => {
                     {/* Action Buttons */}
                     <div className="flex flex-wrap justify-center gap-4">
                         <button className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl dark:from-purple-500 dark:to-blue-500">
-                            <FaDownload className="transition-transform group-hover:scale-110" />
+                            <Download className="transition-transform group-hover:scale-110" />
                             Download Free
                         </button>
                         <button className="group inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-8 py-4 font-semibold text-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
-                            <FaPlay className="transition-transform group-hover:scale-110" />
+                            <Play className="transition-transform group-hover:scale-110" />
                             Live Demo
                         </button>
                         <Link
                             href="https://github.com"
                             target="_blank"
                             className="group inline-flex items-center gap-2 rounded-full border border-gray-300 bg-white px-8 py-4 font-semibold text-gray-700 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700">
-                            <FaGithub className="transition-transform group-hover:scale-110" />
+                            <Github className="transition-transform group-hover:scale-110" />
                             View Source
                         </Link>
                     </div>
@@ -209,7 +216,7 @@ const PluginDebugSuite = () => {
                             </p>
                             <div className="flex flex-wrap justify-center gap-6">
                                 <div className="flex items-center gap-2 rounded-lg bg-white px-4 py-3 shadow-sm dark:bg-gray-800">
-                                    <FaWordpress className="h-6 w-6 text-blue-600" />
+                                    <Wrench className="h-6 w-6 text-blue-600" />
                                     <span className="font-medium text-gray-800 dark:text-gray-200">
                                         WordPress 6.0+
                                     </span>
@@ -243,7 +250,7 @@ const PluginDebugSuite = () => {
                         {/* Installation */}
                         <div className="rounded-2xl bg-white/60 p-6 shadow-lg backdrop-blur-sm dark:bg-gray-800/60">
                             <h3 className="mb-4 flex items-center gap-3 text-xl font-bold text-gray-900 dark:text-white">
-                                <FaRocket className="h-5 w-5 text-green-500" />
+                                <Rocket className="h-5 w-5 text-green-500" />
                                 Quick Install
                             </h3>
                             <div className="space-y-3">
@@ -261,7 +268,7 @@ const PluginDebugSuite = () => {
                         {/* Requirements */}
                         <div className="rounded-2xl bg-white/60 p-6 shadow-lg backdrop-blur-sm dark:bg-gray-800/60">
                             <h3 className="mb-4 flex items-center gap-3 text-xl font-bold text-gray-900 dark:text-white">
-                                <HiOutlineCog className="h-5 w-5 text-blue-500" />
+                                <Cog className="h-5 w-5 text-blue-500" />
                                 Requirements
                             </h3>
                             <div className="space-y-2 text-sm">
@@ -291,7 +298,7 @@ const PluginDebugSuite = () => {
                         {/* Latest Release */}
                         <div className="rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 p-6 shadow-lg dark:from-green-900/20 dark:to-emerald-900/20">
                             <h3 className="mb-4 flex items-center gap-3 text-xl font-bold text-gray-900 dark:text-white">
-                                <FaStar className="h-5 w-5 text-yellow-500" />
+                                <Star className="h-5 w-5 text-yellow-500" />
                                 Latest Release
                             </h3>
                             <div className="space-y-2">
@@ -336,4 +343,3 @@ const PluginDebugSuite = () => {
 };
 
 export default PluginDebugSuite;
-

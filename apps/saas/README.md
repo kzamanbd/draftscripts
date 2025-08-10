@@ -31,7 +31,7 @@ A modern SaaS dashboard application built with Next.js 15, React 19, and Tailwin
 - **jose**: JWT token handling
 - **next-themes**: Theme switching capabilities
 - **@headlessui/react**: Unstyled, accessible UI components
-- **react-icons**: Comprehensive icon library
+- **lucide-react**: Comprehensive icon library
 
 ## Project Structure
 

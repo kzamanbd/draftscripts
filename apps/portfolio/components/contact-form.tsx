@@ -1,16 +1,7 @@
 'use client';
 
+import { Check, Loader, Mail, MessageSquare, Send, Sparkles, User, X } from 'lucide-react';
 import { useState } from 'react';
-import {
-    FaCheck,
-    FaComment,
-    FaEnvelope,
-    FaPaperPlane,
-    FaSpinner,
-    FaTimes,
-    FaUser
-} from 'react-icons/fa';
-import { HiOutlineMail, HiOutlineSparkles } from 'react-icons/hi';
 
 interface FormData {
     name: string;
@@ -97,7 +88,7 @@ const ContactForm = () => {
                     <div className="mb-16 text-center">
                         {/* Badge */}
                         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-gradient-to-r from-blue-50 to-purple-50 px-4 py-2 text-sm font-medium shadow-sm dark:border-blue-800/30 dark:from-blue-900/20 dark:to-purple-900/20">
-                            <HiOutlineMail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                            <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent dark:from-blue-400 dark:to-purple-400">
                                 Get In Touch
                             </span>
@@ -132,7 +123,7 @@ const ContactForm = () => {
                                         <label
                                             htmlFor="name"
                                             className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                            <FaUser className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                                            <User className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                             Full Name *
                                         </label>
                                         <div className="relative">
@@ -153,7 +144,7 @@ const ContactForm = () => {
                                         <label
                                             htmlFor="email"
                                             className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                            <FaEnvelope className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                                            <Mail className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                             Email Address *
                                         </label>
                                         <div className="relative">
@@ -175,7 +166,7 @@ const ContactForm = () => {
                                     <label
                                         htmlFor="subject"
                                         className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                        <HiOutlineSparkles className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                                        <Sparkles className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                         Subject
                                     </label>
                                     <div className="relative">
@@ -196,7 +187,7 @@ const ContactForm = () => {
                                     <label
                                         htmlFor="message"
                                         className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                                        <FaComment className="h-4 w-4 text-blue-600 dark:text-blue-400" />
+                                        <MessageSquare className="h-4 w-4 text-blue-600 dark:text-blue-400" />
                                         Message *
                                     </label>
                                     <div className="relative">
@@ -223,12 +214,10 @@ const ContactForm = () => {
                                                   : 'bg-blue-50 text-blue-800 dark:bg-blue-900/20 dark:text-blue-300'
                                         }`}>
                                         {status.type === 'loading' && (
-                                            <FaSpinner className="h-5 w-5 animate-spin" />
+                                            <Loader className="h-5 w-5 animate-spin" />
                                         )}
-                                        {status.type === 'success' && (
-                                            <FaCheck className="h-5 w-5" />
-                                        )}
-                                        {status.type === 'error' && <FaTimes className="h-5 w-5" />}
+                                        {status.type === 'success' && <Check className="h-5 w-5" />}
+                                        {status.type === 'error' && <X className="h-5 w-5" />}
                                         <span className="font-medium">{status.message}</span>
                                     </div>
                                 )}
@@ -243,12 +232,12 @@ const ContactForm = () => {
                                         <div className="relative flex items-center justify-center gap-2">
                                             {status.type === 'loading' ? (
                                                 <>
-                                                    <FaSpinner className="h-5 w-5 animate-spin" />
+                                                    <Loader className="h-5 w-5 animate-spin" />
                                                     Sending...
                                                 </>
                                             ) : (
                                                 <>
-                                                    <FaPaperPlane className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                                    <Send className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                                                     Send Message
                                                 </>
                                             )}
@@ -277,4 +266,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-

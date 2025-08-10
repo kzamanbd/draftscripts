@@ -1,8 +1,8 @@
 'use client';
 
 import emailjs from '@emailjs/browser';
+import { Send } from 'lucide-react';
 import { useState } from 'react';
-import { TbMailForward } from 'react-icons/tb';
 import { toast } from 'react-toastify';
 
 export function isValidEmail(email: string) {
@@ -152,7 +152,7 @@ export default function FormWithCaptcha() {
                             role="button"
                             onClick={handleSendMail}>
                             <span>Send Message</span>
-                            <TbMailForward className="mt-1" size={18} />
+                            <Send className="mt-1" size={18} />
                         </button>
                     </div>
                 </div>

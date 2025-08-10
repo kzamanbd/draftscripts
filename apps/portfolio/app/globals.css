@@ -158,6 +158,19 @@
     .resume-link {
         @apply hover:text-primary-500 text-sm font-semibold text-gray-800 underline;
     }
+    .radial-gradient {
+        background: radial-gradient(
+            farthest-corner,
+            var(--color-primary-100),
+            #eaf6ff,
+            #fff9ea,
+            #fafafa,
+            #f5f7f2
+        );
+        background-size: 200% 200%;
+        animation: moveGradient 10s infinite linear alternate;
+        @apply dark:bg-gray-800 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800;
+    }
 }
 
 /* Custom animations for gradient effects */
@@ -171,6 +184,37 @@
         opacity: 0.8;
         transform: scale(1.05);
     }
+}
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.5s ease-out forwards;
 }
 
 .animate-pulse-slow {
@@ -197,4 +241,3 @@
         font-size: 12px;
     }
 }
-

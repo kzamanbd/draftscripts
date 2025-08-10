@@ -10,6 +10,8 @@
         "source.fixAll.eslint": "always",
         "source.organizeImports": "always"
     },
-    "cSpell.words": ["turbopack"]
+    "cSpell.words": [
+        "Firestore",
+        "turbopack"
+    ]
 }
-

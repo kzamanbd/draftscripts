@@ -1,8 +1,8 @@
+import { Codeforces, Facebook, Github, LeetCode, Linkedin } from '@repo/shared/icons';
+
 import { user } from '@repo/shared/metadata';
+import { ArrowRight, Download } from 'lucide-react';
 import Link from 'next/link';
-import { FaArrowRight, FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { HiDownload } from 'react-icons/hi';
-import { SiCodeforces, SiLeetcode } from 'react-icons/si';
 
 // Software engineer skill sets
 const skills = [
@@ -73,35 +73,35 @@ const Home = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
-                                    <FaGithub size={24} />
+                                    <Github className="h-6 w-6" />
                                 </a>
                                 <a
                                     href={user.linkedin}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
-                                    <FaLinkedin size={24} />
+                                    <Linkedin className="h-6 w-6" />
                                 </a>
                                 <a
                                     href={user.leetcode}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
-                                    <SiLeetcode size={24} />
+                                    <LeetCode className="h-6 w-6" />
                                 </a>
                                 <a
                                     href={user.codeforces}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
-                                    <SiCodeforces size={24} />
+                                    <Codeforces className="h-6 w-6" />
                                 </a>
                                 <a
                                     href={user.facebook}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-gray-600 transition-colors hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-500">
-                                    <FaFacebook size={24} />
+                                    <Facebook className="h-6 w-6" />
                                 </a>
                             </div>
 
@@ -110,13 +110,13 @@ const Home = () => {
                                 <Link
                                     href="#projects"
                                     className="flex items-center gap-2 rounded-full bg-blue-600 px-6 py-2 text-white transition-colors hover:bg-blue-700">
-                                    View Projects <FaArrowRight />
+                                    View Projects <ArrowRight />
                                 </Link>
 
                                 <Link
                                     href="/resume"
                                     className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-2 text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
-                                    Resume <HiDownload />
+                                    Resume <Download />
                                 </Link>
                             </div>
                         </div>
@@ -128,4 +128,3 @@ const Home = () => {
 };
 
 export default Home;
-

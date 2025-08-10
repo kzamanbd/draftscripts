@@ -100,4 +100,3 @@ export const jsonLd: WithContext<ProfilePage> = {
         knowsAbout: jsonLdKnowsAbout
     }
 };
-

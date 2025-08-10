@@ -528,4 +528,3 @@ const BillingView = () => {
 };
 
 export default BillingView;
-
