@@ -52,24 +52,24 @@ export const createLink = async (longUrl: string): Promise<Link> => {
     // Generate a random 6-character slug
     const slug = Math.random().toString(36).substring(2, 8);
 
-    const linkData = {
-        longUrl,
-        slug,
-        clicks: 0,
-        createdAt: serverTimestamp()
-    };
-
     const h = await headers();
     const host = h.get('host');
     const protocol = h.get('x-forwarded-proto') || 'http';
     const baseUrl = `${protocol}://${host}`;
+
+    const linkData = {
+        longUrl,
+        slug,
+        clicks: 0,
+        shortUrl: `${baseUrl}/go/${slug}`,
+        createdAt: serverTimestamp()
+    };
 
     const linksCollection = collection(firestore, 'links');
     const docRef = await addDoc(linksCollection, linkData);
 
     return {
         id: docRef.id,
-        shortUrl: `${baseUrl}/go/${slug}`,
         ...linkData,
         createdAt: new Date() // Replace serverTimestamp with a Date object
     } as Link;
