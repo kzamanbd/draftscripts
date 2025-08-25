@@ -359,7 +359,7 @@ const Resume = () => {
                     </div>
 
                     {/* Education */}
-                    <h5 className="section-heading">EDUCATION</h5>
+                    <h5 className="section-heading break-before-page">EDUCATION</h5>
 
                     <div className="timeline-container">
                         <TimelineIcon>
@@ -437,7 +437,7 @@ const Resume = () => {
                     </div>
 
                     {/* Additional Skills */}
-                    <h5 className="section-heading break-before-page">ADDITIONAL COMPETENCIES</h5>
+                    <h5 className="section-heading">ADDITIONAL COMPETENCIES</h5>
 
                     <ul className="bullet-list">
                         <li>
