@@ -137,7 +137,7 @@
         @apply flex items-center gap-1;
     }
     .section-heading {
-        @apply from-primary-600 to-primary-500 mb-1.5 bg-gradient-to-r bg-clip-text font-bold uppercase text-transparent;
+        @apply mb-1.5 font-bold uppercase;
     }
     .timeline-container {
         @apply border-primary-500 relative mb-4 space-y-3 border-l pl-4;

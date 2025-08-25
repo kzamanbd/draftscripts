@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     keywords: siteKeywords,
     category: 'portfolio',
     icons: {
-        icon: '/kzaman-icon-192x192.png',
-        apple: '/kzaman-icon-192x192.png',
-        shortcut: '/kzaman-icon-192x192.png'
+        icon: '/icon-192x192.png',
+        apple: '/icon-192x192.png',
+        shortcut: '/icon-192x192.png'
     },
     robots: {
         index: true,
