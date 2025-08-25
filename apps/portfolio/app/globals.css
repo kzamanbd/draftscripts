@@ -96,7 +96,7 @@
         @apply bg-primary-100 flex h-10 items-center justify-center rounded-lg;
     }
     .bullet-list {
-        @apply relative ml-2 mt-2 space-y-1.5 text-left text-xs;
+        @apply relative ml-2 space-y-1.5 text-left text-xs;
     }
     .bullet-list li {
         @apply before:bg-primary-500 flex items-center before:mr-2 before:h-1 before:w-1 before:rounded-full;

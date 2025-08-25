@@ -1,200 +1,160 @@
-import ActionButton from '@/components/resume/action-button';
 import CoverLetter from '@/components/resume/cover-letter';
 import TimelineIcon from '@/components/resume/timeline-icon';
 import { profileImage, user } from '@repo/shared/metadata';
-import { MapPin } from 'lucide-react';
 import Image from 'next/image';
 
-const social = {
+const social = Object.entries({
     GitHub: user.github,
     Linkedin: user.linkedin,
-    Codeforces: user.codeforces,
     LeetCode: user.leetcode
-};
-
-export const metadata = {
-    title: 'Resume | Kamruzzaman'
-};
-
-// get the total years of experience
-const getTotalYearsOfExperience = () => {
-    const startDate = new Date('2020-05-01');
-    const currentDate = new Date();
-
-    let years = currentDate.getFullYear() - startDate.getFullYear();
-    let months = currentDate.getMonth() - startDate.getMonth();
-    const days = currentDate.getDate() - startDate.getDate();
-
-    if (months < 0 || (months === 0 && days < 0)) {
-        years--; // subtract a year if current month/day is before start month/day
-        months += 12;
-    }
-
-    const plusSign = months > 0 || days > 0 ? '+' : '';
-    return `${years}${plusSign} yr${years !== 1 ? 's' : ''}`;
-};
+});
 
 const Resume = () => {
     return (
-        <div className="resume">
-            <div className="page-container">
-                <ActionButton />
-                <div className="resume-box with-photo">
-                    <div className="left-box">
+        <div>
+            <div className="page-container h-auto text-gray-900 print:h-auto">
+                <div className="p-10 print:p-0 print:pl-1.5">
+                    <div className="mb-2 flex justify-between">
+                        <div className="flex flex-col">
+                            <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
+                            <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
+                            <p className="mt-1 text-sm text-gray-700">
+                                PHP • Laravel • React.js • Vue.js • AWS • 4+ Years of Experience
+                            </p>
+                            <ul className="flex gap-2 text-sm">
+                                <li>
+                                    <a href="tel:8801716724245" className="contact-link">
+                                        <span className="font-semibold">Phone:</span>
+                                        <span className="underline">+880 1716-724245</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a
+                                        href={`mailto:${user.email}`}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="contact-link">
+                                        <span className="font-semibold">Email:</span>
+                                        <span className="underline"> {user.email}</span>
+                                    </a>
+                                </li>
+
+                                <li className="contact-link">
+                                    <span className="font-semibold">Address:</span>
+                                    <p>Mirpur 12, Dhaka, Bangladesh</p>
+                                </li>
+                            </ul>
+                            {/* Social */}
+                            <div className="mb-4 flex flex-wrap gap-2 text-sm">
+                                {social.map(([key, value], index) => (
+                                    <div key={key} className="contact-link">
+                                        <a
+                                            href={value}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="resume-link">
+                                            <span>
+                                                {value.replace('https://', '').replace('www.', '')}
+                                            </span>
+                                        </a>
+                                        <span>{index < social.length - 1 ? '•' : ''}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                         <Image
                             src={profileImage}
-                            className="profile-photo"
-                            width={150}
-                            height={150}
-                            alt="kamruzzaman, kamruzzaman profile image"
+                            className="size-25 rounded-xl object-cover"
+                            width={100}
+                            height={100}
+                            alt="kamruzzaman"
                         />
-                        <div className="name--title">
-                            <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
-                            <h5 className="subtitle capitalize">Software Engineer</h5>
-                        </div>
-                        {/* contact info */}
-                        <div className="about-me">
-                            <h5 className="subtitle">About Me</h5>
-                            <p className="mb-4 text-justify text-sm">
-                                {getTotalYearsOfExperience()} of hands-on experience in PHP,
-                                Laravel, WordPress, Vue.js, React, and AWS. Skilled in building and
-                                optimizing web apps from architecture to deployment. Passionate
-                                about learning new tools and delivering scalable, high-quality
-                                solutions in team environments.
-                            </p>
-                        </div>
+                    </div>
+                    {/* contact info */}
+                    <div className="about-me">
+                        <h5 className="section-heading">PROFESSIONAL SUMMARY</h5>
+                        <p className="mb-4 text-justify text-sm">
+                            Full Stack Software Engineer with 4+ years of hands-on experience
+                            specializing in Laravel, PHP, and modern JavaScript frameworks like
+                            Vue.js and React. Proven track record of designing and developing
+                            scalable, secure web applications and RESTful APIs using clean, testable
+                            code. Experienced in collaborating with cross-functional teams,
+                            participating in Agile/Scrum workflows, and communicating complex
+                            technical concepts to both technical and non-technical stakeholders.
+                            Adept at optimizing application performance, integrating third-party
+                            services, and mentoring junior developers. Passionate about continuous
+                            learning, user-focused design, and driving impact within high-performing
+                            engineering teams.
+                        </p>
+                    </div>
 
-                        <ul className="mb-3 space-y-1 text-sm">
+                    {/* Core Technical Skills */}
+                    <h5 className="section-heading">CORE TECHNICAL SKILLS</h5>
+
+                    <div className="mb-4 text-sm">
+                        <ul className="bullet-list">
                             <li>
-                                <a href="tel:8801716724245" className="flex items-center gap-1">
-                                    <span className="font-semibold">Phone:</span>
-                                    <span className="underline">+880 1716-724245</span>
-                                </a>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Programming:</span>
+                                    <p>
+                                        PHP/Laravel, JavaScript/TypeScript, React.js/Next.js and
+                                        Vue.js/Nuxt.js
+                                    </p>
+                                </div>
                             </li>
-
                             <li>
-                                <a
-                                    href={`mailto:${user.email}`}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="flex items-center gap-1">
-                                    <span className="font-semibold">Email:</span>
-                                    <span className="underline"> {user.email}</span>
-                                </a>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Databases:</span>
+                                    <p>MySQL, PostgreSQL and Redis</p>
+                                </div>
                             </li>
-
-                            <li className="flex items-center">
-                                <MapPin size={12} />
-                                <p>Mirpur 12, Dhaka, Bangladesh</p>
+                            <li>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Tools:</span>
+                                    <p>
+                                        Git/GitHub, Github Action, Composer, npm, Webpack, Docker,
+                                        PHPUnit and Playwright
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Cloud/Servers:</span>
+                                    <p>AWS (EC2, S3), Google Cloud basics, Nginx and Apache</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">WordPress:</span>
+                                    <p>
+                                        Plugin development, WooCommerce, Hooks, Filters, Shortcodes
+                                        and Custom Post Types
+                                    </p>
+                                </div>
                             </li>
                         </ul>
-
-                        {/* Education */}
-                        <div className="subtitle">
-                            <h5 className="subtitle-text">Educations</h5>
-                        </div>
-                        <div className="timeline-container text-sm">
-                            <TimelineIcon>
-                                <p className="font-bold">Bachelor of Science</p>
-                                <p>Computer Science & Engineering</p>
-                                <p className="mb-2">2022 - Present</p>
-                                <p className="font-semibold italic">Southeast University.</p>
-                                <div className="flex items-center">
-                                    <MapPin size={12} />
-                                    <span>251/A Tejgaon I/A, Dhaka</span>
-                                </div>
-                            </TimelineIcon>
-
-                            <TimelineIcon>
-                                <p className="font-bold">Diploma in Engineering </p>
-                                <p>Computer Technology</p>
-                                <p className="mb-2">2015 - 2019</p>
-                                <p className="font-semibold italic">
-                                    Rumdo Institute of Modern Technology.
-                                </p>
-                                <div className="flex items-center">
-                                    <MapPin size={12} />
-                                    <span>Mymensingh Bypass.</span>
-                                </div>
-                            </TimelineIcon>
-                        </div>
-                        {/* Key Skills */}
-                        <div className="subtitle">
-                            <h5 className="subtitle-text">Key Skills</h5>
-                        </div>
-
-                        <section className="flex flex-wrap gap-2">
-                            <span className="rounded-sm border border-rose-400 bg-rose-100 px-2.5 py-0.5 text-xs font-medium text-rose-800">
-                                PHP/Laravel
-                            </span>
-                            <span className="rounded-sm border border-yellow-300 bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800">
-                                JavaScript
-                            </span>
-                            <span className="rounded-sm border border-sky-400 bg-sky-100 px-2.5 py-0.5 text-xs font-medium text-sky-800">
-                                WordPress
-                            </span>
-                            <span className="rounded-sm border border-blue-400 bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800">
-                                React
-                            </span>
-                            <span className="rounded-sm border border-green-400 bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800">
-                                Vue
-                            </span>
-                            <span className="me-2 rounded-sm border border-amber-500 bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-800">
-                                AWS
-                            </span>
-                        </section>
-                        {/* Training */}
-                        <div className="subtitle left mt-3">
-                            <h5 className="subtitle-text">Training</h5>
-                        </div>
-                        <div className="text-sm">
-                            <div className="mb-2">
-                                <a
-                                    href="#"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="resume-link font-bold">
-                                    PHP/Laravel (2019)
-                                </a>
-                                <p className="italic">Creative It Institute, Dhaka.</p>
-                            </div>
-                            <div>
-                                <a
-                                    href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="resume-link font-bold">
-                                    Redux (2023)
-                                </a>
-                                <p className="italic">Learn with Sumit.</p>
-                            </div>
-                        </div>
                     </div>
-                    <div className="right-box">
-                        {/* Social */}
-                        <div className="mb-4 flex flex-wrap gap-4 md:justify-end">
-                            {Object.entries(social).map(([key, value]) => (
-                                <a
-                                    key={key}
-                                    href={value}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="hover:text-primary-500 text-sm font-semibold text-gray-800 underline">
-                                    <span>{key}</span>
-                                </a>
-                            ))}
-                        </div>
 
-                        {/* Experience section */}
-                        <h5 className="subtitle">Work Experience</h5>
+                    {/* Experience section */}
+                    <h5 className="section-heading">PROFESSIONAL EXPERIENCE</h5>
 
-                        <div className="timeline-container">
-                            <TimelineIcon>
-                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                    <span className="leading-0">Software Engineer</span>
-                                    <div className="ml-1 flex gap-1 text-sm font-medium">
-                                        <span>at</span>
-                                        <div className="flex items-center gap-1">
+                    <div className="timeline-container">
+                        <TimelineIcon>
+                            <div className="job-header">
+                                <div className="font-bold">
+                                    <h3>Software Engineer</h3>
+                                    <div className="company-info">
+                                        <div className="flex items-center rounded border p-0.5">
+                                            <Image
+                                                src="/images/wedevs-logo.svg"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="contact-link">
                                             <a
                                                 href="https://wedevs.com"
                                                 className="underline"
@@ -204,64 +164,72 @@ const Resume = () => {
                                             </a>
                                         </div>
                                     </div>
-                                </h3>
-                                <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                    <time className="block text-sm font-normal">
-                                        NOV 2024 - Present
-                                    </time>
-                                    <address className="flex items-center text-xs">
-                                        <MapPin size={12} />
-                                        <span>
-                                            House:1005, Avenue:11, Road:09, Mirpur DOHS 1216
-                                        </span>
-                                    </address>
                                 </div>
-                                <ul className="bullet-list ml-0">
-                                    <li className="flex items-center">
-                                        <p>
-                                            Developed and enhanced Dokan and Dokan Pro multi-vendor
-                                            marketplace plugins for WordPress.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Built advanced features like vendor management,
-                                            subscriptions, and booking integrations in Dokan Pro.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Enhanced wePOS to integrate physical retail systems with
-                                            WooCommerce stores.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Delivered scalable solutions using PHP, JavaScript, and
-                                            React.js.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Designed intuitive interfaces in collaboration with
-                                            UX/UI teams to improve user experience.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Produced developer documentation with technical writers,
-                                            streamlining onboarding and support.
-                                        </p>
-                                    </li>
-                                </ul>
-                            </TimelineIcon>
+                                <div className="job-meta">
+                                    <time>November 2024 - Present</time>
+                                    <address>Mirpur DOHS 1216, Dhaka, Bangladesh</address>
+                                </div>
+                            </div>
+                            <ul className="bullet-list">
+                                <li>
+                                    <p>
+                                        Developed and enhanced Dokan and Dokan Pro multi-vendor
+                                        marketplace plugins for WordPress, serving 50,000+ active
+                                        installations.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Built advanced features including vendor management systems,
+                                        subscription models, booking integrations, and payment
+                                        gateways for Dokan Pro platform.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Enhanced wePOS (Point of Sale) system to integrate physical
+                                        retail operations with WooCommerce stores, improving
+                                        inventory management and sales tracking.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Implemented scalable solutions using PHP, JavaScript,
+                                        React.js, WordPress APIs, and MySQL database optimization
+                                        techniques.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Collaborated closely with frontend developers, designers,
+                                        and QA to ensure smooth feature rollouts across multi-vendor
+                                        platforms.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Participated in daily stand-ups and sprint planning sessions
+                                        following Agile/Scrum methodology.
+                                    </p>
+                                </li>
+                            </ul>
+                        </TimelineIcon>
 
-                            <TimelineIcon>
-                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                    <span className="leading-0">Software Engineer</span>
-                                    <div className="ml-1 flex gap-1 text-sm font-medium">
-                                        <span>at</span>
-                                        <div className="flex items-center gap-1">
+                        <TimelineIcon>
+                            <div className="job-header">
+                                <div className="font-bold">
+                                    <h3>Software Engineer</h3>
+                                    <div className="company-info">
+                                        <div className="flex items-center rounded border p-0.5">
+                                            <Image
+                                                src="/images/mononsoft-logo.svg"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="contact-link">
                                             <a
                                                 href="https://mononsoft.org"
                                                 className="underline"
@@ -276,61 +244,74 @@ const Resume = () => {
                                                 rel="noreferrer">
                                                 (JMI Group)
                                             </a>
-                                            <span className="text-primary-500 text-sm font-medium">
-                                                (3 yrs 4 mos)
-                                            </span>
                                         </div>
                                     </div>
-                                </h3>
-                                <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                    <time className="block text-sm font-normal">
-                                        JUL 2021 - OCT-2024
-                                    </time>
-                                    <address className="flex items-center text-xs">
-                                        <MapPin size={12} />
-                                        <span>50/B New Eskaton Road, Dhaka 1000</span>
-                                    </address>
                                 </div>
-                                <ul className="bullet-list ml-0">
-                                    <li className="flex items-center">
-                                        <p>
-                                            Developing an ERP system based on Laravel, Vue.js and
-                                            React.js.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>Developing software solutions to meet customer needs.</p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Creating and implementing the source code of new
-                                            applications.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>Testing source code and debugging code.</p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Evaluating existing applications and performing updates
-                                            and modifications.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Produced developer documentation with technical writers,
-                                            streamlining onboarding and support.
-                                        </p>
-                                    </li>
-                                </ul>
-                            </TimelineIcon>
+                                <div className="job-meta">
+                                    <time>July 2021 - October 2024</time>
+                                    <address>50/B New Eskaton Road, Dhaka 1000</address>
+                                </div>
+                            </div>
+                            <ul className="bullet-list">
+                                <li>
+                                    <p>
+                                        Architected and developed comprehensive ERP system using
+                                        Laravel 10, Vue.js 3, React.js 18, and MySQL, serving
+                                        multiple business modules including inventory, accounting,
+                                        and HR management.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Delivered custom software solutions for client requirements,
+                                        reducing manual processes by 60% and improving operational
+                                        efficiency across departments.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Designed and implemented RESTful APIs and microservices
+                                        architecture, ensuring seamless integration between frontend
+                                        and backend systems.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Coordinated with cross-functional stakeholders to gather
+                                        requirements and deliver business-critical ERP modules.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Documented system architecture and conducted walkthroughs
+                                        for new team members
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Mentored junior developers and conducted technical training
+                                        sessions, contributing to team skill development and
+                                        knowledge sharing.
+                                    </p>
+                                </li>
+                            </ul>
+                        </TimelineIcon>
 
-                            <TimelineIcon>
-                                <h3 className="mb-1 flex flex-wrap items-center gap-y-2 font-bold text-gray-900">
-                                    <span className="leading-0">Jr. Software Engineer</span>
-                                    <div className="ml-1 flex gap-1 text-sm font-medium">
-                                        <span>at</span>
-                                        <div className="flex items-center gap-1">
+                        <TimelineIcon>
+                            <div className="job-header">
+                                <div className="font-bold">
+                                    <h3>Jr. Software Engineer</h3>
+                                    <div className="company-info">
+                                        <div className="flex items-center rounded border p-0.5">
+                                            <Image
+                                                src="/images/maxsop-logo.svg"
+                                                alt="Company Logo"
+                                                className="size-3 object-cover"
+                                                width={32}
+                                                height={32}
+                                            />
+                                        </div>
+                                        <div className="contact-link">
                                             <a
                                                 href="https://maxsop.com/"
                                                 className="underline"
@@ -338,102 +319,163 @@ const Resume = () => {
                                                 rel="noreferrer">
                                                 MaxSOP
                                             </a>
-                                            <span className="text-primary-500 text-sm font-medium">
-                                                (1 yr 2 mos)
-                                            </span>
                                         </div>
                                     </div>
-                                </h3>
-
-                                <div className="mb-3 items-center justify-between gap-4 text-gray-700 md:flex print:flex">
-                                    <time className="block text-sm font-normal">
-                                        MAY 2020 – JUN 2021
-                                    </time>
-                                    <address className="flex items-center text-xs">
-                                        <MapPin size={12} />
-                                        <span>27/2 Ram Babu Road, Mymensingh-2200.</span>
-                                    </address>
                                 </div>
-                                <ul className="bullet-list ml-0">
-                                    <li className="flex items-center">
-                                        <p>
-                                            Developing web applications based on PHP frameworks -
-                                            Laravel, Vue JS.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Build efficient, testable & reusable codes. Modify
-                                            existing code as needed.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Executed and monitored standards for user interfaces
-                                            page design and development.
-                                        </p>
-                                    </li>
-                                    <li className="flex items-center">
-                                        <p>
-                                            Perform other operational tasks based on{' '}
-                                            {`"as and when required"`}.
-                                        </p>
-                                    </li>
-                                </ul>
-                            </TimelineIcon>
+                                <div className="job-meta">
+                                    <time>May 2020 – June 2021</time>
+                                    <address>27/2 Ram Babu Road, Mymensingh-2200</address>
+                                </div>
+                            </div>
+                            <ul className="bullet-list">
+                                <li>
+                                    <p>
+                                        Developed responsive web applications using PHP Laravel
+                                        framework, Vue.js, MySQL, and Bootstrap, implementing MVC
+                                        architecture and following coding best practices.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Worked in a small agile team, improving team velocity by
+                                        sharing knowledge and reviewing peers’ code.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Actively communicated with clients to understand project
+                                        requirements and propose technical solutions.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Contributed to full software development lifecycle including
+                                        requirements analysis, system design, implementation,
+                                        testing, and deployment.
+                                    </p>
+                                </li>
+                            </ul>
+                        </TimelineIcon>
+                    </div>
+
+                    {/* Education */}
+                    <h5 className="section-heading">EDUCATION</h5>
+
+                    <div className="timeline-container">
+                        <TimelineIcon>
+                            <div className="job-header">
+                                <div className="font-bold">
+                                    <h3>Bachelor of Science</h3>
+                                    <div className="text-sm font-medium">
+                                        Computer Science & Engineering(In Progress) -{' '}
+                                        <span className="font-bold">Southeast University</span>
+                                    </div>
+                                </div>
+                                <div className="job-meta">
+                                    <time>2022 - Present</time>
+                                    <address>Dhaka, Bangladesh</address>
+                                </div>
+                            </div>
+                        </TimelineIcon>
+
+                        <TimelineIcon>
+                            <div className="job-header">
+                                <div className="font-bold">
+                                    <h3>Diploma in Engineering</h3>
+                                    <div className="text-sm font-medium">
+                                        Computer Technology -{' '}
+                                        <span className="font-bold">
+                                            Rumdo Institute of Modern Technology
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className="job-meta">
+                                    <time>2015 - 2019</time>
+                                    <address>Mymensingh, Bangladesh</address>
+                                </div>
+                            </div>
+                        </TimelineIcon>
+                    </div>
+
+                    {/* Training */}
+                    <h5 className="section-heading">CERTIFICATIONS & TRAINING</h5>
+
+                    <div className="relative mb-4 grid grid-cols-3">
+                        <div className="job-header">
+                            <div className="font-bold">
+                                <h3>
+                                    <a
+                                        href="#"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="resume-link">
+                                        PHP/Laravel Development (Full Stack)
+                                    </a>
+                                </h3>
+                                <div className="text-sm font-medium text-gray-600">
+                                    Creative IT Institute, Dhaka
+                                </div>
+                            </div>
                         </div>
 
-                        {/* Additional Skills */}
-                        <h5 className="subtitle">Additional Skills</h5>
-
-                        <ul className="bullet-list">
-                            <li>
-                                <p>A solid foundation on OOP, Algorithm and Data Structure.</p>
-                            </li>
-                            <li>
-                                <p>Solid Knowledge on Web Services likes REST/JSON APIs.</p>
-                            </li>
-                            <li>
-                                <p>SQL, MySQL, TypeScript, Redux, Tailwind CSS and Bootstrap.</p>
-                            </li>
-                            <li>
-                                <p>Experience with SDLC and Agile methodologies.</p>
-                            </li>
-                            <li>
-                                <p>
-                                    Experience in working with version control systems like Git,
-                                    GitHub, and Gitlab.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Basic knowledge of Cloud Platforms like AWS, Google Cloud
-                                    Platform.
-                                </p>
-                            </li>
-                            <li>
-                                <p>Experience working in a Dockerized environment.</p>
-                            </li>
-                            <li>
-                                <p>
-                                    Familiarity with DevOps processes, operation tools and Linux
-                                    based systems.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Ability to work individually and independently with minimal
-                                    supervision.
-                                </p>
-                            </li>
-                            <li>
-                                <p>
-                                    Problem-solving skills, Self-managed, independent, initiative
-                                    and proactive.
-                                </p>
-                            </li>
-                        </ul>
+                        <div className="job-header">
+                            <div className="font-bold">
+                                <h3>
+                                    <a
+                                        href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="resume-link">
+                                        Think in a Redux way (React & Redux)
+                                    </a>
+                                </h3>
+                                <div className="text-sm font-medium text-gray-600">
+                                    Learn with Sumit
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    {/* Additional Skills */}
+                    <h5 className="section-heading break-before-page">ADDITIONAL COMPETENCIES</h5>
+
+                    <ul className="bullet-list">
+                        <li>
+                            <p>
+                                Strong foundation in Object-Oriented Programming (OOP), Data
+                                Structures, and Algorithms
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Extensive experience with RESTful APIs, and microservices
+                                architecture
+                            </p>
+                        </li>
+                        <li>
+                            <p>TypeScript, Redux, Tailwind CSS, Bootstrap, SCSS, and jQuery</p>
+                        </li>
+                        <li>
+                            <p>
+                                Software Development Life Cycle (SDLC) and Agile/Scrum methodologies
+                            </p>
+                        </li>
+                        <li>
+                            <p>Docker containerization, Nginx, Apache server configuration</p>
+                        </li>
+                        <li>
+                            <p>
+                                Self-motivated team player with strong analytical and
+                                problem-solving abilities
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Strong verbal and written communication skills for team and client
+                                interaction
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <CoverLetter />
