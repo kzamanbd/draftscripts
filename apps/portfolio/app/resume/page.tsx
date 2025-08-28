@@ -113,8 +113,8 @@ const Resume = () => {
                                 <div className="flex gap-1">
                                     <span className="font-bold">Tools:</span>
                                     <p>
-                                        Git/GitHub, Github Action, Composer, npm, Webpack, Docker,
-                                        PHPUnit and Playwright
+                                        Git/GitHub, Github Action/CICD, Composer, npm, Webpack,
+                                        Docker, PHPUnit and Playwright
                                     </p>
                                 </div>
                             </li>
@@ -451,6 +451,15 @@ const Resume = () => {
                                 Extensive experience with RESTful APIs, and microservices
                                 architecture
                             </p>
+                        </li>
+                        <li>
+                            <p>
+                                Extensive experience with WebSockets, Laravel Echo, Pusher, or
+                                Socket.io.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Experience Third-Party APIs like Shopify, Stripe, Twilio.</p>
                         </li>
                         <li>
                             <p>TypeScript, Redux, Tailwind CSS, Bootstrap, SCSS, and jQuery</p>
