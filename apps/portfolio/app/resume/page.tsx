@@ -18,7 +18,7 @@ const Resume = () => {
                         <div className="flex flex-col">
                             <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
                             <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
-                            <p className="mt-1 text-sm text-gray-700">
+                            <p className="mt-1 text-sm">
                                 PHP • Laravel • React.js • Vue.js • AWS • 4+ Years of Experience
                             </p>
                             <ul className="flex gap-2 text-sm">
@@ -98,8 +98,8 @@ const Resume = () => {
                                 <div className="flex gap-1">
                                     <span className="font-bold">Programming:</span>
                                     <p>
-                                        PHP/Laravel, JavaScript/TypeScript, React.js/Next.js and
-                                        Vue.js/Nuxt.js
+                                        PHP/Laravel, JavaScript/TypeScript, React.js/Next.js,
+                                        Vue.js/Nuxt.js and Express.js
                                     </p>
                                 </div>
                             </li>
@@ -121,7 +121,7 @@ const Resume = () => {
                             <li>
                                 <div className="flex gap-1">
                                     <span className="font-bold">Cloud/Servers:</span>
-                                    <p>AWS (EC2, S3), Google Cloud basics, Nginx and Apache</p>
+                                    <p>AWS (EC2, ECS, RDS, S3), Google Cloud basics.</p>
                                 </div>
                             </li>
                             <li>
@@ -412,7 +412,7 @@ const Resume = () => {
                                         PHP/Laravel Development (Full Stack)
                                     </a>
                                 </h3>
-                                <div className="text-sm font-medium text-gray-600">
+                                <div className="text-sm font-medium">
                                     Creative IT Institute, Dhaka
                                 </div>
                             </div>
@@ -429,9 +429,7 @@ const Resume = () => {
                                         Think in a Redux way (React & Redux)
                                     </a>
                                 </h3>
-                                <div className="text-sm font-medium text-gray-600">
-                                    Learn with Sumit
-                                </div>
+                                <div className="text-sm font-medium">Learn with Sumit</div>
                             </div>
                         </div>
                     </div>
