@@ -140,7 +140,7 @@
         @apply mb-1.5 font-bold uppercase;
     }
     .timeline-container {
-        @apply border-primary-500 relative mb-4 space-y-3 border-l pl-4;
+        @apply border-primary-500 relative mb-4 ml-2 space-y-3 border-l pl-4;
     }
     .job-header {
         @apply mb-2 flex justify-between;
