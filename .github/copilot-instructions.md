@@ -6,7 +6,7 @@ DraftScripts is a full-stack monorepo showcasing modern web development patterns
 
 **Repository Structure:**
 
-```
+```md
 draftscripts/
 ├── apps/
 │   ├── portfolio/     # Personal portfolio app (Next.js 15, React 19, TailwindCSS 4)
@@ -141,7 +141,7 @@ A comprehensive portfolio and showcase application featuring:
 
 **Route Structure:**
 
-```
+```md
 app/
 ├── api/             # API endpoints
 ├── blog/            # Blog functionality
@@ -559,4 +559,3 @@ pnpm list --recursive
 - [EmailJS](https://www.emailjs.com)
 
 This monorepo demonstrates modern full-stack development patterns with a focus on developer experience, type safety, and performance optimization.
-
