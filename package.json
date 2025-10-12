@@ -36,5 +36,20 @@
     },
     "dependencies": {
         "lucide-react": "^0.539.0"
+    },
+    "prettier": {
+        "$schema": "https://json.schemastore.org/prettierrc",
+        "semi": true,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "printWidth": 100,
+        "trailingComma": "none",
+        "bracketSameLine": true,
+        "endOfLine": "crlf",
+        "vueIndentScriptAndStyle": true,
+        "plugins": [
+            "prettier-plugin-tailwindcss"
+        ]
     }
 }
+
