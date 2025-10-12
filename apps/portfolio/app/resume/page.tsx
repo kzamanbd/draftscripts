@@ -187,13 +187,6 @@ const Resume = () => {
                                 </li>
                                 <li>
                                     <p>
-                                        Enhanced wePOS (Point of Sale) system to integrate physical
-                                        retail operations with WooCommerce stores, improving
-                                        inventory management and sales tracking.
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
                                         Implemented scalable solutions using PHP, JavaScript,
                                         React.js, WordPress APIs, and MySQL database optimization
                                         techniques.
@@ -256,15 +249,15 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Architected and developed comprehensive ERP system using
-                                        Laravel 10, Vue.js 3, React.js 18, and MySQL, serving
-                                        multiple business modules including inventory, accounting,
-                                        and HR management.
+                                        Laravel, Vue.js, React.js, and MySQL, serving multiple
+                                        business modules including inventory, accounting, and HR
+                                        management.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
                                         Delivered custom software solutions for client requirements,
-                                        reducing manual processes by 60% and improving operational
+                                        reducing manual processes and improving operational
                                         efficiency across departments.
                                     </p>
                                 </li>
@@ -397,43 +390,6 @@ const Resume = () => {
                         </TimelineIcon>
                     </div>
 
-                    {/* Training */}
-                    <h5 className="section-heading">CERTIFICATIONS & TRAINING</h5>
-
-                    <div className="relative mb-4 grid grid-cols-3">
-                        <div className="job-header">
-                            <div className="font-bold">
-                                <h3>
-                                    <a
-                                        href="#"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="resume-link">
-                                        PHP/Laravel Development (Full Stack)
-                                    </a>
-                                </h3>
-                                <div className="text-sm font-medium">
-                                    Creative IT Institute, Dhaka
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="job-header">
-                            <div className="font-bold">
-                                <h3>
-                                    <a
-                                        href="https://learnwithsumit.com/certificates/verify/LWSCTXN-F584A5R7"
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="resume-link">
-                                        Think in a Redux way (React & Redux)
-                                    </a>
-                                </h3>
-                                <div className="text-sm font-medium">Learn with Sumit</div>
-                            </div>
-                        </div>
-                    </div>
-
                     {/* Additional Skills */}
                     <h5 className="section-heading">ADDITIONAL COMPETENCIES</h5>
 
@@ -457,10 +413,10 @@ const Resume = () => {
                             </p>
                         </li>
                         <li>
-                            <p>Experience Third-Party APIs like Shopify, Stripe, Twilio.</p>
-                        </li>
-                        <li>
-                            <p>TypeScript, Redux, Tailwind CSS, Bootstrap, SCSS, and jQuery</p>
+                            <p>
+                                Experience Third-Party APIs like Stripe, Twilio. TypeScript, Redux,
+                                Tailwind CSS, Bootstrap, SCSS, and jQuery
+                            </p>
                         </li>
                         <li>
                             <p>
