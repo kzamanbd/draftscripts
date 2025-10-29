@@ -1,12 +1,9 @@
 import type { MetadataRoute } from 'next';
-import getConfig from 'next/config';
 
 export const dynamic = 'force-static';
 
-const { publicRuntimeConfig } = getConfig();
-
 export default function sitemap(): MetadataRoute.Sitemap {
-    const siteURL: string = publicRuntimeConfig.siteURL;
+    const siteURL = process.env.NEXT_PUBLIC_SITE_URL || 'https://kzaman.me';
     return [
         {
             url: siteURL,

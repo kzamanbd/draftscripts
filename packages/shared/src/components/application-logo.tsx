@@ -1,9 +1,9 @@
-import { SVGAttributes } from 'react';
+import { SVGProps } from 'react';
 
-export default function ApplicationLogo(props: SVGAttributes<SVGElement>) {
+export default function ApplicationLogo(props: SVGProps<SVGSVGElement>) {
     return (
         <svg
-            {...props}
+            {...(props as any)}
             className="tw-logo"
             width="50"
             height="39"

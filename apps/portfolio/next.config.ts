@@ -12,9 +12,8 @@ const nextConfig: NextConfig = {
             }
         ]
     },
-    publicRuntimeConfig: {
-        siteURL: 'https://kzaman.me',
-        sitemapURL: `https://kzaman.me/sitemap.xml`
+    experimental: {
+        turbopackFileSystemCacheForDev: true
     }
 };
 
