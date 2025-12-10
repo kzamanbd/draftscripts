@@ -1,34 +1,33 @@
 {
-    "name": "portfolio",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "next dev --turbopack",
-        "dev:https": "next dev --experimental-https",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint"
-    },
-    "dependencies": {
-        "@next/third-parties": "^16.0.1",
-        "firebase": "^12.1.0",
-        "next": "16.0.1",
-        "react": "^19.2.0",
-        "react-dom": "^19.2.0"
-    },
-    "devDependencies": {
-        "@repo/eslint-config": "workspace:*",
-        "@repo/shared": "workspace:*",
-        "@repo/typescript-config": "workspace:*",
-        "@tailwindcss/postcss": "^4",
-        "@types/node": "^20",
-        "@types/react": "^19",
-        "@types/react-dom": "^19",
-        "eslint": "^9",
-        "schema-dts": "^1.1.5",
-        "tailwindcss": "^4",
-        "typescript": "^5"
-    }
+  "name": "portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:https": "next dev --experimental-https",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@next/third-parties": "^16.0.1",
+    "firebase": "^12.1.0",
+    "next": "16.0.7",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/shared": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "schema-dts": "^1.1.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
 }
-
