@@ -174,8 +174,7 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Developed and enhanced Dokan and Dokan Pro multi-vendor
-                                        marketplace plugins for WordPress, serving 50,000+ active
-                                        installations.
+                                        marketplace plugins for WordPress.
                                     </p>
                                 </li>
                                 <li>
@@ -249,9 +248,8 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Architected and developed comprehensive ERP system using
-                                        Laravel, Vue.js, React.js, and MySQL, serving multiple
-                                        business modules including inventory, accounting, and HR
-                                        management.
+                                        Laravel, Vue.js and MySQL, serving multiple business modules
+                                        including inventory, accounting, and HR management.
                                     </p>
                                 </li>
                                 <li>
@@ -324,8 +322,9 @@ const Resume = () => {
                                 <li>
                                     <p>
                                         Developed responsive web applications using PHP Laravel
-                                        framework, Vue.js, MySQL, and Bootstrap, implementing MVC
-                                        architecture and following coding best practices.
+                                        framework, Vue.js/Nuxt.js, MySQL, and Bootstrap,
+                                        implementing MVC architecture and following coding best
+                                        practices.
                                     </p>
                                 </li>
                                 <li>
