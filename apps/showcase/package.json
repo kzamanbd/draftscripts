@@ -1,47 +1,48 @@
 {
-  "name": "showcase",
-  "version": "1.0.0",
-  "type": "module",
-  "keywords": [
-    "draftscripts",
-    "nextjs",
-    "typescript",
-    "tailwindcss",
-    "react"
-  ],
-  "author": "kamruzzaman",
-  "license": "MIT",
-  "description": "A collection of scripts for DraftScripts projects",
-  "scripts": {
-    "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "postinstall": "cp -n .env.example .env || true"
-  },
-  "dependencies": {
-    "@emailjs/browser": "^4.3.3",
-    "@headlessui/react": "^2.2.2",
-    "@tailwindcss/forms": "^0.5.10",
-    "body-scroll-lock": "4.0.0-beta.0",
-    "next": "15.5.7",
-    "nextjs-toploader": "^1.6.12",
-    "preline": "^3.0.1",
-    "react": "^19",
-    "react-dom": "^19",
-    "react-toastify": "^10.0.5"
-  },
-  "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/shared": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "^4.1.3",
-    "@types/body-scroll-lock": "^3.1.2",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9.24.0",
-    "tailwindcss": "^4.1.3",
-    "typescript": "^5"
-  }
+    "name": "showcase",
+    "version": "1.0.0",
+    "type": "module",
+    "keywords": [
+        "draftscripts",
+        "nextjs",
+        "typescript",
+        "tailwindcss",
+        "react"
+    ],
+    "author": "kamruzzaman",
+    "license": "MIT",
+    "description": "A collection of scripts for DraftScripts projects",
+    "scripts": {
+        "dev": "next dev --turbo",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "postinstall": "cp -n .env.example .env || true"
+    },
+    "dependencies": {
+        "@emailjs/browser": "^4.3.3",
+        "@headlessui/react": "^2.2.2",
+        "@tailwindcss/forms": "^0.5.10",
+        "body-scroll-lock": "4.0.0-beta.0",
+        "next": "15.5.9",
+        "nextjs-toploader": "^1.6.12",
+        "preline": "^3.0.1",
+        "react": "^19",
+        "react-dom": "^19",
+        "react-toastify": "^10.0.5"
+    },
+    "devDependencies": {
+        "@repo/eslint-config": "workspace:*",
+        "@repo/shared": "workspace:*",
+        "@repo/typescript-config": "workspace:*",
+        "@tailwindcss/postcss": "^4.1.3",
+        "@types/body-scroll-lock": "^3.1.2",
+        "@types/node": "^22",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "eslint": "^9.24.0",
+        "tailwindcss": "^4.1.3",
+        "typescript": "^5"
+    }
 }
+
