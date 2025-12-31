@@ -18,144 +18,134 @@ const skills = [
 
 const Home = () => {
     return (
-        <div className="relative min-h-screen overflow-hidden bg-slate-50 selection:bg-blue-500/30 selection:text-blue-600 dark:bg-gray-950">
-            {/* Dynamic Background */}
-            <div className="pointer-events-none absolute inset-0 z-0">
-                <div className="animate-blob absolute left-1/4 top-0 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-400/20 mix-blend-multiply blur-[100px] dark:bg-blue-600/20 dark:mix-blend-screen" />
-                <div className="animate-blob animation-delay-2000 absolute right-1/4 top-0 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-purple-400/20 mix-blend-multiply blur-[100px] dark:bg-purple-600/20 dark:mix-blend-screen" />
-                <div className="animate-blob animation-delay-4000 absolute -bottom-32 left-1/3 h-[500px] w-[500px] rounded-full bg-indigo-400/20 mix-blend-multiply blur-[100px] dark:bg-indigo-600/20 dark:mix-blend-screen" />
+        <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-gray-950 dark:via-blue-950/20 dark:to-indigo-950/30">
+            {/* Modern Background Elements */}
+            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+                {/* Primary gradient orbs */}
+                <div className="animate-pulse-slow absolute -right-40 -top-40 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 blur-3xl" />
+                <div className="animate-pulse-slow absolute -left-40 top-1/3 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-indigo-400/15 via-cyan-400/15 to-blue-400/15 blur-3xl [animation-delay:2s]" />
+                <div className="animate-pulse-slow absolute bottom-1/4 right-1/3 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-violet-400/20 via-purple-400/20 to-fuchsia-400/20 blur-3xl [animation-delay:4s]" />
 
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] bg-[size:100px_100px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black,transparent)] dark:bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]" />
+                {/* Geometric patterns */}
+                <div className="absolute right-20 top-20 h-32 w-32 rotate-45 animate-bounce rounded-2xl bg-gradient-to-br from-blue-500/5 to-purple-500/5 [animation-duration:6s]" />
+                <div className="absolute bottom-40 left-20 h-24 w-24 rotate-12 animate-bounce rounded-xl bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 [animation-delay:1s] [animation-duration:8s]" />
+
+                {/* Grid pattern overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:50px_50px] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]" />
             </div>
 
             {/* Hero Section */}
-            <section className="relative z-10 flex min-h-screen items-center justify-center px-4 pb-32 pt-20">
+            <section className="relative z-10 flex min-h-screen items-center justify-center px-4 py-20">
                 <div className="container mx-auto max-w-6xl">
-                    <div className="flex flex-col items-center text-center">
-                        {/* Premium Status Badge */}
-                        <div className="animate-fade-in-up group mb-8 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/50 px-4 py-1.5 text-sm font-medium text-blue-800 shadow-sm backdrop-blur-md transition-all hover:border-blue-200 hover:bg-white/80 dark:border-blue-900/30 dark:bg-blue-950/30 dark:text-blue-300 dark:hover:bg-blue-900/50">
-                            <span className="relative flex h-2 w-2">
-                                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
-                            </span>
-                            <span className="bg-gradient-to-r from-blue-700 to-indigo-700 bg-clip-text text-transparent dark:from-blue-300 dark:to-indigo-300">
-                                Available for new projects
+                    <div className="text-center">
+                        {/* Status Badge */}
+                        <div className="mb-8 inline-flex items-center rounded-full border border-emerald-200/60 bg-emerald-50/80 px-6 py-3 text-sm font-medium shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-xl dark:border-emerald-800/30 dark:bg-emerald-900/20">
+                            <div className="mr-3 flex h-3 w-3 items-center justify-center">
+                                <div className="absolute h-3 w-3 animate-ping rounded-full bg-emerald-400 opacity-75"></div>
+                                <div className="relative h-2 w-2 rounded-full bg-emerald-500"></div>
+                            </div>
+                            <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-teal-400">
+                                ✨ Available for exciting projects
                             </span>
                         </div>
 
                         {/* Main Heading */}
-                        <div className="animate-fade-in-up mb-8 max-w-4xl [animation-delay:200ms]">
-                            <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-7xl lg:text-8xl dark:text-white">
-                                <span className="mb-4 block text-2xl font-semibold tracking-normal text-gray-500 md:text-3xl dark:text-gray-400">
-                                    Hello, I'm
+                        <div className="mb-8 space-y-4">
+                            <h1 className="text-5xl font-bold tracking-tight text-gray-900 md:text-6xl lg:text-7xl xl:text-8xl dark:text-white">
+                                <span className="mb-2 block text-3xl font-medium text-gray-600 md:text-4xl lg:text-5xl dark:text-gray-400">
+                                    Hi, I&apos;m
                                 </span>
-                                <span className="bg-gradient-to-b from-gray-900 to-gray-600 bg-clip-text text-transparent dark:from-white dark:to-gray-400">
+                                <span className="animate-gradient block bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-[length:200%_200%] bg-clip-text text-transparent dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400">
                                     Kamruzzaman
                                 </span>
                             </h1>
-                            <div className="mt-4 flex flex-col items-center justify-center gap-2 md:flex-row">
-                                <span className="text-3xl font-medium text-gray-400 md:text-5xl dark:text-gray-600">
-                                    Building
-                                </span>
-                                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-3xl font-bold text-transparent md:text-5xl dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400">
-                                    Digital Experiences
-                                </span>
+
+                            <div className="relative">
+                                <h2 className="text-2xl font-semibold text-gray-700 md:text-3xl lg:text-4xl dark:text-gray-300">
+                                    Full Stack Developer
+                                </h2>
+                                <div className="absolute -bottom-2 left-1/2 h-1 w-24 -translate-x-1/2 rounded-full bg-gradient-to-r from-blue-500 to-purple-500"></div>
                             </div>
                         </div>
 
                         {/* Description */}
-                        <p className="animate-fade-in-up mb-12 max-w-2xl text-lg leading-relaxed text-gray-600 [animation-delay:400ms] md:text-xl dark:text-gray-300">
-                            A{' '}
-                            <span className="font-semibold text-gray-900 dark:text-white">
-                                Full Stack Developer
-                            </span>{' '}
-                            specialized in blending
-                            <span className="mx-1.5 inline-block rounded-md bg-blue-100 px-2 py-0.5 text-sm font-semibold text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-                                technical excellence
+                        <p className="mx-auto mb-12 max-w-3xl text-lg leading-relaxed text-gray-600 md:text-xl dark:text-gray-300">
+                            I craft digital experiences that blend{' '}
+                            <span className="font-semibold text-blue-600 dark:text-blue-400">
+                                beautiful design
                             </span>
-                            with
-                            <span className="mx-1.5 inline-block rounded-md bg-purple-100 px-2 py-0.5 text-sm font-semibold text-purple-700 dark:bg-purple-900/30 dark:text-purple-300">
-                                visual aesthetics
+                            ,{' '}
+                            <span className="font-semibold text-purple-600 dark:text-purple-400">
+                                robust functionality
+                            </span>
+                            , and{' '}
+                            <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+                                exceptional performance
                             </span>
                             .
+                            <br />
+                            Transforming ideas into scalable web solutions with modern technologies.
                         </p>
 
-                        {/* Skills Scroller */}
-                        <div className="animate-fade-in-up mb-12 w-full max-w-4xl [animation-delay:600ms]">
-                            <div className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white/30 p-8 shadow-sm backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/30">
-                                <div className="flex flex-wrap justify-center gap-3">
-                                    {skills.map((skill, index) => (
-                                        <div
-                                            key={skill}
-                                            className="group relative overflow-hidden rounded-lg bg-white px-4 py-2 text-sm font-medium text-gray-600 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md dark:bg-gray-800 dark:text-gray-300"
-                                            style={{ animationDelay: `${index * 50}ms` }}>
-                                            <div className="group-hover:animate-shine absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-blue-500/10 to-transparent transition-transform duration-1000" />
-                                            <span className="relative z-10 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-                                                {skill}
-                                            </span>
-                                        </div>
-                                    ))}
+                        {/* Skills Grid */}
+                        <div className="mx-auto mb-12 grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+                            {skills.map((skill, index) => (
+                                <div
+                                    key={skill}
+                                    className="group relative rounded-xl border border-gray-200/50 bg-white/70 px-4 py-3 text-center text-sm font-medium text-gray-700 shadow-sm backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:bg-white hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:text-gray-300 dark:hover:bg-gray-800/70"
+                                    style={{ animationDelay: `${index * 100}ms` }}>
+                                    <span className="relative z-10">{skill}</span>
+                                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-purple-500/0 to-indigo-500/0 opacity-0 transition-opacity duration-300 group-hover:from-blue-500/10 group-hover:via-purple-500/10 group-hover:to-indigo-500/10 group-hover:opacity-100"></div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
 
-                        {/* Social & CTA */}
-                        <div className="animate-fade-in-up flex flex-col items-center gap-8 [animation-delay:800ms]">
-                            {/* Social Icons */}
-                            <div className="flex gap-4">
-                                {[
-                                    { href: user.github, icon: Github, label: 'GitHub' },
-                                    { href: user.linkedin, icon: Linkedin, label: 'LinkedIn' },
-                                    { href: user.leetcode, icon: LeetCode, label: 'LeetCode' },
-                                    {
-                                        href: user.codeforces,
-                                        icon: Codeforces,
-                                        label: 'Codeforces'
-                                    },
-                                    { href: user.facebook, icon: Facebook, label: 'Facebook' }
-                                ].map(({ href, icon: Icon, label }) => (
-                                    <a
-                                        key={label}
-                                        href={href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group relative flex h-10 w-10 items-center justify-center rounded-lg bg-white text-gray-500 shadow-sm transition-all hover:-translate-y-1 hover:text-gray-900 hover:shadow-md dark:bg-gray-800 dark:text-gray-400 dark:hover:text-white"
-                                        aria-label={label}>
-                                        <Icon className="h-5 w-5" />
-                                        <span className="absolute -top-8 left-1/2 -translate-x-1/2 scale-0 rounded-md bg-gray-900 px-2 py-1 text-xs font-semibold text-white opacity-0 transition-all group-hover:scale-100 group-hover:opacity-100 dark:bg-white dark:text-gray-900">
-                                            {label}
-                                        </span>
-                                    </a>
-                                ))}
-                            </div>
+                        {/* Social Links */}
+                        <div className="mb-12 flex justify-center gap-6">
+                            {[
+                                { href: user.github, icon: Github, label: 'GitHub' },
+                                { href: user.linkedin, icon: Linkedin, label: 'LinkedIn' },
+                                { href: user.leetcode, icon: LeetCode, label: 'LeetCode' },
+                                { href: user.codeforces, icon: Codeforces, label: 'Codeforces' },
+                                { href: user.facebook, icon: Facebook, label: 'Facebook' }
+                            ].map(({ href, icon: Icon, label }) => (
+                                <a
+                                    key={label}
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex h-12 w-12 items-center justify-center rounded-full border border-gray-200/50 bg-white/70 text-gray-600 shadow-sm backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-600 hover:shadow-lg dark:border-gray-700/50 dark:bg-gray-800/50 dark:text-gray-400 dark:hover:border-blue-600/50 dark:hover:bg-blue-900/20 dark:hover:text-blue-400"
+                                    aria-label={label}>
+                                    <Icon className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+                                </a>
+                            ))}
+                        </div>
 
-                            {/* Buttons */}
-                            <div className="flex flex-col gap-4 sm:flex-row">
-                                <Link
-                                    href="#projects"
-                                    className="group relative overflow-hidden rounded-full bg-gray-900 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:bg-gray-800 hover:shadow-xl dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100">
-                                    <div className="group-hover:animate-shine absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000" />
-                                    <span className="flex items-center gap-2">
-                                        View My Work
-                                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                    </span>
-                                </Link>
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-6">
+                            <Link
+                                href="#projects"
+                                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-blue-600 to-purple-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                                <span className="relative z-10">View My Work</span>
+                                <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                            </Link>
 
-                                <Link
-                                    href="/resume"
-                                    className="group rounded-full border border-gray-200 bg-white/50 px-8 py-3.5 text-sm font-semibold text-gray-700 backdrop-blur-sm transition-all hover:border-gray-300 hover:bg-white hover:shadow-md dark:border-gray-700 dark:bg-white/5 dark:text-gray-200 dark:hover:bg-white/10">
-                                    <span className="flex items-center gap-2">
-                                        Download Resume
-                                        <Download className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-                                    </span>
-                                </Link>
-                            </div>
+                            <Link
+                                href="/resume"
+                                className="group inline-flex items-center gap-3 rounded-full border border-gray-300/50 bg-white/70 px-8 py-4 font-semibold text-gray-700 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:border-gray-400 hover:bg-white hover:shadow-xl dark:border-gray-600/50 dark:bg-gray-800/50 dark:text-gray-300 dark:hover:border-gray-500 dark:hover:bg-gray-700/70">
+                                <span>Download Resume</span>
+                                <Download className="h-5 w-5 transition-transform duration-300 group-hover:translate-y-0.5" />
+                            </Link>
                         </div>
 
                         {/* Scroll Indicator */}
-                        <div className="animate-fade-in-up mt-20 [animation-delay:1000ms]">
-                            <div className="mouse-scroll-indicator flex h-10 w-6 items-start justify-center rounded-full border-2 border-gray-300 p-1 dark:border-gray-600">
-                                <div className="h-1.5 w-1.5 animate-bounce rounded-full bg-gray-600 dark:bg-gray-400"></div>
+                        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                            <div className="flex flex-col items-center gap-2 text-gray-400 dark:text-gray-600">
+                                <span className="text-sm">Scroll to explore</span>
+                                <div className="h-6 w-4 rounded-full border-2 border-current">
+                                    <div className="mx-auto mt-1 h-1 w-1 animate-pulse rounded-full bg-current"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
