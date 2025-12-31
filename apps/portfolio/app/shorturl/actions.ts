@@ -61,7 +61,7 @@ export const createLink = async (longUrl: string): Promise<Link> => {
         longUrl,
         slug,
         clicks: 0,
-        shortUrl: `${baseUrl}/go/${slug}`,
+        shortUrl: `${baseUrl}/shorturl/${slug}`,
         createdAt: serverTimestamp()
     };
 
