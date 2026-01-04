@@ -1,7 +1,7 @@
 import { user } from '@repo/shared/metadata';
 import { NextResponse } from 'next/server';
 
-export async function GET() {
+export async function POST() {
     // generate random token
     const token = Math.random().toString(36).substring(7);
     // response json with token
