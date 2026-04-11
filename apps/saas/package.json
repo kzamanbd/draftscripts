@@ -7,27 +7,34 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.5.10",
     "bcryptjs": "^3.0.2",
     "jose": "^6.0.10",
     "preline": "^3.0.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.8"
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
+    "next": "16.2.3"
   },
   "devDependencies": {
     "@repo/shared": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
     "@tailwindcss/postcss": "^4",
     "tailwindcss": "^4",
     "eslint": "^9",
-    "typescript": "^5"
+    "typescript": "^5",
+    "eslint-config-next": "16.2.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.14",
+      "@types/react-dom": "19.2.3"
+    }
   }
 }
