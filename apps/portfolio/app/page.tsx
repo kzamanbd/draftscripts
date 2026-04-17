@@ -35,16 +35,16 @@ const Home = () => {
                                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
                             </span>
                             <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent dark:from-emerald-400 dark:to-teal-300">
-                                Open to exciting opportunities
+                                ✨ Open to exciting opportunities
                             </span>
                         </div>
 
                         {/* Main Typography */}
                         <div className="relative mb-8 max-w-4xl space-y-4">
                             <h1
-                                className="animate-fade-in-up text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:text-8xl dark:text-white"
+                                className="animate-fade-in-up text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl dark:text-white"
                                 style={{ animationDelay: '100ms' }}>
-                                <span className="mb-3 block text-2xl font-semibold text-slate-500 sm:text-3xl lg:text-4xl dark:text-slate-400">
+                                <span className="mb-3 block text-xl font-semibold text-slate-500 sm:text-2xl md:text-3xl lg:text-4xl dark:text-slate-400">
                                     Hello, I&apos;m
                                 </span>
                                 <span className="relative inline-block pb-2 pr-2">
@@ -56,7 +56,7 @@ const Home = () => {
                             </h1>
 
                             <h2
-                                className="animate-fade-in-up mx-auto max-w-2xl text-xl font-medium text-slate-600 sm:text-2xl md:text-3xl dark:text-slate-300"
+                                className="animate-fade-in-up mx-auto max-w-2xl text-lg font-medium text-slate-600 sm:text-xl md:text-2xl lg:text-3xl dark:text-slate-300"
                                 style={{ animationDelay: '200ms' }}>
                                 Crafting scalable and high-performance solutions as a{' '}
                                 <span className="border-b-2 border-indigo-500 font-bold text-slate-900 dark:text-white">
@@ -77,7 +77,7 @@ const Home = () => {
 
                         {/* Top Core Competencies (Replacing generic skill grid with rich cards) */}
                         <div
-                            className="animate-fade-in-up mb-14 grid w-full max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4"
+                            className="animate-fade-in-up mb-14 grid w-full max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
                             style={{ animationDelay: '400ms' }}>
                             {skills.map((skill) => (
                                 <div
@@ -100,11 +100,11 @@ const Home = () => {
 
                         {/* CTA Buttons */}
                         <div
-                            className="animate-fade-in-up mb-16 flex flex-col items-center gap-4 sm:flex-row sm:gap-6"
+                            className="animate-fade-in-up mb-16 flex w-full flex-col items-center gap-4 sm:w-auto sm:flex-row sm:gap-6"
                             style={{ animationDelay: '500ms' }}>
                             <Link
                                 href="/resume"
-                                className="group relative overflow-hidden rounded-full bg-slate-900 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-indigo-500/25 dark:bg-white dark:text-slate-900 dark:hover:shadow-indigo-400/25">
+                                className="group relative flex w-full justify-center overflow-hidden rounded-full bg-slate-900 px-8 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-indigo-500/25 sm:w-auto dark:bg-white dark:text-slate-900 dark:hover:shadow-indigo-400/25">
                                 <span className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                 <span className="relative z-10 flex items-center gap-2">
                                     View Resume{' '}
@@ -115,7 +115,7 @@ const Home = () => {
                             <Link
                                 href={user.github}
                                 target="_blank"
-                                className="group flex items-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-3.5 font-semibold text-slate-700 shadow-sm transition-all duration-300 hover:bg-slate-50 hover:text-slate-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white">
+                                className="group flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 bg-white px-8 py-3.5 font-semibold text-slate-700 shadow-sm transition-all duration-300 hover:bg-slate-50 hover:text-slate-900 sm:w-auto dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 dark:hover:text-white">
                                 <Github className="h-5 w-5" />
                                 <span>GitHub Profile</span>
                             </Link>
@@ -125,8 +125,8 @@ const Home = () => {
                         <div
                             className="animate-fade-in-up w-full max-w-4xl border-t border-slate-200/50 pt-8 dark:border-slate-800/50"
                             style={{ animationDelay: '600ms' }}>
-                            <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-                                <div className="flex gap-4">
+                            <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+                                <div className="flex flex-wrap justify-center gap-4">
                                     {[
                                         { href: user.linkedin, icon: Linkedin, label: 'LinkedIn' },
                                         { href: user.leetcode, icon: LeetCode, label: 'LeetCode' },
@@ -149,24 +149,24 @@ const Home = () => {
                                     ))}
                                 </div>
 
-                                <div className="flex gap-8 text-sm font-medium text-slate-500 dark:text-slate-400">
+                                <div className="grid grid-cols-2 gap-6 text-sm font-medium text-slate-500 sm:flex sm:gap-8 dark:text-slate-400">
                                     <div className="flex flex-col items-center">
                                         <span className="text-2xl font-bold text-slate-900 dark:text-white">
                                             4+
                                         </span>
-                                        <span>Years Experience</span>
+                                        <span className="text-center">Years Experience</span>
                                     </div>
                                     <div className="flex flex-col items-center">
                                         <span className="text-2xl font-bold text-slate-900 dark:text-white">
                                             15+
                                         </span>
-                                        <span>Enterprise Projects</span>
+                                        <span className="text-center">Enterprise Projects</span>
                                     </div>
-                                    <div className="flex flex-col items-center">
+                                    <div className="col-span-2 flex flex-col items-center sm:col-span-1">
                                         <span className="text-2xl font-bold text-slate-900 dark:text-white">
                                             1000+
                                         </span>
-                                        <span>Problems Solved</span>
+                                        <span className="text-center">Problems Solved</span>
                                     </div>
                                 </div>
                             </div>
