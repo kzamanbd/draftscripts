@@ -19,7 +19,7 @@ const Resume = () => {
                             <h1 className="text-xl font-bold">MD KAMRUZZAMAN</h1>
                             <h2 className="text-lg font-semibold">Full Stack Software Engineer</h2>
                             <p className="mt-1 text-sm">
-                                PHP • Laravel • React.js • Vue.js • AWS • 4+ Years of Experience
+                                PHP • Laravel • JavaScript • React • Vue • AWS
                             </p>
                             <ul className="flex gap-2 text-sm">
                                 <li>
@@ -75,61 +75,67 @@ const Resume = () => {
                     <div className="about-me">
                         <h5 className="section-heading">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
-                            Full Stack Software Engineer with 4+ years of hands-on experience
-                            specializing in Laravel, PHP, and modern JavaScript frameworks like
-                            Vue.js and React. Proven track record of designing and developing
-                            scalable, secure web applications and RESTful APIs using clean, testable
-                            code. Experienced in collaborating with cross-functional teams,
-                            participating in Agile/Scrum workflows, and communicating complex
-                            technical concepts to both technical and non-technical stakeholders.
-                            Adept at optimizing application performance, integrating third-party
-                            services, and mentoring junior developers. Passionate about continuous
-                            learning, user-focused design, and driving impact within high-performing
-                            engineering teams.
+                            Full Stack Software Engineer with 4+ years of experience building
+                            scalable web applications, APIs, and distributed systems. Strong
+                            expertise in PHP (Laravel) and modern JavaScript frameworks (React,
+                            Vue). Experienced in designing clean architectures, optimizing
+                            performance, and integrating complex third-party systems. Proven ability
+                            to deliver high-impact solutions across multi-vendor platforms and
+                            enterprise ERP systems. Passionate about problem-solving, system design,
+                            and writing maintainable, testable code.
                         </p>
                     </div>
 
-                    {/* Core Technical Skills */}
-                    <h5 className="section-heading">CORE TECHNICAL SKILLS</h5>
+                    {/* Technical Skills */}
+                    <h5 className="section-heading">TECHNICAL SKILLS</h5>
 
                     <div className="mb-4 text-sm">
                         <ul className="bullet-list">
                             <li>
                                 <div className="flex gap-1">
-                                    <span className="font-bold">Programming:</span>
+                                    <span className="font-bold">Languages & Frameworks:</span>
                                     <p>
-                                        PHP/Laravel, JavaScript/TypeScript, React.js/Next.js,
-                                        Vue.js/Nuxt.js and Express.js
+                                        PHP (Laravel), JavaScript/TypeScript, React.js, Next.js,
+                                        Vue.js, Nuxt.js, Express.js
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Backend & Architecture:</span>
+                                    <p>
+                                        REST APIs, Microservices, MVC Architecture, WebSockets,
+                                        Event-driven systems
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
                                     <span className="font-bold">Databases:</span>
-                                    <p>MySQL, PostgreSQL and Redis</p>
+                                    <p>MySQL, PostgreSQL, Redis</p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
-                                    <span className="font-bold">Tools:</span>
+                                    <span className="font-bold">DevOps & Tools:</span>
                                     <p>
-                                        Git/GitHub, Github Action/CICD, Composer, npm, Webpack,
-                                        Docker, PHPUnit and Playwright
+                                        Docker, Git, GitHub Actions (CI/CD), AWS (EC2, ECS, RDS,
+                                        S3), Nginx, Apache
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
-                                    <span className="font-bold">Cloud/Servers:</span>
-                                    <p>AWS (EC2, ECS, RDS, S3), Google Cloud basics.</p>
+                                    <span className="font-bold">Testing & Quality:</span>
+                                    <p>PHPUnit, Playwright</p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
-                                    <span className="font-bold">WordPress:</span>
+                                    <span className="font-bold">Other:</span>
                                     <p>
-                                        Plugin development, WooCommerce, Hooks, Filters, Shortcodes
-                                        and Custom Post Types
+                                        OOP, Data Structures & Algorithms, System Design,
+                                        Agile/Scrum
                                     </p>
                                 </div>
                             </li>
@@ -143,7 +149,7 @@ const Resume = () => {
                         <TimelineIcon>
                             <div className="job-header">
                                 <div className="font-bold">
-                                    <h3>Software Engineer</h3>
+                                    <h3>Software Engineer L2</h3>
                                     <div className="company-info">
                                         <div className="flex items-center rounded border p-0.5">
                                             <Image
@@ -173,35 +179,33 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Developed and enhanced Dokan and Dokan Pro multi-vendor
-                                        marketplace plugins for WordPress.
+                                        Designed and developed scalable multi-vendor marketplace
+                                        features used by thousands of users.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Built advanced features including vendor management systems,
-                                        subscription models, booking integrations, and payment
-                                        gateways for Dokan Pro platform.
+                                        Built and enhanced complex modules including vendor
+                                        management, subscriptions, booking systems, and payment
+                                        integrations.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Implemented scalable solutions using PHP, JavaScript,
-                                        React.js, WordPress APIs, and MySQL database optimization
-                                        techniques.
+                                        Optimized database queries and application performance,
+                                        improving system efficiency and response time.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Collaborated closely with frontend developers, designers,
-                                        and QA to ensure smooth feature rollouts across multi-vendor
-                                        platforms.
+                                        Developed RESTful APIs and frontend integrations using React
+                                        and modern JavaScript practices.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Participated in daily stand-ups and sprint planning sessions
-                                        following Agile/Scrum methodology.
+                                        Collaborated cross-functionally with product, QA, and design
+                                        teams to deliver production-ready features.
                                     </p>
                                 </li>
                             </ul>
@@ -247,42 +251,32 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Architected and developed comprehensive ERP system using
-                                        Laravel, Vue.js and MySQL, serving multiple business modules
-                                        including inventory, accounting, and HR management.
+                                        Architected and developed a modular ERP system covering
+                                        inventory, accounting, and HR management.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Delivered custom software solutions for client requirements,
-                                        reducing manual processes and improving operational
-                                        efficiency across departments.
+                                        Designed scalable backend systems using Laravel and Vue.js,
+                                        supporting multiple business workflows.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Designed and implemented RESTful APIs and microservices
-                                        architecture, ensuring seamless integration between frontend
-                                        and backend systems.
+                                        Improved operational efficiency by automating manual
+                                        processes across departments.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Coordinated with cross-functional stakeholders to gather
-                                        requirements and deliver business-critical ERP modules.
+                                        Built and maintained REST APIs and service-oriented
+                                        architecture for system integration.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Documented system architecture and conducted walkthroughs
-                                        for new team members
-                                    </p>
-                                </li>
-                                <li>
-                                    <p>
-                                        Mentored junior developers and conducted technical training
-                                        sessions, contributing to team skill development and
-                                        knowledge sharing.
+                                        Led technical discussions, mentored junior developers, and
+                                        contributed to system design decisions.
                                     </p>
                                 </li>
                             </ul>
@@ -321,33 +315,60 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Developed responsive web applications using PHP Laravel
-                                        framework, Vue.js/Nuxt.js, MySQL, and Bootstrap,
-                                        implementing MVC architecture and following coding best
-                                        practices.
+                                        Developed full-stack web applications using Laravel, Vue.js,
+                                        and MySQL.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Worked in a small agile team, improving team velocity by
-                                        sharing knowledge and reviewing peers’ code.
+                                        Implemented clean MVC architecture and reusable components
+                                        for scalable development.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Actively communicated with clients to understand project
-                                        requirements and propose technical solutions.
+                                        Collaborated in Agile teams, contributing to code reviews
+                                        and improving team productivity.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Contributed to full software development lifecycle including
-                                        requirements analysis, system design, implementation,
-                                        testing, and deployment.
+                                        Communicated with clients to gather requirements and deliver
+                                        tailored technical solutions.
                                     </p>
                                 </li>
                             </ul>
                         </TimelineIcon>
+                    </div>
+
+                    {/* Project Highlights */}
+                    <h5 className="section-heading">PROJECT HIGHLIGHTS</h5>
+
+                    <div className="mb-4 text-sm">
+                        <ul className="bullet-list">
+                            <li>
+                                <div className="flex flex-col gap-1">
+                                    <span className="font-bold">
+                                        Multi-Vendor Marketplace System
+                                    </span>
+                                    <p>
+                                        Built scalable vendor management and payment systems
+                                        supporting complex business logic. Integrated third-party
+                                        services including payment gateways and booking systems.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex flex-col gap-1">
+                                    <span className="font-bold">Enterprise ERP Platform</span>
+                                    <p>
+                                        Designed end-to-end ERP solution with multiple modules and
+                                        real-time data handling. Implemented modular architecture
+                                        for maintainability and scalability.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
                     {/* Education */}
@@ -355,11 +376,10 @@ const Resume = () => {
 
                     <div className="timeline-container">
                         <TimelineIcon>
-                            <div className="job-header">
+                            <div className="job-header mb-0">
                                 <div className="font-bold">
-                                    <h3>Bachelor of Science</h3>
+                                    <h3>BSc in Computer Science & Engineering (Running)</h3>
                                     <div className="text-sm font-medium">
-                                        Computer Science & Engineering(In Progress) -{' '}
                                         <span className="font-bold">Southeast University</span>
                                     </div>
                                 </div>
@@ -371,11 +391,10 @@ const Resume = () => {
                         </TimelineIcon>
 
                         <TimelineIcon>
-                            <div className="job-header">
+                            <div className="job-header mb-0">
                                 <div className="font-bold">
-                                    <h3>Diploma in Engineering</h3>
+                                    <h3>Diploma in Engineering (Computer Technology)</h3>
                                     <div className="text-sm font-medium">
-                                        Computer Technology -{' '}
                                         <span className="font-bold">
                                             Rumdo Institute of Modern Technology
                                         </span>
@@ -389,52 +408,47 @@ const Resume = () => {
                         </TimelineIcon>
                     </div>
 
-                    {/* Additional Skills */}
-                    <h5 className="section-heading">ADDITIONAL COMPETENCIES</h5>
+                    {/* Additional Information */}
+                    <h5 className="section-heading">ADDITIONAL INFORMATION</h5>
 
                     <ul className="bullet-list">
                         <li>
+                            <p>Strong foundation in Data Structures and Algorithms</p>
+                        </li>
+                        <li>
+                            <p>Experience with real-time systems (WebSockets, Pusher, Socket.io)</p>
+                        </li>
+                        <li>
+                            <p>Familiar with third-party APIs (Stripe, Twilio)</p>
+                        </li>
+                        <li>
+                            <p>Comfortable with system design and scalable architecture</p>
+                        </li>
+                        <li>
                             <p>
-                                Strong foundation in Object-Oriented Programming (OOP), Data
-                                Structures, and Algorithms
+                                Design, code, test, and implement according to software design
+                                specifications following standard coding styles and practices.
                             </p>
                         </li>
                         <li>
+                            <p>Analyze the requirements and understand the deliverables.</p>
+                        </li>
+                        <li>
                             <p>
-                                Extensive experience with RESTful APIs, and microservices
-                                architecture
+                                Ensure that projects are accurately estimated and delivered to
+                                schedule.
                             </p>
                         </li>
                         <li>
-                            <p>
-                                Extensive experience with WebSockets, Laravel Echo, Pusher, or
-                                Socket.io.
-                            </p>
+                            <p>Participate in code/design reviews.</p>
+                        </li>
+                        <li>
+                            <p>Collaborate with team members and ensure knowledge transfer.</p>
                         </li>
                         <li>
                             <p>
-                                Experience Third-Party APIs like Stripe, Twilio. TypeScript, Redux,
-                                Tailwind CSS, Bootstrap, SCSS, and jQuery
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Software Development Life Cycle (SDLC) and Agile/Scrum methodologies
-                            </p>
-                        </li>
-                        <li>
-                            <p>Docker containerization, Nginx, Apache server configuration</p>
-                        </li>
-                        <li>
-                            <p>
-                                Self-motivated team player with strong analytical and
-                                problem-solving abilities
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                Strong verbal and written communication skills for team and client
-                                interaction
+                                Actively contribute to the process of continual improvement,
+                                concerning self, team, and systems.
                             </p>
                         </li>
                     </ul>
