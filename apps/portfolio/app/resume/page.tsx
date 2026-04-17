@@ -75,14 +75,13 @@ const Resume = () => {
                     <div className="about-me">
                         <h5 className="section-heading">PROFESSIONAL SUMMARY</h5>
                         <p className="mb-4 text-justify text-sm">
-                            Full Stack Software Engineer with 4+ years of experience building
-                            scalable web applications, APIs, and distributed systems. Strong
-                            expertise in PHP (Laravel) and modern JavaScript frameworks (React,
-                            Vue). Experienced in designing clean architectures, optimizing
-                            performance, and integrating complex third-party systems. Proven ability
-                            to deliver high-impact solutions across multi-vendor platforms and
-                            enterprise ERP systems. Passionate about problem-solving, system design,
-                            and writing maintainable, testable code.
+                            Strong problem-solving skills with a focus on scalable system design,
+                            performance optimization, and clean, maintainable code. 4+ years of
+                            experience engineering high-throughput web applications, APIs, and
+                            distributed systems. Deep expertise in PHP (Laravel) and modern
+                            JavaScript frameworks (React, Vue). Proven track record of delivering
+                            high-impact solutions across multi-vendor platforms and enterprise ERP
+                            systems, bridging product vision with rigorous engineering standards.
                         </p>
                     </div>
 
