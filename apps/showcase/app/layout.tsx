@@ -1,55 +1,70 @@
 import ScriptWrapper from '@/components/script-wrapper';
 import { ThemeProviders } from '@repo/shared';
-import { authorName, description } from '@repo/shared/metadata';
+import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import '../styles/globals.css';
+
 const inter = Inter({ subsets: ['latin'] });
+
+const SITE_URL = 'https://draftscripts.com';
+const SITE_DESC =
+    'DraftScripts is a modern web studio building polished Next.js & React applications, reusable component libraries, and open-source developer tools.';
+
+export const metadata: Metadata = {
+    metadataBase: new URL(SITE_URL),
+    title: 'DraftScripts — Modern Web Studio',
+    description: SITE_DESC,
+    applicationName: 'DraftScripts',
+    keywords: [
+        'DraftScripts',
+        'web studio',
+        'Next.js',
+        'React',
+        'TypeScript',
+        'Tailwind CSS',
+        'component library',
+        'open source',
+        'developer tools'
+    ],
+    authors: [{ name: 'DraftScripts', url: SITE_URL }],
+    creator: 'DraftScripts',
+    publisher: 'DraftScripts',
+    manifest: '/manifest.json',
+    icons: {
+        icon: [
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/favicon.png', type: 'image/png' }
+        ],
+        apple: '/apple-touch-icon.png'
+    },
+    appleWebApp: { capable: true, title: 'DraftScripts', statusBarStyle: 'default' },
+    openGraph: {
+        type: 'website',
+        siteName: 'DraftScripts',
+        title: 'DraftScripts — Modern Web Studio',
+        description: SITE_DESC,
+        url: SITE_URL,
+        images: [{ url: '/logo.svg', width: 256, height: 256, alt: 'DraftScripts logo' }]
+    },
+    twitter: {
+        card: 'summary',
+        title: 'DraftScripts — Modern Web Studio',
+        description: SITE_DESC,
+        images: ['/logo.svg']
+    }
+};
+
+export const viewport: Viewport = {
+    themeColor: '#059669',
+    width: 'device-width',
+    initialScale: 1,
+    viewportFit: 'cover'
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html className="scroll-smooth" lang="en" suppressHydrationWarning={true}>
-            <head>
-                <meta
-                    name="viewport"
-                    content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
-                />
-
-                <link rel="manifest" href="/manifest.json" />
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-                <link rel="icon" type="image/png" href="/favicon.png" />
-                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-                <meta name="theme-color" content="#059669" />
-                <meta name="apple-mobile-web-app-status-bar" content="#059669" />
-                <meta name="apple-mobile-web-app-capable" content="yes" />
-                <meta name="apple-mobile-web-app-title" content={authorName} />
-                <meta name="application-name" content={authorName} />
-                <meta name="description" content={description} />
-                <meta
-                    name="keywords"
-                    content="kzamanbd, kzaman, kamruzzaman, software engineer, problem solving, draftscripts, draft scripts, scripts"
-                />
-                <meta name="author" content={authorName} />
-                <meta name="theme-color" content="#059669" />
-
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:url" content="https://kzaman.me" />
-                <meta name="twitter:title" content={authorName} />
-                <meta name="twitter:description" content={description} />
-                <meta name="twitter:image" content="/images/banner-image.png" />
-                <meta name="twitter:creator" content="@kzaman" />
-                <meta name="title" property="og:title" content={authorName} key="title" />
-                <meta
-                    name="description"
-                    property="og:description"
-                    content={description}
-                    key="desc"
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:site_name" content={authorName} />
-                <meta property="og:url" content="https://kzaman.me" />
-                <meta property="og:image" content="/images/banner-image.png" />
-            </head>
             <body suppressHydrationWarning={true}>
                 <div className={inter.className}>
                     <NextTopLoader
@@ -58,7 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         showSpinner={false}
                         easing="ease"
                         speed={200}
-                        shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+                        shadow="0 0 10px #059669,0 0 5px #059669"
                     />
                     <ThemeProviders>{children}</ThemeProviders>
                 </div>

@@ -28,13 +28,56 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
+const SITE_URL = 'https://draftscripts.com';
+const SITE_DESC =
+    'DraftScripts is a modern web studio building polished Next.js & React applications, reusable component libraries, and open-source developer tools.';
+
 export const metadata = {
-    title: getTitle('DraftScripts — Modern Web Studio')
+    metadataBase: new URL(SITE_URL),
+    title: getTitle('DraftScripts — Modern Web Studio'),
+    description: SITE_DESC,
+    applicationName: 'DraftScripts',
+    alternates: { canonical: '/' },
+    openGraph: {
+        type: 'website',
+        siteName: 'DraftScripts',
+        title: 'DraftScripts — Modern Web Studio',
+        description: SITE_DESC,
+        url: SITE_URL,
+        images: [{ url: '/logo.svg', width: 256, height: 256, alt: 'DraftScripts logo' }]
+    },
+    twitter: {
+        card: 'summary',
+        title: 'DraftScripts — Modern Web Studio',
+        description: SITE_DESC,
+        images: ['/logo.svg']
+    }
+};
+
+// Organization structured data — lets Google associate the logo + profiles with
+// the DraftScripts brand entity (Knowledge Graph / search logo).
+const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'DraftScripts',
+    alternateName: 'Draft Scripts',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.svg`,
+    image: `${SITE_URL}/logo.svg`,
+    description: SITE_DESC,
+    email: user.email,
+    sameAs: [user.github, user.youtube, user.twitter, user.linkedin, user.facebook].filter(
+        Boolean
+    )
 };
 
 export default function Landing() {
     return (
         <div className="min-h-svh bg-background text-foreground">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+            />
             <SiteHeader />
             <main>
                 <Hero />
