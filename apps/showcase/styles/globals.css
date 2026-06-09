@@ -1,5 +1,4 @@
 @import './tailwind';
-@import './template';
 /* card style */
 .glow-container {
     --spread: 60;
