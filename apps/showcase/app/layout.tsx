@@ -16,10 +16,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 />
 
                 <link rel="manifest" href="/manifest.json" />
-                <link rel="icon" href="/favicon.png" />
-                <link rel="apple-touch-icon" href="/icons/base-icon.png" />
-                <meta name="theme-color" content="#009EF7" />
-                <meta name="apple-mobile-web-app-status-bar" content="#009EF7" />
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <link rel="icon" type="image/png" href="/favicon.png" />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <meta name="theme-color" content="#059669" />
+                <meta name="apple-mobile-web-app-status-bar" content="#059669" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-title" content={authorName} />
                 <meta name="application-name" content={authorName} />
@@ -29,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     content="kzamanbd, kzaman, kamruzzaman, software engineer, problem solving, draftscripts, draft scripts, scripts"
                 />
                 <meta name="author" content={authorName} />
-                <meta name="theme-color" content="#009EF7" />
+                <meta name="theme-color" content="#059669" />
 
                 <meta name="twitter:card" content="summary" />
                 <meta name="twitter:url" content="https://kzaman.me" />
