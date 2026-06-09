@@ -3,7 +3,7 @@
 import emailjs from '@emailjs/browser';
 import { Send } from 'lucide-react';
 import { useState } from 'react';
-import { toast } from 'react-toastify';
+import { toast } from 'sonner';
 
 export function isValidEmail(email: string) {
     // Regular expression for validating email addresses

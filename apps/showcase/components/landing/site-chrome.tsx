@@ -24,17 +24,33 @@ export function BrandMark({ className = 'size-8' }: { className?: string }) {
                 aria-hidden
                 className="pointer-events-none absolute -bottom-1/3 left-1/2 size-2/3 -translate-x-1/2 rounded-full bg-white/20 blur-md"
             />
-            {/* terminal-prompt glyph: ›_  (scripts) */}
+            {/* › DS _  — terminal-prompt monogram, brand identity */}
             <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2.75}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="relative size-[58%] drop-shadow-sm">
-                <path d="m6 8 4 4-4 4" />
-                <path d="M13.5 16H18" />
+                viewBox="0 0 32 32"
+                className="relative size-[84%] drop-shadow-sm"
+                aria-hidden="true">
+                <g
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity="0.9">
+                    <path d="M6 11.5 9 16 6 20.5" />
+                    <path d="M22.5 20.5H26" />
+                </g>
+                <text
+                    x="16"
+                    y="16.4"
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+                    fontSize="12.5"
+                    fontWeight="800"
+                    letterSpacing="-0.8"
+                    fill="currentColor">
+                    DS
+                </text>
             </svg>
         </span>
     );

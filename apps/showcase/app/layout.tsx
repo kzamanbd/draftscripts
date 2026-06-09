@@ -45,7 +45,7 @@ export const metadata: Metadata = {
         title: 'DraftScripts — Modern Web Studio',
         description: SITE_DESC,
         url: SITE_URL,
-        images: [{ url: '/logo.svg', width: 256, height: 256, alt: 'DraftScripts logo' }]
+        images: [{ url: '/logo.svg', width: 720, height: 200, alt: 'DraftScripts logo' }]
     },
     twitter: {
         card: 'summary',
