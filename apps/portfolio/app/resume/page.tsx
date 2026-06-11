@@ -178,33 +178,43 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Designed and developed scalable multi-vendor marketplace
-                                        features used by thousands of users.
+                                        Design and develop complex features end-to-end across
+                                        multiple production products, from design through deployment
+                                        and ongoing support.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Built and enhanced complex modules including vendor
-                                        management, subscriptions, booking systems, and payment
-                                        integrations.
+                                        Architect and ship revenue-critical modules — subscriptions,
+                                        booking systems, multi-gateway payments, and vendor
+                                        management — built to handle high-volume, concurrent
+                                        traffic.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Optimized database queries and application performance,
-                                        improving system efficiency and response time.
+                                        Investigate and resolve difficult production bugs across the
+                                        full stack, restoring reliability under live user load.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Developed RESTful APIs and frontend integrations using React
-                                        and modern JavaScript practices.
+                                        Profile and optimize slow queries and application hot paths
+                                        (indexing, caching, N+1 elimination), cutting response times
+                                        and infrastructure cost.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Collaborated cross-functionally with product, QA, and design
-                                        teams to deliver production-ready features.
+                                        Build robust RESTful APIs and React interfaces, turning
+                                        complex requirements into clean, reusable, well-tested code.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Participate in code reviews and mentor junior developers,
+                                        contributing to engineering standards and overall code
+                                        quality.
                                     </p>
                                 </li>
                             </ul>
@@ -250,32 +260,35 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Architected and developed a modular ERP system covering
-                                        inventory, accounting, and HR management.
+                                        Built and shipped full-stack web applications end-to-end
+                                        across multiple business domains using Laravel, Vue.js, and
+                                        MySQL.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Designed scalable backend systems using Laravel and Vue.js,
-                                        supporting multiple business workflows.
+                                        Designed scalable backend architectures, REST APIs, and
+                                        service-oriented modules supporting diverse product
+                                        workflows.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Improved operational efficiency by automating manual
-                                        processes across departments.
+                                        Translated business requirements into clean, maintainable
+                                        features spanning frontend, backend, and database layers.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Built and maintained REST APIs and service-oriented
-                                        architecture for system integration.
+                                        Optimized application performance and automated manual
+                                        processes, improving reliability and reducing operational
+                                        overhead.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Led technical discussions, mentored junior developers, and
-                                        contributed to system design decisions.
+                                        Led technical discussions, owned key system-design
+                                        decisions, and mentored junior engineers.
                                     </p>
                                 </li>
                             </ul>
@@ -314,26 +327,27 @@ const Resume = () => {
                             <ul className="bullet-list">
                                 <li>
                                     <p>
-                                        Developed full-stack web applications using Laravel, Vue.js,
-                                        and MySQL.
+                                        Developed and maintained full-stack web applications across
+                                        a range of client projects using Laravel, Vue.js, and MySQL.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
                                         Implemented clean MVC architecture and reusable components
-                                        for scalable development.
+                                        for scalable, maintainable codebases.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Collaborated in Agile teams, contributing to code reviews
-                                        and improving team productivity.
+                                        Built RESTful APIs and integrated third-party services to
+                                        extend application functionality.
                                     </p>
                                 </li>
                                 <li>
                                     <p>
-                                        Communicated with clients to gather requirements and deliver
-                                        tailored technical solutions.
+                                        Collaborated in Agile teams on code reviews and gathered
+                                        requirements directly from clients to deliver tailored
+                                        solutions.
                                     </p>
                                 </li>
                             </ul>

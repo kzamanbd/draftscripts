@@ -143,13 +143,13 @@
         @apply relative mb-4 ml-2 flex flex-col;
     }
     .timeline-container > div {
-        @apply border-primary-500 border-l pb-4 pl-4 relative;
+        @apply border-primary-500 relative border-l pb-4 pl-4;
     }
     .timeline-container > div:last-child {
         @apply border-transparent pb-0;
     }
     .job-header {
-        @apply mb-2 flex justify-between;
+        @apply -mt-1 mb-2 flex justify-between;
     }
     .company-info {
         @apply flex gap-1 text-sm font-medium;

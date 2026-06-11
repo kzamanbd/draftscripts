@@ -12,7 +12,7 @@ export const siteThumbnail = '/thumbnail.png';
 
 export const siteAuthorEmail = 'kzamanbn@gmail.com';
 
-export const profileImage = '/kzaman.png';
+export const profileImage = '/kzaman.jpg';
 
 export const siteKeywords: string[] = [
     'Kamruzzaman',
