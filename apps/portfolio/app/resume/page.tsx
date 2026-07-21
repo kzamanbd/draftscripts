@@ -94,8 +94,18 @@ const Resume = () => {
                                 <div className="flex gap-1">
                                     <span className="font-bold">Languages & Frameworks:</span>
                                     <p>
-                                        PHP (Laravel), JavaScript/TypeScript, React.js, Next.js,
-                                        Vue.js, Nuxt.js, Express.js
+                                        JavaScript/TypeScript (ES6+), React.js, Next.js,
+                                        Redux/Redux Toolkit, Vue.js, Express.js,
+                                        PHP 8+ (Laravel)
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="flex gap-1">
+                                    <span className="font-bold">Frontend:</span>
+                                    <p>
+                                        JSX, Virtual DOM, Component Lifecycle, React Hooks, State
+                                        Management, HTML5, CSS3, Tailwind CSS, Responsive UI
                                     </p>
                                 </div>
                             </li>
@@ -103,30 +113,35 @@ const Resume = () => {
                                 <div className="flex gap-1">
                                     <span className="font-bold">Backend & Architecture:</span>
                                     <p>
-                                        REST APIs, Microservices, MVC Architecture, WebSockets,
-                                        Event-driven systems
+                                        REST APIs, Microservices, MVC Architecture,
+                                        WebSockets, Event-driven systems, Eloquent ORM,
+                                        Migrations, Queues &amp; Job Scheduling, Laravel Sanctum &amp;
+                                        Passport
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
                                     <span className="font-bold">Databases:</span>
-                                    <p>MySQL, PostgreSQL, Redis</p>
+                                    <p>
+                                        MySQL, PostgreSQL, Redis (caching &amp; Laravel Horizon
+                                        queues), query optimization
+                                    </p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
                                     <span className="font-bold">DevOps & Tools:</span>
                                     <p>
-                                        Docker, Git, GitHub Actions (CI/CD), AWS (EC2, ECS, RDS,
-                                        S3), Nginx, Apache
+                                        Git, NPM, Docker, GitHub Actions (CI/CD), AWS (EC2, ECS,
+                                        RDS, S3), Nginx, Apache
                                     </p>
                                 </div>
                             </li>
                             <li>
                                 <div className="flex gap-1">
                                     <span className="font-bold">Testing & Quality:</span>
-                                    <p>PHPUnit, Playwright</p>
+                                    <p>Jest, Vitest, PHPUnit, Playwright</p>
                                 </div>
                             </li>
                             <li>
