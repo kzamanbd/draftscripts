@@ -368,35 +368,6 @@ const Resume = () => {
                         </TimelineIcon>
                     </div>
 
-                    {/* Project Highlights */}
-                    <h5 className="section-heading">PROJECT HIGHLIGHTS</h5>
-
-                    <div className="mb-4 text-sm">
-                        <ul className="bullet-list">
-                            <li>
-                                <div className="flex flex-col gap-1">
-                                    <span className="font-bold">
-                                        Multi-Vendor Marketplace System
-                                    </span>
-                                    <p>
-                                        Built scalable vendor management and payment systems
-                                        supporting complex business logic. Integrated third-party
-                                        services including payment gateways and booking systems.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="flex flex-col gap-1">
-                                    <span className="font-bold">Enterprise ERP Platform</span>
-                                    <p>
-                                        Designed end-to-end ERP solution with multiple modules and
-                                        real-time data handling. Implemented modular architecture
-                                        for maintainability and scalability.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
 
                     {/* Education */}
                     <h5 className="section-heading break-before-page">EDUCATION</h5>
