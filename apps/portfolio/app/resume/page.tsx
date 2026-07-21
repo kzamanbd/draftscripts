@@ -91,67 +91,66 @@ const Resume = () => {
                     <div className="mb-4 text-sm">
                         <ul className="bullet-list">
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Languages & Frameworks:</span>
-                                    <p>
-                                        JavaScript/TypeScript (ES6+), React.js, Next.js,
-                                        Redux/Redux Toolkit, Vue.js, Express.js,
-                                        PHP 8+ (Laravel)
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Languages & Frameworks:
+                                    </span>
+                                    JavaScript/TypeScript (ES6+), React.js, Next.js, Redux/Redux
+                                    Toolkit, Vue.js, Express.js, PHP 8+ (Laravel)
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Frontend:</span>
-                                    <p>
-                                        JSX, Virtual DOM, Component Lifecycle, React Hooks, State
-                                        Management, HTML5, CSS3, Tailwind CSS, Responsive UI
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Frontend:
+                                    </span>
+                                    JSX, Virtual DOM, Component Lifecycle, React Hooks, State
+                                    Management, HTML5, CSS3, Tailwind CSS, Responsive UI
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Backend & Architecture:</span>
-                                    <p>
-                                        REST APIs, Microservices, MVC Architecture,
-                                        WebSockets, Event-driven systems, Eloquent ORM,
-                                        Migrations, Queues &amp; Job Scheduling, Laravel Sanctum &amp;
-                                        Passport
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Backend & Architecture:
+                                    </span>
+                                    REST APIs, Microservices, MVC Architecture, WebSockets,
+                                    Event-driven systems, Eloquent ORM, Migrations, Queues &amp; Job
+                                    Scheduling, Laravel Sanctum &amp; Passport
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Databases:</span>
-                                    <p>
-                                        MySQL, PostgreSQL, Redis (caching &amp; Laravel Horizon
-                                        queues), query optimization
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Databases:
+                                    </span>
+                                    MySQL, PostgreSQL, Redis (caching &amp; Laravel Horizon queues),
+                                    query optimization
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">DevOps & Tools:</span>
-                                    <p>
-                                        Git, NPM, Docker, GitHub Actions (CI/CD), AWS (EC2, ECS,
-                                        RDS, S3), Nginx, Apache
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        DevOps & Tools:
+                                    </span>
+                                    Git, NPM, Docker, GitHub Actions (CI/CD), AWS (EC2, ECS, RDS,
+                                    S3), Nginx, Apache
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Testing & Quality:</span>
-                                    <p>Jest, Vitest, PHPUnit, Playwright</p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Testing & Quality:
+                                    </span>
+                                    Jest, Vitest, PHPUnit, Playwright
+                                </p>
                             </li>
                             <li>
-                                <div className="flex gap-1">
-                                    <span className="font-bold">Other:</span>
-                                    <p>
-                                        OOP, Data Structures & Algorithms, System Design,
-                                        Agile/Scrum
-                                    </p>
-                                </div>
+                                <p>
+                                    <span className="font-bold me-2">
+                                        Other:
+                                    </span>
+                                    OOP, Data Structures & Algorithms, System Design, Agile/Scrum
+                                </p>
                             </li>
                         </ul>
                     </div>
