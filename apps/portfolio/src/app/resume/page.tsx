@@ -6,7 +6,8 @@ import Image from 'next/image';
 const social = Object.entries({
     GitHub: user.github,
     Linkedin: user.linkedin,
-    LeetCode: user.leetcode
+    LeetCode: user.leetcode,
+    Codeforces: user.codeforces
 });
 
 const Resume = () => {

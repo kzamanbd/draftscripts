@@ -27,19 +27,20 @@ A modern personal portfolio application built with Next.js 15, React 19, and Tai
 
 ```md
 portfolio/
-├── app/
-│   ├── layout.tsx          # Root layout with metadata
-│   ├── page.tsx            # Home page
-│   ├── resume/             # Resume section
-│   └── globals.css         # Global styles
-├── components/
-│   ├── ui/                 # Reusable UI components
-│   └── sections/           # Page sections
-├── lib/                    # Utilities and configurations
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx      # Root layout with metadata
+│   │   ├── page.tsx        # Home page
+│   │   ├── api/            # Route handlers
+│   │   ├── resume/         # Resume section
+│   │   └── globals.css     # Global styles
+│   ├── components/         # Reusable UI components and page sections
+│   └── utils/              # Utilities and configurations
 ├── public/
-│   ├── manifest.json       # PWA manifest
-│   └── icons/              # App icons and favicons
-└── tailwind.config.ts      # TailwindCSS configuration
+│   ├── icons/              # App icons and favicons
+│   └── images/             # Static images
+├── next.config.ts          # Next.js configuration
+└── postcss.config.mjs      # TailwindCSS (v4) via PostCSS
 ```
 
 ## Getting Started
@@ -141,7 +142,7 @@ The output will be in the `.next` directory and can be deployed to any Node.js h
 
 - Edit `tailwind.config.ts` for theme customization
 - Modify component styles in the respective component files
-- Update global styles in `app/globals.css`
+- Update global styles in `src/app/globals.css`
 
 ### Content
 
